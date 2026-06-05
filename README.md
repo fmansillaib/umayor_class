@@ -19,11 +19,21 @@ Repositorio central con materiales, códigos y recursos de clases en la Universi
 
 ```
 umayor_class/
-├── machine_learning/             - [Vacío - Por cargar]
+├── machine_learning/             - ✅ Con contenido
+│   ├── Clase 1.gslides
+│   ├── Clase 2.gslides
+│   ├── Clase 6.gslides
+│   ├── Clase 3, 4 y 5.ipynb
+│   └── Clase 7 y 8.ipynb
 │
 ├── metodos_IA/                   - [Vacío - Por cargar]
 │
-├── fundamentos_DL/               - [Vacío - Por cargar]
+├── fundamentos_DL/               - ✅ Con contenido
+│   ├── Clase 1.gslides
+│   ├── Clase 2. Red Neuronal.xlsx
+│   ├── Clase 3.ipynb
+│   ├── Clase 4.ipynb
+│   └── mlp_diabetes_best_model.pkl
 │
 ├── nlp/                          - [Vacío - Por cargar]
 │
@@ -34,7 +44,35 @@ umayor_class/
 
 ## 📖 Descripción de Módulos
 
-Los módulos estarán disponibles conforme se cargue contenido. Actualmente el repositorio se encuentra en fase de inicialización.
+### ✅ Módulos con Contenido
+
+#### 1. **Machine Learning**
+Fundamentos y aplicaciones prácticas de Machine Learning.
+
+**Contenido disponible:**
+- Presentaciones (Google Slides) - Clases 1, 2 y 6
+- Notebooks Jupyter - Clases 3-5 y 7-8
+- Cubre desde conceptos fundamentales hasta aplicaciones avanzadas
+
+---
+
+#### 2. **Fundamentos de Deep Learning**
+Aprendizaje profundo desde los fundamentos teóricos hasta implementación.
+
+**Contenido disponible:**
+- Presentación introductoria (Google Slides) - Clase 1
+- Spreadsheet de referencia (Red Neuronal) - Clase 2
+- Notebooks Jupyter - Clases 3 y 4
+- Modelo entrenado (mlp_diabetes_best_model.pkl) - Ejemplo práctico
+- Cubre: Redes neuronales básicas, arquitecturas y aplicaciones
+
+---
+
+### ⏳ Módulos Pendientes de Contenido
+
+- **metodos_IA** - Por cargar
+- **nlp** - Por cargar
+- **IA_generativa** - Por cargar
 
 ---
 
