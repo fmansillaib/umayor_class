@@ -1,58 +1,53 @@
 # Datasets
 
-Este directorio contiene las bases de datos y sus diccionarios de datos utilizados en los proyectos de la clase. Los datasets están organizados por tipo: **datos transversales/paneles** y **series de tiempo**.
+Colección de bases de datos para proyectos de Machine Learning e IA. Los datasets están organizados por tipo: **datos transversales/paneles** y **series de tiempo**.
+
+## Datos Transversales y Paneles
+
+| Dataset | Registros | Tipo | Descripción |
+|---------|-----------|------|-------------|
+| **titanic** | 891 | Clasificación binaria | Supervivencia en el Titanic |
+| **precios_casas** | 1,460 | Regresión / Clasificación | Predicción de precios inmobiliarios |
+| **ventas_empresas** | 500 | Multi-target | Ventas, categorización y rentabilidad |
+| **iris** | 150 | Clasificación multiclase | Clasificación de especies de flores |
+| **wine** | 178 | Clasificación multiclase | Clasificación de cultivares de vino |
+| **breast_cancer** | 569 | Clasificación binaria | Diagnóstico de tumores |
+| **adult_income** | 32,561 | Clasificación binaria | Predicción de ingresos |
+| **mushroom** | 8,124 | Clasificación binaria | Identificación comestible/venenoso |
+| **diabetes** | 768 | Clasificación binaria | Predicción de diabetes |
+| **insurance_charges** | 1,338 | Regresión | Predicción de costos de seguros |
+| **penguin** | 344 | Clasificación multiclase | Clasificación de especies de pingüinos |
+
+## Series de Tiempo
+
+| Dataset | Registros | Tipo | Descripción |
+|---------|-----------|------|-------------|
+| **precios_acciones** | 27,385 | Pronóstico | Precios históricos de 5 stocks (20 años) |
+| **ventas_mensuales** | 3,000 | Pronóstico estacional | Ventas mensuales con estacionalidad (10 años) |
 
 ## Estructura
 
 ```
 datasets/
-├── README.md                                    # Este archivo
-├── diccionario_datos.md                        # Registro centralizado de todas las BD
-│
-├── datos_transversales_paneles/                # Datos transversales y paneles
-│   ├── README.md                               # Guía de esta subcategoría
-│   ├── titanic/                                # Dataset Titanic (clasificación binaria)
-│   │   ├── datos.csv
-│   │   └── diccionario.md
-│   ├── precios_casas/                          # Precios de casas (regresión continua)
-│   │   ├── datos.csv
-│   │   └── diccionario.md
-│   └── ventas_empresas/                        # Ventas de empresas (regresión + categorización)
-│       ├── datos.csv
-│       └── diccionario.md
-│
-└── series_de_tiempo/                           # Series de tiempo
-    ├── README.md                               # Guía de esta subcategoría
-    ├── precios_acciones/                       # Precios de acciones
-    │   ├── datos.csv
-    │   └── diccionario.md
-    └── ventas_mensuales/                       # Ventas mensuales
-        ├── datos.csv
-        └── diccionario.md
+├── README.md (este archivo)
+├── datos_transversales_paneles/
+│   ├── titanic/datos.csv
+│   ├── precios_casas/datos.csv
+│   ├── ventas_empresas/datos.csv
+│   ├── iris/datos.csv
+│   ├── wine/datos.csv
+│   ├── breast_cancer/datos.csv
+│   ├── adult_income/datos.csv
+│   ├── mushroom/datos.csv
+│   ├── diabetes/datos.csv
+│   ├── insurance_charges/datos.csv
+│   └── penguin/datos.csv
+└── series_de_tiempo/
+    ├── precios_acciones/datos.csv
+    └── ventas_mensuales/datos.csv
 ```
 
-## Categorías de Datasets
+## Fuentes
 
-### 1. Datos Transversales y Paneles
-Conjuntos de datos con observaciones independientes, ideales para:
-- **Clasificación binaria:** Titanic (¿Sobrevivió?)
-- **Clasificación multiclase:** Precios de casas (categorización)
-- **Regresión continua:** Precios de casas (predicción de precios)
-- **Targets categóricos y dicotómicos**
-
-### 2. Series de Tiempo
-Datos ordenados temporalmente para:
-- Análisis de tendencias
-- Predicción de valores futuros
-- Detección de patrones estacionales
-
-## Cómo usar
-
-1. Cada dataset está en su propia subcarpeta con `datos.csv` y `diccionario.md`
-2. Lee el `diccionario.md` de cada dataset para entender sus variables
-3. Consulta `diccionario_datos.md` para una descripción general de todos los datasets
-4. Para agregar nuevos datasets, sigue la estructura existente
-
-## Diccionarios de datos
-
-Ver [diccionario_datos.md](./diccionario_datos.md) para la descripción completa de todas las bases de datos.
+- Datasets sintéticos propios (Titanic, Precios de Casas, Ventas de Empresas, Ventas Mensuales)
+- Kaggle - Datasets públicos clásicos (Iris, Wine, Breast Cancer, Adult Income, Mushroom, Diabetes, Insurance, Penguin, Stock Prices)
