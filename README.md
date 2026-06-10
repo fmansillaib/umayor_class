@@ -47,24 +47,8 @@ umayor_class/
 
 ---
 
-## 📖 Descripción de Módulos
-
-- **[Métodos de IA](./metodos_ia/)**: Conceptos, clases y métodos fundamentales de Inteligencia Artificial (Clases 1 a 8).
-- **[Machine Learning](./machine_learning/)**: Fundamentos, notebooks y presentaciones sobre aplicaciones prácticas de Machine Learning.
-- **[Fundamentos de Deep Learning](./fundamentos_DL/)**: Redes neuronales, desde los fundamentos teóricos hasta la implementación práctica.
-- **nlp**: *(Por cargar)*
-- **IA_generativa**: *(Por cargar)*
-
----
-
 ## 👤 Autor
 
 **Franco A. Mansilla Ibáñez**
 - Website: https://www.francomansilla.com
 - GitHub: https://github.com/fmansillaib
-
----
-
-## 📅 Última Actualización
-
-Junio 5, 2026
