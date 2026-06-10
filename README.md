@@ -49,45 +49,11 @@ umayor_class/
 
 ## 📖 Descripción de Módulos
 
-### ✅ Módulos con Contenido
-
-#### 1. **Métodos de IA**
-Conceptos, clases y métodos fundamentales de Inteligencia Artificial.
-
-**Contenido disponible:**
-- Clases 1 y 2
-- Clases 3 y 4 (Ver `README.md` en su carpeta para el video)
-- Clases 5 y 6
-- Clases 7 y 8
-
----
-
-#### 2. **Machine Learning**
-Fundamentos y aplicaciones prácticas de Machine Learning.
-
-**Contenido disponible:**
-- Presentaciones (Google Slides) - Clases 1, 2 y 6
-- Notebooks Jupyter - Clases 3-5 y 7-8
-- Cubre desde conceptos fundamentales hasta aplicaciones avanzadas
-
----
-
-#### 2. **Fundamentos de Deep Learning**
-Aprendizaje profundo desde los fundamentos teóricos hasta implementación.
-
-**Contenido disponible:**
-- Presentación introductoria (Google Slides) - Clase 1
-- Spreadsheet de referencia (Red Neuronal) - Clase 2
-- Notebooks Jupyter - Clases 3 y 4
-- Modelo entrenado (mlp_diabetes_best_model.pkl) - Ejemplo práctico
-- Cubre: Redes neuronales básicas, arquitecturas y aplicaciones
-
----
-
-### ⏳ Módulos Pendientes de Contenido
-
-- **nlp** - Por cargar
-- **IA_generativa** - Por cargar
+- **[Métodos de IA](./metodos_ia/)**: Conceptos, clases y métodos fundamentales de Inteligencia Artificial (Clases 1 a 8).
+- **[Machine Learning](./machine_learning/)**: Fundamentos, notebooks y presentaciones sobre aplicaciones prácticas de Machine Learning.
+- **[Fundamentos de Deep Learning](./fundamentos_DL/)**: Redes neuronales, desde los fundamentos teóricos hasta la implementación práctica.
+- **nlp**: *(Por cargar)*
+- **IA_generativa**: *(Por cargar)*
 
 ---
 
