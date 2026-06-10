@@ -31,6 +31,7 @@ Colección de bases de datos para proyectos de Machine Learning e IA. Los datase
 | **car_prices** | 1,000 | Price | Predicción de precios de autos |
 | **california_housing** | 20,640 | MedianHouseValue | Predicción de precios en California |
 | **salary_prediction** | 1,000 | Salary | Predicción de salarios |
+| **determinantes_salario** | 525 | salario | Determinantes del salario (educación, experiencia) |
 
 ### Multi-target
 
@@ -70,7 +71,8 @@ datasets/
 │   │   ├── concrete_strength/datos.csv
 │   │   ├── car_prices/datos.csv
 │   │   ├── california_housing/datos.csv
-│   │   └── salary_prediction/datos.csv
+│   │   ├── salary_prediction/datos.csv
+│   │   └── determinantes_salario/datos.csv
 │   └── Multi-target:
 │       └── ventas_empresas/datos.csv
 └── series_de_tiempo/
@@ -89,11 +91,11 @@ datasets/
 ## Resumen Estadístico
 
 ### Datasets Transversales
-- **Total datasets**: 19
-- **Total registros**: ~79,000+
+- **Total datasets**: 20
+- **Total registros**: ~79,500+
 - **Clasificación binaria**: 6 datasets
 - **Clasificación multiclase**: 3 datasets
-- **Regresión (targets continuos)**: 10 datasets
+- **Regresión (targets continuos)**: 11 datasets
 - **Multi-target**: 1 dataset
 
 ### Series de Tiempo
