@@ -56,13 +56,9 @@ Conceptos, clases y métodos fundamentales de Inteligencia Artificial.
 
 **Contenido disponible:**
 - Clases 1 y 2
-- Clases 3 y 4
+- Clases 3 y 4 (Ver `README.md` en su carpeta para el video)
 - Clases 5 y 6
 - Clases 7 y 8
-
-**Video de la clase (Árboles):**
-
-<video src="./metodos_ia/clase_3_4_video/arboles_ml.mp4" controls="controls" width="100%"></video>
 
 ---
 
