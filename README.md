@@ -26,7 +26,12 @@ umayor_class/
 │   ├── Clase 3, 4 y 5.ipynb
 │   └── Clase 7 y 8.ipynb
 │
-├── metodos_IA/                   - [Vacío - Por cargar]
+├── metodos_IA/                   - ✅ Con contenido
+│   ├── Clase 1 y 2/
+│   ├── Clase 3 y 4/
+│   │   └── arboles_ml.mp4
+│   ├── Clase 5 y 6/
+│   └── Clase 7 y 8/
 │
 ├── fundamentos_DL/               - ✅ Con contenido
 │   ├── Clase 1.gslides
@@ -46,7 +51,22 @@ umayor_class/
 
 ### ✅ Módulos con Contenido
 
-#### 1. **Machine Learning**
+#### 1. **Métodos de IA**
+Conceptos, clases y métodos fundamentales de Inteligencia Artificial.
+
+**Contenido disponible:**
+- Clases 1 y 2
+- Clases 3 y 4 (Incluye video de árboles: `arboles_ml.mp4`)
+- Clases 5 y 6
+- Clases 7 y 8
+
+<video src="./metodos_IA/Clase 3 y 4/arboles_ml.mp4" controls="controls" style="max-width: 100%; height: auto;">
+  Tu navegador no soporta el tag de video.
+</video>
+
+---
+
+#### 2. **Machine Learning**
 Fundamentos y aplicaciones prácticas de Machine Learning.
 
 **Contenido disponible:**
@@ -70,7 +90,6 @@ Aprendizaje profundo desde los fundamentos teóricos hasta implementación.
 
 ### ⏳ Módulos Pendientes de Contenido
 
-- **metodos_IA** - Por cargar
 - **nlp** - Por cargar
 - **IA_generativa** - Por cargar
 
