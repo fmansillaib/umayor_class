@@ -61,7 +61,8 @@ Conceptos, clases y métodos fundamentales de Inteligencia Artificial.
 - Clases 7 y 8
 
 **Video de la clase (Árboles):**
-<video src="https://raw.githubusercontent.com/fmansillaib/umayor_class/main/metodos_ia/Clase%203%20y%204/arboles_ml_final.mp4" controls="controls" width="100%"></video>
+
+<video src="./metodos_ia/clase_3_4_video/arboles_ml.mp4" controls="controls" width="100%"></video>
 
 ---
 
