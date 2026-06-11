@@ -43,9 +43,9 @@ umayor_class/
 
 | Video | Ver |
 |-------|-----|
-| IA en la Industria | [▶ Ver](https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%201%20y%202/ia_industria.mp4) |
-| Árboles de Decisión | [▶ Ver](https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%203%20y%204/arboles_ml.mp4) |
-| Redes Neuronales | [▶ Ver](https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%205%20y%206/redes_neuronales.mp4) |
+| IA en la Industria | [▶ Ver](https://raw.githubusercontent.com/fmansillaib/umayor_class/main/metodos_ia/Clase%201%20y%202/ia_industria.mp4) |
+| Árboles de Decisión | [▶ Ver](https://raw.githubusercontent.com/fmansillaib/umayor_class/main/metodos_ia/Clase%203%20y%204/arboles_ml.mp4) |
+| Redes Neuronales | [▶ Ver](https://raw.githubusercontent.com/fmansillaib/umayor_class/main/metodos_ia/Clase%205%20y%206/redes_neuronales.mp4) |
 
 ---
 
