@@ -32,10 +32,20 @@ umayor_class/
 
 ## 🌐 Simuladores Interactivos
 
-| Simulador | Curso | Ver |
-|-----------|-------|-----|
-| Simulador Árboles de Decisión | Machine Learning - Clase 4 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%204/Clase%204.%20simulador_arboles.html) |
-| Simulador Clustering | Machine Learning - Clase 6 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%206/Clase%206.%20Simulador%20Clustering.html) |
+| Simulador | Ver |
+|-----------|-----|
+| Simulador Árboles de Decisión | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%204/Clase%204.%20simulador_arboles.html) |
+| Simulador Clustering | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%206/Clase%206.%20Simulador%20Clustering.html) |
+
+---
+
+## 🎬 Videos
+
+| Video | Ver |
+|-------|-----|
+| IA en la Industria | [▶ Ver](https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%201%20y%202/ia_industria.mp4) |
+| Árboles de Decisión | [▶ Ver](https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%203%20y%204/arboles_ml.mp4) |
+| Redes Neuronales | [▶ Ver](https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%205%20y%206/redes_neuronales.mp4) |
 
 ---
 
