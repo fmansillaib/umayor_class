@@ -19,73 +19,24 @@ Repositorio central con materiales, códigos y recursos de clases en la Universi
 
 ```
 umayor_class/
-├── machine_learning/             - ✅ Con contenido
-│   ├── Clase 1 y 2/
-│   │   ├── Clase 1.gslides
-│   │   └── Clase 2. ¿Qué es un Modelo?.xlsx
-│   ├── Clase 3/
-│   │   └── Clase 3. BD Sucia.xlsx
-│   ├── Clase 4/
-│   │   ├── Clase 4 - Regresión.ipynb
-│   │   └── Clase 4. simulador_arboles.html
-│   ├── Clase 5/
-│   │   └── Clase 5 - Clasificación.ipynb
-│   ├── Clase 6/
-│   │   ├── Clase 6.gslides
-│   │   ├── Clase 6. Ejercicio.xlsx
-│   │   └── Clase 6. Simulador Clustering.html
-│   ├── Clase 7/
-│   │   └── Clase 7 - Clustering.ipynb
-│   └── Clase 8/
-│       └── Clase 8 - Interpretación.ipynb
-│
-├── fundamentos_DL/               - ✅ Con contenido
-│   ├── Clase 1/
-│   │   └── Clase 1.gslides
-│   ├── Clase 2/
-│   │   └── Clase 2. Red Neuronal.xlsx
-│   ├── Clase 3/
-│   │   └── Clase 3 - Clasificación.ipynb
-│   └── Clase 4/
-│       └── Clase 4 - Regresión.ipynb
-│
-├── metodos_IA/                   - ✅ Con contenido
-│   ├── Clase 1 y 2/
-│   │   ├── Clase 1.gslides
-│   │   └── Clase 2. ¿Qué es un Modelo?.xlsx
-│   ├── Clase 3 y 4/
-│   │   ├── Clase 3. BD Sucia.xlsx
-│   │   ├── Clase 4 - Regresión.ipynb
-│   │   └── simulador_arboles.html
-│   └── Clase 5 y 6/
-│       ├── Clase 5. Red Neuronal.xlsx
-│       ├── Clase 6 - Clasificación.ipynb
-│       └── Clase 6 - Regresión.ipynb
-│
-├── aplicaciones_computacional/   - ✅ Con contenido
-│   ├── Clase 1/
-│   │   └── Clase 1.gslides
-│   ├── Clase 2/
-│   │   └── Clase 3 - Unidad 2.ipynb
-│   ├── Clase 3/
-│   │   └── Clase 4 - Unidad 2.ipynb
-│   ├── Clase 4/
-│   │   └── Clase 5 - Unidad 2.ipynb
-│   ├── Clase 5/
-│   │   └── desarrollo_u2.ipynb
-│   ├── Clase 6/
-│   │   ├── Clase 6 - Unidad 3.ipynb
-│   │   └── all_df.csv
-│   ├── Clase 7/
-│   │   └── Clase 7 - Unidad 3.ipynb
-│   └── Clase 8/
-│       ├── Clase 8 - Unidad 3.ipynb
-│       └── BD_tratada.xlsx
-│
-├── nlp/                          - [Vacío - Por cargar]
-│
-└── IA_generativa/                - [Vacío - Por cargar]
+├── machine_learning/             - ✅ Clases 1-8 (regresión, clasificación, clustering)
+├── fundamentos_DL/               - ✅ Clases 1-4 (redes neuronales, clasificación, regresión)
+├── metodos_IA/                   - ✅ Clases 1-6 (métodos de IA aplicados)
+├── aplicaciones_computacional/   - ✅ Clases 1-8 (Unidades 2 y 3)
+├── datasets/                     - ✅ Conjuntos de datos para las clases
+├── nlp/                          - [Por cargar]
+└── IA_generativa/                - [Por cargar]
 ```
+
+---
+
+## 🌐 Simuladores Interactivos
+
+| Simulador | Curso | Ver |
+|-----------|-------|-----|
+| Simulador Árboles de Decisión | Machine Learning - Clase 4 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%204/Clase%204.%20simulador_arboles.html) |
+| Simulador Clustering | Machine Learning - Clase 6 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%206/Clase%206.%20Simulador%20Clustering.html) |
+| Simulador Árboles de Decisión | Métodos de IA - Clase 3 y 4 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%203%20y%204/simulador_arboles.html) |
 
 ---
 
