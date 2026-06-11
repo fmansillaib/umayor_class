@@ -22,7 +22,7 @@ umayor_class/
 ├── machine_learning/             - ✅ Clases 1-8 (regresión, clasificación, clustering)
 ├── fundamentos_DL/               - ✅ Clases 1-4 (redes neuronales, clasificación, regresión)
 ├── metodos_IA/                   - ✅ Clases 1-6 (métodos de IA aplicados)
-├── aplicaciones_computacional/   - ✅ Clases 1-8 (Unidades 2 y 3)
+├── aplicaciones_computacional/   - ✅ Clases 1-8 (programación Python)
 ├── datasets/                     - ✅ Conjuntos de datos para las clases
 ├── nlp/                          - [Por cargar]
 └── IA_generativa/                - [Por cargar]
@@ -36,7 +36,6 @@ umayor_class/
 |-----------|-------|-----|
 | Simulador Árboles de Decisión | Machine Learning - Clase 4 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%204/Clase%204.%20simulador_arboles.html) |
 | Simulador Clustering | Machine Learning - Clase 6 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%206/Clase%206.%20Simulador%20Clustering.html) |
-| Simulador Árboles de Decisión | Métodos de IA - Clase 3 y 4 | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_IA/Clase%203%20y%204/simulador_arboles.html) |
 
 ---
 
