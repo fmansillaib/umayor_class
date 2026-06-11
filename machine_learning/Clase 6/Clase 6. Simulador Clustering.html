@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de Índices de Clustering</title>
+<style>
+:root{--bg:#f8f7f4;--surface:#fff;--surface2:#f1f0ec;--border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.16);--text:#1a1a18;--text2:#5f5e5a;--text3:#888780;--accent:#534ab7;--accent-l:#eeedfe;--teal:#1d9e75;--teal-l:#e1f5ee;--coral:#d85a30;--coral-l:#faece7;--amber:#ba7517;--amber-l:#faeeda;--r:12px;--rs:8px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;}
+.hdr{background:var(--surface);border-bottom:0.5px solid var(--border2);padding:1.2rem 2rem;display:flex;align-items:center;gap:14px;}
+.hdr-ico{width:38px;height:38px;background:var(--accent-l);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;}
+.hdr-ico svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;}
+.hdr h1{font-size:17px;font-weight:500;}
+.hdr p{font-size:12px;color:var(--text2);}
+.main{max-width:1120px;margin:0 auto;padding:1.25rem 1.25rem 3rem;display:grid;gap:1.25rem;}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.card{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;}
+.ctitle{font-size:11px;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.85rem;}
+.ctrl{display:flex;align-items:center;gap:10px;margin-bottom:.7rem;}
+.ctrl label{font-size:12px;color:var(--text2);min-width:140px;}
+.ctrl input[type=range]{flex:1;accent-color:var(--accent);}
+.ctrl .val{font-size:12px;font-weight:500;min-width:30px;text-align:right;}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:.8rem;}
+button{font-family:inherit;font-size:12px;font-weight:500;padding:6px 14px;border-radius:var(--rs);border:0.5px solid var(--border2);background:var(--surface);color:var(--text);cursor:pointer;transition:background .12s;}
+button:hover{background:var(--surface2);}
+button.pri{background:var(--accent);color:#fff;border-color:var(--accent);}
+button.pri:hover{opacity:.88;}
+.mc{border-radius:var(--r);padding:.9rem 1.1rem;}
+.mc.sil{background:var(--accent-l);border:0.5px solid rgba(83,74,183,.2);}
+.mc.ch{background:var(--teal-l);border:0.5px solid rgba(29,158,117,.2);}
+.mc.db{background:var(--coral-l);border:0.5px solid rgba(216,90,48,.2);}
+.ml{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;}
+.mc.sil .ml{color:var(--accent);}
+.mc.ch .ml{color:var(--teal);}
+.mc.db .ml{color:var(--coral);}
+.mv{font-size:28px;font-weight:500;line-height:1.1;}
+.mc.sil .mv{color:var(--accent);}
+.mc.ch .mv{color:var(--teal);}
+.mc.db .mv{color:var(--coral);}
+.md{font-size:11px;color:var(--text2);margin-top:3px;}
+.interp{font-size:11px;margin-top:7px;padding:5px 10px;border-radius:var(--rs);}
+.ig{background:var(--teal-l);color:var(--teal);border:0.5px solid rgba(29,158,117,.25);}
+.im{background:var(--amber-l);color:var(--amber);border:0.5px solid rgba(186,117,23,.25);}
+.ib{background:var(--coral-l);color:var(--coral);border:0.5px solid rgba(216,90,48,.25);}
+.vizpanel{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.vizhead{padding:.65rem 1rem;border-bottom:0.5px solid var(--border);display:flex;align-items:center;gap:8px;}
+.badge{font-size:10px;font-weight:500;padding:3px 9px;border-radius:20px;}
+.badge-sil{background:var(--accent-l);color:var(--accent);}
+.badge-ch{background:var(--teal-l);color:var(--teal);}
+.badge-db{background:var(--coral-l);color:var(--coral);}
+.vizhead h3{font-size:12px;font-weight:500;}
+.vizbody{padding:.75rem 1rem;}
+.vizbody p{font-size:11px;color:var(--text2);line-height:1.5;margin-bottom:.5rem;}
+.hl{display:inline-block;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;}
+.hl-sil{background:var(--accent-l);color:var(--accent);}
+.hl-ch{background:var(--teal-l);color:var(--teal);}
+.hl-db{background:var(--coral-l);color:var(--coral);}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:.5rem;}
+.litem{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2);}
+.ldot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.tabs{display:flex;gap:0;border-bottom:0.5px solid var(--border2);margin-bottom:1rem;}
+.tab{padding:7px 16px;font-size:12px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;color:var(--text2);margin-bottom:-.5px;}
+.tab.on{color:var(--accent);border-bottom-color:var(--accent);}
+.tcon{display:none;}
+.tcon.on{display:block;}
+.formula{background:var(--surface2);border-radius:var(--rs);padding:.85rem 1rem;font-size:13px;line-height:1.9;margin:.6rem 0;}
+.fv{color:var(--accent);font-style:italic;}
+.fe{color:var(--text2);}
+.steps{display:flex;flex-direction:column;gap:8px;margin-top:.6rem;}
+.step{display:flex;gap:10px;}
+.sn{min-width:20px;height:20px;border-radius:50%;background:var(--accent-l);color:var(--accent);font-size:10px;font-weight:500;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.step p{font-size:12px;color:var(--text2);}
+canvas{display:block;}
+@media(max-width:680px){.row2,.row3{grid-template-columns:1fr;}.row3b{grid-template-columns:1fr!important;}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-ico"><svg viewBox="0 0 24 24"><circle cx="5" cy="7" r="2"/><circle cx="12" cy="4" r="2"/><circle cx="19" cy="8" r="2"/><circle cx="7" cy="14" r="2"/><circle cx="15" cy="16" r="2"/><circle cx="10" cy="19" r="2"/></svg></div>
+  <div><h1>Simulador de índices de validación de clustering</h1><p>Silhouette · Calinski-Harabász · Davies-Bouldin — visualización geométrica en tiempo real</p></div>
+</div>
+<div class="main">
+  <div class="row2">
+    <div class="card">
+      <div class="ctitle">Configuración</div>
+      <div class="ctrl"><label>Clusters (K)</label><input type="range" id="k" min="2" max="6" step="1" value="3"><span class="val" id="kv">3</span></div>
+      <div class="ctrl"><label>Puntos por cluster</label><input type="range" id="n" min="8" max="50" step="4" value="20"><span class="val" id="nv">20</span></div>
+      <div class="ctrl"><label>Dispersión intra-cluster</label><input type="range" id="sp" min="0.3" max="3.5" step="0.1" value="1.0"><span class="val" id="spv">1.0</span></div>
+      <div class="ctrl"><label>Separación entre clusters</label><input type="range" id="se" min="1" max="8" step="0.5" value="4"><span class="val" id="sev">4.0</span></div>
+      <div class="btns">
+        <button class="pri" onclick="regen()">&#8635; Regenerar</button>
+        <button onclick="preset('ideal')">Ideal</button>
+        <button onclick="preset('overlap')">Solapado</button>
+        <button onclick="preset('chaos')">Caótico</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ctitle">Distribución de puntos</div>
+      <div style="position:relative;width:100%;height:260px;"><canvas id="cScatter" style="position:absolute;top:0;left:0;"></canvas></div>
+    </div>
+  </div>
+
+  <div class="row3">
+    <div class="mc sil"><div class="ml">Silhouette</div><div class="mv" id="vSil">—</div><div class="md">−1 pésimo → +1 perfecto. Mayor es mejor.</div><div class="interp im" id="iSil"></div></div>
+    <div class="mc ch"><div class="ml">Calinski-Harabász</div><div class="mv" id="vCH">—</div><div class="md">Sin límite superior. Mayor es mejor.</div><div class="interp im" id="iCH"></div></div>
+    <div class="mc db"><div class="ml">Davies-Bouldin</div><div class="mv" id="vDB">—</div><div class="md">Mínimo teórico = 0. Menor es mejor.</div><div class="interp im" id="iDB"></div></div>
+  </div>
+
+  <!-- VIZ ROW -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;" class="row3b">
+
+    <div class="vizpanel">
+      <div class="vizhead"><span class="badge badge-sil">Silhouette</span><h3>Coeficiente s(i) por punto</h3></div>
+      <div style="padding:.6rem .8rem .3rem;"><canvas id="cSil" style="width:100%;height:210px;"></canvas></div>
+      <div class="vizbody">
+        <p>Cada barra es un punto ordenado por cluster. Longitud = s(i). Barras a la derecha (azul) = bien asignado. A la izquierda (rojo) = debería estar en otro cluster.</p>
+        <div class="legend">
+          <div class="litem"><div class="ldot" style="background:#534ab7;"></div>s(i) &gt; 0 — bien asignado</div>
+          <div class="litem"><div class="ldot" style="background:#d85a30;"></div>s(i) &lt; 0 — mal asignado</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vizpanel">
+      <div class="vizhead"><span class="badge badge-ch">Calinski-Harabász</span><h3>SS_B vs SS_W geométrico</h3></div>
+      <div style="padding:.6rem .8rem .3rem;"><canvas id="cCH" style="width:100%;height:210px;"></canvas></div>
+      <div class="vizbody">
+        <p>Círculos punteados = radio intra-cluster (SS_W). Líneas ámbar = distancia de cada centroide al centroide global (SS_B). <span class="hl hl-ch">CH = SS_B / SS_W</span> ajustado por grados de libertad.</p>
+        <div class="legend">
+          <div class="litem"><div class="ldot" style="background:#1d9e75;"></div>Centroide de cluster</div>
+          <div class="litem"><div class="ldot" style="background:#ba7517;"></div>Centroide global</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vizpanel">
+      <div class="vizhead"><span class="badge badge-db">Davies-Bouldin</span><h3>Peor par de clusters</h3></div>
+      <div style="padding:.6rem .8rem .3rem;"><canvas id="cDB" style="width:100%;height:210px;"></canvas></div>
+      <div class="vizbody">
+        <p>Se resalta el par con mayor solapamiento. <span class="hl hl-db">R_ij = (s_i+s_j)/d(c_i,c_j)</span>. Los demás clusters aparecen difuminados. El ratio del peor par se muestra sobre la línea.</p>
+        <div class="legend">
+          <div class="litem"><div class="ldot" style="background:#d85a30;"></div>Par más problemático</div>
+          <div class="litem"><div class="ldot" style="background:#888;"></div>Otros clusters</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEORIA -->
+  <div class="card">
+    <div class="tabs">
+      <div class="tab on" onclick="switchTab('t1')">Silhouette</div>
+      <div class="tab" onclick="switchTab('t2')">Calinski-Harabász</div>
+      <div class="tab" onclick="switchTab('t3')">Davies-Bouldin</div>
+      <div class="tab" onclick="switchTab('t4')">Comparativa</div>
+    </div>
+    <div id="t1" class="tcon on">
+      <div class="formula"><span class="fv">s(i)</span> <span class="fe">= [ b(i) − a(i) ] / max{ a(i), b(i) }</span><br><span class="fv">a(i)</span> <span class="fe">= distancia media intra-cluster &nbsp;·&nbsp; </span><span class="fv">b(i)</span> <span class="fe">= distancia media al cluster vecino más próximo</span><br><span class="fv">SC</span> <span class="fe">= promedio de s(i) sobre todos los puntos</span></div>
+      <div class="steps">
+        <div class="step"><div class="sn">1</div><p>Para cada punto, mide su distancia promedio a los demás del mismo cluster → <strong>a(i)</strong>.</p></div>
+        <div class="step"><div class="sn">2</div><p>Para cada cluster vecino, calcula la distancia promedio al punto; toma el mínimo → <strong>b(i)</strong>.</p></div>
+        <div class="step"><div class="sn">3</div><p>s(i) = [b−a]/max{a,b}. Si s(i) > 0 el punto está bien asignado; si s(i) < 0, pertenecería mejor a otro cluster.</p></div>
+        <div class="step"><div class="sn">4</div><p>SC = media de todos los s(i). Valores > 0.5 indican estructura clara.</p></div>
+      </div>
+    </div>
+    <div id="t2" class="tcon">
+      <div class="formula"><span class="fv">CH</span> <span class="fe">= [ SS_B / (K−1) ] / [ SS_W / (N−K) ]</span><br><span class="fv">SS_B</span> <span class="fe">= dispersión entre centroides (between) &nbsp;·&nbsp; </span><span class="fv">SS_W</span> <span class="fe">= dispersión interna (within)</span></div>
+      <div class="steps">
+        <div class="step"><div class="sn">1</div><p>Calcula el centroide global de todos los puntos.</p></div>
+        <div class="step"><div class="sn">2</div><p><strong>SS_B</strong>: suma ponderada de dist² de cada centroide de cluster al centroide global.</p></div>
+        <div class="step"><div class="sn">3</div><p><strong>SS_W</strong>: suma de dist² de cada punto a su centroide de cluster.</p></div>
+        <div class="step"><div class="sn">4</div><p>Normalización por grados de libertad. CH alto → clusters densos y bien separados.</p></div>
+      </div>
+    </div>
+    <div id="t3" class="tcon">
+      <div class="formula"><span class="fv">DB</span> <span class="fe">= (1/K) · Σ_i max_{j≠i} [ (s_i + s_j) / d(c_i, c_j) ]</span><br><span class="fv">s_i</span> <span class="fe">= radio medio del cluster i &nbsp;·&nbsp; </span><span class="fv">d(c_i,c_j)</span> <span class="fe">= distancia entre centroides</span></div>
+      <div class="steps">
+        <div class="step"><div class="sn">1</div><p>Para cada cluster, calcula s_i: distancia media de sus puntos al centroide.</p></div>
+        <div class="step"><div class="sn">2</div><p>Para cada par (i,j), ratio = (s_i+s_j)/dist(c_i,c_j): cuánto se solapan.</p></div>
+        <div class="step"><div class="sn">3</div><p>Para el cluster i, conserva el peor vecino (ratio máximo).</p></div>
+        <div class="step"><div class="sn">4</div><p>DB = media de esos peores casos. DB cercano a 0 → clusters compactos y separados.</p></div>
+      </div>
+    </div>
+    <div id="t4" class="tcon">
+      <table style="width:100%;font-size:12px;border-collapse:collapse;">
+        <thead><tr style="background:var(--surface2);">
+          <th style="padding:8px 10px;font-weight:500;border-bottom:0.5px solid var(--border2);text-align:left;">Aspecto</th>
+          <th style="padding:8px 10px;font-weight:500;color:var(--accent);border-bottom:0.5px solid var(--border2);">Silhouette</th>
+          <th style="padding:8px 10px;font-weight:500;color:var(--teal);border-bottom:0.5px solid var(--border2);">Calinski-Harabász</th>
+          <th style="padding:8px 10px;font-weight:500;color:var(--coral);border-bottom:0.5px solid var(--border2);">Davies-Bouldin</th>
+        </tr></thead>
+        <tbody>
+          <tr><td style="padding:7px 10px;color:var(--text2);border-bottom:0.5px solid var(--border);">Mejor valor</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">+1</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">+∞</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">0</td></tr>
+          <tr><td style="padding:7px 10px;color:var(--text2);border-bottom:0.5px solid var(--border);">Peor valor</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">−1</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">~0</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">+∞</td></tr>
+          <tr><td style="padding:7px 10px;color:var(--text2);border-bottom:0.5px solid var(--border);">Nivel de análisis</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">Punto a punto</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">Global</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">Par de clusters</td></tr>
+          <tr><td style="padding:7px 10px;color:var(--text2);border-bottom:0.5px solid var(--border);">Coste computacional</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">O(N²)</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">O(N·K)</td><td style="padding:7px 10px;border-bottom:0.5px solid var(--border);">O(K²)</td></tr>
+          <tr><td style="padding:7px 10px;color:var(--text2);">Sensibilidad al ruido</td><td style="padding:7px 10px;">Alta</td><td style="padding:7px 10px;">Media</td><td style="padding:7px 10px;">Media-alta</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const COLS=['#534ab7','#1d9e75','#d85a30','#ba7517','#993556','#185fa5'];
+let pts=[],labs=[],K=3;
+const r=(a,b)=>a+Math.random()*(b-a);
+const dist=(a,b)=>Math.sqrt((a[0]-b[0])**2+(a[1]-b[1])**2);
+const centroid=arr=>[arr.reduce((s,p)=>s+p[0],0)/arr.length,arr.reduce((s,p)=>s+p[1],0)/arr.length];
+const byId=s=>document.getElementById(s);
+
+function generate(){
+  K=+byId('k').value;
+  const n=+byId('n').value,sp=+byId('sp').value,se=+byId('se').value;
+  pts=[];labs=[];
+  const cens=Array.from({length:K},(_,k)=>[se*Math.cos(2*Math.PI*k/K),se*Math.sin(2*Math.PI*k/K)]);
+  for(let k=0;k<K;k++)for(let i=0;i<n;i++){pts.push([cens[k][0]+r(-sp,sp),cens[k][1]+r(-sp,sp)]);labs.push(k);}
+}
+
+function clusterPts(k){return pts.filter((_,i)=>labs[i]===k);}
+function clusterInfo(){
+  return Array.from({length:K},(_,k)=>{
+    const cp=clusterPts(k);
+    const c=cp.length?centroid(cp):[0,0];
+    const s=cp.length?cp.reduce((sum,p)=>sum+dist(p,c),0)/cp.length:0;
+    return{pts:cp,c,s};
+  });
+}
+
+function computeSil(){
+  const N=pts.length,vals=[];
+  for(let i=0;i<N;i++){
+    const ci=labs[i];
+    const same=pts.filter((_,j)=>labs[j]===ci&&j!==i);
+    if(!same.length){vals.push(0);continue;}
+    const a=same.reduce((s,p)=>s+dist(pts[i],p),0)/same.length;
+    let bMin=Infinity;
+    for(let k=0;k<K;k++){
+      if(k===ci)continue;
+      const op=clusterPts(k);if(!op.length)continue;
+      const bd=op.reduce((s,p)=>s+dist(pts[i],p),0)/op.length;
+      if(bd<bMin)bMin=bd;
+    }
+    vals.push(isFinite(bMin)?(bMin-a)/Math.max(a,bMin):0);
+  }
+  return{vals,score:vals.reduce((s,v)=>s+v,0)/vals.length};
+}
+
+function computeCH(info){
+  const N=pts.length;
+  const gc=centroid(pts);
+  let ssb=0,ssw=0;
+  info.forEach(cl=>{ssb+=cl.pts.length*dist(cl.c,gc)**2;cl.pts.forEach(p=>ssw+=dist(p,cl.c)**2);});
+  if(ssw===0)return{score:9999,gc};
+  return{score:(ssb/(K-1))/(ssw/(N-K)),gc};
+}
+
+function computeDB(info){
+  let db=0,worstI=-1,worstJ=-1,worstR=0;
+  for(let i=0;i<K;i++){
+    if(!info[i].pts.length)continue;
+    let mx=0,mj=-1;
+    for(let j=0;j<K;j++){
+      if(i===j||!info[j].pts.length)continue;
+      const d=dist(info[i].c,info[j].c);if(d===0)continue;
+      const rv=(info[i].s+info[j].s)/d;
+      if(rv>mx){mx=rv;mj=j;}
+    }
+    if(mx>worstR){worstR=mx;worstI=i;worstJ=mj;}
+    db+=mx;
+  }
+  return{score:db/K,worstI,worstJ,worstR};
+}
+
+function setupCanvas(el,h){
+  const dpr=window.devicePixelRatio||1;
+  const w=el.parentElement.clientWidth||300;
+  el.width=w*dpr;el.height=h*dpr;
+  el.style.width=w+'px';el.style.height=h+'px';
+  const ctx=el.getContext('2d');ctx.scale(dpr,dpr);
+  return{ctx,w,h};
+}
+
+function makeMapper(margin){
+  const ax=pts.map(p=>p[0]),ay=pts.map(p=>p[1]);
+  const xmin=Math.min(...ax)-1.5,xmax=Math.max(...ax)+1.5;
+  const ymin=Math.min(...ay)-1.5,ymax=Math.max(...ay)+1.5;
+  const xr=xmax-xmin||1,yr=ymax-ymin||1;
+  return(w,h)=>(px,py)=>[margin+(px-xmin)/xr*(w-2*margin),h-margin-(py-ymin)/yr*(h-2*margin)];
+}
+
+function drawScatter(){
+  const el=byId('cScatter');
+  const{ctx,w,h}=setupCanvas(el,260);
+  const map=makeMapper(18)(w,h);
+  ctx.clearRect(0,0,w,h);
+  for(let k=0;k<K;k++)clusterPts(k).forEach(p=>{
+    const[x,y]=map(p[0],p[1]);
+    ctx.beginPath();ctx.arc(x,y,4,0,2*Math.PI);
+    ctx.fillStyle=COLS[k]+'99';ctx.fill();
+    ctx.strokeStyle=COLS[k];ctx.lineWidth=1;ctx.stroke();
+  });
+}
+
+function drawSilViz(silData){
+  const el=byId('cSil');
+  const{ctx,w,h}=setupCanvas(el,210);
+  ctx.clearRect(0,0,w,h);
+  const{vals}=silData;if(!vals.length)return;
+  const grouped=Array.from({length:K},(_,k)=>vals.filter((_,i)=>labs[i]===k).sort((a,b)=>b-a));
+  const total=grouped.reduce((s,g)=>s+g.length,0);
+  const barH=Math.max(1.5,Math.floor((h-16)/total)-1);
+  const mid=w/2,scale=mid-28;
+  let y=8;
+  for(let k=0;k<K;k++){
+    grouped[k].forEach(v=>{
+      const bw=Math.abs(v)*scale;
+      ctx.fillStyle=v>=0?(COLS[k]+'cc'):'rgba(216,90,48,0.8)';
+      ctx.fillRect(v>=0?mid:mid-bw,y,bw,barH);
+      y+=barH+1;
+    });
+    y+=4;
+  }
+  ctx.strokeStyle='rgba(0,0,0,0.18)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(mid,0);ctx.lineTo(mid,h);ctx.stroke();
+  ctx.fillStyle='rgba(0,0,0,0.3)';ctx.font='10px sans-serif';ctx.textAlign='center';
+  ctx.fillText('−1',mid-scale,h-1);
+  ctx.fillText('0',mid,h-1);
+  ctx.fillText('+1',mid+scale,h-1);
+  // cluster color markers on left
+  let cy=8;
+  for(let k=0;k<K;k++){
+    const gh=grouped[k].length*(barH+1)+3;
+    ctx.fillStyle=COLS[k];
+    ctx.fillRect(2,cy,4,gh-4);
+    cy+=gh;
+  }
+}
+
+function drawCHViz(info,chData){
+  const el=byId('cCH');
+  const{ctx,w,h}=setupCanvas(el,210);
+  const map=makeMapper(18)(w,h);
+  ctx.clearRect(0,0,w,h);
+  const ax=pts.map(p=>p[0]),ay=pts.map(p=>p[1]);
+  const xRange=Math.max(...ax)-Math.min(...ax)+3;
+  const yRange=Math.max(...ay)-Math.min(...ay)+3;
+  // points
+  for(let k=0;k<K;k++)info[k].pts.forEach(p=>{
+    const[x,y]=map(p[0],p[1]);
+    ctx.beginPath();ctx.arc(x,y,3,0,2*Math.PI);
+    ctx.fillStyle=COLS[k]+'77';ctx.fill();
+  });
+  // radius circles + centroids
+  for(let k=0;k<K;k++){
+    if(!info[k].pts.length)continue;
+    const[cx,cy]=map(info[k].c[0],info[k].c[1]);
+    const rx=(info[k].s/xRange)*(w-36);
+    const ry=(info[k].s/yRange)*(h-36);
+    const rAvg=Math.max(5,(rx+ry)/2);
+    ctx.beginPath();ctx.arc(cx,cy,rAvg,0,2*Math.PI);
+    ctx.strokeStyle=COLS[k];ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.stroke();ctx.setLineDash([]);
+    ctx.beginPath();ctx.arc(cx,cy,5,0,2*Math.PI);ctx.fillStyle=COLS[k];ctx.fill();
+    ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(cx,cy,2,0,2*Math.PI);ctx.fill();
+  }
+  // global centroid lines
+  const[gx,gy]=map(chData.gc[0],chData.gc[1]);
+  for(let k=0;k<K;k++){
+    if(!info[k].pts.length)continue;
+    const[cx,cy]=map(info[k].c[0],info[k].c[1]);
+    ctx.beginPath();ctx.moveTo(gx,gy);ctx.lineTo(cx,cy);
+    ctx.strokeStyle='rgba(186,117,23,0.65)';ctx.lineWidth=1.5;ctx.setLineDash([3,3]);ctx.stroke();ctx.setLineDash([]);
+  }
+  ctx.beginPath();ctx.arc(gx,gy,6,0,2*Math.PI);ctx.fillStyle='#ba7517';ctx.fill();
+  ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(gx,gy,2.5,0,2*Math.PI);ctx.fill();
+}
+
+function drawDBViz(info,dbData){
+  const el=byId('cDB');
+  const{ctx,w,h}=setupCanvas(el,210);
+  const map=makeMapper(18)(w,h);
+  ctx.clearRect(0,0,w,h);
+  const{worstI,worstJ}=dbData;
+  const ax=pts.map(p=>p[0]),ay=pts.map(p=>p[1]);
+  const xRange=Math.max(...ax)-Math.min(...ax)+3;
+  const yRange=Math.max(...ay)-Math.min(...ay)+3;
+  for(let k=0;k<K;k++){
+    const isW=k===worstI||k===worstJ;
+    info[k].pts.forEach(p=>{
+      const[x,y]=map(p[0],p[1]);
+      ctx.beginPath();ctx.arc(x,y,3,0,2*Math.PI);
+      ctx.fillStyle=isW?(COLS[k]+'bb'):(COLS[k]+'22');ctx.fill();
+    });
+    if(!info[k].pts.length)continue;
+    const[cx,cy]=map(info[k].c[0],info[k].c[1]);
+    const rx=(info[k].s/xRange)*(w-36);
+    const ry=(info[k].s/yRange)*(h-36);
+    const rAvg=Math.max(5,(rx+ry)/2);
+    ctx.beginPath();ctx.arc(cx,cy,rAvg,0,2*Math.PI);
+    ctx.strokeStyle=isW?(COLS[k]+'dd'):(COLS[k]+'22');
+    ctx.lineWidth=isW?2:1;ctx.setLineDash([4,3]);ctx.stroke();ctx.setLineDash([]);
+    ctx.beginPath();ctx.arc(cx,cy,5,0,2*Math.PI);
+    ctx.fillStyle=isW?COLS[k]:(COLS[k]+'33');ctx.fill();
+  }
+  if(worstI>=0&&worstJ>=0&&info[worstI].pts.length&&info[worstJ].pts.length){
+    const[x1,y1]=map(info[worstI].c[0],info[worstI].c[1]);
+    const[x2,y2]=map(info[worstJ].c[0],info[worstJ].c[1]);
+    ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);
+    ctx.strokeStyle='rgba(216,90,48,0.85)';ctx.lineWidth=2;ctx.setLineDash([5,3]);ctx.stroke();ctx.setLineDash([]);
+    const mx=(x1+x2)/2,my=(y1+y2)/2;
+    ctx.font='bold 11px sans-serif';ctx.textAlign='center';ctx.fillStyle='rgba(216,90,48,1)';
+    ctx.fillText('R='+dbData.worstR.toFixed(2),mx,my-7);
+  }
+}
+
+function interp(v,t){
+  if(t==='sil'){if(v>=.7)return['ig','Excelente estructura'];if(v>=.5)return['ig','Estructura razonable'];if(v>=.25)return['im','Estructura débil'];return['ib','Sin estructura clara'];}
+  if(t==='ch'){if(v>=200)return['ig','Clusters muy definidos'];if(v>=60)return['im','Separación moderada'];return['ib','Clusters difusos'];}
+  if(v<=0.5)return['ig','Compactos y separados'];if(v<=1.2)return['im','Separación moderada'];return['ib','Alta superposición'];
+}
+
+function setM(vid,iid,val,type,fmt){
+  byId(vid).textContent=fmt(val);
+  const[cls,txt]=interp(isFinite(val)?val:999,type);
+  const el=byId(iid);el.className='interp '+cls;el.textContent=txt;
+}
+
+function update(){
+  const info=clusterInfo();
+  const sil=computeSil();
+  const ch=computeCH(info);
+  const db=computeDB(info);
+  setM('vSil','iSil',sil.score,'sil',v=>v.toFixed(3));
+  setM('vCH','iCH',ch.score,'ch',v=>v>=9999?'—':v.toFixed(1));
+  setM('vDB','iDB',db.score,'db',v=>v.toFixed(3));
+  drawScatter();
+  drawSilViz(sil);
+  drawCHViz(info,ch);
+  drawDBViz(info,db);
+}
+
+function regen(){generate();update();}
+
+function preset(name){
+  const cfg={ideal:[3,20,0.5,6],overlap:[4,20,2.5,2.5],chaos:[5,15,3.0,1.5]}[name];
+  ['k','n','sp','se'].forEach((id_,i)=>byId(id_).value=cfg[i]);
+  syncLabels();regen();
+}
+
+function syncLabels(){
+  byId('kv').textContent=byId('k').value;
+  byId('nv').textContent=byId('n').value;
+  byId('spv').textContent=(+byId('sp').value).toFixed(1);
+  byId('sev').textContent=(+byId('se').value).toFixed(1);
+}
+
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach((t,i)=>{const ids=['t1','t2','t3','t4'];t.classList.toggle('on',ids[i]===name);});
+  document.querySelectorAll('.tcon').forEach(c=>c.classList.toggle('on',c.id===name));
+}
+
+['k','n','sp','se'].forEach(s=>byId(s).addEventListener('input',()=>{syncLabels();regen();}));
+window.addEventListener('resize',()=>update());
+syncLabels();regen();
+</script>
+</body>
+</html>

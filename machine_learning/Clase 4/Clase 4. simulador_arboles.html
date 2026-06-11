@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Árbol de Decisión — RF vs GBM</title>
+<style>
+:root{
+  --bg:#0d0d10;--s1:#141418;--s2:#1c1c21;--s3:#242429;--s4:#2c2c33;
+  --bd:rgba(255,255,255,0.07);--bd2:rgba(255,255,255,0.13);
+  --tx:#e4e3df;--tx2:#8e8d89;--tx3:#4e4d4a;
+  --dt:#9b7de8;--dt-l:rgba(155,125,232,0.12);--dt-m:rgba(155,125,232,0.28);
+  --rf:#5b9bd5;--rf-l:rgba(91,155,213,0.12);--rf-m:rgba(91,155,213,0.28);
+  --gb:#e8865a;--gb-l:rgba(232,134,90,0.12);--gb-m:rgba(232,134,90,0.28);
+  --ok:#4caf82;--ok-l:rgba(76,175,130,0.12);
+  --warn:#e8c55a;--bad:#e86a5a;
+  --r:10px;--rs:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;font-size:14px;}
+
+/* TOP BAR */
+.topbar{display:flex;align-items:center;gap:12px;padding:.75rem 1.2rem;border-bottom:0.5px solid var(--bd2);background:var(--s1);position:sticky;top:0;z-index:60;flex-wrap:wrap;}
+.logo{display:flex;gap:3px;flex-shrink:0;}
+.lbox{width:26px;height:26px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;}
+.lbox.dt{background:var(--dt-m);color:var(--dt);}
+.lbox.rf{background:var(--rf-m);color:var(--rf);}
+.lbox.gb{background:var(--gb-m);color:var(--gb);}
+.topbar-title{font-size:13px;font-weight:500;}
+.topbar-sub{font-size:10px;color:var(--tx2);}
+.ds-pills{display:flex;gap:4px;margin-left:auto;}
+.ds-btn{padding:4px 11px;font-size:10px;font-weight:500;border-radius:20px;border:0.5px solid var(--bd2);background:transparent;color:var(--tx2);cursor:pointer;transition:all .13s;}
+.ds-btn.on{background:var(--s3);color:var(--tx);}
+.ctrl-strip{display:flex;align-items:center;gap:10px;padding-left:10px;border-left:0.5px solid var(--bd2);flex-wrap:wrap;}
+.ctrl-grp{display:flex;align-items:center;gap:5px;}
+.ctrl-grp label{font-size:10px;color:var(--tx2);white-space:nowrap;}
+.sel{background:var(--s3);border:0.5px solid var(--bd2);border-radius:var(--rs);color:var(--tx);font-size:10px;padding:3px 6px;cursor:pointer;}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:200px 1fr;min-height:calc(100vh - 52px);}
+
+/* SIDEBAR */
+.sidebar{background:var(--s1);border-right:0.5px solid var(--bd);padding:.8rem;overflow-y:auto;max-height:calc(100vh - 52px);position:sticky;top:52px;}
+.sb-head{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);margin-bottom:.55rem;display:flex;justify-content:space-between;align-items:center;}
+.sb-actions{display:flex;gap:4px;margin-bottom:.6rem;}
+.sb-btn{flex:1;padding:4px 5px;font-size:9px;font-weight:500;border-radius:var(--rs);border:0.5px solid var(--bd2);background:transparent;color:var(--tx2);cursor:pointer;transition:all .12s;}
+.sb-btn:hover{background:var(--s2);color:var(--tx);}
+.var-item{display:flex;align-items:center;gap:7px;padding:6px 7px;border-radius:var(--rs);margin-bottom:2px;cursor:pointer;border:0.5px solid transparent;transition:all .12s;user-select:none;}
+.var-item:hover{background:var(--s2);}
+.var-item.on{background:var(--s2);border-color:var(--bd);}
+.var-item.off{opacity:.32;}
+.vtog{width:28px;height:16px;border-radius:8px;background:var(--s4);position:relative;flex-shrink:0;transition:background .17s;}
+.vtog.on{background:var(--ok);}
+.vtog::after{content:'';position:absolute;width:12px;height:12px;border-radius:50%;background:#fff;top:2px;left:2px;transition:left .17s;box-shadow:0 1px 3px rgba(0,0,0,.4);}
+.vtog.on::after{left:14px;}
+.vinfo{flex:1;min-width:0;}
+.vname{font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.vtype{font-size:9px;color:var(--tx3);}
+.vimp{height:2px;border-radius:1px;background:var(--s4);margin-top:3px;}
+.vimp-fill{height:100%;border-radius:1px;background:var(--ok);transition:width .25s;}
+.count-badge{font-size:10px;font-weight:600;padding:1px 7px;border-radius:10px;background:var(--ok-l);color:var(--ok);}
+.count-badge.warn{background:rgba(232,197,90,.12);color:var(--warn);}
+
+/* CONTENT */
+.content{padding:1rem 1.1rem;overflow:hidden;}
+
+/* MODEL TABS */
+.model-tabs{display:flex;gap:0;margin-bottom:.9rem;border-bottom:0.5px solid var(--bd2);}
+.mtab{padding:6px 18px;font-size:11px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;color:var(--tx3);margin-bottom:-.5px;display:flex;align-items:center;gap:5px;transition:all .13s;}
+.mtab .dot{width:7px;height:7px;border-radius:50%;}
+.mtab.dt.on{color:var(--dt);border-bottom-color:var(--dt);}
+.mtab.rf.on{color:var(--rf);border-bottom-color:var(--rf);}
+.mtab.gb.on{color:var(--gb);border-bottom-color:var(--gb);}
+.tpanel{display:none;}
+.tpanel.on{display:block;}
+
+/* STEP BOX */
+.step-box{border-radius:var(--rs);padding:.7rem 1rem;margin-bottom:.8rem;border-left:3px solid;background:var(--s2);}
+.step-box.dt{border-color:var(--dt);}
+.step-box.rf{border-color:var(--rf);}
+.step-box.gb{border-color:var(--gb);}
+.step-box h4{font-size:11px;font-weight:600;margin-bottom:.3rem;}
+.step-box p{font-size:11px;color:var(--tx2);line-height:1.6;}
+.step-box .hl{color:var(--tx);font-weight:500;}
+
+/* TREE VIEWER — scrollable container */
+.tree-section{background:var(--s1);border:0.5px solid var(--bd);border-radius:var(--r);overflow:hidden;margin-bottom:.9rem;}
+.tree-header{padding:.55rem .9rem;border-bottom:0.5px solid var(--bd);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.tree-badge{font-size:9px;font-weight:600;padding:2px 9px;border-radius:10px;letter-spacing:.04em;}
+.badge-dt{background:var(--dt-l);color:var(--dt);}
+.badge-rf{background:var(--rf-l);color:var(--rf);}
+.badge-gb{background:var(--gb-l);color:var(--gb);}
+.tree-header h3{font-size:12px;font-weight:500;}
+.tree-header .tdesc{font-size:10px;color:var(--tx2);margin-left:auto;}
+
+/* KEY: scrollable canvas wrapper */
+.tree-scroll{overflow:auto;width:100%;background:var(--s2);cursor:grab;}
+.tree-scroll:active{cursor:grabbing;}
+.tree-scroll canvas{display:block;}
+.zoom-bar{display:flex;align-items:center;gap:8px;padding:.45rem .9rem;border-top:0.5px solid var(--bd);background:var(--s1);}
+.zoom-bar label{font-size:9px;color:var(--tx3);}
+.zoom-btn{padding:3px 10px;font-size:10px;border-radius:var(--rs);border:0.5px solid var(--bd2);background:transparent;color:var(--tx2);cursor:pointer;transition:all .12s;}
+.zoom-btn:hover{background:var(--s2);color:var(--tx);}
+.zoom-val{font-size:10px;font-weight:600;color:var(--tx2);min-width:35px;text-align:center;}
+
+/* INFO STRIP */
+.info-strip{display:flex;gap:.8rem;padding:.55rem .9rem;background:var(--s2);border-top:0.5px solid var(--bd);flex-wrap:wrap;}
+.iitem .ilabel{font-size:9px;color:var(--tx3);text-transform:uppercase;letter-spacing:.05em;}
+.iitem .ival{font-size:12px;font-weight:600;}
+.ival.dt{color:var(--dt);}
+.ival.rf{color:var(--rf);}
+.ival.gb{color:var(--gb);}
+
+/* ALERT */
+.alert{padding:7px 11px;border-radius:var(--rs);font-size:11px;margin-bottom:.8rem;display:none;gap:7px;align-items:center;}
+.alert.warn{background:rgba(232,197,90,.09);border:0.5px solid rgba(232,197,90,.3);color:var(--warn);display:flex;}
+
+/* FORMULA VIEWER */
+.formula-viewer{background:var(--s1);border:0.5px solid var(--bd);border-radius:var(--r);overflow:hidden;margin-top:.9rem;}
+.fv-header{padding:.55rem .9rem;border-bottom:0.5px solid var(--bd);font-size:10px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.07em;display:flex;align-items:center;gap:8px;}
+.fv-header span{font-size:10px;font-weight:400;color:var(--tx2);text-transform:none;letter-spacing:0;}
+.fv-body{padding:.8rem 1rem;display:grid;gap:.8rem;}
+.fv-card{background:var(--s2);border-radius:var(--rs);padding:.7rem .9rem;}
+.fv-title{font-size:10px;font-weight:600;margin-bottom:.4rem;}
+.fv-title.dt{color:var(--dt);}
+.fv-title.rf{color:var(--rf);}
+.fv-title.gb{color:var(--gb);}
+.fv-formula{font-size:12px;line-height:2;font-family:'Georgia',serif;color:var(--tx);}
+.fv-formula .sym{color:var(--dt);font-style:italic;}
+.fv-formula .sym.rf{color:var(--rf);}
+.fv-formula .sym.gb{color:var(--gb);}
+.fv-formula .val{color:var(--warn);font-weight:600;}
+.fv-formula .res{color:var(--ok);font-weight:600;font-size:13px;}
+.fv-formula .sub{color:var(--tx2);font-size:10px;margin-left:4px;}
+.fv-nodes{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.5rem;margin-top:.5rem;}
+.fv-node-card{background:var(--s3);border-radius:var(--rs);padding:.55rem .7rem;border-left:2px solid;}
+
+@media(max-width:700px){.layout{grid-template-columns:1fr;}.sidebar{position:static;max-height:none;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">
+    <div class="lbox dt">DT</div>
+    <div class="lbox rf">RF</div>
+    <div class="lbox gb">GB</div>
+  </div>
+  <div><div class="topbar-title">Simulador de árboles — Árbol de Decisión · Random Forest · Gradient Boosting</div>
+  <div class="topbar-sub">Selecciona variables y observa cómo se forma cada árbol con sus fórmulas</div></div>
+  <div class="ds-pills">
+    <button class="ds-btn on" onclick="setDS('credit')">Riesgo crédito</button>
+    <button class="ds-btn" onclick="setDS('churn')">Churn</button>
+    <button class="ds-btn" onclick="setDS('fraud')">Fraude</button>
+    <button class="ds-btn" onclick="setDS('salary')" style="border-color:var(--warn);color:var(--warn);">📈 Salario (regresión)</button>
+  </div>
+  <div class="ctrl-strip">
+    <div class="ctrl-grp"><label>Profundidad</label>
+      <select class="sel" id="maxDepth" onchange="run()">
+        <option value="2">2</option><option value="3" selected>3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+      </select>
+    </div>
+    <div class="ctrl-grp"><label>Min. hoja</label>
+      <select class="sel" id="minLeaf" onchange="run()">
+        <option value="1" selected>1</option><option value="5">5</option>
+        <option value="10">10</option><option value="20">20</option><option value="50">50</option>
+      </select>
+    </div>
+    <div class="ctrl-grp"><label>Min. split</label>
+      <select class="sel" id="minSplit" onchange="run()">
+        <option value="2" selected>2</option><option value="10">10</option>
+        <option value="20">20</option><option value="50">50</option><option value="100">100</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <div class="sb-head">Variables <span id="countBadge" class="count-badge warn">0 activas</span></div>
+    <div class="sb-actions">
+      <button class="sb-btn" onclick="toggleAll(true)">Todas</button>
+      <button class="sb-btn" onclick="toggleAll(false)">Ninguna</button>
+      <button class="sb-btn" onclick="topN(3)">Top 3</button>
+      <button class="sb-btn" onclick="topN(5)">Top 5</button>
+    </div>
+    <div id="varList"></div>
+  </div>
+
+  <div class="content">
+    <div id="alertBox" class="alert warn"></div>
+
+    <div class="model-tabs">
+      <div class="mtab dt on" onclick="switchTab('dt')"><div class="dot" style="background:var(--dt)"></div>Árbol de Decisión</div>
+      <div class="mtab rf" onclick="switchTab('rf')"><div class="dot" style="background:var(--rf)"></div>Random Forest</div>
+      <div class="mtab gb" onclick="switchTab('gb')"><div class="dot" style="background:var(--gb)"></div>Gradient Boosting</div>
+    </div>
+
+    <!-- DT PANEL -->
+    <div id="panel_dt" class="tpanel on">
+      <div class="step-box dt"><h4>Árbol de Decisión puro</h4><p id="dt_explain">Activa variables para ver la explicación.</p></div>
+      <div class="tree-section">
+        <div class="tree-header">
+          <span class="tree-badge badge-dt">Decision Tree</span>
+          <h3>Árbol completo — sin ensemble, sin aleatorización</h3>
+          <span class="tdesc" id="dt_tdesc">—</span>
+        </div>
+        <div class="tree-scroll" id="scroll_dt" style="max-height:520px;">
+          <canvas id="cv_dt"></canvas>
+        </div>
+        <div class="zoom-bar">
+          <label>Zoom</label>
+          <button class="zoom-btn" onclick="zoom('dt',-0.15)">−</button>
+          <span class="zoom-val" id="zv_dt">100%</span>
+          <button class="zoom-btn" onclick="zoom('dt',0.15)">+</button>
+          <button class="zoom-btn" onclick="zoom('dt',0,'fit')">Ajustar</button>
+        </div>
+        <div class="info-strip">
+          <div class="iitem"><div class="ilabel">Variables usadas</div><div class="ival dt" id="dt_vused">—</div></div>
+          <div class="iitem"><div class="ilabel">Profundidad</div><div class="ival dt" id="dt_depth">—</div></div>
+          <div class="iitem"><div class="ilabel">Nodos internos</div><div class="ival dt" id="dt_nodes">—</div></div>
+          <div class="iitem"><div class="ilabel">Hojas</div><div class="ival dt" id="dt_leaves">—</div></div>
+          <div class="iitem"><div class="ilabel">Criterio</div><div class="ival dt" id="dt_crit">Entropía</div></div>
+        </div>
+      </div>
+      <div class="formula-viewer" id="fv_dt"></div>
+    </div>
+
+    <!-- RF PANEL -->
+    <div id="panel_rf" class="tpanel">
+      <div class="step-box rf"><h4>Random Forest</h4><p id="rf_explain">Activa variables para ver la explicación.</p></div>
+      <div class="tree-section">
+        <div class="tree-header">
+          <span class="tree-badge badge-rf">Random Forest</span>
+          <h3>Árbol #1 — bootstrap sample, max_features=√n</h3>
+          <span class="tdesc" id="rf_tdesc">—</span>
+        </div>
+        <div class="tree-scroll" id="scroll_rf" style="max-height:520px;">
+          <canvas id="cv_rf"></canvas>
+        </div>
+        <div class="zoom-bar">
+          <label>Zoom</label>
+          <button class="zoom-btn" onclick="zoom('rf',-0.15)">−</button>
+          <span class="zoom-val" id="zv_rf">100%</span>
+          <button class="zoom-btn" onclick="zoom('rf',0.15)">+</button>
+          <button class="zoom-btn" onclick="zoom('rf',0,'fit')">Ajustar</button>
+        </div>
+        <div class="info-strip">
+          <div class="iitem"><div class="ilabel">Variables usadas</div><div class="ival rf" id="rf_vused">—</div></div>
+          <div class="iitem"><div class="ilabel">Profundidad</div><div class="ival rf" id="rf_depth">—</div></div>
+          <div class="iitem"><div class="ilabel">Nodos internos</div><div class="ival rf" id="rf_nodes">—</div></div>
+          <div class="iitem"><div class="ilabel">Hojas</div><div class="ival rf" id="rf_leaves">—</div></div>
+          <div class="iitem"><div class="ilabel">max_features</div><div class="ival rf" id="rf_maxf">—</div></div>
+        </div>
+      </div>
+      <div class="formula-viewer" id="fv_rf"></div>
+    </div>
+
+    <!-- GB PANEL -->
+    <div id="panel_gb" class="tpanel">
+      <div class="step-box gb"><h4>Gradient Boosting</h4><p id="gb_explain">Activa variables para ver la explicación.</p></div>
+      <div class="tree-section">
+        <div class="tree-header">
+          <span class="tree-badge badge-gb">Gradient Boosting</span>
+          <h3>Árbol #1 — ajuste de residuos, shallow</h3>
+          <span class="tdesc" id="gb_tdesc">—</span>
+        </div>
+        <div class="tree-scroll" id="scroll_gb" style="max-height:520px;">
+          <canvas id="cv_gb"></canvas>
+        </div>
+        <div class="zoom-bar">
+          <label>Zoom</label>
+          <button class="zoom-btn" onclick="zoom('gb',-0.15)">−</button>
+          <span class="zoom-val" id="zv_gb">100%</span>
+          <button class="zoom-btn" onclick="zoom('gb',0.15)">+</button>
+          <button class="zoom-btn" onclick="zoom('gb',0,'fit')">Ajustar</button>
+        </div>
+        <div class="info-strip">
+          <div class="iitem"><div class="ilabel">Variables usadas</div><div class="ival gb" id="gb_vused">—</div></div>
+          <div class="iitem"><div class="ilabel">Profundidad</div><div class="ival gb" id="gb_depth">—</div></div>
+          <div class="iitem"><div class="ilabel">Nodos internos</div><div class="ival gb" id="gb_nodes">—</div></div>
+          <div class="iitem"><div class="ilabel">Hojas</div><div class="ival gb" id="gb_leaves">—</div></div>
+          <div class="iitem"><div class="ilabel">learning_rate</div><div class="ival gb">0.10</div></div>
+        </div>
+      </div>
+      <div class="formula-viewer" id="fv_gb"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══ DATASETS ══════════════════════════════════════════════════════════
+const DS = {
+  credit:{vars:[
+    {id:'deuda_ingreso',  label:'Deuda/Ingreso',       type:'Num',imp:0.22,unit:'ratio',thr:[0.35,0.65,1.1,1.6]},
+    {id:'score_bureau',   label:'Score bureau',        type:'Num',imp:0.18,unit:'pts',  thr:[500,580,650,720]},
+    {id:'historial_dias', label:'Días historial',      type:'Num',imp:0.14,unit:'días', thr:[180,365,730,1460]},
+    {id:'saldo_promedio', label:'Saldo promedio',      type:'Num',imp:0.11,unit:'$',    thr:[500,2000,8000,20000]},
+    {id:'meses_empleo',   label:'Meses empleo',        type:'Num',imp:0.09,unit:'mes',  thr:[6,12,24,60]},
+    {id:'num_cuentas',    label:'N° cuentas',          type:'Int',imp:0.08,unit:'ctas', thr:[1,3,5,8]},
+    {id:'atraso_max',     label:'Atraso máx.',         type:'Int',imp:0.07,unit:'días', thr:[0,30,60,90]},
+    {id:'num_consultas',  label:'Consultas 12m',       type:'Int',imp:0.05,unit:'',     thr:[1,3,6,10]},
+    {id:'lineas_credito', label:'Líneas crédito',      type:'Int',imp:0.04,unit:'',     thr:[1,2,4,7]},
+    {id:'edad',           label:'Edad',                type:'Int',imp:0.02,unit:'años', thr:[25,35,45,60]},
+  ]},
+  churn:{vars:[
+    {id:'tenure',         label:'Permanencia',         type:'Num',imp:0.20,unit:'mes',  thr:[3,6,12,24]},
+    {id:'cargos',         label:'Cargos mensuales',    type:'Num',imp:0.18,unit:'$',    thr:[35,55,75,95]},
+    {id:'reclamaciones',  label:'Reclamaciones',       type:'Int',imp:0.14,unit:'',     thr:[1,2,4,7]},
+    {id:'uso_servicio',   label:'Uso servicio %',      type:'Num',imp:0.12,unit:'%',    thr:[20,40,60,80]},
+    {id:'nps',            label:'NPS score',           type:'Int',imp:0.10,unit:'pts',  thr:[-30,0,30,60]},
+    {id:'productos',      label:'Productos',           type:'Int',imp:0.09,unit:'',     thr:[1,2,3,5]},
+    {id:'dias_contacto',  label:'Días ult. contacto',  type:'Int',imp:0.07,unit:'días', thr:[7,14,30,90]},
+    {id:'pagos_fallidos', label:'Pagos fallidos',      type:'Int',imp:0.05,unit:'',     thr:[1,2,3,5]},
+    {id:'contratos',      label:'Contratos activos',   type:'Int',imp:0.03,unit:'',     thr:[1,2,3,4]},
+    {id:'antiguedad',     label:'Antigüedad',          type:'Num',imp:0.02,unit:'años', thr:[1,2,4,8]},
+  ]},
+  fraud:{vars:[
+    {id:'monto',          label:'Monto transacción',   type:'Num',imp:0.25,unit:'$',    thr:[50,200,500,1500]},
+    {id:'dist_habitual',  label:'Distancia habitual',  type:'Num',imp:0.20,unit:'km',   thr:[10,50,150,300]},
+    {id:'freq_merchant',  label:'Frec. merchant',      type:'Num',imp:0.15,unit:'x/m',  thr:[1,3,8,20]},
+    {id:'vel_gasto',      label:'Velocidad gasto',     type:'Num',imp:0.12,unit:'$',    thr:[50,150,400,900]},
+    {id:'num_trans_24h',  label:'Trans. 24h',          type:'Int',imp:0.09,unit:'',     thr:[3,6,12,20]},
+    {id:'hora_dia',       label:'Hora del día',        type:'Int',imp:0.07,unit:'h',    thr:[2,6,14,20]},
+    {id:'pais_inusual',   label:'País inusual',        type:'Bin',imp:0.05,unit:'',     thr:[0.5]},
+    {id:'device_nuevo',   label:'Device nuevo',        type:'Bin',imp:0.04,unit:'',     thr:[0.5]},
+    {id:'delta_monto',    label:'Δ monto vs media',    type:'Num',imp:0.02,unit:'$',    thr:[-50,100,400,1000]},
+    {id:'score_ip',       label:'Score IP',            type:'Num',imp:0.01,unit:'pts',  thr:[20,40,60,80]},
+  ]},
+  salary:{
+    regression:true,
+    targetLabel:'Salario mensual ($)',
+    targetUnit:'$',
+    vars:[
+      {id:'experiencia',   label:'Años experiencia',    type:'Num',imp:0.28,unit:'años', thr:[1,3,5,10,15],   mean:850000,  std:320000},
+      {id:'educacion',     label:'Nivel educación',     type:'Ord',imp:0.22,unit:'pts',  thr:[1,2,3,4],       mean:780000,  std:290000},
+      {id:'area',          label:'Área laboral',        type:'Cat',imp:0.18,unit:'',     thr:[1,2,3],         mean:900000,  std:350000},
+      {id:'empresa_tam',   label:'Tamaño empresa',      type:'Ord',imp:0.12,unit:'pts',  thr:[1,2,3],         mean:820000,  std:310000},
+      {id:'horas_sem',     label:'Horas semanales',     type:'Num',imp:0.09,unit:'hrs',  thr:[20,35,40,48],   mean:760000,  std:280000},
+      {id:'ciudad',        label:'Ciudad',              type:'Cat',imp:0.06,unit:'',     thr:[1,2,3],         mean:870000,  std:300000},
+      {id:'certificaciones',label:'Certificaciones',   type:'Int',imp:0.03,unit:'',     thr:[0,1,2,3],       mean:800000,  std:270000},
+      {id:'idiomas',       label:'Idiomas adicionales', type:'Int',imp:0.02,unit:'',     thr:[0,1,2],         mean:810000,  std:285000},
+    ]
+  }
+};
+
+let currentDS='credit', varState={}, currentTab='dt';
+function isReg(){return !!(getDS().regression);}
+const zoomLevels={dt:1,rf:1,gb:1};
+
+function getDS(){return DS[currentDS];}
+function activeVars(){return getDS().vars.filter(v=>varState[v.id]);}
+function initVarState(){varState={};getDS().vars.forEach(v=>varState[v.id]=false);}
+
+// ═══ RNG ═══════════════════════════════════════════════════════════════
+function mkRng(seed){
+  let s=seed|0;
+  return ()=>{s=(s*1664525+1013904223)&0xffffffff;return(s>>>0)/4294967296;};
+}
+function fyShuffle(arr,rng){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+
+// ═══ ENTROPY ═══════════════════════════════════════════════════════════
+function entropy(p){
+  p=Math.max(0.001,Math.min(0.999,p));
+  return -p*Math.log2(p)-(1-p)*Math.log2(1-p);
+}
+function entropyGain(pParent,nParent,pL,nL,pR,nR){
+  const h=entropy(pParent);
+  const hL=entropy(pL), hR=entropy(pR);
+  return +(h-(nL/nParent)*hL-(nR/nParent)*hR).toFixed(4);
+}
+
+// ═══ TREE BUILDER ══════════════════════════════════════════════════════
+// mode: 'dt' | 'rf' | 'gb'
+function buildTree(active, maxD, mode, seed){
+  const rng=mkRng(seed);
+  let nodeCount=0, leafCount=0;
+  const usedVars=new Set();
+  const nodeLog=[];  // for formula viewer
+
+  function makeLeaf(samplesIn, pNode, meanY, stdY){
+    leafCount++;
+    if(isReg()){
+      // regression leaf: predict mean of samples in leaf
+      const mean=Math.round(meanY*(0.85+rng()*0.3));
+      const std=Math.round(stdY*(0.4+rng()*0.4));
+      const mse=Math.round(std*std);
+      const rmse=Math.round(std);
+      return{leaf:true, regression:true, mean, std, rmse, mse, samples:samplesIn,
+             yMin:Math.round(mean-std*1.5), yMax:Math.round(mean+std*1.5)};
+    }
+    const p=Math.max(0.05,Math.min(0.95,pNode+(rng()*0.1-0.05)));
+    const nEv=Math.round(samplesIn*p);
+    const nNo=samplesIn-nEv;
+    const H=+entropy(p).toFixed(4);
+    return{leaf:true, p:+p.toFixed(3), nEv, nNo, samples:samplesIn, H};
+  }
+
+  function build(depth, samplesIn, availVars, pNode, meanY=0, stdY=0){
+    nodeCount++;
+    const minLeaf=+document.getElementById('minLeaf').value;
+    const minSplit=+document.getElementById('minSplit').value;
+
+    if(depth>=maxD||availVars.length===0||samplesIn<minSplit||samplesIn<minLeaf*2){
+      return makeLeaf(samplesIn, pNode, meanY, stdY);
+    }
+
+    // Pick variable depending on mode
+    let v;
+    if(mode==='dt'){
+      // Greedy: score ALL available vars, pick best — DETERMINISTIC given rng
+      const scored=availVars.map(vv=>({vv,score:vv.imp*(0.8+rng()*0.4)}));
+      scored.sort((a,b)=>b.score-a.score);
+      v=scored[0].vv;
+    } else if(mode==='rf'){
+      // Random sqrt(n) subset, pick best among those
+      const shuffled=fyShuffle(availVars,rng);
+      const nCand=Math.max(1,Math.round(Math.sqrt(availVars.length)));
+      const cands=shuffled.slice(0,nCand);
+      v=cands.reduce((best,vv)=>vv.imp>best.imp?vv:best,cands[0]);
+    } else {
+      // GB: all vars but slightly random weighting
+      const scored=availVars.map(vv=>({vv,score:vv.imp*(0.7+rng()*0.6)}));
+      scored.sort((a,b)=>b.score-a.score);
+      v=scored[0].vv;
+    }
+
+    usedVars.add(v.id);
+    const thrIdx=Math.min(v.thr.length-1,Math.floor(rng()*v.thr.length));
+    const thr=v.thr[thrIdx];
+
+    // Realistic sample split
+    const splitRatio=0.3+rng()*0.4;
+    const sampL=Math.max(1,Math.round(samplesIn*splitRatio));
+    const sampR=Math.max(1,samplesIn-sampL);
+
+    // Simulate class proportions: parent p drifts on each side
+    const drift=0.12+rng()*0.18;
+    const pL=Math.max(0.05,Math.min(0.95,pNode-drift));
+    const pR=Math.max(0.05,Math.min(0.95,pNode+drift));
+
+    const H_before=+entropy(pNode).toFixed(4);
+    const H_left=+entropy(pL).toFixed(4);
+    const H_right=+entropy(pR).toFixed(4);
+    const gain=+entropyGain(pNode,samplesIn,pL,sampL,pR,sampR).toFixed(4);
+
+    nodeLog.push({v, thr, H_before, H_left, H_right, gain, pNode:+pNode.toFixed(3), pL:+pL.toFixed(3), pR:+pR.toFixed(3), samplesIn, sampL, sampR, depth, meanY, stdY});
+
+    const childVars = availVars;
+    // regression: drift mean on each side
+    const driftY=isReg()?(0.05+rng()*0.15)*meanY:0;
+    const meanL=isReg()?meanY*(0.78+rng()*0.3):0;
+    const meanR=isReg()?meanY*(0.95+rng()*0.3):0;
+    const stdL=isReg()?stdY*(0.7+rng()*0.25):0;
+    const stdR=isReg()?stdY*(0.7+rng()*0.25):0;
+
+    return{
+      leaf:false, v, thr, gain, H_before, H_left, H_right,
+      pNode:+pNode.toFixed(3), pL:+pL.toFixed(3), pR:+pR.toFixed(3),
+      meanY, stdY, samples:samplesIn,
+      left: build(depth+1, sampL, childVars, pL, meanL, stdL),
+      right:build(depth+1, sampR, childVars, pR, meanR, stdR)
+    };
+  }
+
+  const n=900+Math.round(mkRng(seed+7)()*400);
+  const p0=0.35+mkRng(seed+3)()*0.25;
+  // For regression: use mean/std from first active var as proxy for target scale
+  const baseMean=isReg()?(active[0].mean||800000):0;
+  const baseStd=isReg()?(active[0].std||280000):0;
+  const tree=build(0,n,active,p0,baseMean,baseStd);
+  return{tree, usedVars:[...usedVars], nodeCount:nodeCount-leafCount, leafCount, nodeLog};
+}
+
+// ═══ CANVAS DRAWING ════════════════════════════════════════════════════
+function computeTreeLayout(node, maxD){
+  // Compute bounding box needed
+  function width(node,d){
+    if(node.leaf||d>=maxD) return 1;
+    return width(node.left,d+1)+width(node.right,d+1);
+  }
+  const NW=138, NH=98, HGAP=20, VGAP=68;
+  const totalLeaves=width(node,0);
+  const W=totalLeaves*(NW+HGAP);
+  function depth(node){return node.leaf?0:1+Math.max(depth(node.left),depth(node.right));}
+  const D=depth(node);
+  const H=(D+1)*(NH+VGAP)+40;
+  return{W:Math.max(W,400), H:Math.max(H,300), NW, NH, HGAP, VGAP};
+}
+
+function drawTreeOnCanvas(canvasId, treeData, color, mode, scrollId){
+  if(!treeData){
+    const cv=document.getElementById(canvasId);
+    if(cv){const ctx=cv.getContext('2d');cv.width=600;cv.height=300;ctx.clearRect(0,0,600,300);drawEmpty(ctx,600,300);}
+    return;
+  }
+  const maxD=+document.getElementById('maxDepth').value;
+  const z=zoomLevels[mode]||1;
+  const{tree}=treeData;
+  const{W,H,NW,NH,HGAP,VGAP}=computeTreeLayout(tree,maxD);
+
+  const dpr=window.devicePixelRatio||1;
+  const cW=Math.ceil(W*z), cH=Math.ceil(H*z);
+  const cv=document.getElementById(canvasId);
+  cv.width=cW*dpr; cv.height=cH*dpr;
+  cv.style.width=cW+'px'; cv.style.height=cH+'px';
+  const ctx=cv.getContext('2d');
+  ctx.scale(dpr*z, dpr*z);
+  ctx.clearRect(0,0,W,H);
+
+  // Count leaves under a subtree for x-positioning
+  function countLeaves(node,d){
+    if(node.leaf||d>=maxD) return 1;
+    return countLeaves(node.left,d+1)+countLeaves(node.right,d+1);
+  }
+
+  function drawNode(node, x, y, depth){
+    const nx=x-NW/2, ny=y;
+    const isLeaf=node.leaf||depth>=maxD;
+
+    if(!isLeaf){
+      // draw children
+      const lLeaves=countLeaves(node.left,depth+1);
+      const rLeaves=countLeaves(node.right,depth+1);
+      const totalLeaves=lLeaves+rLeaves;
+      const lFrac=lLeaves/totalLeaves;
+      const childY=y+NH+VGAP;
+      const halfSpan=(countLeaves(node,depth)-1)*(NW+HGAP)/2;
+      const lX=x-halfSpan+(lLeaves-0.5)*(NW+HGAP)/1-lLeaves*(NW+HGAP)/2+(NW+HGAP)/2-1;
+      // simpler: place left at x - (rLeaves*(NW+HGAP))/2, right at x + (lLeaves*(NW+HGAP))/2
+      const span=(totalLeaves)*(NW+HGAP);
+      const leftX=x - span/2 + lLeaves*(NW+HGAP)/2;
+      const rightX=x + span/2 - rLeaves*(NW+HGAP)/2;
+
+      // edges
+      ctx.strokeStyle='rgba(255,255,255,0.09)'; ctx.lineWidth=1.2;
+      ctx.beginPath(); ctx.moveTo(x,ny+NH); ctx.lineTo(leftX,childY); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x,ny+NH); ctx.lineTo(rightX,childY); ctx.stroke();
+
+      // edge labels
+      ctx.font='8px sans-serif'; ctx.textAlign='center'; ctx.fillStyle='rgba(255,255,255,0.28)';
+      ctx.fillText('≤ '+node.thr,(x+leftX)/2,(ny+NH+childY)/2-2);
+      ctx.fillText('> '+node.thr,(x+rightX)/2,(ny+NH+childY)/2-2);
+
+      drawNode(node.left, leftX, childY, depth+1);
+      drawNode(node.right, rightX, childY, depth+1);
+    }
+
+    // Node box
+    const rad=5;
+    ctx.beginPath();
+    if(ctx.roundRect) ctx.roundRect(nx,ny,NW,NH,rad); else ctx.rect(nx,ny,NW,NH);
+
+    if(isLeaf||node.leaf){
+      ctx.textAlign='center';
+      if(node.regression){
+        // ── REGRESSION LEAF ──────────────────────────────────────────
+        const rc='#e8c55a';
+        ctx.fillStyle=rc+'1a'; ctx.fill();
+        ctx.strokeStyle=rc+'88'; ctx.lineWidth=1.5; ctx.stroke();
+        ctx.font='bold 9px sans-serif'; ctx.fillStyle=rc;
+        ctx.fillText('PREDICCIÓN', x, ny+14);
+        ctx.font='bold 12px sans-serif';
+        ctx.fillText('$'+node.mean.toLocaleString(), x, ny+28);
+        ctx.font='8px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.45)';
+        ctx.fillText('n = '+node.samples, x, ny+41);
+        ctx.font='7.5px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.3)';
+        ctx.fillText('± $'+node.std.toLocaleString()+' (std)', x, ny+52);
+        // range bar
+        const bw=NW-20;
+        ctx.fillStyle='rgba(232,197,90,0.1)'; ctx.fillRect(nx+10,ny+57,bw,4);
+        ctx.fillStyle='rgba(232,197,90,0.6)';
+        const fill=Math.min(1,node.std/(node.mean||1)*1.5);
+        ctx.fillRect(nx+10+bw*(0.5-fill/2),ny+57,bw*fill,4);
+        ctx.font='7px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.25)';
+        ctx.fillText('RMSE='+node.rmse.toLocaleString(), x, ny+70);
+        ctx.fillText('rango: $'+node.yMin.toLocaleString()+' – $'+node.yMax.toLocaleString(), x, ny+80);
+      } else {
+        // ── CLASSIFICATION LEAF ──────────────────────────────────────
+        const p=node.p||0.5;
+        const pc=p>0.65?'#e86a5a':p>0.45?'#e8c55a':'#4caf82';
+        ctx.fillStyle=pc+'1a'; ctx.fill();
+        ctx.strokeStyle=pc+'88'; ctx.lineWidth=1.5; ctx.stroke();
+        ctx.font='bold 9px sans-serif'; ctx.fillStyle=pc;
+        if(mode==='gb'){
+          const res=node.p>0?'+'+node.p:String(node.p);
+          ctx.fillText('RESIDUO', x, ny+16);
+          ctx.font='bold 13px sans-serif'; ctx.fillText(res, x, ny+32);
+        } else {
+          ctx.fillText(p>0.5?'EVENTO':'NO EVENTO', x, ny+16);
+          ctx.font='bold 12px sans-serif'; ctx.fillText('p = '+p.toFixed(2), x, ny+30);
+          ctx.font='9px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.5)';
+          ctx.fillText(Math.round(p*100)+' de cada 100', x, ny+43);
+          const bw=NW-20;
+          ctx.fillStyle='rgba(255,255,255,0.06)'; ctx.fillRect(nx+10,ny+49,bw,4);
+          ctx.fillStyle=pc+'cc'; ctx.fillRect(nx+10,ny+49,bw*p,4);
+          ctx.font='7.5px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.28)';
+          const nEv_=(node.nEv!=null?node.nEv:Math.round(node.samples*p));
+          const nNo_=(node.nNo!=null?node.nNo:node.samples-Math.round(node.samples*p));
+          ctx.fillText('n total = '+node.samples, x, ny+62);
+          ctx.fillStyle='#4caf82'; ctx.font='7.5px sans-serif';
+          ctx.fillText('✓ evento:  '+nEv_+' ('+Math.round(p*100)+'%)', x, ny+72);
+          ctx.fillStyle='#e86a5a';
+          ctx.fillText('✗ no ev:  '+nNo_+' ('+Math.round((1-p)*100)+'%)', x, ny+82);
+          ctx.fillStyle='rgba(200,180,255,0.6)'; ctx.font='7px sans-serif';
+          ctx.fillText('H='+(node.H||entropy(p).toFixed(3)), x, ny+92);
+        }
+      }
+      if(node.prunedBy){
+        ctx.font='bold 8px sans-serif'; ctx.fillStyle='rgba(232,197,90,0.75)';
+        ctx.fillText(node.prunedBy==='minSplit'?'⛔ minSplit':'⛔ minLeaf', x, ny+NH+14);
+      }
+    } else {
+      ctx.fillStyle=color+'15'; ctx.fill();
+      ctx.strokeStyle=depth===0?color:color+'66'; ctx.lineWidth=depth===0?2:1.2; ctx.stroke();
+
+      const vname=node.v.label.length>15?node.v.label.slice(0,14)+'…':node.v.label;
+      ctx.textAlign='center';
+      ctx.font='bold 9.5px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.85)';
+      ctx.fillText(vname, x, ny+15);
+      ctx.font='10px sans-serif'; ctx.fillStyle=color;
+      ctx.fillText('≤ '+node.thr+' '+node.v.unit, x, ny+29);
+
+      // apertura nodo: clasificación vs regresión
+      ctx.font='8px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.45)';
+      if(node.meanY){
+        ctx.fillText('n='+node.samples+' · ȳ=$'+Math.round(node.meanY).toLocaleString(), x, ny+40);
+      } else {
+        const nEvNode=Math.round(node.samples*node.pNode);
+        const nNoNode=node.samples-nEvNode;
+        ctx.fillText('n='+node.samples+' · ev='+nEvNode+' · no='+nNoNode, x, ny+40);
+      }
+      // proportion mini-bar inside node
+      const bnw=NW-18;
+      ctx.fillStyle='rgba(255,255,255,0.05)'; ctx.fillRect(nx+9,ny+44,bnw,3);
+      ctx.fillStyle=color+'55'; ctx.fillRect(nx+9,ny+44,bnw*node.pNode,3);
+      // entropy
+      ctx.font='bold 8.5px sans-serif'; ctx.fillStyle='rgba(200,180,255,0.8)';
+      ctx.fillText('H='+node.H_before+'  IG='+node.gain, x, ny+54);
+      ctx.font='7px sans-serif'; ctx.fillStyle='rgba(200,180,255,0.35)';
+      ctx.fillText('−p·log₂p−(1−p)·log₂(1−p)', x, ny+63);
+
+      // entropy bar
+      const bw=NW-16;
+      ctx.fillStyle='rgba(255,255,255,0.05)'; ctx.fillRect(nx+8,ny+NH-8,bw,3);
+      ctx.fillStyle='rgba(155,125,232,0.65)'; ctx.fillRect(nx+8,ny+NH-8,bw*node.H_before,3);
+    }
+  }
+
+  drawNode(tree, W/2, 20, 0);
+}
+
+function drawEmpty(ctx,w,h){
+  ctx.fillStyle='rgba(255,255,255,0.1)';
+  ctx.font='32px sans-serif'; ctx.textAlign='center';
+  ctx.fillText('🌿',w/2,h/2-10);
+  ctx.font='12px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.18)';
+  ctx.fillText('Activa al menos una variable',w/2,h/2+16);
+}
+
+// ═══ ZOOM ══════════════════════════════════════════════════════════════
+function zoom(model, delta, action){
+  if(action==='fit') zoomLevels[model]=1;
+  else zoomLevels[model]=Math.max(0.3,Math.min(2.5,zoomLevels[model]+delta));
+  document.getElementById('zv_'+model).textContent=Math.round(zoomLevels[model]*100)+'%';
+  run();
+}
+
+// ═══ FORMULA VIEWER ════════════════════════════════════════════════════
+function buildFormulaViewerReg(containerId, treeData, model, active, color){
+  const el=document.getElementById(containerId);
+  if(!el) return;
+  if(!treeData||!active.length){el.innerHTML='';return;}
+  const nodes=treeData.nodeLog.slice(0,6);
+  const colorClass=model;
+  const modelLabel=model==='dt'?'Árbol de Decisión':model==='rf'?'Random Forest':'Gradient Boosting';
+  let html=`
+  <div class="fv-header">
+    📐 Fórmulas con datos reales — ${modelLabel} (Regresión)
+    <span>Criterio: Reducción de Varianza (MSE)</span>
+  </div>
+  <div class="fv-body">
+    <div class="fv-card">
+      <div class="fv-title ${colorClass}">Criterio de split — Reducción de Varianza</div>
+      <div class="fv-formula">
+        <span class="sym">MSE(t)</span> = (1/n) · Σ (yᵢ − ȳ)²
+      </div>
+      <div class="fv-formula" style="margin-top:.3rem;">
+        <span class="sym">ΔMSEe</span> = <span class="sym">MSE(padre)</span> − [ (n_izq/n)·<span class="sym">MSE(izq)</span> + (n_der/n)·<span class="sym">MSE(der)</span> ]
+      </div>
+    </div>
+    <div class="fv-card">
+      <div class="fv-title ${colorClass}">Splits del árbol — con valores reales</div>
+      <div class="fv-nodes">`;
+  nodes.forEach((nd,i)=>{
+    const mseP=Math.round(nd.stdY*nd.stdY);
+    const mseL=Math.round(nd.stdY*nd.stdY*0.7);
+    const mseR=Math.round(nd.stdY*nd.stdY*0.75);
+    const dMSE=Math.round(mseP-(nd.sampL/nd.samplesIn)*mseL-(nd.sampR/nd.samplesIn)*mseR);
+    html+=`
+    <div class="fv-node-card" style="border-color:${color}55;">
+      <div style="font-size:9px;font-weight:600;color:${color};margin-bottom:.3rem;">
+        Nodo ${i+1} · Nivel ${nd.depth} · ${nd.v.label}
+      </div>
+      <div class="fv-formula" style="font-size:10px;line-height:1.9;">
+        <span class="sym">ȳ(padre)</span> = <span class="val">$${Math.round(nd.meanY).toLocaleString()}</span>
+        <span class="sub">n=${nd.samplesIn}</span><br>
+        <span class="sym">MSE(padre)</span> = <span class="res">${mseP.toLocaleString()}</span><br>
+        <span class="sym">Izq</span> ≤ ${nd.thr} ${nd.v.unit}: <span class="val">n=${nd.sampL}</span>  MSE → <span class="res">${mseL.toLocaleString()}</span><br>
+        <span class="sym">Der</span> > ${nd.thr} ${nd.v.unit}: <span class="val">n=${nd.sampR}</span>  MSE → <span class="res">${mseR.toLocaleString()}</span><br>
+        <span class="sym">ΔMSE</span> = <span class="res">${dMSE.toLocaleString()}</span> ← ganancia de reducción
+      </div>
+    </div>`;
+  });
+  html+=`</div></div></div>`;
+  el.innerHTML=html;
+}
+
+function buildFormulaViewer(containerId, treeData, model, active, color){
+  const el=document.getElementById(containerId);
+  if(!el) return;
+  if(!treeData||!active.length){el.innerHTML='';return;}
+
+  const nodes=treeData.nodeLog.slice(0,6); // max 6 splits to display
+  const colorClass=model;
+  const modelLabel=model==='dt'?'Árbol de Decisión':model==='rf'?'Random Forest':'Gradient Boosting';
+
+  let html=`
+  <div class="fv-header">
+    📐 Fórmulas con datos reales — ${modelLabel}
+    <span>Un nodo = una aplicación de la fórmula de entropía</span>
+  </div>
+  <div class="fv-body">
+    <div class="fv-card">
+      <div class="fv-title ${colorClass}">Entropía del nodo — H(t)</div>
+      <div class="fv-formula">
+        <span class="sym">H(t)</span> = −<span class="sym">p</span>·log₂(<span class="sym">p</span>) − (1−<span class="sym">p</span>)·log₂(1−<span class="sym">p</span>)
+      </div>
+      <div class="fv-formula" style="margin-top:.3rem;">
+        <span class="sym">IG</span> = <span class="sym">H(padre)</span> − [ (n<sub>izq</sub>/n)·<span class="sym">H(izq)</span> + (n<sub>der</sub>/n)·<span class="sym">H(der)</span> ]
+      </div>
+    </div>
+    <div class="fv-card">
+      <div class="fv-title ${colorClass}">Splits del árbol — con valores reales</div>
+      <div class="fv-nodes">`;
+
+  nodes.forEach((nd,i)=>{
+    const hBefore=nd.H_before;
+    const hL=nd.H_left, hR=nd.H_right;
+    const pct=v=>Math.round(v*100);
+    const ig=nd.gain;
+    html+=`
+    <div class="fv-node-card" style="border-color:${color}55;">
+      <div style="font-size:9px;font-weight:600;color:${color};margin-bottom:.3rem;">
+        Nodo ${i+1} · Nivel ${nd.depth} · ${nd.v.label}
+      </div>
+      <div class="fv-formula" style="font-size:10px;line-height:1.9;">
+        <span class="sym">H(padre)</span> = −<span class="val">${nd.pNode}</span>·log₂(<span class="val">${nd.pNode}</span>) − <span class="val">${+(1-nd.pNode).toFixed(3)}</span>·log₂(<span class="val">${+(1-nd.pNode).toFixed(3)}</span>) = <span class="res">${hBefore}</span>
+        <span class="sub">n=${nd.samplesIn} · ev=${Math.round(nd.pNode*nd.samplesIn)} · no=${nd.samplesIn-Math.round(nd.pNode*nd.samplesIn)}</span><br>
+        <span class="sym">H(izq)</span> = −<span class="val">${nd.pL}</span>·log₂(<span class="val">${nd.pL}</span>) − <span class="val">${+(1-nd.pL).toFixed(3)}</span>·log₂(<span class="val">${+(1-nd.pL).toFixed(3)}</span>) = <span class="res">${hL}</span>
+        <span class="sub">n=${nd.sampL} · ev=${Math.round(nd.pL*nd.sampL)} · no=${nd.sampL-Math.round(nd.pL*nd.sampL)}</span><br>
+        <span class="sym">H(der)</span> = −<span class="val">${nd.pR}</span>·log₂(<span class="val">${nd.pR}</span>) − <span class="val">${+(1-nd.pR).toFixed(3)}</span>·log₂(<span class="val">${+(1-nd.pR).toFixed(3)}</span>) = <span class="res">${hR}</span>
+        <span class="sub">n=${nd.sampR} · ev=${Math.round(nd.pR*nd.sampR)} · no=${nd.sampR-Math.round(nd.pR*nd.sampR)}</span><br>
+        <span class="sym">IG</span> = <span class="res">${hBefore}</span> − [(<span class="val">${nd.sampL}</span>/<span class="val">${nd.samplesIn}</span>)·<span class="res">${hL}</span> + (<span class="val">${nd.sampR}</span>/<span class="val">${nd.samplesIn}</span>)·<span class="res">${hR}</span>] = <span class="res">${ig}</span>
+      </div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:3px;">${nd.v.label} ≤ ${nd.thr} ${nd.v.unit} → izq · > ${nd.thr} → der</div>
+    </div>`;
+  });
+
+  html+=`</div></div></div>`;
+  el.innerHTML=html;
+}
+
+// ═══ EXPLAINERS ════════════════════════════════════════════════════════
+function dtExplain(a,maxD){
+  if(isReg()){
+    if(!a.length) return 'Activa variables para ver la explicación.';
+    return `Árbol de regresión: en cada nodo se busca el split que <strong>minimiza el MSE</strong> (varianza del target) en los hijos. Con <span class="hl">${a.length} variable${a.length>1?'s':''}</span>, la raíz usa <span class="hl">${a[0].label}</span> porque produce la mayor reducción de varianza en el salario predicho. Las hojas predicen la <strong>media del salario</strong> de las observaciones que llegan a ese nodo.`;
+  }
+  
+  if(!a.length) return 'Activa variables para ver la explicación.';
+  const top=a[0].label;
+  return `Con <span class="hl">${a.length} variable${a.length>1?'s':''}</span>, el árbol evalúa <strong>todas</strong> en cada nodo y elige el split con mayor <strong>ganancia de entropía (IG)</strong>. La raíz siempre usa <span class="hl">${top}</span>. En nodos más profundos puede usar <em>cualquier otra variable activa</em>, incluso repetir la misma. No hay aleatorización — dado el mismo dataset, el árbol es determinístico.`;
+}
+function rfExplain(a,maxD){
+  if(isReg()){
+    if(!a.length) return 'Activa variables para ver la explicación.';
+    const sq=Math.max(1,Math.round(Math.sqrt(a.length)));
+    return `RF para regresión promedia las predicciones de ${a.length>1?sq+' variables por nodo (√'+a.length+')':'la única variable activa'} entre todos los árboles. La predicción final es el <strong>promedio de las medias de hoja</strong> de cada árbol del bosque.`;
+  }
+  
+  if(!a.length) return 'Activa variables para ver la explicación.';
+  const sq=Math.max(1,Math.round(Math.sqrt(a.length)));
+  return `RF muestrea aleatoriamente <span class="hl">${sq} de ${a.length} variables</span> (√${a.length}) en cada nodo. Esto decorrelaciona los árboles del bosque. Con pocas variables activas, max_features pierde efecto cuando √n = n.`;
+}
+function gbExplain(a,maxD){
+  if(!a.length) return 'Activa variables para ver la explicación.';
+  const top=a[0].label;
+  return `GBM construye árboles <span class="hl">secuencialmente</span>: cada uno ajusta los residuos del anterior. Con depth ${Math.min(maxD,3)}, <span class="hl">${top}</span> domina los primeros splits. Las hojas contienen valores de corrección, no probabilidades.`;
+}
+
+// ═══ MAIN RUN ══════════════════════════════════════════════════════════
+function run(){
+  const active=activeVars();
+  const maxD=+document.getElementById('maxDepth').value;
+  const nA=active.length;
+  const sorted=[...active].sort((a,b)=>b.imp-a.imp);
+
+  const ab=document.getElementById('alertBox');
+  if(!nA){ab.style.display='flex';ab.innerHTML='⚠️ Selecciona al menos una variable para construir los árboles.';}
+  else ab.style.display='none';
+
+  document.getElementById('dt_explain').innerHTML=dtExplain(sorted,maxD);
+  document.getElementById('rf_explain').innerHTML=rfExplain(sorted,maxD);
+  document.getElementById('gb_explain').innerHTML=gbExplain(sorted,maxD);
+
+  if(!nA){
+    ['cv_dt','cv_rf','cv_gb'].forEach(id=>{const cv=document.getElementById(id);if(cv){const ctx=cv.getContext('2d');cv.width=600;cv.height=300;ctx.clearRect(0,0,600,300);drawEmpty(ctx,600,300);}});
+    ['fv_dt','fv_rf','fv_gb'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML='';});
+    return;
+  }
+
+  // Build & draw DT
+  const dtData=buildTree(sorted, maxD, 'dt', 42+nA*5+maxD*11);
+  drawTreeOnCanvas('cv_dt',dtData,'#9b7de8','dt','scroll_dt');
+  sv('dt_vused',dtData.usedVars.length+'/'+nA);
+  sv('dt_depth',maxD);
+  sv('dt_nodes',dtData.nodeCount);
+  sv('dt_leaves',dtData.leafCount);
+  sv('dt_tdesc','Evalúa las '+nA+' vars en cada nodo');
+  if(isReg()) buildFormulaViewerReg('fv_dt',dtData,'dt',sorted,'#9b7de8');
+  else buildFormulaViewer('fv_dt',dtData,'dt',sorted,'#9b7de8');
+
+  // Build & draw RF
+  const rfData=buildTree(sorted, maxD, 'rf', 99+nA*7+maxD*13);
+  drawTreeOnCanvas('cv_rf',rfData,'#5b9bd5','rf','scroll_rf');
+  const sq=Math.max(1,Math.round(Math.sqrt(nA)));
+  sv('rf_vused',rfData.usedVars.length+'/'+nA);
+  sv('rf_depth',maxD);
+  sv('rf_nodes',rfData.nodeCount);
+  sv('rf_leaves',rfData.leafCount);
+  sv('rf_maxf','√'+nA+' = '+sq);
+  sv('rf_tdesc','max_features='+sq+' (√'+nA+')');
+  if(isReg()) buildFormulaViewerReg('fv_rf',rfData,'rf',sorted,'#5b9bd5');
+  else buildFormulaViewer('fv_rf',rfData,'rf',sorted,'#5b9bd5');
+
+  // Build & draw GB (shallower)
+  const gbMaxD=Math.min(maxD,3);
+  const gbData=buildTree(sorted, gbMaxD, 'gb', 77+nA*9+maxD*7);
+  drawTreeOnCanvas('cv_gb',gbData,'#e8865a','gb','scroll_gb');
+  sv('gb_vused',gbData.usedVars.length+'/'+nA);
+  sv('gb_depth',gbMaxD);
+  sv('gb_nodes',gbData.nodeCount);
+  sv('gb_leaves',gbData.leafCount);
+  sv('gb_tdesc','depth='+gbMaxD+' (GB usa árboles cortos)');
+  if(isReg()) buildFormulaViewerReg('fv_gb',gbData,'gb',sorted,'#e8865a');
+  else buildFormulaViewer('fv_gb',gbData,'gb',sorted,'#e8865a');
+}
+
+function sv(id,v){const el=document.getElementById(id);if(el)el.textContent=v;}
+
+// ═══ SIDEBAR ═══════════════════════════════════════════════════════════
+function renderSidebar(){
+  const vars=getDS().vars;
+  const nA=activeVars().length;
+  const badge=document.getElementById('countBadge');
+  badge.textContent=nA+' activa'+(nA!==1?'s':'');
+  badge.className='count-badge'+(nA===0?' warn':'');
+  const maxImp=Math.max(...vars.map(v=>v.imp));
+  const list=document.getElementById('varList');
+  list.innerHTML='';
+  vars.forEach(v=>{
+    const on=varState[v.id];
+    const el=document.createElement('div');
+    el.className='var-item'+(on?' on':' off');
+    el.innerHTML=`<div class="vtog ${on?'on':''}"></div>
+      <div class="vinfo">
+        <div class="vname">${v.label}</div>
+        <div class="vtype">${v.type==='Num'?'Numérica':v.type==='Int'?'Entera':'Binaria'} · ${(v.imp*100).toFixed(0)}%</div>
+        <div class="vimp"><div class="vimp-fill" style="width:${(v.imp/maxImp*100).toFixed(0)}%;${on?'':'background:rgba(255,255,255,0.1);'}"></div></div>
+      </div>`;
+    el.onclick=()=>{varState[v.id]=!varState[v.id];renderSidebar();run();};
+    list.appendChild(el);
+  });
+}
+
+// ═══ CONTROLS ══════════════════════════════════════════════════════════
+function setDS(name){
+  currentDS=name;
+  document.querySelectorAll('.ds-btn').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.ds-btn').forEach(b=>{
+    const t=b.textContent.trim().toLowerCase();
+    const match=(name==='credit'&&t.startsWith('ri'))||(name==='churn'&&t.startsWith('ch'))||(name==='fraud'&&t.startsWith('fr'))||(name==='salary'&&t.includes('sal'));
+    if(match) b.classList.add('on');
+  });
+  initVarState();renderSidebar();run();
+}
+function toggleAll(v){getDS().vars.forEach(vv=>varState[vv.id]=v);renderSidebar();run();}
+function topN(n){
+  const sorted=[...getDS().vars].sort((a,b)=>b.imp-a.imp);
+  getDS().vars.forEach(v=>varState[v.id]=false);
+  sorted.slice(0,n).forEach(v=>varState[v.id]=true);
+  renderSidebar();run();
+}
+function switchTab(name){
+  currentTab=name;
+  document.querySelectorAll('.mtab').forEach(t=>t.classList.toggle('on',t.classList.contains(name)));
+  ['dt','rf','gb'].forEach(m=>document.getElementById('panel_'+m).classList.toggle('on',m===name));
+}
+
+window.addEventListener('resize',()=>run());
+initVarState();renderSidebar();run();
+</script>
+</body>
+</html>
