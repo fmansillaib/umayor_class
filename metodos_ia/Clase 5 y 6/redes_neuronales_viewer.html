@@ -35,9 +35,27 @@
       font-size: 0.8rem;
       color: #8b949e;
     }
-    .counter {
-      margin-top: 16px;
+    .stats-card {
+      margin-top: 28px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 16px 24px;
+      max-width: 860px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
+    .stats-icon { font-size: 1.4rem; line-height: 1; }
+    .stats-info { display: flex; flex-direction: column; gap: 8px; }
+    .stats-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6e7681;
+    }
+    .stats-badge img { height: 26px; width: auto; display: block; }
   </style>
 </head>
 <body>
@@ -47,10 +65,16 @@
     Tu navegador no soporta reproducción de video.
   </video>
   <p>Universidad Mayor · Métodos de IA</p>
-  <div class="counter">
-    <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=umayor%2Fredes-neuronales&count_bg=%2358A6FF&title_bg=%23161b22&icon=eye.svg&icon_color=%23ffffff&title=visitas&edge_flat=true" alt="visitas"/>
-    </a>
+  <div class="stats-card">
+    <span class="stats-icon">👁</span>
+    <div class="stats-info">
+      <span class="stats-label">Visitas a esta página</span>
+      <div class="stats-badge">
+        <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
+          <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=umayor%2Fredes-neuronales&count_bg=%2358A6FF&title_bg=%23161b22&icon=eye.svg&icon_color=%23ffffff&title=visitas&edge_flat=true" alt="visitas"/>
+        </a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
