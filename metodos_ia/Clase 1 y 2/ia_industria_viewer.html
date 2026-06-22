@@ -55,7 +55,13 @@
       letter-spacing: 0.1em;
       color: #6e7681;
     }
-    .stats-badge img { height: 26px; width: auto; display: block; }
+    .stats-count {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #58a6ff;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
   </style>
 </head>
 <body>
@@ -69,12 +75,14 @@
     <span class="stats-icon">👁</span>
     <div class="stats-info">
       <span class="stats-label">Visitas a esta página</span>
-      <div class="stats-badge">
-        <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
-          <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=umayor%2Fia-industria&count_bg=%2358A6FF&title_bg=%23161b22&icon=eye.svg&icon_color=%23ffffff&title=visitas&edge_flat=true" alt="visitas"/>
-        </a>
-      </div>
+      <span class="stats-count" id="visit-count">—</span>
     </div>
   </div>
+<script>
+  fetch('https://api.countapi.xyz/hit/umayor-class/ia-industria')
+    .then(r => r.json())
+    .then(d => { document.getElementById('visit-count').textContent = d.value.toLocaleString('es-CL'); })
+    .catch(() => {});
+</script>
 </body>
 </html>
