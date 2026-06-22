@@ -11,7 +11,7 @@ Repositorio central con materiales, códigos y recursos de clases en la Universi
 *   **Programas de Postgrado y Especialización en AI/ML**
     *   Cursos de Inteligencia Artificial
     *   Especialización en Machine Learning
-    *   Diplomados en Ciencia de Datos y IA
+    *   Certificaciones en Ciencia de Datos y IA
 
 ---
 
@@ -24,7 +24,7 @@ umayor_class/
 ├── metodos_IA/                   - ✅ Clases 1-6 (métodos de IA aplicados)
 ├── aplicaciones_computacional/   - ✅ Clases 1-8 (programación Python)
 ├── datasets/                     - ✅ Conjuntos de datos para las clases
-├── nlp/                          - [Por cargar]
+├── nlp/                          - ✅ Clases 1-4  (NLP)
 └── IA_generativa/                - [Por cargar]
 ```
 
@@ -36,6 +36,7 @@ umayor_class/
 |-----------|-----|
 | Simulador Árboles de Decisión | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%204/Clase%204.%20simulador_arboles.html) |
 | Simulador Clustering | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/machine_learning/Clase%206/Clase%206.%20Simulador%20Clustering.html) |
+| Simulador NLP | [▶ Abrir](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/nlp/simulador_nlp.html) |
 
 ---
 
@@ -46,6 +47,7 @@ umayor_class/
 | IA en la Industria | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_ia/Clase%201%20y%202/ia_industria_viewer.html) |
 | Árboles de Decisión | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_ia/Clase%203%20y%204/arboles_ml_viewer.html) |
 | Redes Neuronales | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_ia/Clase%205%20y%206/redes_neuronales_viewer.html) |
+| NLP | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/nlp/ia_nlp_viewer.html) |
 
 ---
 

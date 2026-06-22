@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratorio de NLP — Casos de uso en empresas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#161A22;
+    --ink-2:#1D222C;
+    --paper:#F7F2E7;
+    --paper-dim:#ECE3CF;
+    --paper-line:#D8CBA8;
+    --highlighter:#FFD23F;
+    --text-ink:#23262E;
+    --text-muted:#6B6457;
+    --text-on-ink:#EDE7D8;
+    --text-on-ink-muted:#A6A18F;
+    --positive:#2E8B6F;
+    --negative:#C1473E;
+    --neutral:#9C8F72;
+    --blue:#3E7CB1;
+    --purple:#6F5AA8;
+    --teal:#2B9C9C;
+    --orange:#E08E45;
+    --font-display:'Fraunces', Georgia, serif;
+    --font-body:'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono:'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background:var(--ink);
+    background-image: radial-gradient(circle at 15% 0%, #1E2433 0%, var(--ink) 55%);
+    color:var(--text-on-ink);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; }
+  button{ font-family:inherit; }
+
+  :focus-visible{
+    outline:3px solid var(--highlighter);
+    outline-offset:2px;
+    border-radius:4px;
+  }
+
+  .app-shell{
+    max-width:1140px;
+    margin:0 auto;
+    padding:48px 24px 64px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding-bottom:36px;
+    border-bottom:1px solid #2A2F3B;
+    margin-bottom:8px;
+  }
+  .hero-eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--highlighter);
+    margin:0 0 14px;
+  }
+  .hero-title{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:clamp(1.9rem, 3.6vw, 2.9rem);
+    line-height:1.15;
+    margin:0 0 16px;
+    max-width:18ch;
+    color:#FBF8F0;
+  }
+  .hero-sub{
+    font-size:16px;
+    color:var(--text-on-ink-muted);
+    max-width:62ch;
+    margin:0;
+  }
+  .hero-sub strong{ color:var(--text-on-ink); font-weight:600; }
+
+  /* ---------- TABS (folder look) ---------- */
+  .tabs{
+    display:flex;
+    gap:6px;
+    margin-top:36px;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .tabs::-webkit-scrollbar{ display:none; }
+
+  .tab-btn{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 20px 16px;
+    background:var(--paper-dim);
+    color:var(--text-muted);
+    border:none;
+    border-radius:12px 12px 0 0;
+    cursor:pointer;
+    font-size:14px;
+    transition:transform .15s ease, background .15s ease, color .15s ease;
+    transform:translateY(2px);
+  }
+  .tab-btn:hover{ background:#E4D9BD; }
+  .tab-btn .tab-num{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:inherit;
+    opacity:.7;
+  }
+  .tab-btn .tab-dot{
+    width:9px; height:9px; border-radius:50%;
+    flex:0 0 auto;
+  }
+  .tab-btn .tab-label{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:16px;
+    color:inherit;
+  }
+  .tab-btn.is-active{
+    background:var(--paper);
+    color:var(--text-ink);
+    transform:translateY(0);
+    box-shadow: 0 -2px 0 0 var(--highlighter) inset;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .tab-btn{ transition:none; }
+  }
+
+  /* ---------- PANELS ---------- */
+  .panel{
+    background:var(--paper);
+    border-radius:0 14px 14px 14px;
+    padding:32px;
+    color:var(--text-ink);
+  }
+  .panel[hidden]{ display:none; }
+
+  .case-intro{ margin-bottom:26px; max-width:78ch; }
+  .case-eyebrow{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    margin:0 0 8px;
+  }
+  .case-text{
+    margin:0;
+    font-size:15.5px;
+    color:#3C372C;
+  }
+
+  /* ---------- WORKSPACE GRID ---------- */
+  .workspace{
+    display:grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap:26px;
+    align-items:start;
+  }
+  @media (max-width: 780px){
+    .workspace{ grid-template-columns:1fr; }
+  }
+
+  .card{
+    background:#FFFDF7;
+    border:1px solid var(--paper-line);
+    border-radius:12px;
+    padding:20px;
+  }
+
+  .card-label{
+    font-family:var(--font-mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--text-muted);
+    margin:0 0 12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+
+  /* segmented mode toggle */
+  .mode-toggle{
+    display:inline-flex;
+    background:var(--paper-dim);
+    border-radius:8px;
+    padding:3px;
+    gap:3px;
+  }
+  .mode-toggle button{
+    border:none;
+    background:transparent;
+    padding:6px 11px;
+    font-size:12px;
+    font-family:var(--font-body);
+    font-weight:500;
+    color:var(--text-muted);
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .mode-toggle button.is-active{
+    background:#FFFDF7;
+    color:var(--text-ink);
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+  }
+
+  /* doc chips */
+  .doc-chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:14px;
+  }
+  .doc-chip{
+    border:1px solid var(--paper-line);
+    background:#FFFDF7;
+    color:var(--text-muted);
+    font-size:12.5px;
+    font-family:var(--font-mono);
+    padding:7px 12px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .doc-chip:hover{ border-color:#B7A877; }
+  .doc-chip.is-active{
+    background:var(--ink);
+    color:var(--highlighter);
+    border-color:var(--ink);
+  }
+
+  textarea.custom-text{
+    width:100%;
+    min-height:120px;
+    resize:vertical;
+    border:1px solid var(--paper-line);
+    border-radius:8px;
+    padding:12px;
+    font-family:var(--font-body);
+    font-size:14.5px;
+    color:var(--text-ink);
+    background:#FFFDF7;
+    margin-bottom:14px;
+  }
+
+  .doc-display{
+    min-height:150px;
+    border:1px dashed var(--paper-line);
+    border-radius:8px;
+    padding:16px;
+    font-size:15.5px;
+    line-height:1.85;
+    color:var(--text-ink);
+    background:repeating-linear-gradient(#FFFDF7, #FFFDF7 31px, #F1EBDC 32px);
+    margin-bottom:16px;
+  }
+  .doc-display .placeholder{
+    color:var(--text-muted);
+    font-style:italic;
+    font-size:14px;
+  }
+
+  .btn-analyze{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--highlighter);
+    color:#1B1503;
+    border:none;
+    font-family:var(--font-mono);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    padding:11px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:0 2px 0 0 #C9A21F;
+    transition:transform .08s ease;
+  }
+  .btn-analyze:hover{ transform:translateY(-1px); }
+  .btn-analyze:active{ transform:translateY(1px); box-shadow:0 1px 0 0 #C9A21F; }
+
+  /* legend chips */
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .legend-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    color:var(--text-muted);
+    font-family:var(--font-mono);
+  }
+  .legend-swatch{
+    width:11px; height:11px; border-radius:3px; flex:0 0 auto;
+  }
+
+  /* token / keyword / entity highlight spans */
+  .tok-pos, .tok-neg, .kw-match, .ent{
+    border-radius:3px;
+    padding:0 2px;
+    cursor:help;
+    animation: reveal .35s ease both;
+  }
+  @keyframes reveal{
+    from{ opacity:0; transform:translateY(3px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .tok-pos, .tok-neg, .kw-match, .ent{ animation:none; }
+  }
+  .tok-pos{ background:rgba(46,139,111,.20); border-bottom:2px solid var(--positive); }
+  .tok-neg{ background:rgba(193,71,62,.18); border-bottom:2px solid var(--negative); }
+
+  .kw-match::after, .ent::after{
+    content:attr(data-tag);
+    font-family:var(--font-mono);
+    font-size:9px;
+    vertical-align:super;
+    margin-left:2px;
+    opacity:.75;
+  }
+  .kw-soporte{ background:rgba(62,124,177,.20); border-bottom:2px solid var(--blue); }
+  .kw-reclamo{ background:rgba(193,71,62,.18); border-bottom:2px solid var(--negative); }
+  .kw-comercial{ background:rgba(111,90,168,.20); border-bottom:2px solid var(--purple); }
+  .kw-general{ background:rgba(43,156,156,.18); border-bottom:2px solid var(--teal); }
+  .kw-despacho{ background:rgba(224,142,69,.22); border-bottom:2px solid var(--orange); }
+
+  .ent-org{ background:rgba(62,124,177,.20); border-bottom:2px solid var(--blue); }
+  .ent-persona{ background:rgba(111,90,168,.20); border-bottom:2px solid var(--purple); }
+  .ent-lugar{ background:rgba(43,156,156,.18); border-bottom:2px solid var(--teal); }
+  .ent-fecha{ background:rgba(224,142,69,.22); border-bottom:2px solid var(--orange); }
+  .ent-monto{ background:rgba(193,71,62,.18); border-bottom:2px solid var(--negative); }
+
+  /* ---------- RESULTS PANE ---------- */
+  .results-placeholder{
+    color:var(--text-muted);
+    font-size:14px;
+    font-style:italic;
+  }
+
+  .gauge-wrap{ margin-bottom:18px; }
+  .gauge-track{
+    position:relative;
+    height:10px;
+    border-radius:999px;
+    background:linear-gradient(90deg, var(--negative), #E6DCC2 50%, var(--positive));
+    margin:10px 0 6px;
+  }
+  .gauge-marker{
+    position:absolute;
+    top:-5px;
+    width:4px;
+    height:20px;
+    background:var(--ink);
+    border-radius:2px;
+    transform:translateX(-2px);
+  }
+  .gauge-ticks{
+    display:flex;
+    justify-content:space-between;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--text-muted);
+  }
+  .verdict{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:22px;
+    margin:4px 0 2px;
+  }
+  .verdict.is-pos{ color:var(--positive); }
+  .verdict.is-neg{ color:var(--negative); }
+  .verdict.is-neu{ color:#9C8638; }
+  .score-note{ font-size:13px; color:var(--text-muted); margin:0 0 18px; }
+
+  table.breakdown{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+  }
+  table.breakdown th, table.breakdown td{
+    text-align:left;
+    padding:6px 8px;
+    border-bottom:1px solid var(--paper-dim);
+  }
+  table.breakdown th{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--text-muted);
+  }
+  td.weight-pos{ color:var(--positive); font-family:var(--font-mono); }
+  td.weight-neg{ color:var(--negative); font-family:var(--font-mono); }
+
+  .cat-bar-row{ margin-bottom:12px; }
+  .cat-bar-head{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    margin-bottom:5px;
+  }
+  .cat-bar-head .cat-name{ display:flex; align-items:center; gap:7px; font-weight:600; }
+  .cat-bar-head .cat-score{ font-family:var(--font-mono); color:var(--text-muted); }
+  .cat-bar-track{
+    height:10px;
+    border-radius:6px;
+    background:var(--paper-dim);
+    overflow:hidden;
+  }
+  .cat-bar-fill{ height:100%; border-radius:6px; transition:width .5s ease; }
+  .winner-badge{
+    display:inline-block;
+    margin-top:14px;
+    background:var(--highlighter);
+    color:#1B1503;
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    font-weight:600;
+    padding:5px 10px;
+    border-radius:6px;
+  }
+
+  .kw-list{ margin-top:16px; }
+  .kw-list-title{
+    font-family:var(--font-mono);
+    font-size:11px;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    margin:0 0 8px;
+  }
+  .kw-chip{
+    display:inline-block;
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    padding:3px 8px;
+    border-radius:5px;
+    margin:0 5px 5px 0;
+  }
+
+  .entity-group{ margin-bottom:14px; }
+  .entity-group-head{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-weight:600;
+    font-size:13px;
+    margin-bottom:6px;
+  }
+  .entity-values{ display:flex; flex-wrap:wrap; gap:6px; }
+  .entity-chip{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    padding:3px 9px;
+    border-radius:999px;
+    background:var(--paper-dim);
+  }
+
+  /* ---------- HOW IT WORKS ---------- */
+  details.how-card{
+    margin-top:24px;
+    border:1px solid var(--paper-line);
+    border-radius:10px;
+    background:#FFFDF7;
+    padding:4px 18px;
+  }
+  details.how-card summary{
+    cursor:pointer;
+    padding:12px 0;
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--text-muted);
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  details.how-card summary::-webkit-details-marker{ display:none; }
+  details.how-card summary::before{
+    content:'▸';
+    font-size:11px;
+    transition:transform .15s ease;
+  }
+  details.how-card[open] summary::before{ transform:rotate(90deg); }
+  .how-body{
+    font-size:14px;
+    color:#3C372C;
+    padding:0 0 16px;
+    max-width:78ch;
+  }
+  .how-body p{ margin:0 0 10px; }
+  .how-body strong{ color:var(--text-ink); }
+
+  .trace-label{
+    font-family:var(--font-mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--text-muted);
+    margin:16px 0 8px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+  }
+  .trace-label::before{
+    content:'';
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--highlighter);
+    flex:0 0 auto;
+  }
+  .trace-box{
+    background:var(--ink);
+    color:#C9C2AC;
+    font-family:var(--font-mono);
+    font-size:12px;
+    line-height:1.75;
+    border-radius:8px;
+    padding:14px 16px;
+    margin:0 0 4px;
+    overflow-x:auto;
+    white-space:pre-wrap;
+    word-break:break-word;
+  }
+  .trace-box .tr-dim{ color:#888EA0; }
+  .trace-box .tr-pos{ color:#7FD9B0; }
+  .trace-box .tr-neg{ color:#E8978C; }
+  .trace-box .tr-accent{ color:var(--highlighter); }
+
+  footer{
+    text-align:center;
+    margin-top:40px;
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    color:var(--text-on-ink-muted);
+  }
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <header class="hero">
+    <p class="hero-eyebrow">Laboratorio de NLP · Casos de uso en empresa</p>
+    <h1 class="hero-title">Así empieza una máquina a “leer” un texto</h1>
+    <p class="hero-sub">Elige un documento de ejemplo —o escribe el tuyo— y presiona <strong>Analizar</strong>. Vas a ver, palabra por palabra, cómo cada motor llega a su conclusión. Las tres versiones de abajo son deliberadamente simples: el objetivo es la intuición, no reemplazar un modelo de producción.</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Casos de uso de NLP">
+    <button class="tab-btn is-active" data-target="panel-sentiment" role="tab" aria-selected="true">
+      <span class="tab-dot" style="background:var(--positive)"></span>
+      <span class="tab-num">Caso 01</span>
+      <span class="tab-label">Sentimiento</span>
+    </button>
+    <button class="tab-btn" data-target="panel-classify" role="tab" aria-selected="false">
+      <span class="tab-dot" style="background:var(--purple)"></span>
+      <span class="tab-num">Caso 02</span>
+      <span class="tab-label">Clasificación</span>
+    </button>
+    <button class="tab-btn" data-target="panel-ner" role="tab" aria-selected="false">
+      <span class="tab-dot" style="background:var(--blue)"></span>
+      <span class="tab-num">Caso 03</span>
+      <span class="tab-label">Entidades</span>
+    </button>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- CASO 1 — ANÁLISIS DE SENTIMIENTO                              -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-sentiment">
+    <div class="case-intro">
+      <p class="case-eyebrow">Caso 01 · Atención al cliente</p>
+      <p class="case-text">Bancos y retailers leen miles de comentarios, encuestas NPS y menciones en redes sociales para detectar quiebres de servicio antes de que escalen a un reclamo formal. Así de simple —y así de limitado— es el motor que hay detrás de muchas de esas herramientas de monitoreo.</p>
+    </div>
+
+    <div class="workspace">
+      <div class="card">
+        <p class="card-label">
+          <span>Documento</span>
+          <span class="mode-toggle" data-tab="sentiment">
+            <button data-mode="preloaded" class="is-active">Ejemplos</button>
+            <button data-mode="custom">Mi texto</button>
+          </span>
+        </p>
+
+        <div class="legend">
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--positive)"></span>palabra positiva</span>
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--negative)"></span>palabra negativa</span>
+        </div>
+
+        <div class="doc-chips" id="chips-sentiment"></div>
+        <textarea class="custom-text" id="custom-sentiment" hidden placeholder="Escribe aquí una reseña, un correo o cualquier texto en español…">El soporte fue rápido pero la verdad no quedé conforme con la solución.</textarea>
+
+        <div class="doc-display" id="display-sentiment"></div>
+        <button class="btn-analyze" id="analyze-sentiment">▸ Analizar documento</button>
+      </div>
+
+      <div class="card" id="results-sentiment">
+        <p class="card-label"><span>Resultado</span></p>
+        <p class="results-placeholder">Presiona “Analizar documento” para ver el puntaje y qué palabras lo explican.</p>
+      </div>
+    </div>
+
+    <details class="how-card" id="how-sentiment">
+      <summary>¿Cómo funciona este motor?</summary>
+      <div class="how-body">
+        <p>Es un enfoque por <strong>diccionario (lexicón)</strong>: cada palabra del texto se compara contra dos listas —positivas y negativas— y cada coincidencia suma o resta puntos. El puntaje final decide la etiqueta. Es básicamente la lógica detrás de herramientas como VADER.</p>
+        <p>Ahora detecta <strong>negaciones simples</strong>: si “no”, “nunca”, “sin”, “jamás” o “tampoco” aparece hasta 3 palabras antes de un término del diccionario, su polaridad se invierte. Por eso “no fue bueno” ya se reconoce como negativo, y “sin demoras” como positivo.</p>
+        <p>Pero esto sigue sin ser “el modelo correcto” — es una regla más, no comprensión real. Prueba a escribir <em>“¡Qué buena atención, esperé tres horas!”</em> en modo “Mi texto”: no hay ningún negador, así que el motor va a marcarlo como positivo por la palabra “buena”, aunque la frase completa sea claramente sarcástica. Cada regla que agregamos arregla un tipo de error y deja otro sin resolver — por eso los modelos de producción (BERT, modelos de lenguaje) no usan listas con parches, sino representaciones entrenadas con millones de ejemplos que capturan el contexto completo de la oración.</p>
+        <p class="trace-label">Traza de ejecución — documento actual</p>
+        <div class="trace-box" id="trace-sentiment">Presiona “Analizar documento” para ver el cálculo paso a paso.</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CASO 2 — CLASIFICACIÓN DE DOCUMENTOS                          -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-classify" hidden>
+    <div class="case-intro">
+      <p class="case-eyebrow">Caso 02 · Mesa de ayuda / atención</p>
+      <p class="case-text">Una mesa de ayuda recibe cientos de correos al día. En vez de que una persona los lea uno por uno para decidir a qué equipo enviarlos, un clasificador los enruta en milisegundos.</p>
+    </div>
+
+    <div class="workspace">
+      <div class="card">
+        <p class="card-label">
+          <span>Documento</span>
+          <span class="mode-toggle" data-tab="classify">
+            <button data-mode="preloaded" class="is-active">Ejemplos</button>
+            <button data-mode="custom">Mi texto</button>
+          </span>
+        </p>
+
+        <div class="legend" id="legend-classify"></div>
+
+        <div class="doc-chips" id="chips-classify"></div>
+        <textarea class="custom-text" id="custom-classify" hidden placeholder="Escribe aquí un correo o ticket de soporte…">No me ha llegado la respuesta de mi reclamo y el monto cobrado sigue duplicado.</textarea>
+
+        <div class="doc-display" id="display-classify"></div>
+        <button class="btn-analyze" id="analyze-classify">▸ Analizar documento</button>
+      </div>
+
+      <div class="card" id="results-classify">
+        <p class="card-label"><span>Resultado</span></p>
+        <p class="results-placeholder">Presiona “Analizar documento” para ver el puntaje de cada categoría.</p>
+      </div>
+    </div>
+
+    <details class="how-card" id="how-classify">
+      <summary>¿Cómo funciona este motor?</summary>
+      <div class="how-body">
+        <p>Cada categoría tiene una lista de palabras o frases clave con un <strong>peso</strong>. El texto se compara contra todas las listas y la categoría con mayor puntaje se queda con el documento.</p>
+        <p>Es la versión hecha a mano de lo que aprende solo un clasificador real (Naive Bayes sobre TF-IDF, regresión logística, o un modelo de lenguaje afinado): en vez de que una persona defina los pesos, el modelo los infiere a partir de miles de ejemplos ya etiquetados.</p>
+        <p class="trace-label">Traza de ejecución — documento actual</p>
+        <div class="trace-box" id="trace-classify">Presiona “Analizar documento” para ver el puntaje de cada categoría, paso a paso.</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CASO 3 — EXTRACCIÓN DE ENTIDADES (NER)                        -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-ner" hidden>
+    <div class="case-intro">
+      <p class="case-eyebrow">Caso 03 · Inteligencia financiera / compliance</p>
+      <p class="case-text">Equipos de riesgo, compliance y estudios extraen cifras, fechas y nombres de instituciones desde noticias y reportes para alimentar una base de datos, sin digitarlos a mano uno por uno. Los documentos de este caso son ficticios, solo para fines de ejemplo.</p>
+    </div>
+
+    <div class="workspace">
+      <div class="card">
+        <p class="card-label">
+          <span>Documento</span>
+          <span class="mode-toggle" data-tab="ner">
+            <button data-mode="preloaded" class="is-active">Ejemplos</button>
+            <button data-mode="custom">Mi texto</button>
+          </span>
+        </p>
+
+        <div class="legend" id="legend-ner"></div>
+
+        <div class="doc-chips" id="chips-ner"></div>
+        <textarea class="custom-text" id="custom-ner" hidden placeholder="Escribe una noticia o memo con fechas, montos, instituciones o nombres…">Banco Andino confirmó el 5 de mayo de 2026 una línea de crédito por USD 2 millones para un cliente de Santiago.</textarea>
+
+        <div class="doc-display" id="display-ner"></div>
+        <button class="btn-analyze" id="analyze-ner">▸ Analizar documento</button>
+      </div>
+
+      <div class="card" id="results-ner">
+        <p class="card-label"><span>Resultado</span></p>
+        <p class="results-placeholder">Presiona “Analizar documento” para ver las entidades extraídas.</p>
+      </div>
+    </div>
+
+    <details class="how-card" id="how-ner">
+      <summary>¿Cómo funciona este motor?</summary>
+      <div class="how-body">
+        <p>Las <strong>fechas y los montos</strong> se detectan con expresiones regulares: patrones de texto como “número + ‘de’ + mes + ‘de’ + año” o “UF / USD / % seguido de cifras”. Las <strong>organizaciones, personas y lugares</strong> se buscan en listas de referencia (gazetteers) cargadas de antemano.</p>
+        <p>Es el enfoque clásico de NER basado en reglas. Por eso, si escribes el nombre de una empresa que no está en la lista, el motor no la va a reconocer. Los sistemas modernos (spaCy, modelos transformer) generalizan a entidades nunca vistas usando representaciones aprendidas, en vez de depender de una lista fija.</p>
+        <p class="trace-label">Traza de ejecución — documento actual</p>
+        <div class="trace-box" id="trace-ner">Presiona “Analizar documento” para ver la búsqueda paso a paso.</div>
+      </div>
+    </details>
+  </section>
+
+  <footer>Herramienta educativa · Laboratorio de NLP · Lógica simplificada con fines pedagógicos</footer>
+</div>
+
+<script>
+/* =================================================================
+   UTILIDADES COMPARTIDAS
+================================================================= */
+function escapeHtml(str){
+  return str
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+function clamp(n,min,max){ return Math.max(min, Math.min(max,n)); }
+
+// Combina spans que se solapan: se queda con el primero que empieza
+// y, si dos empiezan igual, con el más largo.
+function mergeSpans(spans){
+  const sorted = spans.slice().sort((a,b)=> a.start-b.start || (b.end-b.start)-(a.end-a.start));
+  const merged = [];
+  let lastEnd = -1;
+  sorted.forEach(s=>{
+    if(s.start >= lastEnd){ merged.push(s); lastEnd = s.end; }
+  });
+  return merged;
+}
+
+// Reconstruye el HTML de un texto a partir de spans ya fusionados.
+// classFor(key) -> {cls, tag, label}
+function buildHighlightedHtml(text, spans, classFor){
+  let html = '';
+  let pos = 0;
+  spans.forEach(s=>{
+    html += escapeHtml(text.slice(pos, s.start));
+    const meta = classFor(s.key);
+    const chunk = text.slice(s.start, s.end);
+    html += `<span class="${meta.cls}" data-tag="${meta.tag}" title="${escapeHtml(meta.label)}">${escapeHtml(chunk)}</span>`;
+    pos = s.end;
+  });
+  html += escapeHtml(text.slice(pos));
+  return html;
+}
+
+function setupTabs(){
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      buttons.forEach(b=>{ b.classList.remove('is-active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected','true');
+      document.querySelectorAll('.panel').forEach(p=> p.hidden = true);
+      document.getElementById(btn.dataset.target).hidden = false;
+    });
+  });
+}
+
+// Maneja el toggle "Ejemplos" / "Mi texto" para una pestaña.
+function setupModeToggle(tabKey, onShowPreloaded, onShowCustom){
+  const wrap = document.querySelector(`.mode-toggle[data-tab="${tabKey}"]`);
+  const buttons = wrap.querySelectorAll('button');
+  buttons.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      buttons.forEach(b=> b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      if(btn.dataset.mode === 'preloaded'){ onShowPreloaded(); } else { onShowCustom(); }
+    });
+  });
+}
+
+/* =================================================================
+   CASO 1 · ANÁLISIS DE SENTIMIENTO
+================================================================= */
+const SENT_DOCS = [
+  { titulo:'Reseña 1', texto:'El ejecutivo que me atendió fue muy amable y resolvió mi problema en minutos. Excelente servicio, totalmente recomendado.' },
+  { titulo:'Reseña 2', texto:'Llevo una semana esperando respuesta y nadie soluciona mi reclamo. Pésima atención, muy decepcionante.' },
+  { titulo:'Reseña 3', texto:'La aplicación es rápida y fácil de usar, pero el proceso para solicitar la tarjeta es lento y un poco confuso.' },
+  { titulo:'Reseña 4', texto:'Increíble cómo mejoraron el servicio este año, la atención fue rápida, clara y muy profesional.' },
+  { titulo:'Reseña 5', texto:'Me cobraron una comisión que no estaba autorizada, esto es un abuso y exijo la devolución inmediata.' }
+];
+
+const SENT_POS = {
+  amable:1, resolvió:1, excelente:2, recomendado:2, rápida:1, rápido:1, fácil:1, increíble:2,
+  mejoraron:1, clara:1, claro:1, profesional:1, bueno:1, buena:1, perfecto:1, perfecta:1,
+  satisfecho:1, satisfecha:1, eficiente:1, atento:1, atenta:1, puntual:1, agradecido:1,
+  agradecida:1, cumplió:1, solucionó:1, confiable:1, feliz:1, resolvieron:1, solucionaron:1,
+  compensaron:1, contestaron:1, resuelto:1
+};
+const SENT_NEG = {
+  pésima:2, pésimo:2, decepcionante:2, decepción:2, reclamo:1, lento:1, lenta:1, confuso:1,
+  confusa:1, abuso:2, abusivo:2, exijo:1, inaceptable:1, inaceptables:1, destruida:1,
+  destruido:1, dañado:1, dañada:1, dañados:1, dañadas:1, defectuoso:1, defectuosa:1, grave:1,
+  faltan:1, faltantes:1, quebradas:1, quebrado:1, manipulado:1, manipulada:1,
+  incomprensible:2, indignante:2, injustificable:2, rotas:1, roto:1, terrible:2, horrible:2,
+  estafa:2, negligencia:1, irresponsable:1, demora:1, demoras:1, molesto:1,
+  molesta:1, frustrante:1, incumplimiento:1, atraso:1, retraso:1, extravió:1, extraviado:1,
+  robo:2, prepotencia:2, engañosa:2, engañoso:2, mentiras:2, indebido:1
+};
+
+// Palabras que invierten la polaridad de lo que sigue ("no fue bueno" → bueno deja de ser positivo)
+const NEGATORS = ['no','nunca','jamás','tampoco','ni','sin'];
+const NEGATION_WINDOW = 3; // cuántas palabras antes del término de sentimiento se revisan
+
+const sentState = { mode:'preloaded', index:0 };
+
+function tokenizeEs(text){
+  return text.match(/[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+|[^A-Za-zÁÉÍÓÚÑÜáéíóúñü]+/g) || [];
+}
+
+function buildSentimentTrace(matched, score){
+  let out = '<span class="tr-dim">tokenizar(texto) → revisar negadores cercanos (no/nunca/sin…) → comparar contra el diccionario</span>\n\n';
+  if(matched.length === 0){
+    out += '<span class="tr-dim">(ninguna palabra del texto coincide con el diccionario)</span>\n';
+  } else {
+    let running = 0;
+    matched.forEach(m=>{
+      // signo "natural" del diccionario; si hay negación, el efecto real se invierte
+      const baseSign = m.dict === 'POS' ? '+' : '-';
+      const effectSign = m.negated ? (m.dict === 'POS' ? '-' : '+') : baseSign;
+      running += (effectSign === '+' ? m.weight : -m.weight);
+      const cls = effectSign === '+' ? 'tr-pos' : 'tr-neg';
+      const negNote = m.negated
+        ? ` <span class="tr-accent">→ negador "${escapeHtml(m.negator)}" detectado → se invierte a ${effectSign}${m.weight}</span>`
+        : '';
+      out += `<span class="${cls}">"${escapeHtml(m.word)}"</span> → lexicón_${m.dict}["${escapeHtml(m.word.toLowerCase())}"] = ${baseSign}${m.weight}${negNote}   →   score = ${running}\n`;
+    });
+  }
+  const label = score > 0 ? 'Positivo' : score < 0 ? 'Negativo' : 'Neutral';
+  out += `\n<span class="tr-accent">score final = ${score}  →  ${score>0?'score &gt; 0':score<0?'score &lt; 0':'score = 0'}  →  clasificación = "${label}"</span>`;
+  return out;
+}
+
+function analyzeSentiment(text){
+  const tokens = tokenizeEs(text);
+  let score = 0;
+  const matched = [];
+  const recentWords = []; // ventana de palabras previas, para detectar negadores
+
+  const html = tokens.map(tok=>{
+    const isWord = /^[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+$/.test(tok);
+    if(!isWord){ return escapeHtml(tok); }
+
+    const lower = tok.toLowerCase();
+    const window = recentWords.slice(-NEGATION_WINDOW);
+    const negator = window.find(w => NEGATORS.includes(w));
+    let spanHtml;
+
+    if(SENT_POS[lower] !== undefined){
+      const w = SENT_POS[lower];
+      if(negator){
+        score -= w;
+        matched.push({ word: tok, dict:'POS', weight: w, negated:true, negator });
+        spanHtml = `<span class="tok-neg" title="negada por '${negator}' → -${w}">${escapeHtml(tok)}</span>`;
+      } else {
+        score += w;
+        matched.push({ word: tok, dict:'POS', weight: w, negated:false });
+        spanHtml = `<span class="tok-pos" title="+${w}">${escapeHtml(tok)}</span>`;
+      }
+    } else if(SENT_NEG[lower] !== undefined){
+      const w = SENT_NEG[lower];
+      if(negator){
+        score += w;
+        matched.push({ word: tok, dict:'NEG', weight: w, negated:true, negator });
+        spanHtml = `<span class="tok-pos" title="negada por '${negator}' → +${w}">${escapeHtml(tok)}</span>`;
+      } else {
+        score -= w;
+        matched.push({ word: tok, dict:'NEG', weight: w, negated:false });
+        spanHtml = `<span class="tok-neg" title="-${w}">${escapeHtml(tok)}</span>`;
+      }
+    } else {
+      spanHtml = escapeHtml(tok);
+    }
+
+    recentWords.push(lower);
+    return spanHtml;
+  }).join('');
+
+  return { html, score, matched };
+}
+
+function renderSentDocList(){
+  const wrap = document.getElementById('chips-sentiment');
+  wrap.innerHTML = '';
+  SENT_DOCS.forEach((doc,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'doc-chip' + (i===sentState.index ? ' is-active':'');
+    btn.textContent = doc.titulo;
+    btn.addEventListener('click', ()=>{
+      sentState.index = i;
+      renderSentDocList();
+      showSentPlain();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function showSentPlain(){
+  const display = document.getElementById('display-sentiment');
+  display.textContent = SENT_DOCS[sentState.index].texto;
+  resetSentResults();
+}
+
+function showSentCustomPlaceholder(){
+  const display = document.getElementById('display-sentiment');
+  display.innerHTML = '<span class="placeholder">Escribe tu texto arriba y presiona “Analizar documento”.</span>';
+  resetSentResults();
+}
+
+function resetSentResults(){
+  document.getElementById('results-sentiment').innerHTML =
+    '<p class="card-label"><span>Resultado</span></p><p class="results-placeholder">Presiona “Analizar documento” para ver el puntaje y qué palabras lo explican.</p>';
+  document.getElementById('trace-sentiment').textContent = 'Presiona “Analizar documento” para ver el cálculo paso a paso.';
+}
+
+function runSentimentAnalysis(){
+  const text = sentState.mode === 'preloaded'
+    ? SENT_DOCS[sentState.index].texto
+    : document.getElementById('custom-sentiment').value.trim();
+
+  if(!text){
+    document.getElementById('display-sentiment').innerHTML = '<span class="placeholder">Escribe algo primero.</span>';
+    return;
+  }
+
+  const { html, score, matched } = analyzeSentiment(text);
+  document.getElementById('display-sentiment').innerHTML = html;
+
+  const pct = clamp(50 + score*6, 0, 100);
+  let verdictLabel, verdictClass;
+  if(score > 0){ verdictLabel='Positivo'; verdictClass='is-pos'; }
+  else if(score < 0){ verdictLabel='Negativo'; verdictClass='is-neg'; }
+  else { verdictLabel='Neutral / señales mixtas'; verdictClass='is-neu'; }
+
+  let rows = matched.map(m=>{
+    const effectIsPos = m.negated ? (m.dict === 'NEG') : (m.dict === 'POS');
+    const nota = m.negated ? `negada por "${escapeHtml(m.negator)}"` : (m.dict === 'POS' ? 'Positiva' : 'Negativa');
+    return `<tr><td>${escapeHtml(m.word)}</td><td>${nota}</td>
+     <td class="${effectIsPos ? 'weight-pos' : 'weight-neg'}">${effectIsPos ? '+' : '-'}${m.weight}</td></tr>`;
+  }).join('');
+  if(!rows){ rows = '<tr><td colspan="3" style="color:#9C8F72">No se encontró ninguna palabra del diccionario en este texto.</td></tr>'; }
+
+  document.getElementById('results-sentiment').innerHTML = `
+    <p class="card-label"><span>Resultado</span></p>
+    <p class="verdict ${verdictClass}">${verdictLabel}</p>
+    <p class="score-note">Puntaje total: ${score > 0 ? '+' : ''}${score} (positivas − negativas)</p>
+    <div class="gauge-wrap">
+      <div class="gauge-track">
+        <div class="gauge-marker" style="left:${pct}%"></div>
+      </div>
+      <div class="gauge-ticks"><span>Negativo</span><span>Neutral</span><span>Positivo</span></div>
+    </div>
+    <table class="breakdown">
+      <thead><tr><th>Palabra</th><th>Nota</th><th>Peso</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+
+  document.getElementById('trace-sentiment').innerHTML = buildSentimentTrace(matched, score);
+  document.getElementById('how-sentiment').open = true;
+}
+
+function initSentiment(){
+  renderSentDocList();
+  showSentPlain();
+  document.getElementById('analyze-sentiment').addEventListener('click', runSentimentAnalysis);
+  setupModeToggle('sentiment',
+    ()=>{ sentState.mode='preloaded'; document.getElementById('custom-sentiment').hidden=true; document.getElementById('chips-sentiment').hidden=false; showSentPlain(); },
+    ()=>{ sentState.mode='custom'; document.getElementById('custom-sentiment').hidden=false; document.getElementById('chips-sentiment').hidden=true; showSentCustomPlaceholder(); }
+  );
+}
+
+/* =================================================================
+   CASO 2 · CLASIFICACIÓN DE DOCUMENTOS
+================================================================= */
+const CATEGORIES = {
+  soporte:   { label:'Soporte Técnico',     color:'var(--blue)',   cls:'soporte',   tag:'TEC', keywords:{ 'no puedo ingresar':3, 'aplicación':1, error:2, contraseña:2, 'se cae':3, 'no carga':2, falla:2, 'intentos fallidos':2, 'sitio web':1 } },
+  reclamo:   { label:'Reclamo',             color:'var(--negative)', cls:'reclamo', tag:'REC', keywords:{ cobraron:2, exijo:2, reclamo:2, devolución:2, 'cargo duplicado':3, 'no autorizado':2, indebido:2 } },
+  comercial: { label:'Consulta Comercial',  color:'var(--purple)', cls:'comercial', tag:'COM', keywords:{ 'información sobre':2, 'tasa de interés':3, crédito:1, hipotecario:2, condiciones:1, 'quisiera saber':2 } },
+  despacho:  { label:'Despacho / Logística',color:'var(--orange)', cls:'despacho',  tag:'LOG', keywords:{ 'no ha llegado':3, 'no llega':3, despacho:1, envío:1, pedido:1, atraso:2, demora:2, retraso:2, extravió:2, 'en tránsito':2, seguimiento:1 } },
+  general:   { label:'Información General', color:'var(--teal)',   cls:'general',   tag:'GEN', keywords:{ horario:3, sucursal:2, atención:1, dirección:2, días:1 } }
+};
+
+const CLASSIFY_DOCS = [
+  { titulo:'Ticket 1', texto:'No puedo ingresar a mi cuenta, la aplicación marca error de contraseña cada vez que intento iniciar sesión.' },
+  { titulo:'Ticket 2', texto:'Quisiera información sobre la tasa de interés y las condiciones para un crédito hipotecario.' },
+  { titulo:'Ticket 3', texto:'Me cobraron dos veces el mismo monto en mi tarjeta de crédito y exijo que reviertan el cargo duplicado.' },
+  { titulo:'Ticket 4', texto:'¿Cuál es el horario de atención de las sucursales los días sábado?' },
+  { titulo:'Ticket 5', texto:'El sitio web se cae constantemente cuando intento hacer una transferencia, llevo varios intentos fallidos.' },
+  { titulo:'Ticket 6', texto:'Mi pedido lleva diez días marcado como en tránsito y aún no ha llegado a mi domicilio, sin ninguna información sobre el atraso.' }
+];
+
+const classifyState = { mode:'preloaded', index:0 };
+
+function renderClassifyLegend(){
+  const wrap = document.getElementById('legend-classify');
+  wrap.innerHTML = Object.values(CATEGORIES).map(c=>
+    `<span class="legend-item"><span class="legend-swatch" style="background:${c.color}"></span>${c.label}</span>`
+  ).join('');
+}
+
+function renderClassifyDocList(){
+  const wrap = document.getElementById('chips-classify');
+  wrap.innerHTML = '';
+  CLASSIFY_DOCS.forEach((doc,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'doc-chip' + (i===classifyState.index ? ' is-active':'');
+    btn.textContent = doc.titulo;
+    btn.addEventListener('click', ()=>{
+      classifyState.index = i;
+      renderClassifyDocList();
+      showClassifyPlain();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function showClassifyPlain(){
+  document.getElementById('display-classify').textContent = CLASSIFY_DOCS[classifyState.index].texto;
+  resetClassifyResults();
+}
+function showClassifyCustomPlaceholder(){
+  document.getElementById('display-classify').innerHTML = '<span class="placeholder">Escribe tu texto arriba y presiona “Analizar documento”.</span>';
+  resetClassifyResults();
+}
+function resetClassifyResults(){
+  document.getElementById('results-classify').innerHTML =
+    '<p class="card-label"><span>Resultado</span></p><p class="results-placeholder">Presiona “Analizar documento” para ver el puntaje de cada categoría.</p>';
+  document.getElementById('trace-classify').textContent = 'Presiona “Analizar documento” para ver el puntaje de cada categoría, paso a paso.';
+}
+
+function buildClassifyTrace(results){
+  let out = '';
+  Object.entries(results).forEach(([key,data])=>{
+    const cat = CATEGORIES[key];
+    out += `<span class="tr-dim">${escapeHtml(cat.label)}:</span>\n`;
+    if(data.matches.length === 0){
+      out += '  (sin coincidencias) → 0 pts\n\n';
+    } else {
+      let running = 0;
+      data.matches.forEach(({kw,w})=>{
+        running += w;
+        out += `  "${escapeHtml(kw)}" encontrada → +${w}   (acumulado: ${running})\n`;
+      });
+      out += '\n';
+    }
+  });
+  const entries = Object.entries(results);
+  const scores = entries.map(([,d])=> d.score);
+  const max = Math.max(...scores);
+  const winner = max > 0 ? entries.find(([,d])=> d.score === max)[0] : null;
+  out += `<span class="tr-accent">max(${scores.join(', ')}) = ${max}  →  categoría asignada = "${winner ? CATEGORIES[winner].label : 'ninguna (sin señal suficiente)'}"</span>`;
+  return out;
+}
+
+function scoreCategories(text){
+  const lower = text.toLowerCase();
+  const results = {};
+  Object.entries(CATEGORIES).forEach(([key, cat])=>{
+    let score = 0; const matches = [];
+    Object.entries(cat.keywords).forEach(([kw,w])=>{
+      if(lower.includes(kw)){ score += w; matches.push({kw,w}); }
+    });
+    results[key] = { score, matches };
+  });
+  return results;
+}
+
+function highlightCategoryMatches(text, results){
+  const lower = text.toLowerCase();
+  let spans = [];
+  Object.entries(results).forEach(([key,data])=>{
+    data.matches.forEach(({kw})=>{
+      let idx = 0;
+      while((idx = lower.indexOf(kw, idx)) !== -1){
+        spans.push({ start: idx, end: idx+kw.length, key });
+        idx += kw.length;
+      }
+    });
+  });
+  spans = mergeSpans(spans);
+  return buildHighlightedHtml(text, spans, key=>({
+    cls: `kw-match kw-${CATEGORIES[key].cls}`,
+    tag: CATEGORIES[key].tag,
+    label: CATEGORIES[key].label
+  }));
+}
+
+function runClassifyAnalysis(){
+  const text = classifyState.mode === 'preloaded'
+    ? CLASSIFY_DOCS[classifyState.index].texto
+    : document.getElementById('custom-classify').value.trim();
+
+  if(!text){
+    document.getElementById('display-classify').innerHTML = '<span class="placeholder">Escribe algo primero.</span>';
+    return;
+  }
+
+  const results = scoreCategories(text);
+  document.getElementById('display-classify').innerHTML = highlightCategoryMatches(text, results);
+
+  const maxScore = Math.max(...Object.values(results).map(r=>r.score));
+  const winnerKey = maxScore > 0
+    ? Object.keys(results).find(k=> results[k].score === maxScore)
+    : null;
+
+  const bars = Object.entries(results).map(([key,data])=>{
+    const cat = CATEGORIES[key];
+    const width = maxScore > 0 ? (data.score/maxScore*100) : 0;
+    return `
+      <div class="cat-bar-row">
+        <div class="cat-bar-head">
+          <span class="cat-name"><span class="legend-swatch" style="background:${cat.color}"></span>${cat.label}</span>
+          <span class="cat-score">${data.score} pts</span>
+        </div>
+        <div class="cat-bar-track"><div class="cat-bar-fill" style="width:${width}%; background:${cat.color}"></div></div>
+      </div>`;
+  }).join('');
+
+  let kwListHtml = Object.entries(results).map(([key,data])=>{
+    if(!data.matches.length) return '';
+    const cat = CATEGORIES[key];
+    const chips = data.matches.map(m=>
+      `<span class="kw-chip kw-${cat.cls}">${escapeHtml(m.kw)} (+${m.w})</span>`
+    ).join('');
+    return `<div class="kw-list"><p class="kw-list-title">${cat.label} — palabras detectadas</p>${chips}</div>`;
+  }).join('');
+
+  const winnerBadge = winnerKey
+    ? `<span class="winner-badge">Categoría asignada: ${CATEGORIES[winnerKey].label}</span>`
+    : `<span class="winner-badge" style="background:#E6DCC2">Sin categoría clara — no hay palabras clave suficientes</span>`;
+
+  document.getElementById('results-classify').innerHTML = `
+    <p class="card-label"><span>Resultado</span></p>
+    ${bars}
+    ${winnerBadge}
+    ${kwListHtml}
+  `;
+
+  document.getElementById('trace-classify').innerHTML = buildClassifyTrace(results);
+  document.getElementById('how-classify').open = true;
+}
+
+function initClassify(){
+  renderClassifyLegend();
+  renderClassifyDocList();
+  showClassifyPlain();
+  document.getElementById('analyze-classify').addEventListener('click', runClassifyAnalysis);
+  setupModeToggle('classify',
+    ()=>{ classifyState.mode='preloaded'; document.getElementById('custom-classify').hidden=true; document.getElementById('chips-classify').hidden=false; showClassifyPlain(); },
+    ()=>{ classifyState.mode='custom'; document.getElementById('custom-classify').hidden=false; document.getElementById('chips-classify').hidden=true; showClassifyCustomPlaceholder(); }
+  );
+}
+
+/* =================================================================
+   CASO 3 · EXTRACCIÓN DE ENTIDADES (NER)
+================================================================= */
+const ENTITY_META = {
+  ORG:     { cls:'ent ent-org',     tag:'ORG', label:'Organización', color:'var(--blue)' },
+  PERSONA: { cls:'ent ent-persona', tag:'PER', label:'Persona',      color:'var(--purple)' },
+  LUGAR:   { cls:'ent ent-lugar',   tag:'LUG', label:'Lugar',        color:'var(--teal)' },
+  FECHA:   { cls:'ent ent-fecha',   tag:'FEC', label:'Fecha',        color:'var(--orange)' },
+  MONTO:   { cls:'ent ent-monto',   tag:'$',   label:'Monto / cifra',color:'var(--negative)' }
+};
+
+const GAZETTEER = {
+  ORG: [
+    'Banco Central de Chile','Comisión para el Mercado Financiero','Retail Cordillera','Banco Andino','BCCh','CMF',
+    'Falabella','Ripley','Paris','Sodimac','Easy','Líder','Walmart','Jumbo',
+    'Movistar','Entel','Claro','VTR','Chilexpress','Pullman Bus','Turbus',
+    'Banco Santander','Banco Estado','Banco BCI','Mercado Libre','Mercado Pago'
+  ],
+  PERSONA: ['María Soto'],
+  LUGAR: ['Providencia','Santiago']
+};
+
+const DATE_RE = /\d{1,2} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre) de \d{4}|\b(primer|segundo|tercer|cuarto) trimestre\b/gi;
+const MONEY_RE = /UF\s?\d{1,3}(?:\.\d{3})*(?:,\d+)?|USD\s?\d+(?:\s?millones|\s?mil)?|\$\s?\d{1,3}(?:\.\d{3})*(?:,\d+)?|\d+(?:,\d+)?%/gi;
+
+const NER_DOCS = [
+  { titulo:'Memo 1', texto:'El Banco Central de Chile (BCCh) informó el 15 de marzo de 2026 que evalúa mantener la tasa de política monetaria en 5,5% durante el segundo trimestre.' },
+  { titulo:'Memo 2', texto:'Banco Andino otorgó un crédito hipotecario por UF 3.200 a un cliente de Providencia, con una tasa anual de 4,8%.' },
+  { titulo:'Memo 3', texto:'María Soto, gerenta de riesgo de Retail Cordillera, presentó el informe anual el 2 de enero de 2026, destacando una inversión de USD 8 millones en transformación digital.' },
+  { titulo:'Memo 4', texto:'La Comisión para el Mercado Financiero (CMF) revisará en el cuarto trimestre los requisitos de capital para Banco Andino, que opera principalmente en Santiago.' }
+];
+
+const nerState = { mode:'preloaded', index:0 };
+
+function renderNerLegend(){
+  const wrap = document.getElementById('legend-ner');
+  wrap.innerHTML = Object.values(ENTITY_META).map(m=>
+    `<span class="legend-item"><span class="legend-swatch" style="background:${m.color}"></span>${m.label}</span>`
+  ).join('');
+}
+
+function renderNerDocList(){
+  const wrap = document.getElementById('chips-ner');
+  wrap.innerHTML = '';
+  NER_DOCS.forEach((doc,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'doc-chip' + (i===nerState.index ? ' is-active':'');
+    btn.textContent = doc.titulo;
+    btn.addEventListener('click', ()=>{
+      nerState.index = i;
+      renderNerDocList();
+      showNerPlain();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function showNerPlain(){
+  document.getElementById('display-ner').textContent = NER_DOCS[nerState.index].texto;
+  resetNerResults();
+}
+function showNerCustomPlaceholder(){
+  document.getElementById('display-ner').innerHTML = '<span class="placeholder">Escribe tu texto arriba y presiona “Analizar documento”.</span>';
+  resetNerResults();
+}
+function resetNerResults(){
+  document.getElementById('results-ner').innerHTML =
+    '<p class="card-label"><span>Resultado</span></p><p class="results-placeholder">Presiona “Analizar documento” para ver las entidades extraídas.</p>';
+  document.getElementById('trace-ner').textContent = 'Presiona “Analizar documento” para ver la búsqueda paso a paso.';
+}
+
+function findTerms(text, terms, type){
+  const spans = [];
+  terms.forEach(term=>{
+    let idx = 0;
+    while((idx = text.indexOf(term, idx)) !== -1){
+      spans.push({ start: idx, end: idx+term.length, key: type });
+      idx += term.length;
+    }
+  });
+  return spans;
+}
+
+function findRegex(text, regex, type){
+  const spans = [];
+  const re = new RegExp(regex.source, regex.flags);
+  let m;
+  while((m = re.exec(text))){
+    spans.push({ start: m.index, end: m.index + m[0].length, key: type });
+    if(m[0].length === 0) re.lastIndex++;
+  }
+  return spans;
+}
+
+function buildNerTrace(text, spans){
+  const gaz = spans.filter(s=> s.key==='ORG' || s.key==='PERSONA' || s.key==='LUGAR');
+  const rx = spans.filter(s=> s.key==='FECHA' || s.key==='MONTO');
+
+  let out = '<span class="tr-dim">buscar términos del gazetteer (ORG / PERSONA / LUGAR)…</span>\n';
+  if(gaz.length === 0){ out += '  (sin coincidencias en la lista de referencia)\n'; }
+  gaz.forEach(s=>{
+    out += `  "${escapeHtml(text.slice(s.start,s.end))}" encontrada en posición ${s.start}   →   tipo ${s.key}\n`;
+  });
+
+  out += '\n<span class="tr-dim">aplicar expresiones regulares (fechas, montos, %)…</span>\n';
+  if(rx.length === 0){ out += '  (sin coincidencias de patrones)\n'; }
+  rx.forEach(s=>{
+    out += `  "${escapeHtml(text.slice(s.start,s.end))}" coincide con patrón ${s.key} en posición ${s.start}\n`;
+  });
+
+  out += `\n<span class="tr-accent">fusionar spans solapados (mergeSpans) → ${spans.length} entidad${spans.length===1?'':'es'} final${spans.length===1?'':'es'}</span>`;
+  return out;
+}
+
+function extractEntities(text){
+  let spans = [];
+  spans = spans.concat(findTerms(text, GAZETTEER.ORG, 'ORG'));
+  spans = spans.concat(findTerms(text, GAZETTEER.PERSONA, 'PERSONA'));
+  spans = spans.concat(findTerms(text, GAZETTEER.LUGAR, 'LUGAR'));
+  spans = spans.concat(findRegex(text, DATE_RE, 'FECHA'));
+  spans = spans.concat(findRegex(text, MONEY_RE, 'MONTO'));
+  return mergeSpans(spans);
+}
+
+function runNerAnalysis(){
+  const text = nerState.mode === 'preloaded'
+    ? NER_DOCS[nerState.index].texto
+    : document.getElementById('custom-ner').value.trim();
+
+  if(!text){
+    document.getElementById('display-ner').innerHTML = '<span class="placeholder">Escribe algo primero.</span>';
+    return;
+  }
+
+  const spans = extractEntities(text);
+  document.getElementById('display-ner').innerHTML = buildHighlightedHtml(text, spans, key=> ENTITY_META[key]);
+
+  const grouped = {};
+  spans.forEach(s=>{
+    const value = text.slice(s.start, s.end);
+    if(!grouped[s.key]) grouped[s.key] = new Set();
+    grouped[s.key].add(value);
+  });
+
+  let groupsHtml = Object.entries(grouped).map(([key, set])=>{
+    const meta = ENTITY_META[key];
+    const chips = Array.from(set).map(v=> `<span class="entity-chip">${escapeHtml(v)}</span>`).join('');
+    return `
+      <div class="entity-group">
+        <div class="entity-group-head"><span class="legend-swatch" style="background:${meta.color}"></span>${meta.label}</div>
+        <div class="entity-values">${chips}</div>
+      </div>`;
+  }).join('');
+
+  if(!groupsHtml){
+    groupsHtml = '<p class="results-placeholder">No se detectó ninguna entidad conocida en este texto.</p>';
+  }
+
+  document.getElementById('results-ner').innerHTML = `
+    <p class="card-label"><span>Resultado</span></p>
+    <p class="score-note">${spans.length} entidad${spans.length===1?'':'es'} encontrada${spans.length===1?'':'s'}</p>
+    ${groupsHtml}
+  `;
+
+  document.getElementById('trace-ner').innerHTML = buildNerTrace(text, spans);
+  document.getElementById('how-ner').open = true;
+}
+
+function initNer(){
+  renderNerLegend();
+  renderNerDocList();
+  showNerPlain();
+  document.getElementById('analyze-ner').addEventListener('click', runNerAnalysis);
+  setupModeToggle('ner',
+    ()=>{ nerState.mode='preloaded'; document.getElementById('custom-ner').hidden=true; document.getElementById('chips-ner').hidden=false; showNerPlain(); },
+    ()=>{ nerState.mode='custom'; document.getElementById('custom-ner').hidden=false; document.getElementById('chips-ner').hidden=true; showNerCustomPlaceholder(); }
+  );
+}
+
+/* =================================================================
+   INIT GENERAL
+================================================================= */
+setupTabs();
+initSentiment();
+initClassify();
+initNer();
+</script>
+</body>
+</html>
