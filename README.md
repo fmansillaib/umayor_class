@@ -23,8 +23,8 @@ umayor_class/
 ├── fundamentos_DL/               - ✅ Clases 1-4 (redes neuronales, clasificación, regresión)
 ├── metodos_IA/                   - ✅ Clases 1-6 (métodos de IA aplicados)
 ├── aplicaciones_computacional/   - ✅ Clases 1-8 (programación Python)
-├── datasets/                     - ✅ Conjuntos de datos para las clases
-├── nlp/                          - ✅ Clases 1-4  (NLP)
+├── datasets/                     - ✅ Conjuntos de datos para las clases (PDFs, CSV)
+├── nlp/                          - ✅ Clases 1-3 (NLP, Regex, OCR con PDFs)
 └── IA_generativa/                - [Por cargar]
 ```
 
