@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estación de Pronóstico del Lenguaje — Simulador de IA Generativa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16241F;
+    --ink-2:#1E3229;
+    --panel:#F4EFE3;
+    --panel-dim:#E8DFC8;
+    --panel-line:#D6C9A0;
+    --text-ink:#23261F;
+    --text-muted:#6B6452;
+    --text-on-ink:#EFEAD9;
+    --text-on-ink-muted:#9FAE9F;
+    --brass:#D98E3B;
+    --teal:#3E7C6F;
+    --coral:#D1603D;
+    --violet:#7B6FA6;
+    --sky:#5E89A6;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono:'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background:var(--ink);
+    background-image: radial-gradient(circle at 85% -10%, #243B31 0%, var(--ink) 55%);
+    color:var(--text-on-ink);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  button{ font-family:inherit; }
+  :focus-visible{ outline:3px solid var(--brass); outline-offset:2px; border-radius:4px; }
+
+  .app-shell{ max-width:1160px; margin:0 auto; padding:48px 24px 64px; }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding-bottom:32px; border-bottom:1px solid #2C4438; margin-bottom:8px; }
+  .hero-eyebrow{
+    font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--brass); margin:0 0 14px;
+  }
+  .hero-title{
+    font-family:var(--font-display); font-weight:600; font-size:clamp(1.8rem,3.4vw,2.7rem);
+    line-height:1.18; margin:0 0 16px; max-width:22ch; color:#FBF8F0;
+  }
+  .hero-sub{ font-size:16px; color:var(--text-on-ink-muted); max-width:64ch; margin:0; }
+  .hero-sub strong{ color:var(--text-on-ink); font-weight:600; }
+
+  /* ---------- TABS ---------- */
+  .tabs{ display:flex; gap:8px; margin-top:32px; flex-wrap:wrap; }
+  .tab-btn{
+    display:flex; align-items:center; gap:9px; padding:11px 16px;
+    background:var(--ink-2); color:var(--text-on-ink-muted); border:1px solid #2C4438;
+    border-radius:999px; cursor:pointer; font-size:13.5px; font-family:var(--font-body); font-weight:500;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .tab-btn:hover{ border-color:var(--brass); color:var(--text-on-ink); }
+  .tab-dot{ width:8px; height:8px; border-radius:50%; flex:0 0 auto; }
+  .tab-btn.is-active{ background:var(--panel); color:var(--text-ink); border-color:var(--panel); }
+
+  /* ---------- PANEL ---------- */
+  .panel{ background:var(--panel); border-radius:16px; padding:30px; color:var(--text-ink); margin-top:18px; }
+  .panel[hidden]{ display:none; }
+  .case-intro{ margin-bottom:24px; max-width:80ch; }
+  .case-eyebrow{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--text-muted); margin:0 0 8px;
+  }
+  .case-text{ margin:0; font-size:15.5px; color:#3A3826; }
+
+  .card{ background:#FFFDF6; border:1px solid var(--panel-line); border-radius:12px; padding:20px; }
+  .card-label{
+    font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--text-muted); margin:0 0 14px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+  }
+
+  .chip-row{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+  .pill-chip{
+    border:1px solid var(--panel-line); background:#FFFDF6; color:var(--text-muted);
+    font-size:12.5px; font-family:var(--font-mono); padding:7px 12px; border-radius:999px; cursor:pointer;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .pill-chip:hover{ border-color:#B7A877; }
+  .pill-chip.is-active{ background:var(--ink); color:var(--brass); border-color:var(--ink); }
+
+  details.how-card{ margin-top:22px; border:1px solid var(--panel-line); border-radius:10px; background:#FFFDF6; padding:4px 18px; }
+  details.how-card summary{
+    cursor:pointer; padding:12px 0; font-family:var(--font-mono); font-size:12.5px; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--text-muted); list-style:none; display:flex; align-items:center; gap:8px;
+  }
+  details.how-card summary::-webkit-details-marker{ display:none; }
+  details.how-card summary::before{ content:'▸'; font-size:11px; transition:transform .15s ease; }
+  details.how-card[open] summary::before{ transform:rotate(90deg); }
+  .how-body{ font-size:14px; color:#3A3826; padding:0 0 16px; max-width:80ch; }
+  .how-body p{ margin:0 0 10px; }
+  .how-body strong{ color:var(--text-ink); }
+
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
+
+  /* =================== TAB 1: QUIZ =================== */
+  .quiz-progress{ font-family:var(--font-mono); font-size:12px; color:var(--text-muted); margin-bottom:10px; }
+  .quiz-question{ font-size:18px; font-weight:600; margin:0 0 18px; max-width:60ch; }
+  .quiz-options{ display:flex; gap:12px; margin-bottom:16px; flex-wrap:wrap; }
+  .quiz-opt{
+    flex:1; min-width:160px; padding:16px; border-radius:10px; border:2px solid var(--panel-line);
+    background:#FFFDF6; cursor:pointer; font-family:var(--font-display); font-weight:600; font-size:15px;
+    color:var(--text-ink); text-align:center; transition:border-color .15s ease, transform .08s ease;
+  }
+  .quiz-opt:hover{ transform:translateY(-1px); }
+  .quiz-opt[data-kind="generativa"]{ border-color:#cdbfa0; }
+  .quiz-opt[data-kind="predictiva"]{ border-color:#cdbfa0; }
+  .quiz-opt.correct{ border-color:var(--teal); background:#EAF3EF; }
+  .quiz-opt.incorrect{ border-color:var(--coral); background:#FAEAE2; }
+  .quiz-opt[disabled]{ cursor:default; }
+  .quiz-feedback{ font-size:14px; padding:14px; border-radius:8px; background:var(--panel-dim); margin-bottom:14px; }
+  .quiz-feedback strong{ display:block; margin-bottom:4px; font-family:var(--font-display); }
+  .btn-main{
+    display:inline-flex; align-items:center; gap:8px; background:var(--brass); color:#231503;
+    border:none; font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:.03em;
+    text-transform:uppercase; padding:11px 18px; border-radius:8px; cursor:pointer; box-shadow:0 2px 0 0 #A06A23;
+    transition:transform .08s ease;
+  }
+  .btn-main:hover{ transform:translateY(-1px); }
+  .btn-main:active{ transform:translateY(1px); box-shadow:0 1px 0 0 #A06A23; }
+  .quiz-score{ font-family:var(--font-mono); font-size:13px; color:var(--text-muted); }
+
+  /* =================== TAB 2: TOKENIZACIÓN =================== */
+  .token-input-row{ margin-bottom:14px; }
+  textarea.token-textarea{
+    width:100%; min-height:70px; resize:vertical; border:1px solid var(--panel-line); border-radius:8px;
+    padding:12px; font-family:var(--font-body); font-size:14.5px; color:var(--text-ink); background:#FFFDF6;
+  }
+  .token-strip{ display:flex; flex-wrap:wrap; gap:4px; align-items:flex-end; min-height:120px; padding:8px 0; }
+  .token-chip{
+    display:flex; flex-direction:column; align-items:center; gap:4px; background:var(--ink-2);
+    border-radius:8px; padding:8px 10px; animation:reveal .35s ease both;
+  }
+  .token-chip.piece-start{ border-radius:8px 2px 2px 8px; margin-right:0; }
+  .token-chip.piece-end{ border-radius:2px 8px 8px 2px; margin-left:-3px; }
+  .token-chip .tok-text{ font-family:var(--font-mono); font-size:13.5px; color:var(--text-on-ink); font-weight:600; }
+  .token-chip .tok-id{ font-family:var(--font-mono); font-size:9.5px; color:var(--sky); }
+  .token-chip .tok-vec{ display:flex; gap:1.5px; align-items:flex-end; height:18px; }
+  .token-chip .tok-bar{ width:3px; border-radius:1px; }
+  @keyframes reveal{ from{ opacity:0; transform:translateY(3px); } to{ opacity:1; transform:translateY(0); } }
+  .token-stats{ display:flex; gap:18px; font-family:var(--font-mono); font-size:12px; color:var(--text-muted); margin-top:8px; }
+  .impact-row{ margin-bottom:12px; }
+  .impact-head{ display:flex; justify-content:space-between; font-size:13px; margin-bottom:5px; }
+  .impact-head .imp-name{ font-weight:600; }
+  .impact-head .imp-val{ font-family:var(--font-mono); color:var(--text-muted); }
+  .impact-note{ font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-top:6px; }
+
+  .embed-plot-wrap{ background:#FFFDF6; border:1px solid var(--panel-line); border-radius:10px; padding:12px; margin-bottom:12px; }
+  .embed-svg{ width:100%; height:auto; display:block; }
+  .embed-dot{ cursor:pointer; transition:r .15s ease, stroke-width .15s ease; }
+  .embed-dot:hover{ stroke-width:2.5px; }
+  .embed-dot.is-selected{ stroke:var(--ink); stroke-width:2.5px; }
+  .embed-word-label{ font-family:var(--font-mono); font-size:10.5px; fill:var(--text-ink); pointer-events:none; }
+  .embed-line{ stroke-linecap:round; }
+  .embed-legend{ display:flex; flex-wrap:wrap; gap:14px; font-family:var(--font-mono); font-size:11.5px; color:var(--text-muted); margin-bottom:2px; }
+  .embed-legend-item{ display:flex; align-items:center; gap:6px; }
+  .embed-legend-swatch{ width:10px; height:10px; border-radius:50%; flex:0 0 auto; }
+  .neighbor-row{ display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--panel-dim); font-size:13.5px; }
+  .neighbor-row .nb-dist{ font-family:var(--font-mono); color:var(--text-muted); font-size:12px; }
+
+  /* =================== TAB 3: PREDICCIÓN + TEMPERATURA =================== */
+  .gauge-wrap{ display:flex; gap:24px; align-items:center; flex-wrap:wrap; margin-bottom:18px; }
+  .gauge-svg{ width:200px; height:120px; flex:0 0 auto; }
+  .gauge-readout{ font-family:var(--font-mono); }
+  .gauge-readout .t-value{ font-size:28px; font-weight:600; color:var(--text-ink); }
+  .gauge-readout .t-label{ font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.05em; }
+  input[type="range"].temp-slider{ width:220px; margin-top:8px; accent-color:var(--brass); }
+  .formula-box{
+    font-family:var(--font-mono); font-size:12.5px; background:var(--ink); color:var(--text-on-ink-muted);
+    border-radius:8px; padding:12px 14px; margin-bottom:16px; line-height:1.7;
+  }
+  .formula-box .fx{ color:var(--brass); }
+  .forecast-row{ margin-bottom:10px; }
+  .forecast-head{ display:flex; justify-content:space-between; font-size:13.5px; margin-bottom:5px; }
+  .forecast-head .fc-name{ font-weight:600; }
+  .forecast-head .fc-pct{ font-family:var(--font-mono); color:var(--text-muted); }
+  .forecast-track{ height:12px; border-radius:6px; background:var(--panel-dim); overflow:hidden; }
+  .forecast-fill{ height:100%; border-radius:6px; background:var(--sky); transition:width .4s ease; }
+  .forecast-fill.is-chosen{ background:var(--brass); }
+  .gen-result{ margin-top:16px; padding:14px; background:var(--panel-dim); border-radius:8px; font-size:15px; }
+  .gen-result strong{ font-family:var(--font-display); }
+  .gen-history{ display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  .gen-history-chip{ font-family:var(--font-mono); font-size:11px; padding:3px 8px; border-radius:999px; background:var(--panel-dim); }
+
+  /* =================== TAB 4: ATENCIÓN =================== */
+  .attn-panel{
+    position:relative; background:var(--ink);
+    background-image:
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 17%, rgba(123,111,166,.10) 18%, transparent 19%,
+      transparent 36%, rgba(123,111,166,.10) 37%, transparent 38%,
+      transparent 55%, rgba(123,111,166,.08) 56%, transparent 57%);
+    border-radius:12px; padding:34px 20px; margin-bottom:16px; min-height:160px;
+  }
+  .attn-svg{ position:absolute; top:0; left:0; pointer-events:none; }
+  #attn-words{ position:relative; display:flex; flex-wrap:wrap; gap:10px 14px; justify-content:center; z-index:1; }
+  .attn-chip{
+    font-family:var(--font-mono); font-size:13.5px; color:var(--text-on-ink); background:#26392F;
+    border:1px solid #344A3E; border-radius:7px; padding:7px 11px; cursor:pointer;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .attn-chip:hover{ border-color:var(--violet); }
+  .attn-chip.is-focus{ background:var(--violet); color:#FBF8F0; border-color:var(--violet); }
+  .attn-list{ font-family:var(--font-mono); font-size:12.5px; }
+  .attn-list-row{ display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px solid var(--panel-dim); }
+  .attn-list-row .alw-bar{ flex:1; margin:0 10px; height:7px; border-radius:4px; background:var(--panel-dim); position:relative; overflow:hidden; }
+  .attn-list-row .alw-fill{ position:absolute; left:0; top:0; height:100%; background:var(--violet); border-radius:4px; }
+
+  /* =================== TAB 5: ALUCINACIONES =================== */
+  .halluc-toggle{ display:inline-flex; background:var(--panel-dim); border-radius:8px; padding:3px; gap:3px; margin-bottom:16px; }
+  .halluc-toggle button{
+    border:none; background:transparent; padding:8px 14px; font-size:12.5px; font-family:var(--font-mono);
+    font-weight:600; color:var(--text-muted); border-radius:6px; cursor:pointer;
+  }
+  .halluc-toggle button.is-active{ background:#FFFDF6; color:var(--text-ink); box-shadow:0 1px 2px rgba(0,0,0,.08); }
+  .halluc-card{ border-radius:10px; padding:18px; }
+  .halluc-card.is-risky{ background:repeating-linear-gradient(135deg, #FBEAE0, #FBEAE0 14px, #F6D9C8 14px, #F6D9C8 16px); border:1px solid var(--coral); }
+  .halluc-card.is-grounded{ background:#EAF3EF; border:1px solid var(--teal); }
+  .halluc-card.is-honest{ background:var(--panel-dim); border:1px solid var(--panel-line); }
+  .halluc-flag{ font-family:var(--font-mono); font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; margin-bottom:10px; display:block; }
+  .halluc-flag.flag-risky{ color:#A8431F; }
+  .halluc-flag.flag-grounded{ color:var(--teal); }
+  .halluc-flag.flag-honest{ color:var(--text-muted); }
+  .halluc-answer{ font-size:15px; line-height:1.6; margin:0 0 10px; }
+  .halluc-source{ font-family:var(--font-mono); font-size:11.5px; background:#FFFFFF; border:1px solid var(--panel-line); border-radius:6px; padding:8px 10px; color:var(--text-muted); }
+
+  /* ---------- WORKSPACE GRID (shared) ---------- */
+  .workspace{ display:grid; grid-template-columns:1.05fr .95fr; gap:24px; align-items:start; }
+  @media (max-width:780px){ .workspace{ grid-template-columns:1fr; } }
+
+  footer{ text-align:center; margin-top:36px; font-family:var(--font-mono); font-size:11.5px; color:var(--text-on-ink-muted); }
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <header class="hero">
+    <p class="hero-eyebrow">Simulador interactivo · IA Generativa y LLMs</p>
+    <h1 class="hero-title">Una estación de pronóstico para el lenguaje</h1>
+    <p class="hero-sub">Un modelo de lenguaje no "sabe" lo que va a decir — <strong>lo pronostica</strong>, como un meteorólogo calcula la probabilidad de lluvia. Esta estación tiene cinco instrumentos: cada uno muestra, paso a paso, una pieza distinta de cómo funciona realmente la IA generativa.</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Módulos del simulador">
+    <button class="tab-btn is-active" data-target="panel-quiz" role="tab" aria-selected="true">
+      <span class="tab-dot" style="background:var(--teal)"></span>Generativa vs. predictiva
+    </button>
+    <button class="tab-btn" data-target="panel-token" role="tab" aria-selected="false">
+      <span class="tab-dot" style="background:var(--sky)"></span>Tokenización
+    </button>
+    <button class="tab-btn" data-target="panel-predict" role="tab" aria-selected="false">
+      <span class="tab-dot" style="background:var(--brass)"></span>Predicción y temperatura
+    </button>
+    <button class="tab-btn" data-target="panel-attention" role="tab" aria-selected="false">
+      <span class="tab-dot" style="background:var(--violet)"></span>Atención
+    </button>
+    <button class="tab-btn" data-target="panel-halluc" role="tab" aria-selected="false">
+      <span class="tab-dot" style="background:var(--coral)"></span>Alucinaciones
+    </button>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- TAB 1 — GENERATIVA VS PREDICTIVA                              -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-quiz">
+    <div class="case-intro">
+      <p class="case-eyebrow">Instrumento 01 · Clasificación</p>
+      <p class="case-text">Antes de mirar el motor por dentro, conviene distinguir para qué sirve cada tipo de IA. La IA predictiva anticipa un resultado futuro (un número, una probabilidad, una etiqueta). La IA generativa crea contenido nuevo (texto, imágenes, código). Mismo origen estadístico, objetivos distintos.</p>
+    </div>
+    <div class="card">
+      <p class="quiz-progress" id="quiz-progress">Escenario 1 de 6</p>
+      <p class="quiz-question" id="quiz-question"></p>
+      <div class="quiz-options" id="quiz-options"></div>
+      <div id="quiz-feedback"></div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span class="quiz-score" id="quiz-score">Puntaje: 0/6</span>
+        <button class="btn-main" id="quiz-next" disabled>Siguiente →</button>
+      </div>
+    </div>
+    <details class="how-card">
+      <summary>¿Cómo funciona, para qué sirve y cómo lo usan hoy?</summary>
+      <div class="how-body">
+        <p>La pregunta clave es <strong>qué produce</strong> el sistema. Si la salida es un número, una probabilidad o una etiqueta (score de riesgo, PD, forecast de demanda) → es predictiva. Si la salida es un artefacto nuevo y utilizable (un texto, un borrador, una imagen) → es generativa, aunque por debajo use los mismos datos históricos.</p>
+        <p>Ambas pueden convivir: en un banco, la predictiva calcula a quién contactar (score de churn) y la generativa redacta el mensaje para contactarlo. Una decide, la otra comunica.</p>
+        <p><strong>¿Para qué sirve distinguirlo?</strong> Para no usar la herramienta equivocada: pedirle a un modelo generativo que calcule una probabilidad de no pago es pedirle que invente un número con apariencia de cifra real; pedirle a un modelo predictivo que redacte un correo no tiene sentido, porque no genera texto libre. Esta distinción decide qué sistema construir para cada problema y cómo medir si funciona.</p>
+        <p><strong>¿Cómo lo usan ChatGPT, Gemini y Claude hoy?</strong> Los tres son asistentes generativos: su trabajo es producir texto, código o imágenes. Pero ya no trabajan solos — las tres plataformas pueden conectarse a herramientas externas (calculadoras, bases de datos, modelos de scoring, buscadores) mediante "function calling" o "tool use". El modelo generativo no calcula la predicción él mismo: se la pide a una herramienta especializada y redacta la respuesta con ese resultado. Es la misma división de trabajo del documento —predictiva decide, generativa comunica— orquestada dentro de un solo asistente.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 2 — TOKENIZACIÓN                                          -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-token" hidden>
+    <div class="case-intro">
+      <p class="case-eyebrow">Instrumento 02 · Texto → tokens → vectores</p>
+      <p class="case-text">El modelo no lee palabras, lee <strong>tokens</strong>: fragmentos de texto que pueden ser una palabra completa, un pedazo de palabra o un signo de puntuación. Cada token se convierte en un identificador y luego en un vector numérico (embedding) — ahí recién el modelo puede "calcular" con el lenguaje.</p>
+    </div>
+    <div class="card">
+      <p class="card-label">
+        <span>Texto de entrada</span>
+        <span class="mode-toggle halluc-toggle" data-tab="token">
+          <button data-mode="preloaded" class="is-active">Ejemplos</button>
+          <button data-mode="custom">Mi texto</button>
+        </span>
+      </p>
+      <div class="chip-row" id="chips-token"></div>
+      <div class="token-input-row">
+        <textarea class="token-textarea" id="custom-token" hidden placeholder="Escribe una frase para ver cómo se tokeniza…">El directorio aprobó la reestructuración financiera.</textarea>
+      </div>
+      <button class="btn-main" id="analyze-token">▸ Tokenizar</button>
+      <div class="token-strip" id="token-strip"><span class="results-placeholder" style="color:var(--text-muted); font-style:italic; font-size:14px;">Presiona "Tokenizar" para ver el resultado.</span></div>
+      <div class="token-stats" id="token-stats"></div>
+      <div id="token-impact" style="margin-top:16px;"></div>
+    </div>
+    <div class="card" style="margin-top:18px;">
+      <p class="card-label"><span>De token a embedding</span></p>
+      <p style="font-size:14px; color:#3A3826; margin:0 0 16px; max-width:70ch;">Cada token se convierte en una lista de números — un vector — que funciona como una coordenada en un espacio de cientos de dimensiones. Aquí lo simplificamos a solo 2, para que puedas verlo: las palabras que se usan en contextos parecidos quedan cerca; las que no tienen nada que ver, quedan lejos. Haz clic en cualquier palabra para ver sus vecinos más cercanos.</p>
+      <div class="embed-plot-wrap">
+        <svg class="embed-svg" id="embed-svg" viewBox="0 0 480 300"></svg>
+      </div>
+      <div class="embed-legend" id="embed-legend"></div>
+      <div id="embed-neighbors" style="margin-top:14px;"></div>
+    </div>
+    <details class="how-card">
+      <summary>¿Cómo funciona, para qué sirve y cómo lo usan hoy?</summary>
+      <div class="how-body">
+        <p>Para palabras largas, este simulador busca sufijos frecuentes en español (-ción, -mente, -ario, -ado, -idad…) e imita cómo un tokenizador subword (como el de GPT) partiría la palabra en pedazos más pequeños — por ejemplo, "reestructuración" → "reestructura" + "ción".</p>
+        <p>El <strong>ID</strong> y el <strong>vector</strong> (las 4 barritas) son generados con una función hash determinística para fines ilustrativos — no son los embeddings reales de ningún modelo entrenado, que tienen cientos o miles de dimensiones y se aprenden de datos, no se calculan con una fórmula fija.</p>
+        <p><strong>¿Cómo se calcula el vector de verdad?</strong> Existe una tabla gigante — la matriz de embeddings — con una fila para cada token posible del vocabulario. Al inicio del entrenamiento esos números son aleatorios; a medida que el modelo lee miles de millones de oraciones, va ajustando esa tabla para que los tokens que aparecen en contextos parecidos terminen con vectores parecidos. Por eso, en un espacio entrenado de verdad, "crédito" y "préstamo" terminan cerca, y "crédito" y "perro" terminan lejos — la misma intuición que puedes explorar en el mapa de arriba, aunque ahí lo armamos a mano y reducido a solo 2 dimensiones, en vez de las cientos o miles que usa un modelo real.</p>
+        <p><strong>¿Para qué sirve convertir todo en vectores?</strong> Es lo que vuelve al lenguaje algo con lo que se puede hacer matemática. Sin un vector, comparar "banco" y "crédito" no significa nada para una computadora; con vectores, esa comparación se convierte en una simple distancia. Eso es exactamente lo que usa después la atención (instrumento 04) para decidir qué tan relacionadas están dos palabras, y es la misma idea detrás de la búsqueda semántica: cuando subes un documento a un asistente de IA, el sistema lo convierte en vectores por adelantado para poder encontrar luego el fragmento más parecido a tu pregunta — eso es justo lo que pasa detrás del modo "Con RAG" del instrumento 05.</p>
+        <p><strong>¿Para qué sirve esto en la práctica?</strong> Define dos límites muy concretos de cualquier producto de IA: cuánto cuesta cada consulta (las APIs cobran por token, no por palabra ni por carácter) y cuánto texto puede "tener en mente" el modelo a la vez (la ventana de contexto). Por eso un mismo texto en español suele costar más que su equivalente en inglés: los tokenizadores se entrenaron mayoritariamente con texto en inglés, así que el español —y más aún idiomas con otro alfabeto— suele partirse en más piezas para la misma cantidad de palabras. El medidor de costo y de ventana de contexto debajo del botón "Tokenizar" usa justamente el número de tokens que acabas de generar.</p>
+        <p><strong>¿Cómo lo usan ChatGPT, Gemini y Claude hoy?</strong> Cada proveedor entrena y usa su propio tokenizador — no existe un estándar único, así que el mismo texto puede dar un número distinto de tokens en cada plataforma. Los tres publican cuántos tokens caben en la ventana de contexto de cada uno de sus modelos; hoy esa cifra ronda desde varios cientos de miles hasta más de un millón de tokens según el modelo y el plan, y sigue creciendo mes a mes, así que conviene revisar la documentación oficial vigente en vez de memorizar un número. Lo que no cambia es el principio: más tokens de entrada (tu pregunta, el historial de la conversación, los documentos adjuntos) significan más costo y menos espacio disponible para la respuesta. El mismo mecanismo de vectores reaparece cuando conectas tus propios documentos al asistente: cada plataforma los convierte en embeddings y los guarda en una base de datos vectorial, para poder encontrar el fragmento más relevante apenas haces una pregunta.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 3 — PREDICCIÓN Y TEMPERATURA                              -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-predict" hidden>
+    <div class="case-intro">
+      <p class="case-eyebrow">Instrumento 03 · El corazón del modelo de lenguaje</p>
+      <p class="case-text">Dado un contexto, el modelo calcula una distribución de probabilidad sobre el siguiente token y elige uno. La <strong>temperatura</strong> es el dial que decide qué tan jugada arriesgada hace: baja temperatura = casi siempre el más probable; alta temperatura = más espacio para sorpresas.</p>
+    </div>
+    <div class="workspace">
+      <div class="card">
+        <p class="card-label"><span>Contexto</span></p>
+        <div class="chip-row" id="chips-predict"></div>
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="0 0 200 120" id="gauge-svg">
+            <path d="M 20 110 A 80 80 0 0 1 180 110" fill="none" stroke="#D6C9A0" stroke-width="10" stroke-linecap="round"/>
+            <line id="gauge-needle" x1="100" y1="110" x2="100" y2="34" stroke="var(--brass)" stroke-width="4" stroke-linecap="round" transform="rotate(0 100 110)"/>
+            <circle cx="100" cy="110" r="7" fill="var(--brass)"/>
+          </svg>
+          <div class="gauge-readout">
+            <div class="t-value" id="temp-value">1.0</div>
+            <div class="t-label">Temperatura</div>
+            <input type="range" class="temp-slider" id="temp-slider" min="0.1" max="2" step="0.1" value="1.0">
+            <div class="t-label" style="display:flex; justify-content:space-between; width:220px; margin-top:4px;"><span>Determinista</span><span>Creativo</span></div>
+          </div>
+        </div>
+        <div class="formula-box" id="formula-box"></div>
+        <div id="forecast-list"></div>
+        <button class="btn-main" id="generate-token" style="margin-top:8px;">▸ Generar token</button>
+      </div>
+      <div class="card">
+        <p class="card-label"><span>Resultado</span></p>
+        <div id="gen-result-area"><p class="results-placeholder" style="color:var(--text-muted); font-style:italic; font-size:14px;">Ajusta la temperatura y presiona "Generar token" para muestrear.</p></div>
+      </div>
+    </div>
+    <details class="how-card">
+      <summary>¿Cómo funciona, para qué sirve y cómo lo usan hoy?</summary>
+      <div class="how-body">
+        <p>Cada probabilidad base p se transforma con <strong>p^(1/T)</strong> y luego se normaliza. Esto es matemáticamente equivalente a aplicar softmax(logits/T): con T bajo, las diferencias se exageran (casi determinista); con T alto, se aplanan (más espacio para tokens menos probables).</p>
+        <p>"Generar token" no elige siempre el más probable: hace un sorteo ponderado según la distribución ajustada. Por eso, a la misma temperatura, puedes obtener resultados distintos cada vez — corre el sorteo varias veces a temperatura 0.1 y luego a 1.8 para sentir la diferencia.</p>
+        <p><strong>¿Para qué sirve ajustar la temperatura?</strong> Permite adaptar el mismo modelo a tareas muy distintas sin reentrenarlo: temperatura baja para tareas donde un error de redacción no es aceptable (resúmenes ejecutivos, respuestas legales o financieras, código), temperatura alta para tareas donde la variedad es justamente el objetivo (lluvia de ideas, nombres de campaña, variantes de un aviso publicitario).</p>
+        <p><strong>¿Cómo lo usan ChatGPT, Gemini y Claude hoy?</strong> Las tres plataformas exponen un parámetro de temperatura (y uno relacionado, top_p) en sus APIs para que quien construye una aplicación lo ajuste según la tarea. En las apps de consumo que usa la mayoría de la gente, ese control normalmente queda fijo y oculto: cada equipo de producto ya eligió un valor balanceado para que la conversación se sienta natural sin que cada persona tenga que entender qué es la temperatura.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 4 — ATENCIÓN                                              -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-attention" hidden>
+    <div class="case-intro">
+      <p class="case-eyebrow">Instrumento 04 · "¿En qué me fijo del contexto?"</p>
+      <p class="case-text">Cuando el modelo procesa una palabra, no la mira aislada: la compara con todas las demás palabras de la oración y decide cuáles le sirven más para interpretarla. Eso es la atención. Este instrumento te deja elegir qué palabra está "procesando" el modelo y ver, literalmente, en qué otras palabras se apoya.</p>
+    </div>
+    <div class="card" style="margin-bottom:18px;">
+      <p class="card-label"><span>Cómo leer este instrumento</span></p>
+      <ol style="margin:0; padding-left:20px; font-size:14px; color:#3A3826; line-height:1.7;">
+        <li>Cada palabra de la oración es una ficha. Haz clic en cualquiera — esa será la palabra que el modelo está "interpretando ahora" (queda resaltada en violeta).</li>
+        <li>Las líneas curvas conectan esa ficha con las palabras en las que más se apoya para entenderla.</li>
+        <li>Mientras más gruesa y más opaca la línea, mayor el peso de atención — es decir, más influye esa palabra en el significado de la palabra seleccionada.</li>
+        <li>Abajo, la lista ordenada te da el número exacto detrás de cada línea.</li>
+      </ol>
+      <p style="font-size:13.5px; color:var(--text-muted); margin:12px 0 0;">Prueba con el ejemplo precargado: haz clic en <strong>"tenía"</strong> y mira cómo la línea más gruesa apunta a <strong>"cliente"</strong>, no a "banco" — el modelo entiende que lo que el cliente "tenía" es el historial, no algo relacionado con el banco.</p>
+    </div>
+    <div class="card">
+      <p class="card-label"><span>Oración</span></p>
+      <div class="chip-row" id="chips-attention"></div>
+      <div class="attn-panel" id="attn-panel">
+        <svg class="attn-svg" id="attn-svg"></svg>
+        <div id="attn-words"></div>
+      </div>
+      <p class="card-label"><span>Top conexiones desde la palabra seleccionada</span></p>
+      <div class="attn-list" id="attn-list"></div>
+    </div>
+    <details class="how-card">
+      <summary>¿Cómo funciona, para qué sirve y cómo lo usan hoy?</summary>
+      <div class="how-body">
+        <p><strong>¿Qué está calculando exactamente?</strong> Para la palabra que seleccionaste, el instrumento le da un peso a cada otra palabra de la oración según dos factores: si es una palabra "de contenido" (sustantivo, verbo, adjetivo) en vez de una palabra "de función" (artículos, preposiciones), y qué tan cerca está. A eso le suma manualmente algunas relaciones específicas para que el ejemplo coincida con lo que describe el documento — por ejemplo, que "tenía" se apoye fuertemente en "cliente". Todos los pesos de una palabra siempre suman 100%, igual que en un Transformer real.</p>
+        <p>Estos pesos son una <strong>simulación hecha a mano</strong>, no la atención real de un Transformer entrenado. Un modelo real calcula esto aprendiendo proyecciones Query, Key y Value para millones de oraciones, de modo que estos pesos emergen del entrenamiento — nadie los escribe a mano. Aquí los escribimos a mano para mostrar la intuición sin necesitar una red neuronal real corriendo en el navegador.</p>
+        <p><strong>¿Para qué sirve la atención?</strong> Es lo que le permite al modelo no perder el hilo: resolver a qué se refiere un pronombre, qué adjetivo modifica a qué sustantivo, o qué cláusula corresponde a qué sujeto, sin importar cuántas palabras de distancia haya entre ellos. Sin atención, un modelo solo podría mirar bien las palabras inmediatamente anteriores; con atención, puede "saltar" directo a la palabra relevante aunque esté al principio de un párrafo largo. Esto es lo que permite que un contrato de 40 páginas o una conversación larga no se vuelvan incoherentes a medida que avanzan.</p>
+        <p><strong>¿Cómo lo usan ChatGPT, Gemini y Claude hoy?</strong> Los tres son arquitecturas Transformer con auto-atención multi-cabeza en su núcleo — eso no los diferencia entre sí, es la base que comparten prácticamente todos los modelos de lenguaje modernos desde 2017. Lo que sí varía entre ellos es la escala (cuántas capas y cabezas de atención), las optimizaciones para sostener atención eficiente sobre contextos de cientos de miles de tokens sin perder precisión, y en el caso de Gemini, una atención diseñada desde el origen para combinar texto, imagen, audio y video dentro del mismo mecanismo en vez de procesarlos por separado.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 5 — ALUCINACIONES                                         -->
+  <!-- ============================================================ -->
+  <section class="panel" id="panel-halluc" hidden>
+    <div class="case-intro">
+      <p class="case-eyebrow">Instrumento 05 · Respuestas plausibles vs. respuestas verificadas</p>
+      <p class="case-text">Un modelo sin fuentes "completa" la respuesta con el patrón más probable, aunque eso signifique inventar una cifra. Conectado a fuentes (RAG), responde apoyado en un documento real — y, si no encuentra nada, debería poder decir "no sé" en vez de inventar.</p>
+    </div>
+    <div class="card">
+      <p class="card-label"><span>Pregunta</span></p>
+      <div class="chip-row" id="chips-halluc"></div>
+      <div class="halluc-toggle" id="halluc-toggle">
+        <button data-mode="sin" class="is-active">Sin fuentes</button>
+        <button data-mode="rag">Con RAG (fuentes)</button>
+      </div>
+      <div id="halluc-card-area"></div>
+    </div>
+    <details class="how-card">
+      <summary>¿Cómo funciona, para qué sirve y cómo lo usan hoy?</summary>
+      <div class="how-body">
+        <p>"Sin fuentes" representa al modelo completando la respuesta solo con patrones de lenguaje aprendidos — fluida y segura, pero sin ningún documento real detrás. "Con RAG" representa <em>retrieval-augmented generation</em>: el sistema busca primero en una base de conocimiento y solo entonces redacta la respuesta apoyada en lo que encontró.</p>
+        <p>El tercer ejemplo es deliberado: incluso con RAG, si el documento no existe en la base, la respuesta correcta es decir que no se encontró — no inventar algo plausible para no quedar mal.</p>
+        <p><strong>¿Para qué sirve todo esto?</strong> Hace viable usar estos modelos en contextos donde inventar algo sale caro: atención al cliente regulada, compliance, decisiones financieras. La diferencia entre un chatbot que alucina una tarifa y uno que cita el tarifario real puede ser la diferencia entre un cliente satisfecho y un reclamo formal — o una multa.</p>
+        <p><strong>¿Cómo lo usan ChatGPT, Gemini y Claude hoy?</strong> Las tres plataformas ofrecen formas de anclar sus respuestas a fuentes verificables en vez de depender solo de lo aprendido en entrenamiento: búsqueda web en tiempo real, y la posibilidad de conectar o subir documentos propios (Drive, archivos, bases internas de una empresa) para que la respuesta cite ese material en vez de inventarlo. Ese "buscar antes de responder" es, en esencia, RAG funcionando dentro de un producto de consumo. Pero ninguna de las tres garantiza que el modelo vaya a decir "no sé" cuando no encuentra nada — ese comportamiento depende de cómo esté instruido el sistema, y sigue siendo un punto débil real incluso hoy.</p>
+      </div>
+    </details>
+  </section>
+
+  <footer>Herramienta educativa · Simulador de IA Generativa · Lógica simplificada con fines pedagógicos</footer>
+</div>
+
+<script>
+/* =================================================================
+   UTILIDADES COMPARTIDAS
+================================================================= */
+function escapeHtml(str){
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function clamp(n,min,max){ return Math.max(min, Math.min(max,n)); }
+
+function setupTabs(){
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      buttons.forEach(b=>{ b.classList.remove('is-active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected','true');
+      document.querySelectorAll('.panel').forEach(p=> p.hidden = true);
+      document.getElementById(btn.dataset.target).hidden = false;
+      if(btn.dataset.target === 'panel-attention'){ renderAttentionSentence(); }
+    });
+  });
+}
+
+/* =================================================================
+   TAB 1 · GENERATIVA VS PREDICTIVA (QUIZ)
+================================================================= */
+const QUIZ_ITEMS = [
+  { texto:'Estimar la probabilidad de que un cliente no pague su próxima cuota (PD).', tipo:'predictiva',
+    explicacion:'Salida numérica (una probabilidad) que anticipa un resultado futuro: es predictiva.' },
+  { texto:'Redactar un borrador de correo de bienvenida para nuevos clientes.', tipo:'generativa',
+    explicacion:'La salida es un texto nuevo y utilizable, no un número: es generativa.' },
+  { texto:'Asignar un score de riesgo crediticio a una solicitud de préstamo.', tipo:'predictiva',
+    explicacion:'Score = estimación numérica de un resultado: es predictiva, aunque alimente una decisión.' },
+  { texto:'Generar variantes de un aviso publicitario para probar en redes sociales.', tipo:'generativa',
+    explicacion:'Crea contenido nuevo (varios borradores) a partir de patrones aprendidos: es generativa.' },
+  { texto:'Pronosticar la demanda de un producto para el próximo trimestre.', tipo:'predictiva',
+    explicacion:'Forecast numérico de un resultado futuro: es predictiva.' },
+  { texto:'Resumir un informe interno de 40 páginas en un párrafo ejecutivo.', tipo:'generativa',
+    explicacion:'El resultado es un artefacto comunicacional nuevo (el resumen), no una predicción: es generativa.' }
+];
+
+const quizState = { index:0, score:0, answered:false };
+
+function renderQuiz(){
+  const item = QUIZ_ITEMS[quizState.index];
+  document.getElementById('quiz-progress').textContent = `Escenario ${quizState.index+1} de ${QUIZ_ITEMS.length}`;
+  document.getElementById('quiz-question').textContent = item.texto;
+  document.getElementById('quiz-feedback').innerHTML = '';
+  document.getElementById('quiz-score').textContent = `Puntaje: ${quizState.score}/${QUIZ_ITEMS.length}`;
+  quizState.answered = false;
+
+  const optsWrap = document.getElementById('quiz-options');
+  optsWrap.innerHTML = '';
+  ['generativa','predictiva'].forEach(kind=>{
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.dataset.kind = kind;
+    btn.textContent = kind === 'generativa' ? 'IA Generativa' : 'IA Predictiva';
+    btn.addEventListener('click', ()=> answerQuiz(kind));
+    optsWrap.appendChild(btn);
+  });
+
+  const nextBtn = document.getElementById('quiz-next');
+  nextBtn.disabled = true;
+  nextBtn.textContent = quizState.index === QUIZ_ITEMS.length - 1 ? 'Ver resultado final →' : 'Siguiente →';
+}
+
+function answerQuiz(kind){
+  if(quizState.answered) return;
+  quizState.answered = true;
+  const item = QUIZ_ITEMS[quizState.index];
+  const correct = kind === item.tipo;
+  if(correct) quizState.score++;
+
+  document.querySelectorAll('.quiz-opt').forEach(btn=>{
+    btn.disabled = true;
+    if(btn.dataset.kind === item.tipo) btn.classList.add('correct');
+    else if(btn.dataset.kind === kind) btn.classList.add('incorrect');
+  });
+
+  document.getElementById('quiz-feedback').innerHTML = `
+    <div class="quiz-feedback">
+      <strong>${correct ? '✓ Correcto' : '✗ No exactamente'} — es ${item.tipo === 'generativa' ? 'IA Generativa' : 'IA Predictiva'}</strong>
+      ${escapeHtml(item.explicacion)}
+    </div>`;
+  document.getElementById('quiz-score').textContent = `Puntaje: ${quizState.score}/${QUIZ_ITEMS.length}`;
+  document.getElementById('quiz-next').disabled = false;
+}
+
+function nextQuiz(){
+  if(quizState.index < QUIZ_ITEMS.length - 1){
+    quizState.index++;
+    renderQuiz();
+  } else {
+    document.getElementById('quiz-progress').textContent = 'Resultado final';
+    document.getElementById('quiz-question').textContent = `Terminaste el cuestionario con ${quizState.score} de ${QUIZ_ITEMS.length} correctas.`;
+    document.getElementById('quiz-options').innerHTML = '';
+    document.getElementById('quiz-feedback').innerHTML = '';
+    document.getElementById('quiz-next').disabled = true;
+    const restart = document.createElement('button');
+    restart.className = 'btn-main';
+    restart.textContent = '↺ Reiniciar cuestionario';
+    restart.addEventListener('click', ()=>{
+      quizState.index = 0; quizState.score = 0;
+      renderQuiz();
+    });
+    document.getElementById('quiz-options').appendChild(restart);
+  }
+}
+
+function initQuiz(){
+  renderQuiz();
+  document.getElementById('quiz-next').addEventListener('click', nextQuiz);
+}
+
+/* =================================================================
+   TAB 2 · TOKENIZACIÓN
+================================================================= */
+const TOKEN_DOCS = [
+  { titulo:'Ejemplo 1', texto:'La inflación sube.' },
+  { titulo:'Ejemplo 2', texto:'El Banco Central decidió subir la tasa.' },
+  { titulo:'Ejemplo 3', texto:'El cliente solicitó un crédito hipotecario.' }
+];
+const SUFFIXES = ['ciones','ción','mente','dades','dad','arios','arias','ario','aria','ados','adas','ado','ada',
+  'iendo','ando','osos','osas','oso','osa','idades','idad','ables','ibles','able','ible'].sort((a,b)=>b.length-a.length);
+
+const tokenState = { mode:'preloaded', index:0 };
+
+function splitSubword(word){
+  if(word.length <= 7) return [word];
+  const lower = word.toLowerCase();
+  for(const suf of SUFFIXES){
+    if(lower.endsWith(suf) && word.length - suf.length >= 3){
+      return [word.slice(0, word.length - suf.length), word.slice(word.length - suf.length)];
+    }
+  }
+  if(word.length > 9){
+    const mid = Math.ceil(word.length * 0.55);
+    return [word.slice(0, mid), word.slice(mid)];
+  }
+  return [word];
+}
+
+function hashStr(str, seed){
+  let h = seed;
+  for(let i=0;i<str.length;i++){ h = (h * 31 + str.charCodeAt(i)) % 1000000007; }
+  return Math.abs(h);
+}
+function tokenId(token){ return hashStr(token.toLowerCase(), 7) % 50000; }
+function pseudoEmbedding(token){
+  const vec = [];
+  for(let d=0; d<4; d++){
+    const h = hashStr(token.toLowerCase(), 17 + d*101);
+    vec.push(Math.round((((h % 2000) / 1000) - 1) * 100) / 100);
+  }
+  return vec;
+}
+
+function tokenizeForDisplay(text){
+  const rawChunks = text.match(/[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+|[^A-Za-zÁÉÍÓÚÑÜáéíóúñü]+/g) || [];
+  const tokens = [];
+  rawChunks.forEach(chunk=>{
+    const isWord = /^[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+$/.test(chunk);
+    if(isWord){
+      const pieces = splitSubword(chunk);
+      pieces.forEach((piece, i)=>{
+        tokens.push({ text:piece, isWord:true, piece: pieces.length>1 ? (i===0?'start':'end') : null });
+      });
+    } else {
+      chunk.split('').forEach(ch=>{
+        if(ch.trim()===''){ tokens.push({ text:' ', isSpace:true }); }
+        else { tokens.push({ text:ch, isWord:false }); }
+      });
+    }
+  });
+  return tokens;
+}
+
+function runTokenize(){
+  const text = tokenState.mode === 'preloaded'
+    ? TOKEN_DOCS[tokenState.index].texto
+    : document.getElementById('custom-token').value.trim();
+
+  const strip = document.getElementById('token-strip');
+  if(!text){ strip.innerHTML = '<span style="color:var(--text-muted); font-style:italic; font-size:14px;">Escribe algo primero.</span>'; return; }
+
+  const tokens = tokenizeForDisplay(text);
+  let html = '';
+  let wordTokenCount = 0;
+  tokens.forEach(tok=>{
+    if(tok.isSpace){ html += '<span style="width:6px"></span>'; return; }
+    wordTokenCount++;
+    const id = tokenId(tok.text);
+    const vec = pseudoEmbedding(tok.text);
+    const bars = vec.map(v=>{
+      const h = Math.abs(v) * 16 + 2;
+      const color = v >= 0 ? 'var(--brass)' : 'var(--sky)';
+      return `<span class="tok-bar" style="height:${h}px; background:${color}"></span>`;
+    }).join('');
+    const pieceCls = tok.piece === 'start' ? ' piece-start' : tok.piece === 'end' ? ' piece-end' : '';
+    html += `<span class="token-chip${pieceCls}">
+      <span class="tok-text">${escapeHtml(tok.text)}</span>
+      <span class="tok-id">#${id}</span>
+      <span class="tok-vec">${bars}</span>
+    </span>`;
+  });
+  strip.innerHTML = html;
+  document.getElementById('token-stats').innerHTML =
+    `<span>${text.length} caracteres</span><span>${wordTokenCount} tokens</span><span>${text.split(/\s+/).filter(Boolean).length} palabras</span>`;
+  renderTokenImpact(wordTokenCount);
+}
+
+const ILLUSTRATIVE_RATE_PER_1K = 0.003; // USD por 1.000 tokens — tarifa ILUSTRATIVA, no es la de ningún proveedor real
+const ILLUSTRATIVE_CONTEXT_WINDOW = 100000; // tokens — ventana de ejemplo, no representa el límite real de ningún modelo
+
+function renderTokenImpact(numTokens){
+  const cost = (numTokens / 1000) * ILLUSTRATIVE_RATE_PER_1K;
+  const pctContext = clamp((numTokens / ILLUSTRATIVE_CONTEXT_WINDOW) * 100, 0, 100);
+  document.getElementById('token-impact').innerHTML = `
+    <p class="card-label"><span>¿Qué implica este número de tokens?</span></p>
+    <div class="impact-row">
+      <div class="impact-head"><span class="imp-name">Costo estimado de esta consulta</span><span class="imp-val">$${cost.toFixed(5)} USD</span></div>
+      <div class="impact-note">A una tarifa ilustrativa de $${ILLUSTRATIVE_RATE_PER_1K.toFixed(3)} por cada 1.000 tokens — no es la tarifa real de ningún proveedor, es solo para mostrar que el costo escala con los tokens, no con las palabras.</div>
+    </div>
+    <div class="impact-row">
+      <div class="impact-head"><span class="imp-name">Uso de una ventana de contexto de ejemplo (100.000 tokens)</span><span class="imp-val">${pctContext.toFixed(3)}%</span></div>
+      <div class="forecast-track"><div class="forecast-fill" style="width:${pctContext}%"></div></div>
+      <div class="impact-note">Las ventanas reales de ChatGPT, Gemini y Claude hoy son mucho más grandes y cambian seguido — esta de 100.000 es solo una referencia fija para comparar.</div>
+    </div>`;
+}
+
+function renderTokenDocList(){
+  const wrap = document.getElementById('chips-token');
+  wrap.innerHTML = '';
+  TOKEN_DOCS.forEach((doc,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'pill-chip' + (i===tokenState.index ? ' is-active':'');
+    btn.textContent = doc.titulo;
+    btn.addEventListener('click', ()=>{ tokenState.index = i; renderTokenDocList(); });
+    wrap.appendChild(btn);
+  });
+}
+
+function initTokenize(){
+  renderTokenDocList();
+  document.getElementById('analyze-token').addEventListener('click', runTokenize);
+  const toggle = document.querySelector('.mode-toggle[data-tab="token"]');
+  toggle.querySelectorAll('button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      toggle.querySelectorAll('button').forEach(b=>b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const isCustom = btn.dataset.mode === 'custom';
+      tokenState.mode = isCustom ? 'custom' : 'preloaded';
+      document.getElementById('custom-token').hidden = !isCustom;
+      document.getElementById('chips-token').hidden = isCustom;
+    });
+  });
+}
+
+/* =================================================================
+   TAB 2b · DE TOKEN A EMBEDDING (mapa semántico 2D)
+================================================================= */
+const EMBED_WORDS = [
+  { word:'banco', x:90, y:70, cat:'finanzas' },
+  { word:'crédito', x:130, y:60, cat:'finanzas' },
+  { word:'préstamo', x:70, y:110, cat:'finanzas' },
+  { word:'interés', x:140, y:100, cat:'finanzas' },
+  { word:'deuda', x:100, y:130, cat:'finanzas' },
+  { word:'cliente', x:210, y:80, cat:'negocio' },
+  { word:'venta', x:240, y:70, cat:'negocio' },
+  { word:'factura', x:200, y:120, cat:'negocio' },
+  { word:'contrato', x:250, y:130, cat:'negocio' },
+  { word:'perro', x:320, y:200, cat:'animales' },
+  { word:'gato', x:350, y:190, cat:'animales' },
+  { word:'caballo', x:340, y:240, cat:'animales' },
+  { word:'manzana', x:100, y:250, cat:'frutas' },
+  { word:'naranja', x:140, y:230, cat:'frutas' },
+  { word:'plátano', x:160, y:270, cat:'frutas' }
+];
+const EMBED_CATS = {
+  finanzas: { label:'Finanzas', cssVar:'var(--brass)', hex:'#D98E3B' },
+  negocio:  { label:'Negocio / cliente', cssVar:'var(--teal)', hex:'#3E7C6F' },
+  animales: { label:'Animales', cssVar:'var(--sky)', hex:'#5E89A6' },
+  frutas:   { label:'Frutas', cssVar:'var(--violet)', hex:'#7B6FA6' }
+};
+const embedState = { selected:'banco' };
+
+function embedDist(a,b){ return Math.sqrt((a.x-b.x)**2 + (a.y-b.y)**2); }
+
+function embedNeighbors(word, k){
+  const target = EMBED_WORDS.find(w=>w.word===word);
+  return EMBED_WORDS.filter(w=>w.word!==word)
+    .map(w=>({ ...w, d: embedDist(target,w) }))
+    .sort((a,b)=>a.d-b.d)
+    .slice(0,k);
+}
+
+function renderEmbedLegend(){
+  document.getElementById('embed-legend').innerHTML = Object.values(EMBED_CATS).map(c=>
+    `<span class="embed-legend-item"><span class="embed-legend-swatch" style="background:${c.cssVar}"></span>${c.label}</span>`
+  ).join('');
+}
+
+function renderEmbedPlot(){
+  const svg = document.getElementById('embed-svg');
+  const selected = embedState.selected;
+  const target = EMBED_WORDS.find(w=>w.word===selected);
+  const neighbors = embedNeighbors(selected, 3);
+  const neighborWords = new Set(neighbors.map(n=>n.word));
+
+  let linesHtml = '';
+  neighbors.forEach(n=>{
+    const opacity = Math.max(0.25, Math.min(1, 1 - n.d/260));
+    const width = Math.max(1, 3.5 - n.d/60);
+    linesHtml += `<line class="embed-line" x1="${target.x}" y1="${target.y}" x2="${n.x}" y2="${n.y}" stroke="${EMBED_CATS[target.cat].hex}" stroke-width="${width.toFixed(1)}" opacity="${opacity.toFixed(2)}"></line>`;
+  });
+
+  let dotsHtml = '';
+  EMBED_WORDS.forEach(w=>{
+    const isSelected = w.word === selected;
+    const isNeighbor = neighborWords.has(w.word);
+    const r = isSelected ? 7 : (isNeighbor ? 6 : 5);
+    const cls = 'embed-dot' + (isSelected ? ' is-selected' : '');
+    dotsHtml += `<circle class="${cls}" cx="${w.x}" cy="${w.y}" r="${r}" fill="${EMBED_CATS[w.cat].hex}" stroke="#FFFDF6" stroke-width="1.5" data-word="${w.word}"></circle>`;
+    dotsHtml += `<text class="embed-word-label" x="${w.x + 8}" y="${w.y + 3}" text-anchor="start">${escapeHtml(w.word)}</text>`;
+  });
+
+  svg.innerHTML = linesHtml + dotsHtml;
+  svg.querySelectorAll('.embed-dot').forEach(dot=>{
+    dot.addEventListener('click', ()=>{
+      embedState.selected = dot.dataset.word;
+      renderEmbedPlot();
+      renderEmbedNeighbors();
+    });
+  });
+}
+
+function renderEmbedNeighbors(){
+  const selected = embedState.selected;
+  const neighbors = embedNeighbors(selected, 3);
+  const rows = neighbors.map(n=>
+    `<div class="neighbor-row"><span>${escapeHtml(n.word)}</span><span class="nb-dist">distancia ${n.d.toFixed(0)}</span></div>`
+  ).join('');
+  document.getElementById('embed-neighbors').innerHTML = `
+    <p class="card-label"><span>Vecinos más cercanos a "${escapeHtml(selected)}"</span></p>
+    ${rows}`;
+}
+
+function initEmbeddings(){
+  renderEmbedLegend();
+  renderEmbedPlot();
+  renderEmbedNeighbors();
+}
+
+/* =================================================================
+   TAB 3 · PREDICCIÓN Y TEMPERATURA
+================================================================= */
+const PREDICT_CONTEXTS = [
+  { titulo:'Ejemplo 1', contexto:'La inflación', candidatos:[
+    {label:'sube', p:0.60}, {label:'baja', p:0.25}, {label:'anual', p:0.10}, {label:'repunta', p:0.05}
+  ]},
+  { titulo:'Ejemplo 2', contexto:'El Banco Central decidió', candidatos:[
+    {label:'subir la tasa', p:0.55}, {label:'mantener la tasa', p:0.25}, {label:'bajar la tasa', p:0.12}, {label:'esperar más antecedentes', p:0.08}
+  ]},
+  { titulo:'Ejemplo 3', contexto:'El cliente solicitó', candidatos:[
+    {label:'un crédito', p:0.50}, {label:'una tarjeta', p:0.20}, {label:'información', p:0.18}, {label:'un reembolso', p:0.12}
+  ]}
+];
+
+const predictState = { index:0, temp:1.0, history:[] };
+
+function adjustByTemperature(candidatos, T){
+  const raw = candidatos.map(c => Math.pow(c.p, 1/T));
+  const sum = raw.reduce((a,b)=>a+b, 0);
+  return candidatos.map((c,i)=>({ label:c.label, p:c.p, adj: raw[i]/sum }));
+}
+
+function sampleFromDist(items){
+  const r = Math.random();
+  let cum = 0;
+  for(const it of items){ cum += it.adj; if(r <= cum) return it; }
+  return items[items.length-1];
+}
+
+function updateGaugeNeedle(T){
+  const angle = -80 + (T - 0.1) / (2.0 - 0.1) * 160;
+  document.getElementById('gauge-needle').setAttribute('transform', `rotate(${angle} 100 110)`);
+  document.getElementById('temp-value').textContent = T.toFixed(1);
+}
+
+function renderForecast(){
+  const ctx = PREDICT_CONTEXTS[predictState.index];
+  const adjusted = adjustByTemperature(ctx.candidatos, predictState.temp).sort((a,b)=> b.adj - a.adj);
+
+  document.getElementById('formula-box').innerHTML =
+    `<span class="fx">p'(token)</span> = p(token)<sup>1/T</sup> / Σ p(j)<sup>1/T</sup> &nbsp;·&nbsp; T = ${predictState.temp.toFixed(1)}`;
+
+  const list = document.getElementById('forecast-list');
+  list.innerHTML = adjusted.map(c => `
+    <div class="forecast-row">
+      <div class="forecast-head"><span class="fc-name">"${escapeHtml(c.label)}"</span><span class="fc-pct">${(c.adj*100).toFixed(1)}%</span></div>
+      <div class="forecast-track"><div class="forecast-fill" style="width:${c.adj*100}%"></div></div>
+    </div>`).join('');
+}
+
+function runGenerate(){
+  const ctx = PREDICT_CONTEXTS[predictState.index];
+  const adjusted = adjustByTemperature(ctx.candidatos, predictState.temp);
+  const chosen = sampleFromDist(adjusted);
+
+  // marcar la barra elegida
+  const rows = document.querySelectorAll('.forecast-row');
+  const sorted = [...adjusted].sort((a,b)=> b.adj - a.adj);
+  rows.forEach((row,i)=>{
+    const fill = row.querySelector('.forecast-fill');
+    fill.classList.toggle('is-chosen', sorted[i].label === chosen.label);
+  });
+
+  predictState.history.unshift({ label: chosen.label, temp: predictState.temp });
+  if(predictState.history.length > 8) predictState.history.pop();
+
+  document.getElementById('gen-result-area').innerHTML = `
+    <p class="gen-result"><strong>"${escapeHtml(ctx.contexto)} ${escapeHtml(chosen.label)}"</strong><br>
+    Token elegido: <strong>${escapeHtml(chosen.label)}</strong> (probabilidad ajustada: ${(chosen.adj*100).toFixed(1)}%, a T=${predictState.temp.toFixed(1)})</p>
+    <div class="gen-history">${predictState.history.map(h=>`<span class="gen-history-chip">"${escapeHtml(h.label)}" · T=${h.temp.toFixed(1)}</span>`).join('')}</div>
+  `;
+}
+
+function renderPredictDocList(){
+  const wrap = document.getElementById('chips-predict');
+  wrap.innerHTML = '';
+  PREDICT_CONTEXTS.forEach((ctx,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'pill-chip' + (i===predictState.index ? ' is-active':'');
+    btn.textContent = `${ctx.titulo}: "${ctx.contexto}"`;
+    btn.addEventListener('click', ()=>{
+      predictState.index = i;
+      predictState.history = [];
+      renderPredictDocList();
+      renderForecast();
+      document.getElementById('gen-result-area').innerHTML = '<p class="results-placeholder" style="color:var(--text-muted); font-style:italic; font-size:14px;">Ajusta la temperatura y presiona "Generar token" para muestrear.</p>';
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function initPredict(){
+  renderPredictDocList();
+  updateGaugeNeedle(predictState.temp);
+  renderForecast();
+  document.getElementById('temp-slider').addEventListener('input', (e)=>{
+    predictState.temp = Math.round(parseFloat(e.target.value) * 10) / 10;
+    updateGaugeNeedle(predictState.temp);
+    renderForecast();
+  });
+  document.getElementById('generate-token').addEventListener('click', runGenerate);
+}
+
+/* =================================================================
+   TAB 4 · ATENCIÓN
+================================================================= */
+const ATTENTION_SENTENCES = [
+  { titulo:'Ejemplo 1',
+    words:['El','banco','aprobó','el','crédito','porque','el','cliente','tenía','buen','historial'],
+    classes:['fn','c','c','fn','c','fn','fn','c','c','c','c'],
+    boosts:{ 8:{7:0.55, 10:0.20}, 1:{2:0.40, 4:0.30}, 7:{10:0.30, 9:0.20} },
+    defaultFocus:8 },
+  { titulo:'Ejemplo 2',
+    words:['La','gerenta','firmó','el','contrato','después','de','revisar','las','cláusulas','legales'],
+    classes:['fn','c','c','fn','c','fn','fn','c','fn','c','c'],
+    boosts:{ 7:{9:0.45, 10:0.30}, 2:{1:0.40, 4:0.35} },
+    defaultFocus:7 },
+  { titulo:'Ejemplo 3',
+    words:['El','modelo','generó','una','respuesta','porque','el','prompt','incluía','ejemplos','claros'],
+    classes:['fn','c','c','fn','c','fn','fn','c','c','c','c'],
+    boosts:{ 4:{1:0.35, 7:0.30}, 8:{7:0.40, 9:0.30} },
+    defaultFocus:4 }
+];
+
+const attnState = { sentenceIdx:0, focusIdx: ATTENTION_SENTENCES[0].defaultFocus };
+
+function computeAttention(sentence, focusIdx){
+  const { words, classes, boosts } = sentence;
+  const n = words.length;
+  const raw = [];
+  for(let j=0;j<n;j++){
+    if(j === focusIdx){ raw.push(0.15); continue; }
+    const dist = Math.abs(j - focusIdx);
+    raw.push((classes[j] === 'c' ? 1.0 : 0.25) / (1 + 0.35*dist));
+  }
+  const boostMap = (boosts && boosts[focusIdx]) || {};
+  Object.entries(boostMap).forEach(([idx,val])=>{ raw[+idx] += val; });
+  const sum = raw.reduce((a,b)=>a+b, 0);
+  return raw.map(v => v/sum);
+}
+
+function renderChipsAttentionDocs(){
+  const wrap = document.getElementById('chips-attention');
+  wrap.innerHTML = '';
+  ATTENTION_SENTENCES.forEach((s,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'pill-chip' + (i===attnState.sentenceIdx ? ' is-active':'');
+    btn.textContent = s.titulo;
+    btn.addEventListener('click', ()=>{
+      attnState.sentenceIdx = i;
+      attnState.focusIdx = ATTENTION_SENTENCES[i].defaultFocus;
+      renderChipsAttentionDocs();
+      renderAttentionSentence();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function renderAttentionSentence(){
+  const sentence = ATTENTION_SENTENCES[attnState.sentenceIdx];
+  const container = document.getElementById('attn-words');
+  container.innerHTML = '';
+  sentence.words.forEach((w,i)=>{
+    const chip = document.createElement('span');
+    chip.className = 'attn-chip' + (i === attnState.focusIdx ? ' is-focus' : '');
+    chip.textContent = w;
+    chip.dataset.idx = i;
+    chip.addEventListener('click', ()=>{ attnState.focusIdx = i; updateAttentionView(); });
+    container.appendChild(chip);
+  });
+  updateAttentionView();
+}
+
+function updateAttentionView(){
+  const sentence = ATTENTION_SENTENCES[attnState.sentenceIdx];
+  const weights = computeAttention(sentence, attnState.focusIdx);
+  document.querySelectorAll('.attn-chip').forEach(chip=>{
+    chip.classList.toggle('is-focus', +chip.dataset.idx === attnState.focusIdx);
+  });
+  drawAttentionArcs(weights);
+  renderAttentionList(sentence.words, weights);
+}
+
+function drawAttentionArcs(weights){
+  const container = document.getElementById('attn-panel');
+  const svg = document.getElementById('attn-svg');
+  const chips = Array.from(document.querySelectorAll('.attn-chip'));
+  if(!chips.length) return;
+  const containerRect = container.getBoundingClientRect();
+  svg.setAttribute('width', containerRect.width || 0);
+  svg.setAttribute('height', containerRect.height || 0);
+  svg.innerHTML = '';
+
+  const focusChip = chips[attnState.focusIdx];
+  const focusRect = focusChip.getBoundingClientRect();
+  const fx = focusRect.left + focusRect.width/2 - containerRect.left;
+  const fy = focusRect.top + focusRect.height/2 - containerRect.top;
+
+  const ranked = weights.map((w,i)=>({i,w})).sort((a,b)=> b.w - a.w).slice(0,5);
+  ranked.forEach(({i,w})=>{
+    if(i === attnState.focusIdx) return;
+    const r = chips[i].getBoundingClientRect();
+    const tx = r.left + r.width/2 - containerRect.left;
+    const ty = r.top + r.height/2 - containerRect.top;
+    const midX = (fx+tx)/2;
+    const midY = Math.min(fy,ty) - 28 - w*36;
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d', `M ${fx} ${fy} Q ${midX} ${midY} ${tx} ${ty}`);
+    path.setAttribute('stroke', 'var(--violet)');
+    path.setAttribute('stroke-width', Math.max(1, w*14));
+    path.setAttribute('fill', 'none');
+    path.setAttribute('opacity', Math.min(1, w*1.8));
+    svg.appendChild(path);
+  });
+}
+
+function renderAttentionList(words, weights){
+  const ranked = words.map((w,i)=>({w, weight:weights[i], idx:i}))
+    .filter(r=> r.idx !== attnState.focusIdx)
+    .sort((a,b)=> b.weight - a.weight);
+  document.getElementById('attn-list').innerHTML = ranked.map(r => `
+    <div class="attn-list-row">
+      <span>${escapeHtml(r.w)}</span>
+      <span class="alw-bar"><span class="alw-fill" style="width:${(r.weight*100/ranked[0].weight*0.9)}%"></span></span>
+      <span>${(r.weight*100).toFixed(1)}%</span>
+    </div>`).join('');
+}
+
+function initAttention(){
+  renderChipsAttentionDocs();
+  renderAttentionSentence();
+}
+
+/* =================================================================
+   TAB 5 · ALUCINACIONES
+================================================================= */
+const HALLUC_QUESTIONS = [
+  { titulo:'Pregunta 1',
+    pregunta:'¿Cuál es la comisión mensual por mantención de la tarjeta de crédito clásica de Banco Andino?',
+    sin:'La comisión mensual es de $4.990, vigente desde enero de 2024, según la última actualización del tarifario.',
+    rag:{ tipo:'grounded', snippet:'Tarifario Banco Andino — vigente 2026: mantención tarjeta clásica $3.490/mes; tarjeta gold $5.990/mes.',
+      respuesta:'Según el tarifario vigente, la mantención de la tarjeta clásica es de $3.490 al mes.', fuente:'Tarifario Banco Andino 2026' } },
+  { titulo:'Pregunta 2',
+    pregunta:'¿Qué porcentaje de aumento tuvo la cartera de clientes pyme en el primer trimestre de 2026?',
+    sin:'La cartera de clientes pyme creció un 12,4% en el primer trimestre de 2026, impulsada principalmente por el comercio minorista.',
+    rag:{ tipo:'grounded', snippet:'Reporte interno Q1 2026: cartera pyme +7,8% respecto a Q4 2025.',
+      respuesta:'Según el reporte interno de Q1 2026, la cartera pyme creció 7,8% respecto al trimestre anterior.', fuente:'Reporte interno Q1 2026' } },
+  { titulo:'Pregunta 3',
+    pregunta:'¿Qué exige la última normativa de la CMF sobre reportes de riesgo operacional publicada este mes?',
+    sin:'La normativa exige reportar incidentes operacionales dentro de 24 horas y mantener un registro centralizado auditable trimestralmente.',
+    rag:{ tipo:'honest', snippet:'(sin coincidencias en la base de conocimiento disponible)',
+      respuesta:'No encontré ese documento en la base disponible. Te recomiendo verificarlo directamente en el sitio de la CMF antes de actuar sobre esta información.', fuente:null } }
+];
+
+const halluctState = { index:0, mode:'sin' };
+
+function renderHallucDocList(){
+  const wrap = document.getElementById('chips-halluc');
+  wrap.innerHTML = '';
+  HALLUC_QUESTIONS.forEach((q,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'pill-chip' + (i===halluctState.index ? ' is-active':'');
+    btn.textContent = q.titulo;
+    btn.addEventListener('click', ()=>{ halluctState.index = i; renderHallucDocList(); renderHallucCard(); });
+    wrap.appendChild(btn);
+  });
+}
+
+function renderHallucCard(){
+  const q = HALLUC_QUESTIONS[halluctState.index];
+  const area = document.getElementById('halluc-card-area');
+  const pregunta = `<p style="font-weight:600; margin:0 0 14px;">${escapeHtml(q.pregunta)}</p>`;
+
+  if(halluctState.mode === 'sin'){
+    area.innerHTML = pregunta + `
+      <div class="halluc-card is-risky">
+        <span class="halluc-flag flag-risky">⚠ Sin fuentes — posible alucinación</span>
+        <p class="halluc-answer">${escapeHtml(q.sin)}</p>
+      </div>`;
+  } else {
+    const rag = q.rag;
+    if(rag.tipo === 'grounded'){
+      area.innerHTML = pregunta + `
+        <div class="halluc-card is-grounded">
+          <span class="halluc-flag flag-grounded">✓ Con RAG — respuesta fundamentada</span>
+          <p class="halluc-answer">${escapeHtml(rag.respuesta)}</p>
+          <div class="halluc-source">📄 Recuperado: "${escapeHtml(rag.snippet)}" — Fuente: ${escapeHtml(rag.fuente)}</div>
+        </div>`;
+    } else {
+      area.innerHTML = pregunta + `
+        <div class="halluc-card is-honest">
+          <span class="halluc-flag flag-honest">— Con RAG — sin evidencia disponible</span>
+          <p class="halluc-answer">${escapeHtml(rag.respuesta)}</p>
+          <div class="halluc-source">📄 Búsqueda: ${escapeHtml(rag.snippet)}</div>
+        </div>`;
+    }
+  }
+}
+
+function initHalluc(){
+  renderHallucDocList();
+  renderHallucCard();
+  const toggle = document.getElementById('halluc-toggle');
+  toggle.querySelectorAll('button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      toggle.querySelectorAll('button').forEach(b=>b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      halluctState.mode = btn.dataset.mode;
+      renderHallucCard();
+    });
+  });
+}
+
+/* =================================================================
+   INIT GENERAL
+================================================================= */
+setupTabs();
+initQuiz();
+initTokenize();
+initEmbeddings();
+initPredict();
+initAttention();
+initHalluc();
+</script>
+</body>
+</html>
