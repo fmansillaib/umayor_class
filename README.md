@@ -21,11 +21,11 @@ Repositorio central con materiales, códigos y recursos de clases en la Universi
 umayor_class/
 ├── machine_learning/             - ✅ Clases 1-8 (regresión, clasificación, clustering)
 ├── fundamentos_DL/               - ✅ Clases 1-4 (redes neuronales, clasificación, regresión)
-├── metodos_IA/                   - ✅ Clases 1-7 (métodos de IA aplicados)
+├── metodos_IA/                   - ✅ Clases 1-8 (métodos de IA aplicados)
 ├── aplicaciones_computacional/   - ✅ Clases 1-8 (programación Python)
 ├── datasets/                     - ✅ Conjuntos de datos para las clases (PDFs, CSV)
-├── nlp/                          - ✅ Clases 1-3 (NLP, Regex, OCR con PDFs)
-└── IA_generativa/                - ✅ Clase 2 (embeddings, IA generativa)
+├── nlp/                          - ✅ Clases 1-4 (NLP, Regex, OCR con PDFs)
+└── IA_generativa/                - ✅ Clase 1-4 (embeddings)
 ```
 
 ---
