@@ -48,7 +48,6 @@ umayor_class/
 | IA en la Industria | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_ia/Clase%201%20y%202/ia_industria_viewer.html) |
 | Árboles de Decisión | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_ia/Clase%203%20y%204/arboles_ml_viewer.html) |
 | Redes Neuronales | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_ia/Clase%205%20y%206/redes_neuronales_viewer.html) |
-| IA Generativa | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/metodos_ia/Clase%207%20y%208/ia_generativa_viewer.html) |
 | NLP | [▶ Ver](https://htmlpreview.github.io/?https://github.com/fmansillaib/umayor_class/blob/main/nlp/ia_nlp_viewer.html) |
 
 ---

@@ -1,0 +1,151 @@
+id_reclamo,fecha,banco,texto
+1,2026-09-01,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+2,2026-09-01,BancoAndes,Me vendieron un seguro en BancoAndes sin explicarme bien las condiciones.
+3,2026-09-01,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+4,2026-09-01,BancoAndes,Solicité una cotización de crédito hipotecario en BancoAndes hace una semana y no responden.
+5,2026-09-01,BancoAndes,BancoAndes no me ofrece una mejor tasa a pesar de ser cliente hace años.
+6,2026-09-01,BancoAndes,Me cobran una multa de BancoAndes que no está justificada en el contrato.
+7,2026-09-01,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+8,2026-09-01,BancoAndes,BancoAndes no me ha devuelto el dinero de una transacción fraudulenta reportada hace días.
+9,2026-09-01,BancoAndes,Solicité una cotización de crédito hipotecario en BancoAndes hace una semana y no responden.
+10,2026-09-02,BancoAndes,BancoAndes no ha activado el beneficio que venía incluido con mi cuenta nueva.
+11,2026-09-02,BancoAndes,La clave digital de BancoAndes no me permite autenticarme desde el celular.
+12,2026-09-02,BancoAndes,Necesito que un ejecutivo de BancoAndes me explique los requisitos antes de postular a la tarjeta.
+13,2026-09-03,BancoAndes,El área de cobranza de BancoAndes no quiere regularizar mi deuda a pesar de mi pago.
+14,2026-09-03,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+15,2026-09-03,BancoAndes,Contraté una tarjeta de crédito en BancoAndes y aún no me llega ni me explican por qué.
+16,2026-09-03,BancoAndes,La clave digital de BancoAndes no me permite autenticarme desde el celular.
+17,2026-09-03,BancoAndes,Me clonaron la tarjeta de BancoAndes y el proceso de reclamo por fraude es muy lento.
+18,2026-09-03,BancoAndes,BancoAndes me está cobrando intereses que no corresponden a mi situación de mora.
+19,2026-09-03,BancoAndes,La clave digital de BancoAndes no me permite autenticarme desde el celular.
+20,2026-09-03,BancoAndes,Me clonaron la tarjeta de BancoAndes y el proceso de reclamo por fraude es muy lento.
+21,2026-09-04,BancoAndes,BancoAndes no me ha devuelto el dinero de una transacción fraudulenta reportada hace días.
+22,2026-09-04,BancoAndes,El vendedor de BancoAndes me hizo firmar sin explicarme correctamente el contrato.
+23,2026-09-04,BancoAndes,El ejecutivo comercial de BancoAndes no cumplió con las condiciones que me ofreció.
+24,2026-09-04,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+25,2026-09-04,BancoAndes,BancoAndes no respeta el descuento comercial que me habían prometido al inicio.
+26,2026-09-05,BancoAndes,BancoAndes no bloqueó mi tarjeta a tiempo cuando reporté un fraude.
+27,2026-09-05,BancoAndes,El área de cobranza de BancoAndes no quiere regularizar mi deuda a pesar de mi pago.
+28,2026-09-05,BancoAndes,La clave digital de BancoAndes no me permite autenticarme desde el celular.
+29,2026-09-05,BancoAndes,Un ejecutivo de ventas de BancoAndes me llamó insistentemente para ofrecerme productos que no pedí.
+30,2026-09-06,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+31,2026-09-06,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+32,2026-09-06,BancoAndes,BancoAndes no bloqueó mi tarjeta a tiempo cuando reporté un fraude.
+33,2026-09-07,BancoAndes,Me clonaron la tarjeta de BancoAndes y el proceso de reclamo por fraude es muy lento.
+34,2026-09-07,BancoAndes,Necesito que un ejecutivo de BancoAndes me explique los requisitos antes de postular a la tarjeta.
+35,2026-09-07,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+36,2026-09-07,BancoAndes,Necesito que un ejecutivo de BancoAndes me explique los requisitos antes de postular a la tarjeta.
+37,2026-09-07,BancoAndes,Solicité una cotización de crédito hipotecario en BancoAndes hace una semana y no responden.
+38,2026-09-08,BancoAndes,Quiero renegociar las condiciones de mi crédito con BancoAndes y no logro que me atiendan.
+39,2026-09-08,BancoAndes,Sufrí un phishing usando el nombre de BancoAndes y no me han dado respuesta.
+40,2026-09-09,BancoAndes,El seguro que me vendieron en BancoAndes no está funcionando como me prometieron.
+41,2026-09-09,BancoAndes,BancoAndes me ofreció una tarjeta con beneficios que luego no eran reales.
+42,2026-09-09,BancoAndes,El área de cobranza de BancoAndes no quiere regularizar mi deuda a pesar de mi pago.
+43,2026-09-10,BancoAndes,Recibí llamadas de cobranza de BancoAndes de forma agresiva y fuera de horario.
+44,2026-09-10,BancoAndes,Un ejecutivo de ventas de BancoAndes me llamó insistentemente para ofrecerme productos que no pedí.
+45,2026-09-10,BancoAndes,La app de BancoAndes se cierra sola cada vez que intento pagar una cuenta.
+46,2026-09-10,BancoAndes,Un ejecutivo de ventas de BancoAndes me llamó insistentemente para ofrecerme productos que no pedí.
+47,2026-09-10,BancoAndes,BancoAndes no reconoce el pago que ya realicé y me sigue enviando cartas de cobranza.
+48,2026-09-10,BancoAndes,La app de BancoAndes se cierra sola cada vez que intento pagar una cuenta.
+49,2026-09-11,BancoAndes,BancoAndes no reconoce el pago que ya realicé y me sigue enviando cartas de cobranza.
+50,2026-09-11,BancoAndes,Pregunté por las tasas de interés de BancoAndes y no obtuve una respuesta clara.
+51,2026-09-11,BancoAndes,Necesito que un ejecutivo de BancoAndes me explique los requisitos antes de postular a la tarjeta.
+52,2026-09-11,BancoAndes,La clave digital de BancoAndes no me permite autenticarme desde el celular.
+53,2026-09-12,BancoAndes,Contraté una tarjeta de crédito en BancoAndes y aún no me llega ni me explican por qué.
+54,2026-09-12,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+55,2026-09-12,BancoAndes,El área de cobranza de BancoAndes no quiere regularizar mi deuda a pesar de mi pago.
+56,2026-09-12,BancoAndes,"Después de contratar el crédito hipotecario, BancoAndes no me da soporte con mis dudas."
+57,2026-09-12,BancoAndes,BancoAndes me está cobrando intereses que no corresponden a mi situación de mora.
+58,2026-09-13,BancoAndes,Me clonaron la tarjeta de BancoAndes y el proceso de reclamo por fraude es muy lento.
+59,2026-09-13,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+60,2026-09-13,BancoAndes,BancoAndes no me ha devuelto el dinero de una transacción fraudulenta reportada hace días.
+61,2026-09-13,BancoAndes,Pregunté por las tasas de interés de BancoAndes y no obtuve una respuesta clara.
+62,2026-09-13,BancoAndes,Recibí llamadas de cobranza de BancoAndes de forma agresiva y fuera de horario.
+63,2026-09-13,BancoAndes,Pregunté por las tasas de interés de BancoAndes y no obtuve una respuesta clara.
+64,2026-09-14,BancoAndes,"El sistema de BancoAndes no genera mi cartola mensual, sale una pantalla en blanco."
+65,2026-09-14,BancoAndes,Sufrí un phishing usando el nombre de BancoAndes y no me han dado respuesta.
+66,2026-09-14,BancoAndes,BancoAndes me ofreció una tarjeta con beneficios que luego no eran reales.
+67,2026-09-14,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+68,2026-09-14,BancoAndes,El ejecutivo comercial de BancoAndes no cumplió con las condiciones que me ofreció.
+69,2026-09-15,BancoAndes,Solicité una repactación de mi deuda en BancoAndes y el proceso está detenido.
+70,2026-09-15,BancoAndes,Me vendieron un seguro en BancoAndes sin explicarme bien las condiciones.
+71,2026-09-15,BancoAndes,Quiero renegociar las condiciones de mi crédito con BancoAndes y no logro que me atiendan.
+72,2026-09-15,BancoAndes,El seguro que me vendieron en BancoAndes no está funcionando como me prometieron.
+73,2026-09-16,BancoAndes,El área de cobranza de BancoAndes no quiere regularizar mi deuda a pesar de mi pago.
+74,2026-09-16,BancoAndes,El vendedor de BancoAndes me hizo firmar sin explicarme correctamente el contrato.
+75,2026-09-16,BancoAndes,Detecté cargos no reconocidos en mi tarjeta de BancoAndes y nadie me da solución.
+76,2026-09-16,BancoAndes,BancoAndes no reconoce el pago que ya realicé y me sigue enviando cartas de cobranza.
+77,2026-09-16,BancoAndes,"Ya tengo el producto contratado con BancoAndes, pero nadie responde mis consultas de seguimiento."
+78,2026-09-17,BancoAndes,El vendedor de BancoAndes me hizo firmar sin explicarme correctamente el contrato.
+79,2026-09-17,BancoAndes,"Ya tengo el producto contratado con BancoAndes, pero nadie responde mis consultas de seguimiento."
+80,2026-09-17,BancoAndes,Me cobran una multa de BancoAndes que no está justificada en el contrato.
+81,2026-09-17,BancoAndes,Necesito que un ejecutivo de BancoAndes me explique los requisitos antes de postular a la tarjeta.
+82,2026-09-17,BancoAndes,"Después de contratar el crédito hipotecario, BancoAndes no me da soporte con mis dudas."
+83,2026-09-18,BancoAndes,Necesito que un ejecutivo de BancoAndes me explique los requisitos antes de postular a la tarjeta.
+84,2026-09-18,BancoAndes,BancoAndes no respeta el descuento comercial que me habían prometido al inicio.
+85,2026-09-18,BancoAndes,Sufrí un phishing usando el nombre de BancoAndes y no me han dado respuesta.
+86,2026-09-18,BancoAndes,El seguro que me vendieron en BancoAndes no está funcionando como me prometieron.
+87,2026-09-18,BancoAndes,Contraté una tarjeta de crédito en BancoAndes y aún no me llega ni me explican por qué.
+88,2026-09-19,BancoAndes,Contraté una tarjeta de crédito en BancoAndes y aún no me llega ni me explican por qué.
+89,2026-09-19,BancoAndes,BancoAndes no ha activado el beneficio que venía incluido con mi cuenta nueva.
+90,2026-09-19,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+91,2026-09-19,BancoAndes,Detecté cargos no reconocidos en mi tarjeta de BancoAndes y nadie me da solución.
+92,2026-09-19,BancoAndes,BancoAndes me ofreció una tarjeta con beneficios que luego no eran reales.
+93,2026-09-20,BancoAndes,Me cobran una multa de BancoAndes que no está justificada en el contrato.
+94,2026-09-20,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+95,2026-09-20,BancoAndes,BancoAndes no ha activado el beneficio que venía incluido con mi cuenta nueva.
+96,2026-09-20,BancoAndes,Quiero renegociar las condiciones de mi crédito con BancoAndes y no logro que me atiendan.
+97,2026-09-20,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+98,2026-09-20,BancoAndes,Me cobran una multa de BancoAndes que no está justificada en el contrato.
+99,2026-09-20,BancoAndes,Recibí llamadas de cobranza de BancoAndes de forma agresiva y fuera de horario.
+100,2026-09-21,BancoAndes,BancoAndes no me ha devuelto el dinero de una transacción fraudulenta reportada hace días.
+101,2026-09-21,BancoAndes,Sufrí un phishing usando el nombre de BancoAndes y no me han dado respuesta.
+102,2026-09-21,BancoAndes,Me clonaron la tarjeta de BancoAndes y el proceso de reclamo por fraude es muy lento.
+103,2026-09-22,BancoAndes,La app de BancoAndes se cierra sola cada vez que intento pagar una cuenta.
+104,2026-09-22,BancoAndes,Necesito que un ejecutivo de BancoAndes me explique los requisitos antes de postular a la tarjeta.
+105,2026-09-22,BancoAndes,Quiero saber las condiciones de la cuenta corriente de BancoAndes antes de contratar.
+106,2026-09-23,BancoAndes,El ejecutivo comercial de BancoAndes no cumplió con las condiciones que me ofreció.
+107,2026-09-23,BancoAndes,Me vendieron un seguro en BancoAndes sin explicarme bien las condiciones.
+108,2026-09-23,BancoAndes,"El sistema de BancoAndes no genera mi cartola mensual, sale una pantalla en blanco."
+109,2026-09-23,BancoAndes,BancoAndes me ofreció una tarjeta con beneficios que luego no eran reales.
+110,2026-09-23,BancoAndes,Quiero saber las condiciones de la cuenta corriente de BancoAndes antes de contratar.
+111,2026-09-23,BancoAndes,Detecté cargos no reconocidos en mi tarjeta de BancoAndes y nadie me da solución.
+112,2026-09-23,BancoAndes,"No puedo ingresar a la banca en línea de BancoAndes, me marca error de sistema."
+113,2026-09-23,BancoAndes,BancoAndes no me ofrece una mejor tasa a pesar de ser cliente hace años.
+114,2026-09-23,BancoAndes,BancoAndes me está cobrando intereses que no corresponden a mi situación de mora.
+115,2026-09-24,BancoAndes,BancoAndes me está cobrando intereses que no corresponden a mi situación de mora.
+116,2026-09-24,BancoAndes,El área de cobranza de BancoAndes no quiere regularizar mi deuda a pesar de mi pago.
+117,2026-09-24,BancoAndes,Me clonaron la tarjeta de BancoAndes y el proceso de reclamo por fraude es muy lento.
+118,2026-09-24,BancoAndes,"Ya tengo el producto contratado con BancoAndes, pero nadie responde mis consultas de seguimiento."
+119,2026-09-24,BancoAndes,Detecté cargos no reconocidos en mi tarjeta de BancoAndes y nadie me da solución.
+120,2026-09-25,BancoAndes,Me contactaron de BancoAndes para venderme un crédito que no había solicitado.
+121,2026-09-25,BancoAndes,El sitio web de BancoAndes lleva dos días caído y no puedo ver mis movimientos.
+122,2026-09-25,BancoAndes,Me vendieron un seguro en BancoAndes sin explicarme bien las condiciones.
+123,2026-09-25,BancoAndes,Recibí llamadas de cobranza de BancoAndes de forma agresiva y fuera de horario.
+124,2026-09-25,BancoAndes,Sufrí un phishing usando el nombre de BancoAndes y no me han dado respuesta.
+125,2026-09-25,BancoAndes,"El sistema de BancoAndes no genera mi cartola mensual, sale una pantalla en blanco."
+126,2026-09-25,BancoAndes,La app de BancoAndes se cierra sola cada vez que intento pagar una cuenta.
+127,2026-09-25,BancoAndes,BancoAndes no respeta el descuento comercial que me habían prometido al inicio.
+128,2026-09-26,BancoAndes,BancoAndes no me ha devuelto el dinero de una transacción fraudulenta reportada hace días.
+129,2026-09-26,BancoAndes,Me vendieron un seguro en BancoAndes sin explicarme bien las condiciones.
+130,2026-09-26,BancoAndes,El área de cobranza de BancoAndes no quiere regularizar mi deuda a pesar de mi pago.
+131,2026-09-26,BancoAndes,Pedí información sobre créditos de consumo en BancoAndes y nunca me contactaron.
+132,2026-09-26,BancoAndes,El seguro que me vendieron en BancoAndes no está funcionando como me prometieron.
+133,2026-09-26,BancoAndes,Solicité una cotización de crédito hipotecario en BancoAndes hace una semana y no responden.
+134,2026-09-26,BancoAndes,Me cobran una multa de BancoAndes que no está justificada en el contrato.
+135,2026-09-27,BancoAndes,El vendedor de BancoAndes me hizo firmar sin explicarme correctamente el contrato.
+136,2026-09-27,BancoAndes,El seguro que me vendieron en BancoAndes no está funcionando como me prometieron.
+137,2026-09-27,BancoAndes,"Ya tengo el producto contratado con BancoAndes, pero nadie responde mis consultas de seguimiento."
+138,2026-09-27,BancoAndes,Me clonaron la tarjeta de BancoAndes y el proceso de reclamo por fraude es muy lento.
+139,2026-09-27,BancoAndes,Solicité una cotización de crédito hipotecario en BancoAndes hace una semana y no responden.
+140,2026-09-28,BancoAndes,Me cobran una multa de BancoAndes que no está justificada en el contrato.
+141,2026-09-28,BancoAndes,Solicité una repactación de mi deuda en BancoAndes y el proceso está detenido.
+142,2026-09-28,BancoAndes,"Ya tengo el producto contratado con BancoAndes, pero nadie responde mis consultas de seguimiento."
+143,2026-09-28,BancoAndes,"Ya tengo el producto contratado con BancoAndes, pero nadie responde mis consultas de seguimiento."
+144,2026-09-29,BancoAndes,La app de BancoAndes se cierra sola cada vez que intento pagar una cuenta.
+145,2026-09-29,BancoAndes,BancoAndes no respeta el descuento comercial que me habían prometido al inicio.
+146,2026-09-30,BancoAndes,Me vendieron un seguro en BancoAndes sin explicarme bien las condiciones.
+147,2026-09-30,BancoAndes,BancoAndes no respeta el descuento comercial que me habían prometido al inicio.
+148,2026-09-30,BancoAndes,BancoAndes no reconoce el pago que ya realicé y me sigue enviando cartas de cobranza.
+149,2026-09-30,BancoAndes,La app de BancoAndes se cierra sola cada vez que intento pagar una cuenta.
+150,2026-09-30,BancoAndes,La clave digital de BancoAndes no me permite autenticarme desde el celular.
