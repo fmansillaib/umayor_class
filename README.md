@@ -25,7 +25,7 @@ umayor_class/
 ├── aplicaciones_computacional/   - ✅ Clases 1-8 (programación Python)
 ├── datasets/                     - ✅ Conjuntos de datos para las clases (PDFs, CSV)
 ├── nlp/                          - ✅ Clases 1-4 (NLP, Regex, OCR con PDFs)
-└── IA_generativa/                - ✅ Clase 1-4 (embeddings)
+└── IA_generativa/                - ✅ Clase 1-4 (simulador, embeddings, attention, chat a mano)
 ```
 
 ---
