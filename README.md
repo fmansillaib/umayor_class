@@ -23,10 +23,16 @@ umayor_class/
 ├── fundamentos_DL/               - ✅ Clases 1-4 (redes neuronales, clasificación, regresión)
 ├── metodos_IA/                   - ✅ Clases 1-8 (métodos de IA aplicados)
 ├── aplicaciones_computacional/   - ✅ Clases 1-8 (programación Python)
-├── datasets/                     - ✅ Conjuntos de datos para las clases (PDFs, CSV)
+├── datasets/                     - ✅ Conjuntos de datos para las clases (CSV, PDFs, bases SQL)
 ├── nlp/                          - ✅ Clases 1-4 (NLP, Regex, OCR con PDFs)
 └── IA_generativa/                - ✅ Clase 1-4 (simulador, embeddings, attention, chat a mano)
 ```
+
+---
+
+## 🗄️ Bases de Datos Relacionales
+
+Tres bases sintéticas con modelo estrella para practicar **SQL** y **Power BI**: [compras](datasets/esquema-datos/compras/), [tarjetas de crédito](datasets/esquema-datos/tarjetas_credito/) y [taxis](datasets/esquema-datos/taxis/). Diagramas y guía de uso en [`datasets/esquema-datos`](datasets/esquema-datos/).
 
 ---
 

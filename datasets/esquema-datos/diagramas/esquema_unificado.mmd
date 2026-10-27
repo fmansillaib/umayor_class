@@ -1,0 +1,49 @@
+flowchart LR
+    classDef hecho fill:#1f4e79,stroke:#0b2540,color:#ffffff,font-weight:bold
+    classDef dim fill:#dbe8f5,stroke:#5b8bc0,color:#0b2540
+    classDef comun fill:#f6c85f,stroke:#b8860b,color:#3a2a00,font-weight:bold
+
+    subgraph C["🛒 compras · 2024–2025"]
+        direction TB
+        c_cli["dim_cliente<br/>1.500"]:::dim
+        c_can["dim_canal<br/>6"]:::dim
+        c_ord(["orden<br/>12.000"]):::hecho
+        c_det(["detalle_orden<br/>26.182"]):::hecho
+        c_pro["dim_producto<br/>78"]:::dim
+        c_cli --> c_ord
+        c_can --> c_ord
+        c_ord --> c_det
+        c_pro --> c_det
+    end
+
+    subgraph T["💳 tarjetas_credito · 2025"]
+        direction TB
+        t_cli["dim_cliente<br/>2.500"]:::dim
+        t_tar["dim_tarjeta<br/>2.500"]:::dim
+        t_com["dim_comercio<br/>27"]:::dim
+        t_tx(["transaccion<br/>375.262"]):::hecho
+        t_ec(["estado_cuenta<br/>26.367"]):::hecho
+        t_cli --> t_tar
+        t_tar --> t_tx
+        t_com --> t_tx
+        t_tar --> t_ec
+    end
+
+    subgraph X["🚕 taxis · 2025"]
+        direction TB
+        x_pas["dim_pasajero<br/>8.000"]:::dim
+        x_con["dim_conductor<br/>600"]:::dim
+        x_veh["dim_vehiculo<br/>600"]:::dim
+        x_zon["dim_zona<br/>20"]:::dim
+        x_via(["viaje<br/>186.984"]):::hecho
+        x_pas --> x_via
+        x_con --> x_via
+        x_veh --> x_via
+        x_zon -- "origen / destino" --> x_via
+    end
+
+    F["dim_fecha<br/>misma estructura en las 3 bases<br/>id_fecha = AAAAMMDD"]:::comun
+    F --> c_ord
+    F --> t_tx
+    F --> t_ec
+    F --> x_via

@@ -1,0 +1,601 @@
+﻿id_conductor,nombre,genero,tramo_edad,fecha_ingreso,jornada,calificacion_promedio,estado
+1,Isidora Soto,M,36-45,2024-03-22,Parcial,4.63,Activo
+2,Jorge López,F,36-45,2019-06-21,Parcial,4.62,Activo
+3,Luis Contreras,M,36-45,2019-05-04,Parcial,4.56,Activo
+4,Camila Rojas,M,26-35,2022-03-29,Completa,4.68,Activo
+5,Valentina Contreras,M,26-35,2023-03-18,Completa,4.61,Inactivo
+6,Vicente Contreras,M,26-35,2024-06-17,Parcial,4.71,Activo
+7,Vicente López,F,36-45,2022-05-30,Parcial,4.68,Activo
+8,Valentina Rojas,M,36-45,2019-10-28,Completa,4.66,Activo
+9,Isidora Soto,M,60+,2021-07-24,Completa,4.62,Activo
+10,Catalina Martínez,M,46-60,2021-09-03,Parcial,4.63,Activo
+11,Isidora González,M,36-45,2019-10-31,Completa,4.55,Activo
+12,Rodrigo Pérez,M,46-60,2022-09-17,Parcial,4.65,Activo
+13,Benjamín Pérez,M,46-60,2019-10-24,Completa,4.63,Activo
+14,Jorge Rojas,M,36-45,2019-02-20,Fin de semana,4.6,Activo
+15,Camila Silva,F,26-35,2019-05-03,Parcial,4.69,Activo
+16,Antonella Araya,M,26-35,2020-11-25,Completa,4.67,Activo
+17,Benjamín Rojas,F,26-35,2020-07-11,Completa,4.58,Activo
+18,Antonella Rojas,M,26-35,2024-01-28,Parcial,4.59,Activo
+19,Benjamín Díaz,M,36-45,2021-12-27,Parcial,4.59,Activo
+20,Vicente Silva,M,26-35,2019-05-29,Parcial,4.58,Activo
+21,Camila López,M,36-45,2020-06-16,Parcial,4.75,Activo
+22,Tomás Morales,M,46-60,2019-12-26,Completa,4.57,Activo
+23,Carlos Morales,M,46-60,2019-09-20,Parcial,4.61,Activo
+24,Pedro Martínez,M,36-45,2020-11-04,Parcial,4.64,Activo
+25,Camila Muñoz,M,36-45,2020-04-13,Parcial,4.64,Activo
+26,Florencia Silva,M,26-35,2023-07-14,Completa,4.57,Activo
+27,Camila Sepúlveda,M,26-35,2019-04-04,Parcial,4.66,Activo
+28,Patricio Fuentes,M,36-45,2023-03-20,Parcial,4.62,Activo
+29,Isidora Contreras,M,26-35,2022-07-17,Completa,4.64,Activo
+30,Isidora López,M,46-60,2020-05-31,Completa,4.66,Activo
+31,Carlos Espinoza,M,26-35,2024-05-28,Completa,4.67,Activo
+32,Martín Rodríguez,M,36-45,2024-03-27,Completa,4.69,Activo
+33,Antonella Rojas,M,46-60,2020-11-07,Fin de semana,4.65,Inactivo
+34,Catalina Pérez,F,46-60,2020-10-17,Parcial,4.58,Activo
+35,Benjamín Silva,M,60+,2022-12-27,Completa,4.61,Activo
+36,Catalina González,M,26-35,2020-05-04,Completa,4.62,Inactivo
+37,Pedro Díaz,M,46-60,2022-10-28,Completa,4.6,Activo
+38,Lucas Fuentes,M,36-45,2023-10-26,Completa,4.61,Activo
+39,Patricio Soto,M,46-60,2019-02-27,Completa,4.64,Activo
+40,Benjamín Díaz,F,46-60,2021-09-25,Parcial,4.62,Activo
+41,Rodrigo Fuentes,M,26-35,2020-09-25,Parcial,4.69,Activo
+42,Pedro Rodríguez,M,36-45,2022-06-18,Parcial,4.63,Activo
+43,Benjamín González,M,36-45,2021-03-13,Parcial,4.64,Activo
+44,Lucas Espinoza,M,26-35,2023-03-09,Parcial,4.7,Activo
+45,Jorge Morales,M,46-60,2020-09-09,Parcial,4.68,Activo
+46,Rodrigo Araya,M,46-60,2024-06-08,Completa,4.59,Activo
+47,Javiera Martínez,M,46-60,2022-09-01,Completa,4.63,Activo
+48,Luis López,M,46-60,2023-06-09,Completa,4.65,Activo
+49,Vicente Sepúlveda,F,36-45,2019-04-02,Parcial,4.6,Activo
+50,Valentina González,M,26-35,2022-07-09,Parcial,4.64,Activo
+51,Sofía Espinoza,M,46-60,2022-10-15,Completa,4.57,Inactivo
+52,Joaquín González,M,36-45,2024-11-15,Completa,4.7,Activo
+53,Tomás Díaz,M,26-35,2022-01-27,Fin de semana,4.54,Activo
+54,Jorge Espinoza,M,26-35,2021-08-22,Completa,4.62,Activo
+55,Carlos Rojas,M,26-35,2023-07-08,Completa,4.67,Activo
+56,Joaquín Araya,M,46-60,2024-04-19,Parcial,4.57,Activo
+57,Luis Soto,M,46-60,2021-12-27,Parcial,4.64,Activo
+58,Tomás González,M,36-45,2024-09-03,Fin de semana,4.68,Activo
+59,Carlos Sepúlveda,F,36-45,2022-06-29,Completa,4.7,Activo
+60,Agustín Sepúlveda,M,36-45,2024-04-30,Completa,4.6,Activo
+61,Matías Morales,M,26-35,2019-12-23,Parcial,4.65,Activo
+62,Vicente Contreras,M,46-60,2021-01-04,Parcial,4.69,Activo
+63,Isidora Pérez,M,36-45,2023-10-16,Completa,4.7,Activo
+64,Antonella Contreras,M,36-45,2021-12-03,Completa,4.68,Activo
+65,Pedro Pérez,M,26-35,2022-05-07,Fin de semana,4.66,Activo
+66,Antonella Rojas,F,26-35,2022-09-28,Parcial,4.61,Activo
+67,Antonella Pérez,M,46-60,2020-11-21,Completa,4.68,Activo
+68,Tomás López,M,36-45,2020-07-20,Parcial,4.65,Inactivo
+69,Agustín Morales,M,46-60,2020-12-12,Parcial,4.67,Activo
+70,Tomás Espinoza,F,36-45,2023-07-25,Fin de semana,4.57,Activo
+71,Jorge Fuentes,M,36-45,2019-04-10,Parcial,4.64,Activo
+72,Lucas Díaz,M,26-35,2019-08-01,Completa,4.55,Activo
+73,Matías Pérez,M,36-45,2023-09-23,Fin de semana,4.62,Activo
+74,Sofía Rodríguez,M,26-35,2023-06-16,Completa,4.62,Activo
+75,Joaquín Espinoza,M,36-45,2019-08-30,Parcial,4.64,Inactivo
+76,Martín Pérez,M,60+,2022-01-26,Parcial,4.59,Activo
+77,Florencia Rodríguez,M,36-45,2021-08-22,Completa,4.6,Activo
+78,Javiera Rojas,M,18-25,2019-11-09,Parcial,4.67,Activo
+79,Vicente Pérez,F,18-25,2021-01-04,Parcial,4.64,Activo
+80,Rodrigo Espinoza,M,36-45,2022-08-07,Parcial,4.69,Activo
+81,Agustín Martínez,M,26-35,2021-11-15,Parcial,4.64,Activo
+82,Martín Araya,M,46-60,2024-07-25,Completa,4.63,Activo
+83,Patricio Soto,M,26-35,2021-12-20,Parcial,4.49,Activo
+84,Sofía Espinoza,M,36-45,2019-06-22,Completa,4.56,Activo
+85,Benjamín Silva,M,26-35,2022-05-05,Fin de semana,4.58,Activo
+86,Benjamín Soto,M,36-45,2021-06-13,Completa,4.61,Activo
+87,Carlos Soto,M,36-45,2023-09-11,Parcial,4.65,Activo
+88,Florencia Rodríguez,F,36-45,2019-07-13,Parcial,4.67,Activo
+89,Matías González,F,46-60,2023-01-13,Completa,4.57,Inactivo
+90,Sofía Pérez,M,26-35,2021-02-07,Completa,4.63,Activo
+91,Sofía López,M,26-35,2022-02-22,Completa,4.54,Activo
+92,Rodrigo Rojas,F,26-35,2022-05-05,Parcial,4.6,Activo
+93,Florencia Silva,M,36-45,2023-04-20,Parcial,4.64,Activo
+94,Carlos Sepúlveda,M,18-25,2021-11-18,Completa,4.58,Activo
+95,Benjamín Rodríguez,M,26-35,2022-08-26,Completa,4.73,Activo
+96,Patricio Muñoz,M,36-45,2019-11-06,Completa,4.61,Activo
+97,Camila Pérez,M,26-35,2022-01-22,Completa,4.67,Activo
+98,Jorge Morales,M,26-35,2019-11-20,Completa,4.67,Activo
+99,Rodrigo Espinoza,M,26-35,2022-04-17,Completa,4.61,Activo
+100,Benjamín Soto,M,36-45,2024-05-22,Parcial,4.68,Activo
+101,Isidora Pérez,M,36-45,2022-08-31,Parcial,4.58,Activo
+102,Camila Espinoza,M,60+,2021-01-26,Fin de semana,4.61,Activo
+103,Benjamín Contreras,M,46-60,2019-07-19,Fin de semana,4.52,Activo
+104,Agustín López,M,36-45,2022-03-08,Completa,4.69,Activo
+105,Sofía Morales,F,26-35,2021-10-26,Parcial,4.56,Activo
+106,Sofía Rojas,M,46-60,2019-07-29,Parcial,4.62,Activo
+107,Jorge Martínez,M,60+,2023-06-10,Fin de semana,4.7,Activo
+108,Camila Sepúlveda,M,36-45,2023-01-10,Fin de semana,4.65,Activo
+109,Martín Martínez,F,36-45,2020-02-18,Completa,4.65,Activo
+110,Joaquín Sepúlveda,M,46-60,2024-01-17,Completa,4.55,Inactivo
+111,Sofía Rodríguez,M,36-45,2021-04-23,Completa,4.52,Activo
+112,Luis Díaz,M,26-35,2019-09-30,Parcial,4.62,Activo
+113,Camila Pérez,M,36-45,2021-01-21,Fin de semana,4.63,Activo
+114,Martín Araya,M,36-45,2024-01-31,Completa,4.67,Activo
+115,Florencia Morales,M,36-45,2022-08-23,Parcial,4.66,Activo
+116,Matías Martínez,F,18-25,2020-04-14,Fin de semana,4.56,Activo
+117,Valentina Díaz,M,46-60,2024-06-26,Parcial,4.66,Inactivo
+118,Benjamín Rodríguez,F,26-35,2022-09-29,Completa,4.74,Activo
+119,Isidora Fuentes,M,46-60,2022-07-19,Parcial,4.63,Activo
+120,Florencia Díaz,M,26-35,2020-06-12,Parcial,4.74,Activo
+121,Jorge Fuentes,M,26-35,2019-10-20,Completa,4.65,Activo
+122,Valentina Araya,M,36-45,2022-03-19,Completa,4.63,Activo
+123,Rodrigo Silva,M,26-35,2022-01-01,Parcial,4.67,Activo
+124,Isidora Rojas,M,18-25,2024-01-31,Completa,4.6,Activo
+125,Agustín González,F,36-45,2024-05-18,Parcial,4.63,Activo
+126,Pedro Contreras,M,46-60,2021-06-12,Parcial,4.65,Activo
+127,Camila Díaz,M,36-45,2023-02-28,Parcial,4.63,Activo
+128,Pedro Sepúlveda,M,46-60,2024-09-18,Completa,4.67,Activo
+129,Sofía Soto,M,36-45,2020-03-03,Fin de semana,4.62,Activo
+130,Catalina Díaz,M,46-60,2019-04-27,Parcial,4.65,Activo
+131,Patricio Pérez,M,36-45,2023-09-14,Fin de semana,4.69,Activo
+132,Patricio Fuentes,M,26-35,2023-01-08,Completa,4.6,Activo
+133,Agustín Espinoza,M,26-35,2023-03-04,Parcial,4.69,Activo
+134,Antonella Soto,M,36-45,2019-08-18,Parcial,4.63,Activo
+135,Catalina Silva,M,26-35,2022-03-16,Completa,4.68,Activo
+136,Patricio González,M,46-60,2022-10-24,Completa,4.63,Activo
+137,Martín Díaz,M,46-60,2020-07-27,Parcial,4.59,Activo
+138,Isidora Díaz,M,36-45,2020-04-11,Parcial,4.61,Activo
+139,Catalina Espinoza,M,46-60,2024-07-18,Completa,4.61,Activo
+140,Javiera Araya,M,36-45,2023-05-11,Parcial,4.66,Activo
+141,Florencia López,M,26-35,2021-11-18,Fin de semana,4.58,Activo
+142,Rodrigo Sepúlveda,M,26-35,2020-02-24,Fin de semana,4.63,Activo
+143,Sofía Contreras,F,46-60,2023-01-01,Parcial,4.69,Inactivo
+144,Jorge Martínez,M,26-35,2022-04-06,Completa,4.62,Activo
+145,Sofía López,M,46-60,2022-03-13,Fin de semana,4.58,Activo
+146,Lucas Araya,M,26-35,2021-08-14,Completa,4.62,Activo
+147,Luis Díaz,M,26-35,2019-10-22,Completa,4.68,Activo
+148,Carlos Rojas,M,36-45,2024-11-04,Completa,4.54,Activo
+149,Carlos Rojas,M,26-35,2024-06-17,Completa,4.67,Activo
+150,Vicente Rojas,M,26-35,2022-07-19,Fin de semana,4.61,Activo
+151,Rodrigo Rojas,M,18-25,2024-10-29,Parcial,4.71,Activo
+152,Florencia Muñoz,M,36-45,2021-09-17,Completa,4.55,Activo
+153,Vicente Silva,M,36-45,2024-05-15,Parcial,4.65,Activo
+154,Rodrigo Muñoz,M,36-45,2021-04-17,Completa,4.57,Activo
+155,Sofía Fuentes,M,46-60,2019-10-27,Completa,4.67,Activo
+156,Martín Soto,M,26-35,2019-09-24,Fin de semana,4.74,Activo
+157,Rodrigo Araya,M,46-60,2020-07-09,Fin de semana,4.66,Activo
+158,Pedro Araya,M,36-45,2022-01-26,Fin de semana,4.58,Activo
+159,Jorge Araya,M,60+,2020-03-05,Parcial,4.62,Activo
+160,Benjamín Soto,M,46-60,2020-10-28,Fin de semana,4.66,Activo
+161,Jorge Rodríguez,M,26-35,2022-05-31,Parcial,4.65,Activo
+162,Agustín Soto,M,36-45,2024-07-06,Fin de semana,4.7,Activo
+163,Lucas Díaz,M,46-60,2020-02-02,Parcial,4.68,Activo
+164,Valentina Morales,M,36-45,2019-08-19,Parcial,4.66,Activo
+165,Patricio Díaz,M,36-45,2023-06-21,Fin de semana,4.68,Activo
+166,Javiera Sepúlveda,F,46-60,2021-05-31,Parcial,4.63,Activo
+167,Patricio López,F,36-45,2024-09-27,Completa,4.6,Activo
+168,Jorge Pérez,M,36-45,2021-12-06,Completa,4.67,Activo
+169,Agustín Silva,M,46-60,2019-04-04,Parcial,4.6,Activo
+170,Antonella Morales,F,46-60,2020-02-27,Completa,4.62,Activo
+171,Carlos Muñoz,M,46-60,2024-06-21,Completa,4.71,Activo
+172,Tomás Fuentes,M,46-60,2022-12-26,Parcial,4.69,Activo
+173,Carlos Fuentes,F,36-45,2024-08-10,Completa,4.5,Activo
+174,Benjamín Araya,M,60+,2019-06-19,Fin de semana,4.68,Activo
+175,Agustín López,M,26-35,2020-06-07,Fin de semana,4.67,Activo
+176,Catalina Araya,M,26-35,2019-10-26,Completa,4.63,Activo
+177,Isidora Martínez,M,26-35,2024-09-15,Completa,4.65,Activo
+178,Jorge Rojas,M,36-45,2022-05-29,Fin de semana,4.61,Inactivo
+179,Agustín Rojas,M,60+,2024-02-06,Completa,4.62,Activo
+180,Tomás Contreras,M,36-45,2023-06-20,Parcial,4.67,Activo
+181,Sofía Morales,M,36-45,2023-07-28,Completa,4.65,Activo
+182,Rodrigo Pérez,M,18-25,2023-09-17,Parcial,4.59,Activo
+183,Catalina Martínez,M,36-45,2020-11-19,Parcial,4.58,Inactivo
+184,Patricio González,M,26-35,2019-12-18,Parcial,4.71,Activo
+185,Luis Sepúlveda,M,60+,2024-04-25,Completa,4.71,Activo
+186,Lucas Rodríguez,M,26-35,2020-12-03,Parcial,4.64,Activo
+187,Luis González,M,18-25,2019-09-14,Completa,4.75,Activo
+188,Carlos Martínez,M,26-35,2020-12-23,Parcial,4.62,Activo
+189,Joaquín Sepúlveda,M,26-35,2022-04-11,Completa,4.68,Activo
+190,Pedro Silva,M,36-45,2023-12-25,Parcial,4.65,Activo
+191,Isidora Rodríguez,F,46-60,2019-06-10,Parcial,4.54,Activo
+192,Valentina Díaz,M,60+,2021-03-08,Parcial,4.69,Activo
+193,Catalina Díaz,M,60+,2020-04-06,Fin de semana,4.54,Activo
+194,Luis González,M,46-60,2022-10-11,Fin de semana,4.63,Activo
+195,Agustín Soto,M,18-25,2021-01-23,Parcial,4.66,Activo
+196,Patricio Díaz,M,60+,2022-08-01,Completa,4.67,Activo
+197,Isidora Rojas,M,26-35,2021-09-09,Completa,4.75,Activo
+198,Pedro Martínez,M,18-25,2020-05-14,Fin de semana,4.67,Activo
+199,Benjamín Rojas,M,60+,2021-09-05,Completa,4.69,Activo
+200,Sofía Martínez,M,18-25,2019-10-02,Completa,4.62,Activo
+201,Javiera Díaz,M,18-25,2020-04-06,Parcial,4.73,Activo
+202,Camila Espinoza,M,60+,2023-05-09,Completa,4.64,Activo
+203,Matías Muñoz,M,26-35,2023-04-20,Completa,4.7,Activo
+204,Luis Martínez,F,46-60,2023-01-23,Parcial,4.52,Activo
+205,Antonella López,M,36-45,2023-11-14,Fin de semana,4.63,Activo
+206,Camila Díaz,M,18-25,2022-10-22,Completa,4.61,Activo
+207,Martín Martínez,M,36-45,2024-03-11,Completa,4.59,Activo
+208,Carlos Contreras,M,36-45,2021-01-20,Fin de semana,4.7,Activo
+209,Matías Muñoz,M,18-25,2024-02-10,Completa,4.59,Activo
+210,Matías Rodríguez,M,46-60,2022-11-11,Fin de semana,4.6,Activo
+211,Lucas Martínez,M,46-60,2023-10-04,Completa,4.68,Activo
+212,Valentina Araya,M,36-45,2022-04-03,Completa,4.7,Activo
+213,Javiera Pérez,M,26-35,2019-11-22,Completa,4.67,Activo
+214,Lucas Pérez,M,26-35,2020-11-22,Fin de semana,4.65,Activo
+215,Valentina Díaz,M,60+,2019-07-19,Completa,4.74,Activo
+216,Martín Soto,F,36-45,2019-10-29,Completa,4.68,Activo
+217,Vicente Martínez,M,26-35,2021-10-16,Completa,4.6,Activo
+218,Lucas Espinoza,M,26-35,2023-09-21,Completa,4.62,Activo
+219,Florencia Rodríguez,M,36-45,2023-08-09,Completa,4.61,Activo
+220,Tomás López,M,46-60,2020-12-12,Fin de semana,4.67,Activo
+221,Florencia Sepúlveda,M,18-25,2021-04-05,Parcial,4.73,Inactivo
+222,Agustín Araya,M,36-45,2019-03-03,Completa,4.61,Activo
+223,Valentina Soto,M,26-35,2020-05-20,Completa,4.57,Activo
+224,Lucas Pérez,M,36-45,2019-05-27,Completa,4.65,Activo
+225,Vicente Martínez,M,36-45,2022-06-21,Completa,4.68,Activo
+226,Florencia Soto,M,36-45,2022-11-26,Completa,4.64,Activo
+227,Patricio López,M,36-45,2024-06-28,Parcial,4.63,Activo
+228,Camila Espinoza,M,46-60,2020-01-08,Completa,4.74,Activo
+229,Antonella Pérez,M,36-45,2024-09-02,Parcial,4.69,Activo
+230,Tomás Pérez,M,46-60,2020-04-12,Parcial,4.65,Activo
+231,Lucas Rojas,M,26-35,2019-12-08,Parcial,4.65,Activo
+232,Vicente Morales,M,46-60,2020-01-26,Completa,4.64,Activo
+233,Martín López,F,36-45,2019-07-27,Parcial,4.61,Activo
+234,Martín Martínez,M,36-45,2022-06-12,Parcial,4.68,Activo
+235,Tomás Soto,M,18-25,2022-01-10,Parcial,4.61,Activo
+236,Carlos Espinoza,M,36-45,2023-07-04,Completa,4.57,Activo
+237,Carlos Muñoz,M,26-35,2019-08-02,Completa,4.69,Activo
+238,Antonella Silva,F,26-35,2019-01-29,Parcial,4.63,Activo
+239,Catalina Araya,M,36-45,2022-10-17,Completa,4.53,Activo
+240,Camila Silva,M,26-35,2022-06-29,Fin de semana,4.68,Activo
+241,Matías Rojas,F,26-35,2019-06-20,Completa,4.76,Activo
+242,Patricio Pérez,M,60+,2022-08-21,Completa,4.57,Activo
+243,Rodrigo Araya,F,26-35,2024-06-21,Completa,4.58,Activo
+244,Rodrigo Díaz,M,60+,2023-12-17,Fin de semana,4.65,Activo
+245,Antonella Rojas,M,60+,2022-06-10,Parcial,4.65,Activo
+246,Jorge Rodríguez,M,18-25,2020-11-27,Parcial,4.59,Activo
+247,Benjamín López,M,18-25,2019-02-16,Fin de semana,4.58,Activo
+248,Luis Sepúlveda,M,18-25,2021-03-12,Completa,4.77,Activo
+249,Jorge Pérez,F,46-60,2022-03-11,Completa,4.58,Activo
+250,Antonella Martínez,M,36-45,2023-04-19,Parcial,4.52,Activo
+251,Florencia Rodríguez,M,36-45,2021-05-07,Completa,4.67,Activo
+252,Javiera Espinoza,M,46-60,2024-07-25,Completa,4.74,Activo
+253,Florencia Sepúlveda,M,26-35,2020-05-31,Completa,4.7,Activo
+254,Benjamín Espinoza,M,18-25,2024-06-20,Parcial,4.71,Activo
+255,Joaquín Morales,M,26-35,2020-10-16,Completa,4.7,Activo
+256,Agustín Sepúlveda,M,60+,2021-04-10,Fin de semana,4.56,Activo
+257,Valentina Rodríguez,M,60+,2019-01-11,Completa,4.74,Activo
+258,Javiera Díaz,M,36-45,2021-12-11,Parcial,4.6,Inactivo
+259,Tomás Silva,M,26-35,2021-07-04,Parcial,4.54,Activo
+260,Javiera Contreras,F,26-35,2019-09-14,Parcial,4.66,Activo
+261,Jorge Pérez,M,36-45,2021-11-13,Completa,4.54,Activo
+262,Lucas Araya,F,26-35,2024-02-22,Completa,4.58,Activo
+263,Joaquín Araya,F,46-60,2020-08-20,Parcial,4.71,Activo
+264,Sofía Araya,M,26-35,2023-07-29,Parcial,4.68,Activo
+265,Patricio Muñoz,M,26-35,2022-02-05,Completa,4.61,Activo
+266,Isidora Espinoza,M,18-25,2024-09-28,Completa,4.66,Inactivo
+267,Florencia Contreras,M,46-60,2022-02-20,Parcial,4.72,Activo
+268,Luis Silva,M,26-35,2019-06-12,Parcial,4.6,Activo
+269,Antonella Díaz,M,36-45,2021-09-22,Completa,4.67,Activo
+270,Pedro Muñoz,M,36-45,2022-04-23,Parcial,4.65,Activo
+271,Jorge Rojas,M,46-60,2024-02-03,Parcial,4.61,Activo
+272,Lucas Pérez,M,36-45,2024-05-21,Parcial,4.72,Activo
+273,Carlos Soto,M,26-35,2023-11-07,Parcial,4.72,Activo
+274,Martín Espinoza,M,36-45,2021-07-30,Parcial,4.58,Inactivo
+275,Tomás Soto,M,26-35,2020-11-12,Parcial,4.62,Activo
+276,Javiera Rojas,M,36-45,2021-03-29,Completa,4.65,Activo
+277,Jorge Martínez,M,36-45,2023-10-06,Parcial,4.61,Activo
+278,Joaquín Martínez,M,36-45,2023-09-25,Parcial,4.54,Activo
+279,Catalina Araya,M,36-45,2021-11-14,Completa,4.58,Activo
+280,Florencia González,M,46-60,2019-08-05,Completa,4.71,Activo
+281,Rodrigo Silva,M,26-35,2021-09-10,Parcial,4.69,Activo
+282,Luis Muñoz,M,26-35,2021-08-09,Completa,4.54,Activo
+283,Valentina Díaz,F,26-35,2021-03-14,Completa,4.76,Activo
+284,Javiera Contreras,M,46-60,2021-08-08,Parcial,4.73,Activo
+285,Rodrigo Araya,M,18-25,2022-03-09,Fin de semana,4.66,Inactivo
+286,Agustín Rodríguez,M,36-45,2023-05-22,Parcial,4.68,Activo
+287,Matías Espinoza,M,26-35,2023-10-08,Completa,4.68,Activo
+288,Carlos Sepúlveda,M,18-25,2020-07-13,Parcial,4.61,Inactivo
+289,Luis Soto,M,26-35,2021-08-16,Completa,4.62,Activo
+290,Martín Araya,M,36-45,2024-05-14,Fin de semana,4.66,Activo
+291,Martín Silva,M,46-60,2020-09-09,Completa,4.6,Activo
+292,Carlos Fuentes,M,36-45,2019-03-29,Parcial,4.57,Activo
+293,Sofía Rojas,F,60+,2022-02-13,Parcial,4.5,Activo
+294,Pedro Díaz,M,26-35,2020-12-30,Completa,4.62,Activo
+295,Valentina Soto,M,46-60,2023-09-16,Completa,4.61,Activo
+296,Jorge Martínez,M,36-45,2020-07-08,Parcial,4.59,Activo
+297,Sofía Rodríguez,M,26-35,2024-02-05,Fin de semana,4.63,Activo
+298,Joaquín López,M,26-35,2023-04-28,Completa,4.66,Activo
+299,Catalina Araya,M,36-45,2020-03-03,Completa,4.6,Activo
+300,Benjamín Rojas,M,36-45,2024-06-09,Completa,4.65,Activo
+301,Rodrigo Rojas,M,36-45,2022-08-17,Parcial,4.68,Activo
+302,Joaquín González,M,46-60,2020-04-13,Fin de semana,4.62,Activo
+303,Tomás González,M,18-25,2024-09-04,Completa,4.64,Activo
+304,Carlos Pérez,M,36-45,2023-11-20,Parcial,4.6,Activo
+305,Antonella Sepúlveda,M,36-45,2023-05-19,Completa,4.54,Activo
+306,Jorge Fuentes,M,46-60,2023-11-23,Completa,4.69,Activo
+307,Jorge Morales,M,46-60,2020-11-11,Fin de semana,4.62,Activo
+308,Valentina Araya,M,36-45,2020-09-06,Fin de semana,4.63,Activo
+309,Jorge López,M,26-35,2024-08-06,Fin de semana,4.67,Activo
+310,Antonella Muñoz,F,18-25,2020-11-17,Completa,4.69,Activo
+311,Rodrigo Muñoz,M,46-60,2019-10-13,Completa,4.57,Activo
+312,Florencia Rojas,M,46-60,2021-07-30,Completa,4.63,Activo
+313,Valentina Araya,F,60+,2021-07-03,Fin de semana,4.59,Activo
+314,Luis Araya,F,26-35,2022-10-03,Fin de semana,4.6,Activo
+315,Joaquín Sepúlveda,M,26-35,2023-12-01,Completa,4.74,Activo
+316,Joaquín Araya,M,26-35,2019-03-01,Parcial,4.61,Activo
+317,Lucas Martínez,M,36-45,2020-06-10,Parcial,4.6,Activo
+318,Antonella Rodríguez,M,26-35,2022-05-12,Completa,4.59,Activo
+319,Tomás González,M,26-35,2021-09-19,Parcial,4.52,Activo
+320,Matías Rojas,M,46-60,2022-10-17,Parcial,4.66,Inactivo
+321,Sofía Rojas,M,36-45,2024-05-06,Parcial,4.67,Activo
+322,Catalina Pérez,M,26-35,2021-06-04,Parcial,4.67,Inactivo
+323,Camila Rodríguez,M,26-35,2023-12-11,Parcial,4.72,Activo
+324,Sofía Soto,M,60+,2024-01-13,Completa,4.58,Activo
+325,Agustín González,M,26-35,2021-11-07,Completa,4.67,Activo
+326,Agustín Espinoza,M,18-25,2023-06-26,Parcial,4.75,Activo
+327,Valentina Silva,M,18-25,2023-10-16,Parcial,4.61,Activo
+328,Joaquín Pérez,M,26-35,2020-04-09,Completa,4.65,Activo
+329,Lucas González,M,46-60,2024-11-17,Parcial,4.6,Activo
+330,Agustín Rodríguez,M,18-25,2022-06-30,Completa,4.7,Activo
+331,Martín Martínez,M,36-45,2020-10-23,Parcial,4.67,Activo
+332,Luis Rojas,M,18-25,2021-06-23,Completa,4.77,Inactivo
+333,Florencia Martínez,M,60+,2020-01-20,Completa,4.67,Activo
+334,Matías Muñoz,F,26-35,2021-05-19,Parcial,4.57,Inactivo
+335,Benjamín Silva,M,36-45,2020-09-02,Completa,4.62,Activo
+336,Luis Rojas,M,18-25,2020-11-28,Parcial,4.71,Activo
+337,Camila Rodríguez,M,36-45,2019-12-16,Parcial,4.72,Activo
+338,Jorge López,M,36-45,2020-04-25,Completa,4.61,Inactivo
+339,Isidora González,M,36-45,2021-09-08,Parcial,4.76,Activo
+340,Isidora Martínez,M,18-25,2024-02-03,Completa,4.61,Activo
+341,Sofía Muñoz,M,26-35,2020-09-25,Parcial,4.58,Activo
+342,Jorge Pérez,M,36-45,2022-12-06,Completa,4.64,Activo
+343,Joaquín Rojas,F,60+,2020-05-28,Parcial,4.61,Activo
+344,Agustín Muñoz,F,36-45,2024-11-16,Completa,4.57,Activo
+345,Vicente Rodríguez,M,46-60,2019-01-09,Parcial,4.62,Inactivo
+346,Martín Fuentes,F,36-45,2020-01-23,Parcial,4.73,Activo
+347,Isidora Pérez,M,36-45,2020-12-10,Fin de semana,4.72,Activo
+348,Tomás Contreras,M,26-35,2020-07-14,Completa,4.69,Activo
+349,Martín Muñoz,M,36-45,2020-01-14,Parcial,4.82,Activo
+350,Joaquín Díaz,M,26-35,2020-08-07,Parcial,4.57,Activo
+351,Florencia Muñoz,M,36-45,2024-07-20,Parcial,4.42,Activo
+352,Rodrigo Silva,M,36-45,2022-11-07,Completa,4.55,Activo
+353,Agustín Díaz,M,46-60,2022-01-17,Parcial,4.53,Activo
+354,Valentina Morales,M,36-45,2022-11-03,Fin de semana,4.55,Activo
+355,Joaquín Pérez,M,26-35,2024-03-30,Parcial,4.75,Activo
+356,Lucas Rodríguez,M,26-35,2020-05-25,Completa,4.6,Activo
+357,Pedro Muñoz,M,36-45,2021-03-14,Completa,4.71,Activo
+358,Camila Silva,F,46-60,2020-05-12,Completa,4.69,Activo
+359,Carlos Morales,F,60+,2024-10-29,Parcial,4.55,Activo
+360,Lucas Espinoza,F,46-60,2022-04-20,Completa,4.63,Activo
+361,Sofía Muñoz,F,26-35,2022-05-29,Completa,4.64,Activo
+362,Rodrigo Rojas,F,46-60,2024-11-01,Completa,4.51,Activo
+363,Lucas González,M,46-60,2020-10-17,Parcial,4.7,Activo
+364,Camila Sepúlveda,M,60+,2019-08-27,Completa,4.61,Activo
+365,Camila Espinoza,M,36-45,2019-04-29,Parcial,4.67,Activo
+366,Florencia Araya,M,36-45,2024-02-25,Parcial,4.6,Activo
+367,Joaquín Soto,M,36-45,2024-05-09,Fin de semana,4.59,Activo
+368,Florencia Araya,M,46-60,2024-07-01,Completa,4.66,Activo
+369,Antonella Rojas,M,26-35,2024-01-21,Parcial,4.65,Activo
+370,Javiera Rodríguez,M,26-35,2020-06-01,Parcial,4.63,Activo
+371,Carlos Pérez,M,36-45,2019-04-02,Fin de semana,4.72,Activo
+372,Martín González,F,46-60,2019-11-03,Parcial,4.65,Activo
+373,Vicente Espinoza,M,46-60,2022-07-10,Completa,4.63,Activo
+374,Matías Martínez,M,26-35,2020-02-01,Parcial,4.59,Activo
+375,Isidora González,M,46-60,2023-06-16,Fin de semana,4.77,Activo
+376,Carlos Soto,M,46-60,2021-12-23,Parcial,4.69,Activo
+377,Jorge Sepúlveda,M,60+,2019-07-30,Parcial,4.69,Activo
+378,Florencia Muñoz,M,60+,2023-12-17,Completa,4.61,Inactivo
+379,Agustín Muñoz,M,26-35,2021-08-24,Parcial,4.6,Activo
+380,Matías Araya,M,36-45,2020-08-13,Fin de semana,4.62,Activo
+381,Martín Contreras,M,36-45,2019-09-01,Parcial,4.62,Inactivo
+382,Catalina Contreras,M,36-45,2024-10-11,Fin de semana,4.57,Activo
+383,Florencia Espinoza,F,60+,2021-08-21,Fin de semana,4.6,Activo
+384,Martín Martínez,M,46-60,2022-08-30,Fin de semana,4.56,Inactivo
+385,Sofía Sepúlveda,M,36-45,2024-02-14,Completa,4.63,Activo
+386,Patricio Sepúlveda,M,36-45,2022-05-06,Parcial,4.6,Activo
+387,Vicente Pérez,M,18-25,2021-11-09,Parcial,4.68,Activo
+388,Jorge Araya,M,26-35,2024-07-04,Fin de semana,4.65,Activo
+389,Lucas Contreras,M,46-60,2023-11-19,Parcial,4.64,Activo
+390,Florencia Rojas,M,36-45,2023-12-28,Parcial,4.71,Activo
+391,Benjamín Soto,M,26-35,2024-05-22,Parcial,4.64,Activo
+392,Florencia Rojas,M,46-60,2019-10-18,Parcial,4.72,Activo
+393,Vicente Díaz,M,26-35,2019-03-26,Parcial,4.59,Activo
+394,Camila López,F,46-60,2024-06-13,Parcial,4.59,Activo
+395,Matías López,F,26-35,2020-04-19,Fin de semana,4.65,Activo
+396,Vicente Díaz,M,36-45,2020-05-18,Completa,4.55,Activo
+397,Luis López,M,46-60,2020-06-30,Parcial,4.56,Activo
+398,Catalina Muñoz,F,18-25,2023-10-04,Fin de semana,4.74,Activo
+399,Rodrigo Díaz,M,46-60,2020-06-18,Completa,4.6,Activo
+400,Joaquín Fuentes,M,36-45,2024-08-19,Completa,4.6,Activo
+401,Antonella Espinoza,M,18-25,2024-09-07,Completa,4.62,Activo
+402,Sofía Fuentes,M,60+,2022-03-24,Completa,4.66,Activo
+403,Patricio Silva,M,26-35,2024-11-11,Parcial,4.65,Activo
+404,Isidora Muñoz,M,60+,2023-03-22,Fin de semana,4.7,Activo
+405,Patricio Martínez,M,26-35,2023-01-02,Parcial,4.64,Activo
+406,Joaquín Morales,M,46-60,2021-05-15,Parcial,4.61,Activo
+407,Joaquín Contreras,M,36-45,2023-10-26,Completa,4.6,Activo
+408,Pedro Rodríguez,M,46-60,2022-07-25,Completa,4.64,Activo
+409,Joaquín Fuentes,M,26-35,2023-06-06,Completa,4.7,Activo
+410,Agustín Soto,M,36-45,2021-07-17,Parcial,4.66,Activo
+411,Tomás Pérez,M,36-45,2023-10-01,Parcial,4.44,Activo
+412,Tomás Pérez,M,36-45,2022-05-29,Completa,4.63,Activo
+413,Patricio Contreras,M,46-60,2021-11-16,Fin de semana,4.7,Inactivo
+414,Tomás Pérez,M,36-45,2019-03-26,Parcial,4.61,Activo
+415,Sofía Silva,M,36-45,2021-04-29,Parcial,4.72,Activo
+416,Martín Díaz,M,46-60,2021-12-12,Completa,4.49,Activo
+417,Catalina Martínez,M,60+,2020-06-27,Fin de semana,4.66,Activo
+418,Camila Soto,M,36-45,2021-06-14,Parcial,4.61,Activo
+419,Valentina López,M,46-60,2023-11-10,Completa,4.66,Activo
+420,Isidora Muñoz,M,18-25,2024-08-09,Completa,4.62,Activo
+421,Javiera Pérez,F,36-45,2023-02-03,Parcial,4.67,Activo
+422,Javiera Muñoz,M,26-35,2024-07-21,Completa,4.54,Activo
+423,Martín Soto,M,26-35,2024-06-26,Fin de semana,4.66,Activo
+424,Rodrigo Soto,M,26-35,2021-04-20,Fin de semana,4.66,Activo
+425,Isidora Díaz,M,26-35,2019-04-12,Fin de semana,4.65,Activo
+426,Antonella Díaz,M,26-35,2021-08-03,Completa,4.6,Activo
+427,Pedro Martínez,M,18-25,2019-06-07,Parcial,4.64,Activo
+428,Agustín Contreras,M,36-45,2020-12-24,Completa,4.8,Activo
+429,Tomás González,M,36-45,2020-04-17,Parcial,4.67,Activo
+430,Vicente Rodríguez,M,36-45,2019-02-07,Completa,4.68,Activo
+431,Florencia Contreras,M,26-35,2019-09-23,Completa,4.64,Activo
+432,Valentina Díaz,M,36-45,2024-02-12,Parcial,4.66,Activo
+433,Lucas Fuentes,M,36-45,2023-01-06,Parcial,4.65,Activo
+434,Agustín Espinoza,F,26-35,2022-01-02,Parcial,4.65,Inactivo
+435,Patricio Araya,M,36-45,2019-01-29,Completa,4.69,Activo
+436,Joaquín Fuentes,M,26-35,2023-02-05,Completa,4.64,Activo
+437,Javiera Espinoza,F,46-60,2020-10-10,Parcial,4.59,Activo
+438,Javiera Pérez,M,26-35,2019-12-27,Fin de semana,4.64,Activo
+439,Tomás Soto,M,36-45,2022-05-14,Completa,4.7,Activo
+440,Isidora Espinoza,M,26-35,2022-12-23,Parcial,4.62,Activo
+441,Tomás González,M,18-25,2021-12-23,Completa,4.5,Activo
+442,Matías Rojas,M,46-60,2019-09-10,Parcial,4.71,Activo
+443,Agustín Díaz,M,36-45,2023-06-29,Parcial,4.58,Activo
+444,Isidora Silva,M,26-35,2019-08-08,Parcial,4.64,Inactivo
+445,Camila López,M,18-25,2022-03-26,Parcial,4.66,Activo
+446,Carlos Araya,M,26-35,2020-05-31,Completa,4.59,Activo
+447,Benjamín Rojas,M,18-25,2021-08-23,Completa,4.7,Activo
+448,Matías Martínez,M,26-35,2019-04-13,Completa,4.62,Activo
+449,Joaquín Espinoza,M,46-60,2019-11-12,Completa,4.65,Activo
+450,Patricio López,M,18-25,2020-12-27,Parcial,4.68,Activo
+451,Catalina González,M,60+,2021-10-30,Completa,4.65,Activo
+452,Martín Araya,F,18-25,2023-05-14,Parcial,4.61,Activo
+453,Carlos Pérez,M,46-60,2023-07-18,Completa,4.62,Activo
+454,Antonella Contreras,M,36-45,2019-03-21,Completa,4.63,Activo
+455,Agustín Araya,M,36-45,2021-12-27,Parcial,4.69,Activo
+456,Tomás Contreras,M,36-45,2020-04-15,Fin de semana,4.61,Activo
+457,Rodrigo López,M,36-45,2021-08-08,Parcial,4.68,Activo
+458,Agustín Contreras,M,26-35,2019-08-17,Completa,4.66,Activo
+459,Isidora Morales,F,18-25,2024-11-01,Completa,4.66,Activo
+460,Isidora Muñoz,M,36-45,2019-02-25,Completa,4.58,Activo
+461,Vicente González,F,26-35,2022-04-06,Parcial,4.62,Activo
+462,Carlos Muñoz,M,18-25,2019-11-09,Parcial,4.57,Activo
+463,Florencia González,F,18-25,2020-05-08,Completa,4.65,Activo
+464,Tomás Rodríguez,M,36-45,2019-05-02,Fin de semana,4.71,Activo
+465,Vicente Soto,M,36-45,2019-10-04,Completa,4.67,Activo
+466,Agustín Sepúlveda,M,18-25,2020-06-16,Parcial,4.68,Activo
+467,Jorge Morales,M,26-35,2019-07-21,Parcial,4.7,Activo
+468,Carlos González,M,46-60,2020-07-02,Completa,4.62,Activo
+469,Matías Muñoz,F,46-60,2023-12-28,Parcial,4.66,Activo
+470,Antonella Martínez,M,36-45,2024-03-26,Parcial,4.64,Activo
+471,Florencia Rojas,M,36-45,2020-04-03,Parcial,4.64,Activo
+472,Carlos López,M,46-60,2024-04-17,Completa,4.73,Activo
+473,Pedro Soto,M,36-45,2019-09-06,Completa,4.57,Activo
+474,Catalina Pérez,M,26-35,2019-05-16,Parcial,4.68,Activo
+475,Agustín Martínez,M,46-60,2023-07-24,Completa,4.69,Activo
+476,Valentina Silva,M,18-25,2023-04-01,Parcial,4.56,Activo
+477,Rodrigo Martínez,M,26-35,2023-09-08,Completa,4.63,Activo
+478,Florencia Morales,M,26-35,2022-04-12,Completa,4.59,Activo
+479,Camila Contreras,F,36-45,2020-09-21,Parcial,4.69,Activo
+480,Luis Araya,F,46-60,2021-12-10,Parcial,4.67,Activo
+481,Florencia Soto,M,36-45,2021-05-16,Fin de semana,4.77,Activo
+482,Camila Silva,M,46-60,2022-01-23,Completa,4.7,Activo
+483,Patricio Rojas,M,18-25,2022-05-21,Completa,4.52,Activo
+484,Agustín López,M,26-35,2024-03-11,Completa,4.5,Activo
+485,Florencia Rodríguez,F,46-60,2019-06-21,Parcial,4.78,Activo
+486,Luis Espinoza,M,26-35,2022-10-25,Completa,4.63,Activo
+487,Agustín López,M,26-35,2019-11-20,Parcial,4.63,Activo
+488,Jorge Pérez,M,36-45,2020-05-09,Completa,4.61,Activo
+489,Agustín Silva,M,36-45,2021-10-17,Completa,4.65,Activo
+490,Patricio González,M,46-60,2023-02-13,Completa,4.63,Activo
+491,Martín Araya,M,18-25,2022-07-30,Parcial,4.66,Activo
+492,Vicente Fuentes,M,46-60,2021-10-27,Completa,4.65,Activo
+493,Matías Fuentes,M,46-60,2024-05-11,Completa,4.65,Inactivo
+494,Antonella López,M,46-60,2019-03-28,Completa,4.72,Activo
+495,Camila Rojas,M,46-60,2022-08-18,Completa,4.54,Activo
+496,Luis Araya,M,26-35,2022-06-14,Completa,4.59,Activo
+497,Antonella Fuentes,M,26-35,2023-12-29,Fin de semana,4.63,Activo
+498,Martín Martínez,M,26-35,2023-08-11,Parcial,4.65,Activo
+499,Luis Silva,M,18-25,2024-08-14,Fin de semana,4.54,Activo
+500,Vicente González,M,26-35,2021-04-01,Parcial,4.6,Activo
+501,Antonella Pérez,M,26-35,2022-02-28,Parcial,4.66,Activo
+502,Vicente López,M,36-45,2022-06-04,Parcial,4.72,Activo
+503,Martín Fuentes,M,46-60,2024-04-18,Parcial,4.71,Activo
+504,Catalina Contreras,M,46-60,2021-03-04,Parcial,4.61,Activo
+505,Isidora Pérez,M,26-35,2023-01-21,Completa,4.68,Activo
+506,Sofía Morales,M,36-45,2022-06-07,Completa,4.57,Activo
+507,Florencia Rodríguez,M,36-45,2020-08-20,Parcial,4.64,Activo
+508,Pedro González,M,18-25,2022-05-24,Parcial,4.66,Activo
+509,Carlos Morales,M,46-60,2019-10-02,Parcial,4.62,Activo
+510,Sofía Rodríguez,F,36-45,2024-02-02,Fin de semana,4.61,Activo
+511,Camila López,M,26-35,2021-04-25,Parcial,4.67,Activo
+512,Florencia Muñoz,M,36-45,2020-09-12,Fin de semana,4.63,Activo
+513,Joaquín Morales,M,26-35,2024-01-01,Parcial,4.67,Activo
+514,Antonella Rodríguez,M,26-35,2020-12-07,Completa,4.72,Activo
+515,Valentina Contreras,F,18-25,2023-11-10,Parcial,4.66,Activo
+516,Martín Silva,M,36-45,2022-01-12,Completa,4.68,Activo
+517,Catalina Martínez,M,36-45,2019-09-07,Completa,4.63,Activo
+518,Catalina Rodríguez,M,46-60,2022-04-02,Completa,4.67,Activo
+519,Carlos Rojas,M,46-60,2021-10-17,Fin de semana,4.62,Activo
+520,Carlos Contreras,M,36-45,2021-09-11,Completa,4.59,Inactivo
+521,Camila Espinoza,M,26-35,2020-09-16,Completa,4.71,Activo
+522,Pedro Rodríguez,M,36-45,2024-01-01,Completa,4.75,Activo
+523,Jorge Pérez,M,60+,2022-12-01,Parcial,4.65,Activo
+524,Vicente Díaz,M,26-35,2022-01-26,Parcial,4.52,Activo
+525,Sofía Espinoza,M,26-35,2024-08-09,Fin de semana,4.66,Activo
+526,Patricio Martínez,M,26-35,2023-09-28,Fin de semana,4.63,Inactivo
+527,Valentina Fuentes,M,26-35,2021-11-05,Parcial,4.6,Activo
+528,Rodrigo Muñoz,M,18-25,2019-05-11,Parcial,4.55,Activo
+529,Vicente Espinoza,M,26-35,2019-12-04,Completa,4.61,Activo
+530,Agustín Silva,M,46-60,2022-03-08,Parcial,4.61,Activo
+531,Benjamín Morales,M,36-45,2020-11-12,Parcial,4.6,Activo
+532,Florencia Silva,M,26-35,2024-06-12,Parcial,4.65,Activo
+533,Lucas Silva,M,46-60,2022-01-29,Completa,4.74,Activo
+534,Patricio Rodríguez,M,18-25,2019-05-09,Fin de semana,4.65,Activo
+535,Javiera Araya,M,36-45,2020-03-23,Completa,4.69,Activo
+536,Catalina Sepúlveda,M,26-35,2022-11-24,Parcial,4.62,Activo
+537,Valentina Díaz,M,36-45,2023-05-10,Completa,4.51,Activo
+538,Agustín López,M,46-60,2021-07-17,Fin de semana,4.63,Activo
+539,Catalina Sepúlveda,M,46-60,2019-01-13,Parcial,4.59,Activo
+540,Joaquín Contreras,M,36-45,2023-04-18,Fin de semana,4.58,Activo
+541,Pedro Rojas,M,36-45,2023-07-31,Parcial,4.53,Activo
+542,Vicente Rojas,M,26-35,2021-03-26,Completa,4.52,Activo
+543,Vicente González,F,36-45,2022-07-30,Parcial,4.64,Activo
+544,Jorge Pérez,M,36-45,2021-12-08,Parcial,4.63,Activo
+545,Jorge Sepúlveda,M,46-60,2021-11-05,Completa,4.71,Activo
+546,Florencia Soto,M,36-45,2020-06-13,Parcial,4.59,Activo
+547,Catalina González,M,26-35,2020-11-28,Parcial,4.63,Activo
+548,Javiera Fuentes,F,26-35,2024-09-11,Parcial,4.62,Activo
+549,Joaquín Rojas,M,26-35,2024-08-12,Completa,4.67,Activo
+550,Catalina Muñoz,M,26-35,2024-09-25,Completa,4.69,Activo
+551,Carlos Díaz,M,60+,2020-10-28,Completa,4.76,Activo
+552,Benjamín Fuentes,F,36-45,2024-10-03,Completa,4.57,Activo
+553,Florencia Contreras,F,26-35,2021-12-20,Fin de semana,4.75,Activo
+554,Valentina Fuentes,M,36-45,2019-04-06,Parcial,4.64,Inactivo
+555,Javiera Martínez,M,26-35,2022-05-11,Completa,4.61,Activo
+556,Pedro Muñoz,F,26-35,2023-07-09,Parcial,4.65,Inactivo
+557,Pedro Araya,M,46-60,2022-04-26,Parcial,4.7,Activo
+558,Tomás López,M,46-60,2023-10-10,Completa,4.61,Activo
+559,Isidora Morales,M,46-60,2022-01-25,Completa,4.66,Activo
+560,Benjamín Pérez,M,36-45,2023-12-12,Completa,4.68,Activo
+561,Isidora Rodríguez,M,46-60,2022-05-22,Completa,4.7,Activo
+562,Luis Martínez,F,26-35,2020-09-04,Parcial,4.7,Activo
+563,Matías Contreras,M,36-45,2022-07-10,Completa,4.63,Activo
+564,Martín López,M,46-60,2020-10-21,Parcial,4.51,Activo
+565,Rodrigo Fuentes,M,26-35,2021-11-19,Parcial,4.66,Activo
+566,Catalina Martínez,M,60+,2022-01-06,Fin de semana,4.66,Activo
+567,Javiera Martínez,M,36-45,2024-08-22,Parcial,4.68,Activo
+568,Florencia Díaz,M,60+,2021-12-15,Parcial,4.47,Activo
+569,Matías Rojas,M,36-45,2023-03-16,Completa,4.58,Activo
+570,Sofía Silva,M,26-35,2023-03-31,Parcial,4.62,Activo
+571,Camila López,M,26-35,2021-10-12,Parcial,4.63,Activo
+572,Benjamín Soto,M,18-25,2019-07-26,Completa,4.66,Activo
+573,Catalina Rodríguez,M,46-60,2020-05-10,Fin de semana,4.64,Activo
+574,Sofía Rodríguez,F,60+,2024-11-12,Fin de semana,4.68,Activo
+575,Tomás Morales,M,26-35,2023-06-10,Parcial,4.57,Activo
+576,Martín Díaz,M,26-35,2021-12-15,Completa,4.47,Activo
+577,Camila González,M,36-45,2020-11-18,Completa,4.68,Activo
+578,Antonella Rodríguez,M,46-60,2023-02-07,Fin de semana,4.69,Activo
+579,Camila Sepúlveda,M,18-25,2024-07-02,Completa,4.6,Activo
+580,Antonella López,F,26-35,2021-09-24,Fin de semana,4.57,Activo
+581,Vicente Espinoza,F,26-35,2019-07-13,Parcial,4.61,Activo
+582,Catalina Contreras,M,26-35,2021-06-11,Fin de semana,4.68,Activo
+583,Vicente Espinoza,M,60+,2022-10-16,Completa,4.62,Activo
+584,Agustín Díaz,M,46-60,2019-06-07,Completa,4.59,Activo
+585,Lucas Silva,M,46-60,2024-02-11,Fin de semana,4.61,Activo
+586,Joaquín Sepúlveda,F,36-45,2023-03-03,Fin de semana,4.69,Activo
+587,Agustín Araya,F,26-35,2019-10-12,Completa,4.68,Activo
+588,Sofía González,M,36-45,2021-11-13,Completa,4.7,Activo
+589,Lucas González,M,36-45,2024-06-10,Parcial,4.67,Activo
+590,Camila Morales,M,60+,2024-10-15,Fin de semana,4.57,Activo
+591,Antonella Fuentes,M,36-45,2019-03-30,Completa,4.56,Activo
+592,Camila Sepúlveda,M,60+,2021-10-24,Parcial,4.59,Activo
+593,Luis Díaz,M,26-35,2019-12-31,Completa,4.63,Activo
+594,Jorge Fuentes,F,18-25,2023-01-23,Parcial,4.64,Activo
+595,Isidora Contreras,M,36-45,2022-07-03,Completa,4.6,Activo
+596,Martín Espinoza,M,26-35,2019-04-22,Completa,4.64,Activo
+597,Vicente Soto,M,36-45,2022-10-31,Parcial,4.59,Inactivo
+598,Catalina Silva,F,36-45,2021-09-30,Completa,4.59,Activo
+599,Matías Morales,M,60+,2021-11-01,Completa,4.62,Activo
+600,Valentina Araya,M,26-35,2024-01-18,Completa,4.63,Activo
