@@ -1,0 +1,601 @@
+﻿id_vehiculo,id_conductor,patente,marca,modelo,anio,tipo_servicio,capacidad,combustible
+1,1,WPGD78,Suzuki,Swift,2017,Básico,4,Híbrido
+2,2,BYDC14,Toyota,Corolla,2025,Confort,4,Bencina
+3,3,LVZD42,Chevrolet,Sail,2023,Básico,4,Bencina
+4,4,DBBJ36,Kia,Rio,2022,Básico,4,Híbrido
+5,5,VFGK22,Kia,Rio,2016,Básico,4,Bencina
+6,6,TFTV37,Suzuki,Swift,2022,Básico,4,Bencina
+7,7,JWLB88,Nissan,V16,2018,Taxi tradicional,4,Bencina
+8,8,WGXG59,Kia,Rio,2021,Básico,4,Bencina
+9,9,DVCF23,Hyundai,Accent,2023,Básico,4,Bencina
+10,10,DGKX81,Chevrolet,Sail,2018,Taxi tradicional,4,Bencina
+11,11,PSYG21,Toyota,Corolla,2018,Confort,4,Bencina
+12,12,CBDX18,Toyota,Corolla,2020,Taxi tradicional,4,Bencina
+13,13,VBXB89,Hyundai,Accent,2017,Básico,4,Bencina
+14,14,TWWW79,Hyundai,Accent,2021,Básico,4,Bencina
+15,15,LBSP28,Chevrolet,Spin,2023,XL,6,Bencina
+16,16,VJJT38,Kia,Rio,2019,Básico,4,Bencina
+17,17,LJVT90,Hyundai,Accent,2023,Básico,4,Bencina
+18,18,SPBG61,Nissan,Sentra,2020,Confort,4,Bencina
+19,19,JJXL32,Kia,Rio,2017,Básico,4,Bencina
+20,20,HTKD62,Chevrolet,Spin,2024,XL,6,Eléctrico
+21,21,RJFF37,Hyundai,H-1,2023,XL,6,Bencina
+22,22,WRZV45,Chevrolet,Sail,2016,Básico,4,Bencina
+23,23,DKWY81,Hyundai,Accent,2023,Básico,4,Bencina
+24,24,PGZY44,Chevrolet,Spin,2019,XL,6,Bencina
+25,25,DHDZ68,Chevrolet,Sail,2023,Básico,4,Bencina
+26,26,RFJV89,Toyota,Corolla,2024,Taxi tradicional,4,Bencina
+27,27,FYLJ99,Chevrolet,Sail,2023,Básico,4,Bencina
+28,28,JZGK90,Suzuki,Swift,2024,Básico,4,Híbrido
+29,29,DLTF65,Nissan,V16,2018,Taxi tradicional,4,Híbrido
+30,30,FYRY97,Kia,Rio,2021,Básico,4,Híbrido
+31,31,FCGW19,Nissan,V16,2020,Taxi tradicional,4,Bencina
+32,32,HVWS57,Chevrolet,Sail,2019,Básico,4,Bencina
+33,33,JYRL45,Hyundai,Accent,2025,Básico,4,Híbrido
+34,34,TJHD53,Hyundai,H-1,2018,XL,6,Bencina
+35,35,HZDT75,Suzuki,Swift,2022,Básico,4,Eléctrico
+36,36,YCJT11,Hyundai,Elantra,2022,Confort,4,Bencina
+37,37,HTXH73,Chevrolet,Sail,2022,Básico,4,Bencina
+38,38,XLZP94,Nissan,Sentra,2020,Confort,4,Bencina
+39,39,CRDK64,Kia,Rio,2022,Básico,4,Bencina
+40,40,FCVW25,Suzuki,Swift,2025,Básico,4,Bencina
+41,41,YGPG40,Hyundai,Accent,2021,Básico,4,Bencina
+42,42,JLKJ41,Nissan,Sentra,2025,Confort,4,Bencina
+43,43,ZLDD96,Toyota,Corolla,2019,Confort,4,Bencina
+44,44,FWJW64,Suzuki,Swift,2017,Básico,4,Bencina
+45,45,SFWR20,Suzuki,Swift,2022,Básico,4,Bencina
+46,46,DPXR46,Suzuki,Swift,2025,Básico,4,Híbrido
+47,47,TYKD56,Kia,Rio,2019,Básico,4,Híbrido
+48,48,GHHD68,Hyundai,Accent,2024,Básico,4,Híbrido
+49,49,ZPZD52,Chevrolet,Sail,2025,Básico,4,Bencina
+50,50,KKXY53,Chevrolet,Spin,2022,XL,6,Bencina
+51,51,SBTD69,Chevrolet,Sail,2022,Básico,4,Eléctrico
+52,52,HTHR36,Toyota,Corolla,2019,Confort,4,Bencina
+53,53,BXCR23,Toyota,Corolla,2023,Confort,4,Bencina
+54,54,HPZZ71,Kia,Rio,2022,Básico,4,Híbrido
+55,55,YYLC94,Suzuki,Swift,2022,Básico,4,Híbrido
+56,56,HRGL76,Nissan,V16,2022,Taxi tradicional,4,Bencina
+57,57,SLYF71,Kia,Carnival,2017,XL,6,Bencina
+58,58,JCZV77,Chevrolet,Sail,2023,Básico,4,Bencina
+59,59,FTWF93,Nissan,V16,2018,Taxi tradicional,4,Bencina
+60,60,GPTZ48,Chevrolet,Sail,2019,Taxi tradicional,4,Eléctrico
+61,61,WTDF28,Chevrolet,Spin,2021,XL,6,Bencina
+62,62,KCHF65,Chevrolet,Sail,2017,Básico,4,Bencina
+63,63,BTRK94,Hyundai,Accent,2025,Básico,4,Eléctrico
+64,64,YRPF88,Hyundai,Elantra,2019,Confort,4,Bencina
+65,65,BJDG41,Suzuki,Swift,2025,Básico,4,Bencina
+66,66,GKZZ81,Chevrolet,Sail,2023,Básico,4,Bencina
+67,67,SHHZ19,Toyota,Corolla,2019,Taxi tradicional,4,Bencina
+68,68,VWCG77,Suzuki,Swift,2019,Básico,4,Bencina
+69,69,XFXS62,Toyota,Corolla,2022,Confort,4,Híbrido
+70,70,VFFY52,Chevrolet,Sail,2022,Taxi tradicional,4,Bencina
+71,71,DKFW41,Kia,Rio,2025,Básico,4,Bencina
+72,72,DSZV82,Hyundai,Accent,2019,Básico,4,Híbrido
+73,73,KPBR32,Chevrolet,Sail,2020,Básico,4,Bencina
+74,74,PRXG70,Toyota,Corolla,2021,Taxi tradicional,4,Híbrido
+75,75,KJCF49,Suzuki,Swift,2024,Básico,4,Bencina
+76,76,HKPF98,Hyundai,Accent,2017,Básico,4,Bencina
+77,77,HKLG91,Suzuki,Swift,2020,Básico,4,Bencina
+78,78,LVDH46,Kia,Rio,2024,Básico,4,Eléctrico
+79,79,XCHD81,Hyundai,Accent,2016,Básico,4,Bencina
+80,80,ZHHF87,Chevrolet,Sail,2024,Taxi tradicional,4,Bencina
+81,81,CJCW33,Hyundai,Elantra,2020,Confort,4,Bencina
+82,82,ZKGC49,Toyota,Corolla,2018,Confort,4,Bencina
+83,83,WCRV69,Nissan,Sentra,2025,Confort,4,Bencina
+84,84,CBKV77,Hyundai,Accent,2024,Básico,4,Bencina
+85,85,DKSP53,Hyundai,Accent,2023,Básico,4,Eléctrico
+86,86,HWTJ58,Toyota,Corolla,2025,Taxi tradicional,4,Bencina
+87,87,WXHX36,Kia,Rio,2023,Básico,4,Bencina
+88,88,TJLF56,Kia,Rio,2024,Básico,4,Bencina
+89,89,LYCP60,Hyundai,H-1,2021,XL,6,Bencina
+90,90,ZLRW95,Suzuki,Swift,2024,Básico,4,Bencina
+91,91,JGCB90,Toyota,Corolla,2021,Taxi tradicional,4,Bencina
+92,92,KLDV25,Chevrolet,Sail,2021,Básico,4,Bencina
+93,93,KYDR64,Suzuki,Swift,2021,Básico,4,Híbrido
+94,94,TLCT73,Kia,Rio,2017,Básico,4,Híbrido
+95,95,TRSB83,Suzuki,Swift,2023,Básico,4,Bencina
+96,96,WWTT14,Kia,Rio,2017,Básico,4,Híbrido
+97,97,YBZT10,Toyota,Corolla,2019,Confort,4,Bencina
+98,98,HJHH52,Suzuki,Swift,2022,Básico,4,Bencina
+99,99,GDDF49,Suzuki,Swift,2024,Básico,4,Bencina
+100,100,TYTL91,Kia,Rio,2020,Básico,4,Bencina
+101,101,HGJT89,Nissan,Sentra,2020,Confort,4,Bencina
+102,102,LVLT59,Suzuki,Swift,2020,Básico,4,Eléctrico
+103,103,RBZX31,Nissan,V16,2022,Taxi tradicional,4,Bencina
+104,104,ZPGW32,Hyundai,Accent,2019,Básico,4,Híbrido
+105,105,LRKD71,Hyundai,Elantra,2022,Confort,4,Bencina
+106,106,RXGJ62,Toyota,Corolla,2018,Confort,4,Bencina
+107,107,CHBH78,Hyundai,Accent,2025,Básico,4,Bencina
+108,108,BYLK73,Chevrolet,Sail,2021,Básico,4,Bencina
+109,109,RTSY94,Nissan,V16,2019,Taxi tradicional,4,Bencina
+110,110,RJHJ16,Nissan,V16,2020,Taxi tradicional,4,Bencina
+111,111,TFRZ36,Nissan,Sentra,2016,Confort,4,Bencina
+112,112,VHLD96,Suzuki,Swift,2023,Básico,4,Bencina
+113,113,SWVY82,Nissan,V16,2019,Taxi tradicional,4,Híbrido
+114,114,CYWW46,Chevrolet,Sail,2024,Básico,4,Bencina
+115,115,XFKH93,Toyota,Corolla,2018,Confort,4,Bencina
+116,116,YSWJ78,Kia,Rio,2020,Básico,4,Bencina
+117,117,XCZD29,Suzuki,Swift,2017,Básico,4,Híbrido
+118,118,TBWX19,Hyundai,Accent,2018,Básico,4,Bencina
+119,119,JJHG31,Nissan,Sentra,2020,Confort,4,Bencina
+120,120,BDJS49,Kia,Rio,2019,Básico,4,Bencina
+121,121,YVKX84,Chevrolet,Sail,2021,Básico,4,Bencina
+122,122,KWDS63,Hyundai,Accent,2025,Básico,4,Bencina
+123,123,VLRF85,Hyundai,Elantra,2022,Confort,4,Bencina
+124,124,BGXD56,Nissan,Sentra,2021,Confort,4,Bencina
+125,125,FCDW93,Nissan,Sentra,2024,Confort,4,Bencina
+126,126,BHLX25,Toyota,Corolla,2017,Confort,4,Bencina
+127,127,PYFD82,Chevrolet,Sail,2017,Básico,4,Bencina
+128,128,CJWH81,Hyundai,Elantra,2023,Confort,4,Bencina
+129,129,BKGF58,Chevrolet,Sail,2022,Básico,4,Bencina
+130,130,VPDJ43,Toyota,Corolla,2022,Confort,4,Bencina
+131,131,LLKS20,Hyundai,Elantra,2020,Confort,4,Bencina
+132,132,YTZR61,Chevrolet,Sail,2018,Básico,4,Híbrido
+133,133,SKSS48,Toyota,Corolla,2016,Confort,4,Bencina
+134,134,JLLV92,Kia,Carnival,2017,XL,6,Híbrido
+135,135,PCXC60,Suzuki,Swift,2020,Básico,4,Bencina
+136,136,XVRD32,Nissan,Sentra,2016,Confort,4,Bencina
+137,137,ZFFT49,Chevrolet,Sail,2021,Básico,4,Bencina
+138,138,LXVC65,Toyota,Corolla,2018,Confort,4,Eléctrico
+139,139,BSHS58,Kia,Rio,2019,Básico,4,Bencina
+140,140,DXKL54,Hyundai,Elantra,2021,Confort,4,Bencina
+141,141,HVYW59,Toyota,Corolla,2024,Confort,4,Bencina
+142,142,HZXR72,Kia,Rio,2025,Básico,4,Bencina
+143,143,HJHS98,Toyota,Corolla,2017,Taxi tradicional,4,Bencina
+144,144,PLZG43,Kia,Rio,2020,Básico,4,Bencina
+145,145,HZLP16,Chevrolet,Sail,2024,Básico,4,Bencina
+146,146,LSKD80,Chevrolet,Spin,2024,XL,6,Bencina
+147,147,DGBV83,Nissan,V16,2016,Taxi tradicional,4,Bencina
+148,148,XJFV27,Chevrolet,Sail,2021,Taxi tradicional,4,Bencina
+149,149,ZGVB87,Kia,Rio,2018,Básico,4,Bencina
+150,150,PPBV14,Toyota,Corolla,2017,Confort,4,Bencina
+151,151,VSRK54,Hyundai,Accent,2019,Básico,4,Bencina
+152,152,WKVH35,Chevrolet,Sail,2021,Taxi tradicional,4,Bencina
+153,153,BHPK18,Kia,Rio,2025,Básico,4,Bencina
+154,154,JCVZ27,Suzuki,Swift,2023,Básico,4,Bencina
+155,155,PZDX11,Suzuki,Swift,2022,Básico,4,Bencina
+156,156,RGGG50,Suzuki,Swift,2021,Básico,4,Eléctrico
+157,157,HSCF49,Suzuki,Swift,2017,Básico,4,Bencina
+158,158,BDPY33,Toyota,Corolla,2019,Confort,4,Bencina
+159,159,GXBW84,Chevrolet,Sail,2019,Básico,4,Bencina
+160,160,VXDW13,Chevrolet,Sail,2019,Básico,4,Bencina
+161,161,GVVZ85,Suzuki,Swift,2021,Básico,4,Bencina
+162,162,KZTH99,Suzuki,Swift,2021,Básico,4,Eléctrico
+163,163,XTLX83,Hyundai,Accent,2016,Básico,4,Híbrido
+164,164,ZWCD45,Toyota,Corolla,2020,Confort,4,Bencina
+165,165,GPRY74,Hyundai,Accent,2023,Básico,4,Bencina
+166,166,HFXP41,Kia,Rio,2020,Básico,4,Bencina
+167,167,FLPT49,Chevrolet,Sail,2018,Taxi tradicional,4,Bencina
+168,168,BLXX38,Hyundai,Elantra,2022,Confort,4,Bencina
+169,169,WLHB92,Hyundai,Accent,2021,Básico,4,Bencina
+170,170,PWCR23,Chevrolet,Spin,2025,XL,6,Bencina
+171,171,SKVR60,Toyota,Corolla,2025,Confort,4,Bencina
+172,172,VVXV90,Chevrolet,Sail,2017,Básico,4,Bencina
+173,173,GHZL84,Toyota,Corolla,2025,Confort,4,Bencina
+174,174,CZDB44,Suzuki,Swift,2020,Básico,4,Bencina
+175,175,DGKC83,Hyundai,Elantra,2016,Confort,4,Bencina
+176,176,RFRP12,Hyundai,Accent,2025,Básico,4,Bencina
+177,177,VJWV50,Nissan,V16,2021,Taxi tradicional,4,Bencina
+178,178,YTDK47,Hyundai,Accent,2022,Básico,4,Bencina
+179,179,BVSV43,Nissan,Sentra,2022,Confort,4,Bencina
+180,180,TDRS84,Chevrolet,Sail,2019,Básico,4,Bencina
+181,181,XRHX94,Kia,Rio,2024,Básico,4,Bencina
+182,182,BPSV16,Chevrolet,Sail,2023,Taxi tradicional,4,Bencina
+183,183,TGPK36,Kia,Rio,2022,Básico,4,Bencina
+184,184,RJSR53,Chevrolet,Sail,2020,Básico,4,Híbrido
+185,185,RGRW65,Nissan,V16,2025,Taxi tradicional,4,Bencina
+186,186,XSCK73,Kia,Rio,2019,Básico,4,Bencina
+187,187,ZTDF63,Hyundai,Accent,2025,Básico,4,Bencina
+188,188,PKZB55,Toyota,Corolla,2023,Confort,4,Bencina
+189,189,XYJP79,Suzuki,Swift,2017,Básico,4,Híbrido
+190,190,YZKP12,Hyundai,H-1,2023,XL,6,Bencina
+191,191,DTYZ39,Kia,Rio,2023,Básico,4,Híbrido
+192,192,PCPY55,Chevrolet,Sail,2024,Taxi tradicional,4,Eléctrico
+193,193,HDWK96,Chevrolet,Sail,2025,Básico,4,Bencina
+194,194,KPRH81,Chevrolet,Sail,2017,Taxi tradicional,4,Bencina
+195,195,BHXR43,Nissan,V16,2019,Taxi tradicional,4,Híbrido
+196,196,TLTH63,Chevrolet,Spin,2020,XL,6,Bencina
+197,197,TRXB17,Toyota,Corolla,2017,Taxi tradicional,4,Bencina
+198,198,RTGH36,Hyundai,Elantra,2024,Confort,4,Bencina
+199,199,KVTH56,Hyundai,Accent,2023,Básico,4,Bencina
+200,200,DCGR87,Hyundai,Accent,2018,Básico,4,Eléctrico
+201,201,ZTVG58,Nissan,V16,2018,Taxi tradicional,4,Bencina
+202,202,VTPZ46,Hyundai,Elantra,2016,Confort,4,Eléctrico
+203,203,TRLF81,Chevrolet,Sail,2018,Básico,4,Eléctrico
+204,204,LTXD26,Chevrolet,Spin,2018,XL,6,Bencina
+205,205,HSYJ79,Toyota,Corolla,2020,Confort,4,Híbrido
+206,206,YBDV39,Kia,Rio,2023,Básico,4,Híbrido
+207,207,GJGH97,Hyundai,Accent,2024,Básico,4,Bencina
+208,208,FCGW96,Chevrolet,Sail,2021,Básico,4,Híbrido
+209,209,HDHZ54,Toyota,Corolla,2025,Confort,4,Bencina
+210,210,KCZR46,Nissan,Sentra,2025,Confort,4,Bencina
+211,211,ZGSS97,Kia,Rio,2016,Básico,4,Bencina
+212,212,TXSD25,Chevrolet,Sail,2023,Taxi tradicional,4,Bencina
+213,213,PPST37,Suzuki,Swift,2023,Básico,4,Bencina
+214,214,GJRW33,Chevrolet,Sail,2025,Básico,4,Bencina
+215,215,CHXX48,Hyundai,Accent,2019,Básico,4,Bencina
+216,216,YKGZ75,Hyundai,Accent,2016,Básico,4,Eléctrico
+217,217,WDFY22,Chevrolet,Sail,2019,Taxi tradicional,4,Bencina
+218,218,DYYV62,Suzuki,Swift,2018,Básico,4,Bencina
+219,219,PTCL59,Chevrolet,Sail,2018,Taxi tradicional,4,Bencina
+220,220,LXKF18,Chevrolet,Sail,2024,Básico,4,Bencina
+221,221,JBFV19,Kia,Rio,2023,Básico,4,Bencina
+222,222,WSLG56,Chevrolet,Spin,2022,XL,6,Bencina
+223,223,HPRP47,Hyundai,H-1,2025,XL,6,Eléctrico
+224,224,YWDG16,Chevrolet,Spin,2022,XL,6,Híbrido
+225,225,BXZT21,Toyota,Corolla,2022,Taxi tradicional,4,Híbrido
+226,226,LCWF80,Hyundai,Accent,2016,Básico,4,Bencina
+227,227,XJFS31,Hyundai,Accent,2018,Básico,4,Bencina
+228,228,SVWB69,Toyota,Corolla,2024,Taxi tradicional,4,Bencina
+229,229,DVKS13,Kia,Carnival,2024,XL,6,Bencina
+230,230,HFRB66,Kia,Rio,2018,Básico,4,Bencina
+231,231,XFLD48,Kia,Rio,2017,Básico,4,Bencina
+232,232,DRJD63,Toyota,Corolla,2023,Taxi tradicional,4,Híbrido
+233,233,KTRW39,Toyota,Corolla,2022,Confort,4,Bencina
+234,234,BWCR84,Hyundai,H-1,2021,XL,6,Bencina
+235,235,SBWZ77,Chevrolet,Sail,2016,Básico,4,Bencina
+236,236,PWZY76,Hyundai,Accent,2018,Básico,4,Híbrido
+237,237,LGXF91,Chevrolet,Sail,2018,Taxi tradicional,4,Bencina
+238,238,VWCY19,Toyota,Corolla,2017,Taxi tradicional,4,Bencina
+239,239,RTVY70,Chevrolet,Sail,2018,Básico,4,Bencina
+240,240,SPPB26,Hyundai,Accent,2025,Básico,4,Bencina
+241,241,XGSY44,Kia,Rio,2025,Básico,4,Eléctrico
+242,242,CVRD17,Toyota,Corolla,2017,Confort,4,Bencina
+243,243,CDTT69,Hyundai,Accent,2021,Básico,4,Eléctrico
+244,244,KVGB95,Suzuki,Swift,2018,Básico,4,Híbrido
+245,245,WXDW68,Nissan,Sentra,2016,Confort,4,Bencina
+246,246,XJCJ69,Nissan,Sentra,2023,Confort,4,Híbrido
+247,247,TFDY64,Nissan,Sentra,2020,Confort,4,Bencina
+248,248,XYLZ55,Kia,Rio,2021,Básico,4,Bencina
+249,249,FZHF89,Suzuki,Swift,2019,Básico,4,Bencina
+250,250,FJHP68,Chevrolet,Sail,2020,Básico,4,Bencina
+251,251,GKYB26,Chevrolet,Sail,2024,Básico,4,Bencina
+252,252,WFRH99,Chevrolet,Sail,2016,Taxi tradicional,4,Bencina
+253,253,JJBF21,Hyundai,Elantra,2021,Confort,4,Bencina
+254,254,PLKD38,Chevrolet,Sail,2022,Taxi tradicional,4,Bencina
+255,255,SYCK99,Toyota,Corolla,2016,Taxi tradicional,4,Bencina
+256,256,XCSJ18,Suzuki,Swift,2024,Básico,4,Bencina
+257,257,FSZP17,Nissan,Sentra,2019,Confort,4,Bencina
+258,258,ZTZK67,Chevrolet,Sail,2024,Básico,4,Eléctrico
+259,259,YFCW59,Hyundai,Elantra,2016,Confort,4,Eléctrico
+260,260,XVFB27,Kia,Rio,2025,Básico,4,Bencina
+261,261,XHXJ50,Chevrolet,Sail,2018,Básico,4,Bencina
+262,262,LPZD96,Kia,Rio,2019,Básico,4,Híbrido
+263,263,TWYW17,Toyota,Corolla,2017,Confort,4,Eléctrico
+264,264,GFDD66,Hyundai,Accent,2017,Básico,4,Bencina
+265,265,DLHC37,Suzuki,Swift,2025,Básico,4,Bencina
+266,266,BSRK33,Hyundai,Accent,2018,Básico,4,Bencina
+267,267,HZBL92,Chevrolet,Sail,2021,Taxi tradicional,4,Bencina
+268,268,LJSB90,Kia,Carnival,2023,XL,6,Híbrido
+269,269,HKBK56,Chevrolet,Sail,2022,Taxi tradicional,4,Bencina
+270,270,FWPF47,Suzuki,Swift,2020,Básico,4,Bencina
+271,271,DHYH84,Chevrolet,Sail,2019,Básico,4,Bencina
+272,272,FPLZ36,Toyota,Corolla,2020,Confort,4,Bencina
+273,273,HTWD25,Kia,Rio,2025,Básico,4,Bencina
+274,274,LDZC64,Nissan,Sentra,2024,Confort,4,Bencina
+275,275,YKPD93,Kia,Carnival,2018,XL,6,Híbrido
+276,276,WPFZ70,Kia,Rio,2021,Básico,4,Híbrido
+277,277,SPXH66,Suzuki,Swift,2023,Básico,4,Bencina
+278,278,ZRSL65,Suzuki,Swift,2019,Básico,4,Bencina
+279,279,KGJD55,Hyundai,Accent,2024,Básico,4,Eléctrico
+280,280,HRBC60,Hyundai,Accent,2016,Básico,4,Bencina
+281,281,XKJH72,Hyundai,Accent,2022,Básico,4,Bencina
+282,282,KBLC52,Hyundai,Accent,2017,Básico,4,Bencina
+283,283,LWRG69,Chevrolet,Sail,2019,Básico,4,Bencina
+284,284,FGDY38,Nissan,V16,2016,Taxi tradicional,4,Bencina
+285,285,TRVR18,Hyundai,Elantra,2017,Confort,4,Bencina
+286,286,LTBK50,Suzuki,Swift,2023,Básico,4,Bencina
+287,287,SGFT38,Hyundai,Accent,2017,Básico,4,Híbrido
+288,288,CZWD67,Chevrolet,Spin,2018,XL,6,Bencina
+289,289,YXWV91,Kia,Carnival,2020,XL,6,Bencina
+290,290,YKFD94,Toyota,Corolla,2024,Confort,4,Bencina
+291,291,WRYW18,Toyota,Corolla,2021,Confort,4,Bencina
+292,292,LVKZ76,Hyundai,Elantra,2019,Confort,4,Bencina
+293,293,GDPS92,Kia,Rio,2016,Básico,4,Bencina
+294,294,GWLC84,Chevrolet,Sail,2020,Taxi tradicional,4,Bencina
+295,295,CRWK36,Hyundai,Elantra,2023,Confort,4,Híbrido
+296,296,VGLJ25,Hyundai,Elantra,2024,Confort,4,Bencina
+297,297,JVTH21,Hyundai,Elantra,2019,Confort,4,Bencina
+298,298,DPSL32,Suzuki,Swift,2022,Básico,4,Bencina
+299,299,RTSB72,Toyota,Corolla,2025,Taxi tradicional,4,Bencina
+300,300,WKLY49,Suzuki,Swift,2022,Básico,4,Híbrido
+301,301,CHTP39,Chevrolet,Sail,2025,Básico,4,Bencina
+302,302,DZGX30,Chevrolet,Sail,2023,Básico,4,Bencina
+303,303,YZGD68,Kia,Carnival,2022,XL,6,Eléctrico
+304,304,WZCB47,Nissan,V16,2023,Taxi tradicional,4,Bencina
+305,305,TPZC79,Chevrolet,Spin,2016,XL,6,Híbrido
+306,306,XXVK77,Chevrolet,Sail,2019,Taxi tradicional,4,Híbrido
+307,307,TWBW31,Hyundai,Elantra,2022,Confort,4,Bencina
+308,308,PYCV32,Nissan,Sentra,2023,Confort,4,Bencina
+309,309,HWJH68,Nissan,V16,2024,Taxi tradicional,4,Bencina
+310,310,GFZW99,Hyundai,Accent,2023,Básico,4,Bencina
+311,311,SFCT62,Suzuki,Swift,2017,Básico,4,Bencina
+312,312,XBHR14,Toyota,Corolla,2022,Confort,4,Bencina
+313,313,WYWB69,Chevrolet,Sail,2025,Básico,4,Bencina
+314,314,PWZY38,Kia,Rio,2016,Básico,4,Bencina
+315,315,DLWB48,Nissan,Sentra,2018,Confort,4,Bencina
+316,316,ZZDX81,Chevrolet,Sail,2025,Taxi tradicional,4,Bencina
+317,317,VLSJ86,Kia,Rio,2019,Básico,4,Bencina
+318,318,TYZX53,Suzuki,Swift,2017,Básico,4,Bencina
+319,319,DPXC92,Nissan,V16,2023,Taxi tradicional,4,Bencina
+320,320,SDPF74,Nissan,V16,2024,Taxi tradicional,4,Bencina
+321,321,FFDF70,Chevrolet,Sail,2022,Básico,4,Híbrido
+322,322,XDDV90,Kia,Rio,2016,Básico,4,Bencina
+323,323,JXPT99,Chevrolet,Sail,2025,Taxi tradicional,4,Híbrido
+324,324,VDWH88,Hyundai,Accent,2019,Básico,4,Bencina
+325,325,JPZY90,Suzuki,Swift,2020,Básico,4,Bencina
+326,326,LGWY89,Nissan,V16,2018,Taxi tradicional,4,Bencina
+327,327,WJXW55,Kia,Rio,2019,Básico,4,Híbrido
+328,328,FPBL71,Hyundai,Accent,2022,Básico,4,Bencina
+329,329,WZSY48,Chevrolet,Sail,2024,Taxi tradicional,4,Bencina
+330,330,XSFT52,Hyundai,Accent,2023,Básico,4,Bencina
+331,331,CKTK86,Toyota,Corolla,2019,Confort,4,Bencina
+332,332,PYPP29,Nissan,V16,2023,Taxi tradicional,4,Bencina
+333,333,RSGC21,Chevrolet,Sail,2025,Taxi tradicional,4,Bencina
+334,334,ZRGX74,Chevrolet,Sail,2016,Básico,4,Bencina
+335,335,RDDC50,Suzuki,Swift,2017,Básico,4,Bencina
+336,336,YSJG96,Chevrolet,Sail,2018,Taxi tradicional,4,Bencina
+337,337,KYXC24,Chevrolet,Sail,2020,Básico,4,Bencina
+338,338,YZWT52,Hyundai,Elantra,2023,Confort,4,Bencina
+339,339,KXJL62,Hyundai,Elantra,2025,Confort,4,Bencina
+340,340,TCJK43,Kia,Rio,2025,Básico,4,Bencina
+341,341,BCBR33,Kia,Carnival,2017,XL,6,Bencina
+342,342,RFPW50,Chevrolet,Sail,2018,Básico,4,Bencina
+343,343,CTZF72,Suzuki,Swift,2024,Básico,4,Bencina
+344,344,BPRZ73,Suzuki,Swift,2020,Básico,4,Bencina
+345,345,VXGC43,Nissan,Sentra,2016,Confort,4,Bencina
+346,346,VWLY20,Chevrolet,Sail,2021,Taxi tradicional,4,Bencina
+347,347,TRSS38,Hyundai,Accent,2023,Básico,4,Eléctrico
+348,348,WDFV58,Kia,Rio,2021,Básico,4,Bencina
+349,349,RTDV17,Chevrolet,Sail,2019,Taxi tradicional,4,Bencina
+350,350,DGVH66,Kia,Rio,2021,Básico,4,Bencina
+351,351,VPYF45,Hyundai,Elantra,2017,Confort,4,Bencina
+352,352,ZTWC59,Hyundai,Elantra,2018,Confort,4,Bencina
+353,353,LTDT86,Toyota,Corolla,2020,Taxi tradicional,4,Bencina
+354,354,BDJY22,Hyundai,Elantra,2020,Confort,4,Bencina
+355,355,SCYT45,Chevrolet,Sail,2016,Básico,4,Bencina
+356,356,DXFY73,Toyota,Corolla,2021,Confort,4,Eléctrico
+357,357,FCSX19,Kia,Carnival,2023,XL,6,Bencina
+358,358,KBGW93,Suzuki,Swift,2016,Básico,4,Bencina
+359,359,VWCB38,Chevrolet,Spin,2016,XL,6,Bencina
+360,360,WDVD22,Chevrolet,Sail,2016,Taxi tradicional,4,Bencina
+361,361,VDZY70,Hyundai,Accent,2024,Básico,4,Bencina
+362,362,JHSH29,Nissan,V16,2019,Taxi tradicional,4,Eléctrico
+363,363,VKFR89,Chevrolet,Sail,2023,Básico,4,Híbrido
+364,364,ZXXR14,Hyundai,Accent,2017,Básico,4,Bencina
+365,365,SVVD22,Suzuki,Swift,2019,Básico,4,Bencina
+366,366,JWGB44,Chevrolet,Sail,2022,Básico,4,Bencina
+367,367,JVZJ57,Chevrolet,Sail,2018,Taxi tradicional,4,Bencina
+368,368,PGWS68,Toyota,Corolla,2024,Confort,4,Bencina
+369,369,VYLB16,Hyundai,Accent,2023,Básico,4,Bencina
+370,370,VBLB78,Toyota,Corolla,2022,Confort,4,Bencina
+371,371,SZZL94,Toyota,Corolla,2016,Taxi tradicional,4,Híbrido
+372,372,DWRR80,Kia,Rio,2018,Básico,4,Bencina
+373,373,ZTPL71,Chevrolet,Sail,2024,Taxi tradicional,4,Bencina
+374,374,LWSC92,Kia,Rio,2018,Básico,4,Bencina
+375,375,KGWS47,Chevrolet,Sail,2024,Básico,4,Bencina
+376,376,YXPL24,Nissan,Sentra,2025,Confort,4,Bencina
+377,377,SLZS30,Suzuki,Swift,2018,Básico,4,Bencina
+378,378,ZKRK66,Chevrolet,Sail,2016,Básico,4,Bencina
+379,379,PBXX16,Hyundai,H-1,2019,XL,6,Bencina
+380,380,VVHJ94,Hyundai,Elantra,2020,Confort,4,Híbrido
+381,381,BLSW73,Chevrolet,Sail,2023,Básico,4,Bencina
+382,382,GYFS67,Suzuki,Swift,2022,Básico,4,Híbrido
+383,383,FVJL52,Toyota,Corolla,2024,Taxi tradicional,4,Bencina
+384,384,PTYB91,Kia,Rio,2021,Básico,4,Bencina
+385,385,SSHD39,Kia,Rio,2017,Básico,4,Híbrido
+386,386,JXLB91,Chevrolet,Spin,2025,XL,6,Bencina
+387,387,JZPY62,Suzuki,Swift,2016,Básico,4,Bencina
+388,388,FPDH76,Chevrolet,Spin,2020,XL,6,Eléctrico
+389,389,ZCZS72,Kia,Rio,2022,Básico,4,Bencina
+390,390,PRLZ47,Hyundai,Accent,2017,Básico,4,Bencina
+391,391,YFLY79,Kia,Rio,2024,Básico,4,Bencina
+392,392,TZYV76,Hyundai,Accent,2017,Básico,4,Bencina
+393,393,JVBY37,Hyundai,Accent,2018,Básico,4,Bencina
+394,394,BZLJ93,Nissan,V16,2017,Taxi tradicional,4,Bencina
+395,395,JSRX32,Kia,Rio,2024,Básico,4,Bencina
+396,396,RHXY70,Suzuki,Swift,2018,Básico,4,Bencina
+397,397,VTLD14,Hyundai,Accent,2020,Básico,4,Bencina
+398,398,SRKG88,Chevrolet,Sail,2016,Básico,4,Bencina
+399,399,VLJV43,Chevrolet,Spin,2020,XL,6,Híbrido
+400,400,PXVC95,Hyundai,Accent,2017,Básico,4,Bencina
+401,401,FBRS56,Suzuki,Swift,2023,Básico,4,Bencina
+402,402,GWHH28,Nissan,Sentra,2017,Confort,4,Bencina
+403,403,KLCB56,Chevrolet,Sail,2023,Taxi tradicional,4,Bencina
+404,404,SBKF59,Toyota,Corolla,2021,Taxi tradicional,4,Bencina
+405,405,CPPB45,Hyundai,H-1,2016,XL,6,Eléctrico
+406,406,GRPW24,Suzuki,Swift,2024,Básico,4,Eléctrico
+407,407,RYZF70,Chevrolet,Spin,2024,XL,6,Bencina
+408,408,ZTFD20,Suzuki,Swift,2024,Básico,4,Bencina
+409,409,VWSR72,Kia,Rio,2019,Básico,4,Bencina
+410,410,DWBH15,Toyota,Corolla,2024,Taxi tradicional,4,Bencina
+411,411,KCCD20,Hyundai,Elantra,2024,Confort,4,Bencina
+412,412,HYCX82,Chevrolet,Sail,2018,Básico,4,Bencina
+413,413,JJHJ54,Nissan,Sentra,2024,Confort,4,Híbrido
+414,414,RTRZ55,Chevrolet,Sail,2020,Básico,4,Bencina
+415,415,HSJW72,Toyota,Corolla,2022,Confort,4,Bencina
+416,416,PPRL59,Chevrolet,Sail,2018,Básico,4,Bencina
+417,417,TVZJ12,Hyundai,Elantra,2017,Confort,4,Bencina
+418,418,ZGFD13,Suzuki,Swift,2025,Básico,4,Híbrido
+419,419,FDBR47,Chevrolet,Sail,2019,Taxi tradicional,4,Bencina
+420,420,ZFXD81,Kia,Rio,2017,Básico,4,Bencina
+421,421,LWZB92,Toyota,Corolla,2021,Confort,4,Eléctrico
+422,422,BLHS63,Nissan,V16,2024,Taxi tradicional,4,Bencina
+423,423,BDYL45,Nissan,V16,2024,Taxi tradicional,4,Híbrido
+424,424,LLCY26,Chevrolet,Sail,2019,Taxi tradicional,4,Bencina
+425,425,KZCY82,Suzuki,Swift,2022,Básico,4,Eléctrico
+426,426,HWRW98,Kia,Rio,2022,Básico,4,Bencina
+427,427,BBHP77,Suzuki,Swift,2017,Básico,4,Híbrido
+428,428,PBVJ92,Hyundai,Accent,2016,Básico,4,Bencina
+429,429,CGRW93,Chevrolet,Sail,2024,Taxi tradicional,4,Bencina
+430,430,RJWK36,Nissan,Sentra,2016,Confort,4,Eléctrico
+431,431,DRCR38,Nissan,V16,2024,Taxi tradicional,4,Bencina
+432,432,RTGY36,Hyundai,Elantra,2018,Confort,4,Bencina
+433,433,VCHK20,Nissan,V16,2019,Taxi tradicional,4,Híbrido
+434,434,SRVK33,Chevrolet,Sail,2019,Básico,4,Bencina
+435,435,HRWK15,Suzuki,Swift,2017,Básico,4,Bencina
+436,436,BBZW72,Nissan,V16,2023,Taxi tradicional,4,Bencina
+437,437,CZLL77,Toyota,Corolla,2020,Taxi tradicional,4,Bencina
+438,438,PCLP61,Chevrolet,Sail,2022,Básico,4,Bencina
+439,439,GCZC92,Chevrolet,Sail,2023,Básico,4,Bencina
+440,440,WCKX27,Toyota,Corolla,2020,Taxi tradicional,4,Bencina
+441,441,FWPP75,Kia,Rio,2024,Básico,4,Bencina
+442,442,FXGS30,Chevrolet,Sail,2023,Básico,4,Bencina
+443,443,XTRK74,Chevrolet,Sail,2021,Básico,4,Híbrido
+444,444,PCSB48,Toyota,Corolla,2020,Taxi tradicional,4,Eléctrico
+445,445,SDHV75,Chevrolet,Sail,2017,Básico,4,Bencina
+446,446,XVLK27,Hyundai,Elantra,2025,Confort,4,Bencina
+447,447,XCGL99,Chevrolet,Sail,2019,Taxi tradicional,4,Bencina
+448,448,DYHZ63,Hyundai,H-1,2021,XL,6,Bencina
+449,449,WPST73,Nissan,Sentra,2025,Confort,4,Bencina
+450,450,RGYT59,Toyota,Corolla,2021,Confort,4,Bencina
+451,451,DDXY46,Hyundai,Elantra,2022,Confort,4,Bencina
+452,452,LPJB95,Suzuki,Swift,2016,Básico,4,Bencina
+453,453,ZDVR70,Toyota,Corolla,2024,Taxi tradicional,4,Bencina
+454,454,YKBC25,Kia,Rio,2016,Básico,4,Híbrido
+455,455,VGYF28,Hyundai,Accent,2020,Básico,4,Bencina
+456,456,SKHB22,Nissan,V16,2022,Taxi tradicional,4,Eléctrico
+457,457,FGWC25,Hyundai,Elantra,2018,Confort,4,Bencina
+458,458,TLYX76,Suzuki,Swift,2024,Básico,4,Bencina
+459,459,BZLD44,Suzuki,Swift,2022,Básico,4,Bencina
+460,460,PDLC19,Suzuki,Swift,2019,Básico,4,Bencina
+461,461,VZLZ36,Kia,Rio,2024,Básico,4,Bencina
+462,462,XWVG68,Hyundai,Elantra,2022,Confort,4,Bencina
+463,463,SPPF96,Suzuki,Swift,2020,Básico,4,Bencina
+464,464,HLBC35,Hyundai,Elantra,2017,Confort,4,Híbrido
+465,465,VDSV40,Hyundai,Accent,2021,Básico,4,Bencina
+466,466,HLVZ91,Hyundai,Accent,2024,Básico,4,Bencina
+467,467,TPWH11,Suzuki,Swift,2017,Básico,4,Bencina
+468,468,XKWP91,Chevrolet,Sail,2016,Básico,4,Bencina
+469,469,XGJX11,Toyota,Corolla,2024,Confort,4,Híbrido
+470,470,WVYX24,Kia,Rio,2023,Básico,4,Eléctrico
+471,471,WTTG42,Suzuki,Swift,2024,Básico,4,Bencina
+472,472,SXPY12,Chevrolet,Sail,2017,Taxi tradicional,4,Bencina
+473,473,BCJZ69,Toyota,Corolla,2024,Taxi tradicional,4,Bencina
+474,474,SVBR48,Nissan,V16,2019,Taxi tradicional,4,Bencina
+475,475,DSPF69,Suzuki,Swift,2017,Básico,4,Bencina
+476,476,LGZL71,Kia,Rio,2025,Básico,4,Bencina
+477,477,CLRJ16,Kia,Rio,2023,Básico,4,Bencina
+478,478,CJZX94,Toyota,Corolla,2016,Confort,4,Bencina
+479,479,CHZP97,Chevrolet,Sail,2025,Taxi tradicional,4,Híbrido
+480,480,RVWR49,Toyota,Corolla,2018,Confort,4,Bencina
+481,481,WXDC88,Chevrolet,Sail,2019,Básico,4,Híbrido
+482,482,DZZR97,Toyota,Corolla,2022,Taxi tradicional,4,Bencina
+483,483,ZLKJ28,Hyundai,Accent,2025,Básico,4,Bencina
+484,484,DWDC70,Toyota,Corolla,2023,Taxi tradicional,4,Bencina
+485,485,RCWV84,Chevrolet,Sail,2024,Básico,4,Bencina
+486,486,FGLK63,Nissan,Sentra,2018,Confort,4,Bencina
+487,487,BPLS52,Chevrolet,Sail,2017,Básico,4,Bencina
+488,488,XBDB91,Toyota,Corolla,2022,Taxi tradicional,4,Bencina
+489,489,FSVJ57,Nissan,Sentra,2020,Confort,4,Bencina
+490,490,BPDB29,Suzuki,Swift,2022,Básico,4,Bencina
+491,491,JYDZ19,Toyota,Corolla,2020,Confort,4,Bencina
+492,492,XGLY39,Kia,Rio,2021,Básico,4,Híbrido
+493,493,YHSS75,Kia,Rio,2016,Básico,4,Híbrido
+494,494,KWZC77,Toyota,Corolla,2017,Taxi tradicional,4,Bencina
+495,495,TWVK92,Suzuki,Swift,2019,Básico,4,Bencina
+496,496,GSTD33,Kia,Rio,2018,Básico,4,Bencina
+497,497,XPCG44,Hyundai,Elantra,2023,Confort,4,Bencina
+498,498,RPSZ28,Nissan,V16,2020,Taxi tradicional,4,Híbrido
+499,499,VRGR44,Chevrolet,Sail,2024,Básico,4,Híbrido
+500,500,GVBC47,Nissan,V16,2024,Taxi tradicional,4,Híbrido
+501,501,GGBF52,Suzuki,Swift,2019,Básico,4,Bencina
+502,502,LPGC55,Kia,Carnival,2019,XL,6,Eléctrico
+503,503,PYWF60,Chevrolet,Sail,2025,Taxi tradicional,4,Bencina
+504,504,JRZJ67,Toyota,Corolla,2021,Confort,4,Eléctrico
+505,505,JYPD39,Toyota,Corolla,2023,Confort,4,Eléctrico
+506,506,FRYS28,Kia,Rio,2018,Básico,4,Bencina
+507,507,BPSY45,Toyota,Corolla,2017,Taxi tradicional,4,Híbrido
+508,508,WPRG53,Nissan,V16,2019,Taxi tradicional,4,Bencina
+509,509,CDHG62,Hyundai,Accent,2019,Básico,4,Bencina
+510,510,XHRJ25,Hyundai,Accent,2023,Básico,4,Bencina
+511,511,ZZGG94,Hyundai,H-1,2025,XL,6,Bencina
+512,512,JRZB11,Hyundai,Accent,2019,Básico,4,Híbrido
+513,513,LHHJ37,Nissan,V16,2025,Taxi tradicional,4,Híbrido
+514,514,CVFX70,Kia,Carnival,2020,XL,6,Bencina
+515,515,VVSX66,Chevrolet,Sail,2019,Taxi tradicional,4,Eléctrico
+516,516,FDGL96,Hyundai,Elantra,2024,Confort,4,Bencina
+517,517,HCHJ81,Suzuki,Swift,2023,Básico,4,Híbrido
+518,518,VXFS36,Nissan,V16,2016,Taxi tradicional,4,Bencina
+519,519,YPWJ17,Chevrolet,Sail,2016,Básico,4,Eléctrico
+520,520,KYBP25,Kia,Carnival,2016,XL,6,Bencina
+521,521,YGBP11,Suzuki,Swift,2023,Básico,4,Bencina
+522,522,XWSG32,Chevrolet,Sail,2022,Básico,4,Bencina
+523,523,YRJZ51,Chevrolet,Sail,2025,Básico,4,Bencina
+524,524,JFDS27,Toyota,Corolla,2025,Taxi tradicional,4,Híbrido
+525,525,TSVH18,Kia,Rio,2018,Básico,4,Bencina
+526,526,ZZTX13,Hyundai,Elantra,2025,Confort,4,Bencina
+527,527,SFPW49,Toyota,Corolla,2018,Confort,4,Bencina
+528,528,XJJS82,Suzuki,Swift,2019,Básico,4,Bencina
+529,529,CTDL90,Chevrolet,Sail,2016,Taxi tradicional,4,Bencina
+530,530,FBGC56,Kia,Rio,2020,Básico,4,Bencina
+531,531,DXXF10,Hyundai,Elantra,2025,Confort,4,Bencina
+532,532,KWGF71,Kia,Rio,2019,Básico,4,Bencina
+533,533,VFDC95,Kia,Rio,2021,Básico,4,Híbrido
+534,534,RXGV43,Suzuki,Swift,2019,Básico,4,Híbrido
+535,535,ZCJG60,Hyundai,Elantra,2023,Confort,4,Bencina
+536,536,JSVB31,Toyota,Corolla,2022,Confort,4,Bencina
+537,537,WGWX74,Suzuki,Swift,2022,Básico,4,Bencina
+538,538,DZXF56,Kia,Rio,2023,Básico,4,Bencina
+539,539,XSTB97,Hyundai,Accent,2022,Básico,4,Eléctrico
+540,540,KGFV80,Chevrolet,Sail,2018,Básico,4,Bencina
+541,541,FWWV19,Chevrolet,Sail,2021,Básico,4,Bencina
+542,542,VPGZ44,Chevrolet,Sail,2022,Taxi tradicional,4,Bencina
+543,543,SSKV71,Nissan,Sentra,2017,Confort,4,Bencina
+544,544,YPVX78,Hyundai,Elantra,2016,Confort,4,Híbrido
+545,545,PKXR51,Suzuki,Swift,2022,Básico,4,Bencina
+546,546,WXLK25,Kia,Rio,2019,Básico,4,Bencina
+547,547,CRGP63,Hyundai,H-1,2023,XL,6,Bencina
+548,548,KXKL41,Hyundai,Elantra,2024,Confort,4,Bencina
+549,549,YVZX15,Toyota,Corolla,2025,Confort,4,Híbrido
+550,550,PDYT77,Chevrolet,Sail,2025,Básico,4,Bencina
+551,551,CXCZ32,Toyota,Corolla,2019,Taxi tradicional,4,Bencina
+552,552,VFWZ41,Nissan,Sentra,2023,Confort,4,Bencina
+553,553,DSJJ99,Toyota,Corolla,2021,Taxi tradicional,4,Bencina
+554,554,YZGR94,Suzuki,Swift,2021,Básico,4,Híbrido
+555,555,LRXK55,Nissan,Sentra,2022,Confort,4,Bencina
+556,556,TPTT11,Kia,Carnival,2019,XL,6,Bencina
+557,557,CLBG66,Kia,Carnival,2016,XL,6,Bencina
+558,558,XGHR61,Chevrolet,Sail,2019,Básico,4,Bencina
+559,559,DPKJ17,Chevrolet,Sail,2016,Básico,4,Bencina
+560,560,FDLV73,Hyundai,Elantra,2023,Confort,4,Bencina
+561,561,VKYG75,Hyundai,H-1,2017,XL,6,Bencina
+562,562,XHWK43,Kia,Rio,2023,Básico,4,Bencina
+563,563,GXYW98,Nissan,V16,2017,Taxi tradicional,4,Bencina
+564,564,CSSK43,Chevrolet,Sail,2016,Taxi tradicional,4,Bencina
+565,565,PZDV87,Toyota,Corolla,2016,Confort,4,Híbrido
+566,566,BTVB20,Suzuki,Swift,2018,Básico,4,Bencina
+567,567,HCWK94,Nissan,Sentra,2025,Confort,4,Bencina
+568,568,GLJH61,Toyota,Corolla,2023,Taxi tradicional,4,Híbrido
+569,569,JYFH64,Hyundai,Elantra,2018,Confort,4,Bencina
+570,570,CRXS27,Chevrolet,Sail,2021,Taxi tradicional,4,Bencina
+571,571,CWZS84,Nissan,V16,2019,Taxi tradicional,4,Híbrido
+572,572,BLGT23,Suzuki,Swift,2020,Básico,4,Bencina
+573,573,KCSB89,Chevrolet,Spin,2021,XL,6,Híbrido
+574,574,FGWY16,Toyota,Corolla,2020,Taxi tradicional,4,Bencina
+575,575,BBDT84,Chevrolet,Sail,2022,Taxi tradicional,4,Bencina
+576,576,KBTJ73,Chevrolet,Sail,2023,Taxi tradicional,4,Híbrido
+577,577,FXRG69,Hyundai,Accent,2016,Básico,4,Eléctrico
+578,578,RHXB69,Suzuki,Swift,2018,Básico,4,Bencina
+579,579,RBHL53,Nissan,V16,2022,Taxi tradicional,4,Bencina
+580,580,RWXR32,Toyota,Corolla,2021,Confort,4,Híbrido
+581,581,FHDF41,Suzuki,Swift,2016,Básico,4,Bencina
+582,582,DVPB48,Kia,Rio,2018,Básico,4,Eléctrico
+583,583,SJGC54,Toyota,Corolla,2023,Confort,4,Bencina
+584,584,PXSK61,Chevrolet,Sail,2025,Básico,4,Eléctrico
+585,585,XDZP20,Kia,Rio,2020,Básico,4,Bencina
+586,586,YLWC23,Chevrolet,Sail,2019,Básico,4,Bencina
+587,587,KCCP49,Nissan,Sentra,2017,Confort,4,Bencina
+588,588,PHYY59,Hyundai,Elantra,2022,Confort,4,Bencina
+589,589,KZWZ14,Chevrolet,Sail,2025,Básico,4,Bencina
+590,590,SHPW68,Kia,Carnival,2025,XL,6,Bencina
+591,591,BFTB29,Toyota,Corolla,2016,Taxi tradicional,4,Bencina
+592,592,JCSP52,Hyundai,Elantra,2018,Confort,4,Bencina
+593,593,GVWZ16,Chevrolet,Sail,2022,Básico,4,Bencina
+594,594,JDWR25,Hyundai,Accent,2022,Básico,4,Bencina
+595,595,TLSS78,Chevrolet,Sail,2024,Taxi tradicional,4,Bencina
+596,596,VDHJ74,Nissan,V16,2021,Taxi tradicional,4,Bencina
+597,597,YHYX52,Chevrolet,Sail,2025,Básico,4,Eléctrico
+598,598,VXHD12,Nissan,Sentra,2024,Confort,4,Bencina
+599,599,PGRG79,Kia,Rio,2017,Básico,4,Bencina
+600,600,FJCC17,Hyundai,Accent,2020,Básico,4,Bencina

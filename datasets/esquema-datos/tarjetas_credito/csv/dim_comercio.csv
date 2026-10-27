@@ -1,0 +1,28 @@
+﻿id_comercio,nombre_comercio,rubro,mcc,ubicacion,tipo_canal
+1,Supermercado Andino,Supermercados,5411,Los Lagos,Presencial
+2,Mercado Central Express,Supermercados,5411,La Araucanía,Online
+3,SuperAhorro,Supermercados,5411,Valparaíso,Presencial
+4,Estación Ruta Sur,Combustible,5541,Valparaíso,Presencial
+5,Copec-tipo Norte,Combustible,5541,Biobío,Presencial
+6,Bencinera Austral,Combustible,5541,Valparaíso,Presencial
+7,Sushi Bahía,Restaurantes,5812,Metropolitana,Presencial
+8,Parrilla Los Robles,Restaurantes,5812,La Araucanía,Online
+9,Café Plaza,Restaurantes,5812,Metropolitana,Online
+10,Pizzería Mapocho,Restaurantes,5812,Los Lagos,Presencial
+11,Farmacia Vital,Farmacias,5912,Antofagasta,Online
+12,Farmacia Popular,Farmacias,5912,La Araucanía,Online
+13,Tienda Moda Sur,Vestuario,5651,Metropolitana,Presencial
+14,Outlet Urbano,Vestuario,5651,Metropolitana,Presencial
+15,TecnoStore,Tecnología,5732,Metropolitana,Presencial
+16,Mundo Digital,Tecnología,5732,Valparaíso,Online
+17,Vuela Sur,Viajes y aerolíneas,4511,Extranjero,Online
+18,Agencia Horizonte,Viajes y aerolíneas,4511,Metropolitana,Online
+19,Casa & Obra,Hogar y construcción,5200,Biobío,Presencial
+20,Ferretería Central,Hogar y construcción,5200,Valparaíso,Presencial
+21,StreamPlus,Suscripciones digitales,5815,Extranjero,Online
+22,MúsicaYa,Suscripciones digitales,5815,Metropolitana,Online
+23,NubeDocs,Suscripciones digitales,5815,Metropolitana,Online
+24,RideApp,Transporte y apps,4121,Metropolitana,Online
+25,Taxi Express,Transporte y apps,4121,Metropolitana,Online
+26,Clínica Santa Elena,Salud,8099,Metropolitana,Online
+27,Centro Dental Sonrisa,Salud,8099,Metropolitana,Presencial

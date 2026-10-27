@@ -1,0 +1,21 @@
+﻿id_zona,comuna,sector,latitud,longitud,peso_demanda
+1,Santiago Centro,Centro,-33.4489,-70.6693,14
+2,Providencia,Oriente,-33.4314,-70.6093,13
+3,Las Condes,Oriente,-33.411,-70.567,13
+4,Vitacura,Oriente,-33.39,-70.572,5
+5,Lo Barnechea,Oriente,-33.35,-70.518,3
+6,Ñuñoa,Oriente,-33.4569,-70.597,9
+7,La Reina,Oriente,-33.445,-70.539,3
+8,Macul,Sur-Oriente,-33.487,-70.599,3
+9,Peñalolén,Sur-Oriente,-33.487,-70.533,3
+10,La Florida,Sur-Oriente,-33.522,-70.598,5
+11,Puente Alto,Sur,-33.611,-70.575,4
+12,San Miguel,Sur,-33.497,-70.651,3
+13,Maipú,Poniente,-33.51,-70.757,5
+14,Estación Central,Poniente,-33.46,-70.699,4
+15,Pudahuel,Poniente,-33.44,-70.76,2
+16,Quilicura,Norte,-33.36,-70.73,2
+17,Recoleta,Norte,-33.406,-70.64,3
+18,Independencia,Norte,-33.417,-70.665,2
+19,Huechuraba,Norte,-33.37,-70.635,2
+20,Aeropuerto AMB,Aeropuerto,-33.393,-70.7858,4

@@ -1,6 +1,6 @@
 # Datasets
 
-Colección de bases de datos para proyectos de Machine Learning e IA. Los datasets están organizados por tipo: **datos transversales/paneles** y **series de tiempo**.
+Colección de bases de datos para proyectos de Machine Learning e IA. Los datasets están organizados por tipo: **datos transversales/paneles**, **series de tiempo**, **bases relacionales (esquema de datos)** y **archivos** (PDF, imágenes y texto).
 
 ## Datos Transversales y Paneles
 
@@ -46,6 +46,18 @@ Colección de bases de datos para proyectos de Machine Learning e IA. Los datase
 | **precios_acciones** | 27,385 | Pronóstico | Precios históricos de 5 stocks (20 años) |
 | **ventas_mensuales** | 3,000 | Pronóstico estacional | Ventas mensuales con estacionalidad (10 años) |
 
+## Esquema de Datos (bases relacionales para SQL y Power BI)
+
+Bases sintéticas con modelo estrella (tablas de hechos y dimensiones), con SQLite, CSV, DDL y script generador. Detalle y diagramas en [`esquema-datos/`](esquema-datos/).
+
+| Base | Tablas | Registros | Período | Descripción |
+|------|-------:|----------:|---------|-------------|
+| **[compras](esquema-datos/compras/)** | 6 | 40,497 | 2024–2025 | Retail omnicanal: órdenes, detalle, clientes, productos, canales |
+| **[tarjetas_credito](esquema-datos/tarjetas_credito/)** | 6 | 407,066 | 2025 | Transacciones, estados de cuenta, pagos, intereses, mora y fraude |
+| **[taxis](esquema-datos/taxis/)** | 6 | 196,569 | 2025 | Viajes en Santiago: tarifas dinámicas, cancelaciones, conductores, zonas |
+
+![Esquema unificado](esquema-datos/diagramas/esquema_unificado.png)
+
 ## Estructura
 
 ```
@@ -75,14 +87,23 @@ datasets/
 │   │   └── determinantes_salario/datos.csv
 │   └── Multi-target:
 │       └── ventas_empresas/datos.csv
-└── series_de_tiempo/
-    ├── precios_acciones/datos.csv
-    └── ventas_mensuales/datos.csv
+├── series_de_tiempo/
+│   ├── precios_acciones/datos.csv
+│   └── ventas_mensuales/datos.csv
+├── esquema-datos/
+│   ├── compras/            (6 tablas · .db + csv/ + esquema.sql)
+│   ├── tarjetas_credito/   (6 tablas · .db + csv/ + esquema.sql)
+│   ├── taxis/              (6 tablas · .db + csv/ + esquema.sql)
+│   └── diagramas/
+└── archivos/
+    ├── reclamos/
+    ├── pdf_pensiones/
+    └── imagen_boletas/
 ```
 
 ## Fuentes
 
-- Datasets sintéticos propios: Titanic, Precios de Casas, Ventas de Empresas, Ventas Mensuales
+- Datasets sintéticos propios: Titanic, Precios de Casas, Ventas de Empresas, Ventas Mensuales, y las bases relacionales de Compras, Tarjetas de Crédito y Taxis
 - Kaggle - Datasets clásicos: 
   - Clasificación: Iris, Wine, Breast Cancer, Adult Income, Mushroom, Diabetes, Penguin
   - Regresión: Boston Housing, California Housing, Insurance Charges, Car Prices
@@ -101,3 +122,7 @@ datasets/
 ### Series de Tiempo
 - **Total datasets**: 2
 - **Total registros**: ~30,300
+
+### Esquema de Datos
+- **Total bases**: 3 (18 tablas)
+- **Total registros**: ~644,100

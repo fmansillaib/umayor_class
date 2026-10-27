@@ -1,0 +1,1501 @@
+﻿id_cliente,nombre,genero,tramo_edad,region,comuna,segmento,fecha_alta
+1,Agustín Sepúlveda,F,18-25,Metropolitana,Ñuñoa,Frecuente,2025-02-08
+2,Antonella Muñoz,F,26-35,Metropolitana,Maipú,Nuevo,2022-03-06
+3,Lucas Díaz,M,46-60,Metropolitana,Providencia,Nuevo,2025-03-15
+4,Martín Contreras,M,46-60,Valparaíso,Valparaíso,Frecuente,2023-12-27
+5,Benjamín Contreras,M,46-60,Los Lagos,Puerto Montt,Nuevo,2022-07-21
+6,Sofía Contreras,F,26-35,Metropolitana,Providencia,Premium,2024-07-07
+7,Matías González,F,60+,Metropolitana,Providencia,Nuevo,2025-02-01
+8,Catalina González,F,26-35,Metropolitana,Maipú,Nuevo,2023-03-14
+9,Tomás Contreras,M,26-35,Biobío,Talcahuano,Nuevo,2024-07-20
+10,Benjamín Rodríguez,M,18-25,Metropolitana,Puente Alto,Nuevo,2025-01-15
+11,Vicente González,F,46-60,La Araucanía,Temuco,Frecuente,2024-12-23
+12,Catalina Muñoz,F,36-45,Valparaíso,Valparaíso,Frecuente,2023-04-27
+13,Antonella Pérez,F,36-45,Metropolitana,Las Condes,Nuevo,2025-04-10
+14,Javiera Soto,F,18-25,Metropolitana,Puente Alto,Premium,2023-09-07
+15,Isidora Martínez,M,18-25,Los Lagos,Osorno,Premium,2022-05-31
+16,Tomás Rojas,M,46-60,Antofagasta,Calama,Frecuente,2024-01-27
+17,Camila Morales,M,60+,Los Lagos,Puerto Montt,Premium,2024-12-19
+18,Matías Rodríguez,F,26-35,Metropolitana,Puente Alto,Nuevo,2022-08-25
+19,Lucas Pérez,F,18-25,Metropolitana,Maipú,Frecuente,2023-06-25
+20,Sofía Morales,M,26-35,Metropolitana,Maipú,Frecuente,2023-11-15
+21,Matías Muñoz,F,36-45,Metropolitana,Las Condes,Frecuente,2022-01-20
+22,Benjamín Pérez,M,46-60,Metropolitana,Santiago,Premium,2022-09-19
+23,Matías Soto,M,60+,Metropolitana,Ñuñoa,Nuevo,2023-05-27
+24,Vicente Contreras,F,26-35,La Araucanía,Temuco,Frecuente,2022-11-29
+25,Florencia Rojas,F,26-35,Metropolitana,Santiago,Premium,2023-05-24
+26,Joaquín Pérez,F,26-35,Metropolitana,Ñuñoa,Nuevo,2024-07-31
+27,Florencia Soto,M,36-45,Metropolitana,Puente Alto,Nuevo,2022-05-23
+28,Vicente Sepúlveda,M,18-25,Metropolitana,Puente Alto,Nuevo,2023-06-19
+29,Martín Sepúlveda,F,26-35,Biobío,Concepción,Nuevo,2023-10-05
+30,Isidora Soto,M,18-25,Biobío,Talcahuano,Frecuente,2022-01-04
+31,Tomás Martínez,M,36-45,Valparaíso,Viña del Mar,Nuevo,2022-09-13
+32,Isidora Contreras,M,36-45,Metropolitana,Providencia,Frecuente,2022-09-18
+33,Camila Pérez,M,26-35,Metropolitana,Puente Alto,Frecuente,2025-01-27
+34,Javiera Morales,F,36-45,Metropolitana,Ñuñoa,Nuevo,2024-06-23
+35,Antonella Muñoz,F,36-45,Metropolitana,Providencia,Frecuente,2024-11-21
+36,Agustín Silva,F,36-45,Metropolitana,Ñuñoa,Frecuente,2022-04-05
+37,Lucas Contreras,F,18-25,Biobío,Concepción,Premium,2024-02-26
+38,Martín Díaz,F,46-60,Antofagasta,Calama,Nuevo,2022-08-07
+39,Javiera Rojas,M,36-45,Metropolitana,Puente Alto,Frecuente,2022-09-06
+40,Martín Fuentes,M,46-60,Los Lagos,Osorno,Nuevo,2024-06-25
+41,Lucas Morales,F,26-35,Biobío,Concepción,Frecuente,2023-07-22
+42,Antonella Martínez,F,18-25,Metropolitana,Providencia,Nuevo,2023-11-19
+43,Valentina Contreras,M,26-35,Metropolitana,Maipú,Nuevo,2023-03-15
+44,Catalina López,F,46-60,Metropolitana,Puente Alto,Nuevo,2024-05-10
+45,Tomás López,M,46-60,Metropolitana,Maipú,Frecuente,2023-12-22
+46,Lucas Díaz,M,26-35,Biobío,Concepción,Nuevo,2023-03-28
+47,Vicente Fuentes,M,60+,Valparaíso,Quilpué,Frecuente,2024-04-08
+48,Camila Muñoz,M,18-25,La Araucanía,Temuco,Nuevo,2025-03-01
+49,Isidora Silva,M,26-35,Metropolitana,Maipú,Nuevo,2023-11-02
+50,Florencia Fuentes,F,36-45,Los Lagos,Puerto Montt,Premium,2024-05-13
+51,Benjamín López,F,60+,Metropolitana,Providencia,Frecuente,2022-05-21
+52,Sofía Silva,F,36-45,Valparaíso,Valparaíso,Nuevo,2023-05-04
+53,Vicente Sepúlveda,F,46-60,Metropolitana,Providencia,Premium,2024-01-26
+54,Tomás Sepúlveda,M,26-35,Metropolitana,Ñuñoa,Nuevo,2022-02-22
+55,Matías Rodríguez,M,46-60,Valparaíso,Quilpué,Frecuente,2023-05-13
+56,Benjamín Soto,M,36-45,Biobío,Concepción,Frecuente,2025-03-05
+57,Lucas Muñoz,M,60+,Metropolitana,Ñuñoa,Premium,2024-05-10
+58,Martín Rojas,M,36-45,Metropolitana,Puente Alto,Frecuente,2022-11-10
+59,Antonella Fuentes,F,46-60,Metropolitana,Santiago,Nuevo,2023-07-04
+60,Catalina Soto,F,36-45,Metropolitana,Las Condes,Nuevo,2024-08-09
+61,Antonella Pérez,M,36-45,Metropolitana,Puente Alto,Premium,2023-06-14
+62,Lucas Martínez,F,36-45,Metropolitana,Ñuñoa,Frecuente,2024-04-12
+63,Valentina Pérez,F,26-35,Metropolitana,Providencia,Nuevo,2022-02-05
+64,Joaquín Contreras,M,26-35,Valparaíso,Viña del Mar,Nuevo,2024-08-27
+65,Isidora Soto,F,46-60,Metropolitana,Ñuñoa,Nuevo,2022-09-05
+66,Florencia Rodríguez,M,60+,Metropolitana,Providencia,Nuevo,2024-09-18
+67,Camila Rodríguez,F,26-35,Metropolitana,Santiago,Frecuente,2023-09-12
+68,Lucas Muñoz,F,36-45,Valparaíso,Viña del Mar,Nuevo,2022-09-16
+69,Florencia Fuentes,M,18-25,Metropolitana,Santiago,Nuevo,2022-04-16
+70,Sofía Rojas,M,18-25,Metropolitana,Providencia,Nuevo,2022-04-20
+71,Catalina Silva,M,26-35,Biobío,Talcahuano,Nuevo,2023-04-08
+72,Isidora Morales,F,26-35,Valparaíso,Valparaíso,Nuevo,2022-07-23
+73,Vicente González,M,36-45,Metropolitana,Puente Alto,Nuevo,2022-06-03
+74,Tomás Rodríguez,M,18-25,Metropolitana,Providencia,Premium,2023-08-14
+75,Martín Muñoz,F,36-45,Biobío,Talcahuano,Frecuente,2023-02-10
+76,Tomás Sepúlveda,M,26-35,Metropolitana,Maipú,Frecuente,2022-12-06
+77,Lucas Silva,F,36-45,Valparaíso,Viña del Mar,Frecuente,2023-07-12
+78,Valentina Díaz,F,60+,Valparaíso,Quilpué,Frecuente,2022-02-22
+79,Lucas Martínez,M,60+,Valparaíso,Valparaíso,Premium,2022-12-25
+80,Valentina Silva,M,26-35,Metropolitana,Las Condes,Frecuente,2024-10-04
+81,Martín Rodríguez,M,26-35,Antofagasta,Calama,Frecuente,2023-11-07
+82,Valentina Soto,M,26-35,Valparaíso,Viña del Mar,Premium,2024-07-20
+83,Javiera Contreras,F,26-35,Antofagasta,Calama,Frecuente,2022-01-03
+84,Benjamín Díaz,M,36-45,Metropolitana,Las Condes,Nuevo,2024-06-24
+85,Camila Morales,F,46-60,Valparaíso,Viña del Mar,Frecuente,2022-09-06
+86,Agustín Fuentes,F,36-45,Valparaíso,Valparaíso,Frecuente,2022-07-10
+87,Florencia Contreras,M,60+,Metropolitana,Providencia,Nuevo,2023-08-21
+88,Sofía Fuentes,F,26-35,Metropolitana,Maipú,Nuevo,2023-01-26
+89,Camila Pérez,M,46-60,Biobío,Talcahuano,Premium,2023-07-02
+90,Joaquín Soto,M,36-45,Metropolitana,Las Condes,Premium,2024-09-18
+91,Catalina Díaz,M,18-25,Los Lagos,Osorno,Frecuente,2023-05-05
+92,Sofía Silva,F,18-25,Antofagasta,Calama,Premium,2024-03-01
+93,Matías Martínez,M,18-25,Antofagasta,Antofagasta,Nuevo,2024-06-20
+94,Valentina Silva,M,26-35,Valparaíso,Quilpué,Nuevo,2022-11-13
+95,Catalina Soto,M,46-60,Metropolitana,Santiago,Frecuente,2023-11-04
+96,Agustín Rodríguez,F,26-35,Metropolitana,Santiago,Frecuente,2023-08-12
+97,Javiera Rojas,M,60+,Biobío,Concepción,Nuevo,2022-07-25
+98,Joaquín Contreras,F,26-35,Metropolitana,Maipú,Frecuente,2024-01-05
+99,Vicente Muñoz,M,36-45,Biobío,Concepción,Nuevo,2022-12-15
+100,Javiera Morales,M,36-45,Valparaíso,Quilpué,Nuevo,2023-04-21
+101,Vicente Muñoz,M,60+,Antofagasta,Calama,Frecuente,2023-08-13
+102,Javiera Fuentes,M,26-35,Metropolitana,Maipú,Premium,2023-05-28
+103,Joaquín Sepúlveda,M,60+,Metropolitana,Las Condes,Nuevo,2024-02-21
+104,Florencia González,F,60+,Antofagasta,Calama,Frecuente,2024-03-21
+105,Joaquín Díaz,F,36-45,La Araucanía,Temuco,Frecuente,2023-04-17
+106,Tomás López,M,18-25,La Araucanía,Temuco,Frecuente,2022-03-22
+107,Antonella Rodríguez,M,26-35,Metropolitana,Providencia,Frecuente,2023-08-28
+108,Florencia Fuentes,F,26-35,Antofagasta,Calama,Premium,2024-01-20
+109,Matías Silva,F,18-25,Metropolitana,Providencia,Premium,2023-11-25
+110,Joaquín Muñoz,M,18-25,Biobío,Concepción,Nuevo,2024-03-24
+111,Catalina Fuentes,M,18-25,Valparaíso,Valparaíso,Nuevo,2023-06-21
+112,Antonella Sepúlveda,F,36-45,Valparaíso,Quilpué,Frecuente,2025-02-23
+113,Martín Muñoz,F,18-25,La Araucanía,Temuco,Nuevo,2023-09-11
+114,Agustín Martínez,F,26-35,Metropolitana,Las Condes,Frecuente,2022-07-19
+115,Martín Sepúlveda,F,46-60,Biobío,Concepción,Frecuente,2025-01-11
+116,Benjamín Rodríguez,M,26-35,Valparaíso,Viña del Mar,Premium,2023-07-27
+117,Joaquín Martínez,M,18-25,Antofagasta,Calama,Nuevo,2022-07-23
+118,Valentina Morales,F,36-45,Metropolitana,Puente Alto,Premium,2024-07-20
+119,Agustín Rojas,F,18-25,Metropolitana,Puente Alto,Nuevo,2023-11-15
+120,Antonella López,F,46-60,Metropolitana,Puente Alto,Nuevo,2023-04-23
+121,Sofía Martínez,M,46-60,Antofagasta,Antofagasta,Frecuente,2022-10-24
+122,Joaquín López,F,36-45,Metropolitana,Santiago,Nuevo,2022-01-31
+123,Matías Rodríguez,F,36-45,Metropolitana,Las Condes,Frecuente,2024-05-12
+124,Agustín Sepúlveda,F,46-60,Metropolitana,Ñuñoa,Frecuente,2024-10-28
+125,Benjamín Silva,M,26-35,Metropolitana,Santiago,Nuevo,2022-03-05
+126,Valentina Soto,F,18-25,La Araucanía,Temuco,Frecuente,2022-05-31
+127,Catalina Sepúlveda,M,36-45,Valparaíso,Quilpué,Nuevo,2023-10-28
+128,Isidora Contreras,M,46-60,Biobío,Talcahuano,Nuevo,2022-08-23
+129,Matías Soto,M,26-35,Metropolitana,Las Condes,Nuevo,2024-05-01
+130,Valentina Muñoz,F,18-25,Metropolitana,Santiago,Frecuente,2024-08-29
+131,Benjamín Sepúlveda,M,36-45,Metropolitana,Maipú,Nuevo,2022-09-24
+132,Benjamín Pérez,M,26-35,Valparaíso,Quilpué,Frecuente,2024-05-16
+133,Agustín Fuentes,F,26-35,Metropolitana,Puente Alto,Nuevo,2024-09-14
+134,Agustín López,M,46-60,Biobío,Concepción,Frecuente,2025-03-21
+135,Camila Rojas,M,46-60,Valparaíso,Viña del Mar,Premium,2023-07-02
+136,Sofía Sepúlveda,M,18-25,Metropolitana,Ñuñoa,Frecuente,2023-01-07
+137,Isidora Contreras,M,36-45,Metropolitana,Providencia,Nuevo,2024-12-22
+138,Valentina González,F,26-35,Biobío,Concepción,Frecuente,2025-03-08
+139,Lucas Sepúlveda,M,26-35,Metropolitana,Providencia,Frecuente,2024-05-18
+140,Matías Pérez,M,36-45,Metropolitana,Las Condes,Nuevo,2024-05-30
+141,Camila Díaz,M,60+,Metropolitana,Providencia,Frecuente,2022-04-23
+142,Camila Silva,M,26-35,Metropolitana,Maipú,Frecuente,2022-09-03
+143,Joaquín Muñoz,M,46-60,Metropolitana,Santiago,Nuevo,2025-02-18
+144,Antonella Sepúlveda,M,36-45,Metropolitana,Ñuñoa,Frecuente,2022-06-09
+145,Camila Soto,F,46-60,Metropolitana,Puente Alto,Nuevo,2024-04-09
+146,Valentina Contreras,F,26-35,Valparaíso,Quilpué,Nuevo,2024-01-12
+147,Antonella Díaz,M,46-60,Metropolitana,Santiago,Frecuente,2023-09-28
+148,Isidora López,M,26-35,Metropolitana,Ñuñoa,Frecuente,2024-11-10
+149,Florencia Díaz,F,36-45,Metropolitana,Ñuñoa,Nuevo,2022-10-27
+150,Javiera López,M,36-45,Los Lagos,Osorno,Premium,2024-10-08
+151,Javiera Muñoz,M,26-35,Valparaíso,Viña del Mar,Frecuente,2022-11-06
+152,Valentina Pérez,M,36-45,Valparaíso,Valparaíso,Nuevo,2023-12-22
+153,Catalina Silva,F,26-35,Metropolitana,Puente Alto,Frecuente,2022-07-04
+154,Sofía González,M,18-25,Metropolitana,Las Condes,Premium,2024-09-01
+155,Benjamín Díaz,M,60+,Metropolitana,Puente Alto,Frecuente,2022-12-20
+156,Tomás Contreras,M,46-60,Metropolitana,Ñuñoa,Frecuente,2024-02-03
+157,Valentina Soto,F,36-45,Biobío,Talcahuano,Nuevo,2023-11-17
+158,Antonella Muñoz,F,60+,Biobío,Talcahuano,Premium,2022-11-04
+159,Sofía Sepúlveda,F,26-35,Valparaíso,Viña del Mar,Frecuente,2024-03-13
+160,Valentina Morales,M,36-45,Metropolitana,Santiago,Nuevo,2022-09-19
+161,Antonella López,M,26-35,Metropolitana,Providencia,Nuevo,2023-03-15
+162,Benjamín Morales,M,46-60,Metropolitana,Puente Alto,Nuevo,2022-07-27
+163,Vicente Fuentes,F,46-60,Metropolitana,Santiago,Nuevo,2022-11-29
+164,Javiera Sepúlveda,M,46-60,Valparaíso,Viña del Mar,Nuevo,2023-05-02
+165,Isidora Soto,M,36-45,Metropolitana,Las Condes,Frecuente,2024-08-18
+166,Vicente Fuentes,F,46-60,Metropolitana,Providencia,Premium,2024-05-07
+167,Joaquín Martínez,F,46-60,Metropolitana,Puente Alto,Premium,2024-09-11
+168,Florencia Silva,F,46-60,Metropolitana,Santiago,Premium,2022-11-25
+169,Joaquín González,M,18-25,Metropolitana,Puente Alto,Nuevo,2024-07-12
+170,Joaquín Díaz,F,26-35,Metropolitana,Santiago,Frecuente,2022-06-17
+171,Sofía González,M,60+,Valparaíso,Viña del Mar,Frecuente,2022-10-27
+172,Javiera Sepúlveda,F,60+,Metropolitana,Santiago,Nuevo,2024-08-18
+173,Martín Muñoz,M,26-35,Antofagasta,Antofagasta,Nuevo,2025-01-28
+174,Valentina Muñoz,M,36-45,Metropolitana,Santiago,Frecuente,2024-07-25
+175,Tomás Contreras,F,36-45,Valparaíso,Valparaíso,Frecuente,2022-10-22
+176,Joaquín Muñoz,F,26-35,Metropolitana,Maipú,Nuevo,2022-06-25
+177,Florencia Rodríguez,F,26-35,Metropolitana,Santiago,Nuevo,2024-02-04
+178,Antonella Rojas,F,26-35,Biobío,Talcahuano,Frecuente,2022-08-01
+179,Lucas Morales,F,46-60,Metropolitana,Santiago,Frecuente,2024-08-09
+180,Tomás Díaz,F,46-60,Los Lagos,Puerto Montt,Nuevo,2022-03-17
+181,Lucas Pérez,F,46-60,Metropolitana,Providencia,Nuevo,2024-03-26
+182,Antonella Pérez,F,46-60,Antofagasta,Calama,Premium,2022-04-08
+183,Antonella Rojas,M,36-45,Biobío,Talcahuano,Premium,2024-03-02
+184,Martín Muñoz,M,36-45,Metropolitana,Providencia,Frecuente,2022-06-19
+185,Antonella Morales,M,26-35,Metropolitana,Puente Alto,Frecuente,2022-06-13
+186,Joaquín Silva,F,46-60,Metropolitana,Las Condes,Frecuente,2024-06-28
+187,Valentina Morales,M,26-35,Metropolitana,Ñuñoa,Frecuente,2022-04-28
+188,Javiera González,F,18-25,Los Lagos,Osorno,Nuevo,2022-10-20
+189,Sofía Morales,M,60+,Los Lagos,Osorno,Nuevo,2022-03-08
+190,Joaquín Contreras,M,36-45,Metropolitana,Providencia,Premium,2022-10-09
+191,Lucas Martínez,M,60+,Metropolitana,Santiago,Nuevo,2023-01-17
+192,Isidora Sepúlveda,M,36-45,Metropolitana,Maipú,Nuevo,2024-07-02
+193,Javiera Rojas,M,60+,Metropolitana,Ñuñoa,Premium,2022-06-01
+194,Valentina Martínez,M,46-60,Los Lagos,Puerto Montt,Frecuente,2023-12-13
+195,Joaquín Martínez,F,18-25,La Araucanía,Temuco,Frecuente,2022-12-23
+196,Camila Soto,M,36-45,Metropolitana,Puente Alto,Nuevo,2024-10-08
+197,Tomás Contreras,M,36-45,La Araucanía,Temuco,Frecuente,2022-05-15
+198,Valentina Silva,M,36-45,Metropolitana,Las Condes,Nuevo,2023-10-12
+199,Vicente López,F,26-35,Antofagasta,Antofagasta,Frecuente,2025-02-03
+200,Vicente Rojas,M,60+,Metropolitana,Providencia,Nuevo,2023-09-15
+201,Valentina Pérez,F,36-45,Los Lagos,Osorno,Nuevo,2023-08-05
+202,Valentina Martínez,F,36-45,Metropolitana,Puente Alto,Nuevo,2024-12-28
+203,Benjamín Fuentes,F,18-25,Valparaíso,Quilpué,Frecuente,2023-11-23
+204,Martín Sepúlveda,F,36-45,Metropolitana,Ñuñoa,Frecuente,2023-03-08
+205,Lucas Díaz,M,26-35,Valparaíso,Valparaíso,Frecuente,2023-09-11
+206,Lucas Silva,F,26-35,Metropolitana,Providencia,Nuevo,2024-05-01
+207,Catalina Rojas,M,36-45,Biobío,Concepción,Nuevo,2023-12-09
+208,Javiera Díaz,F,18-25,Metropolitana,Las Condes,Premium,2023-07-02
+209,Agustín Fuentes,F,46-60,Antofagasta,Calama,Nuevo,2024-05-06
+210,Javiera Silva,M,36-45,Metropolitana,Santiago,Premium,2024-11-20
+211,Isidora Sepúlveda,M,18-25,Metropolitana,Las Condes,Nuevo,2023-05-09
+212,Tomás Martínez,F,46-60,La Araucanía,Temuco,Nuevo,2024-08-21
+213,Catalina Soto,F,26-35,Metropolitana,Puente Alto,Frecuente,2024-01-20
+214,Valentina Contreras,M,46-60,Metropolitana,Las Condes,Frecuente,2023-08-15
+215,Sofía Muñoz,M,26-35,Valparaíso,Viña del Mar,Frecuente,2022-09-01
+216,Isidora Sepúlveda,M,36-45,Metropolitana,Santiago,Nuevo,2022-10-23
+217,Javiera Rojas,F,26-35,Biobío,Talcahuano,Nuevo,2024-08-28
+218,Antonella Martínez,M,46-60,Los Lagos,Osorno,Nuevo,2023-09-05
+219,Matías Contreras,M,46-60,Metropolitana,Ñuñoa,Premium,2023-11-10
+220,Florencia Morales,F,46-60,Valparaíso,Quilpué,Nuevo,2024-08-29
+221,Sofía Fuentes,F,18-25,Metropolitana,Ñuñoa,Nuevo,2024-02-18
+222,Martín Rojas,M,36-45,Metropolitana,Maipú,Frecuente,2023-10-05
+223,Benjamín Rodríguez,F,36-45,Valparaíso,Quilpué,Nuevo,2024-08-23
+224,Catalina Soto,F,36-45,Valparaíso,Quilpué,Nuevo,2024-12-12
+225,Lucas Díaz,F,26-35,Metropolitana,Las Condes,Nuevo,2023-06-26
+226,Tomás Rodríguez,F,36-45,Los Lagos,Osorno,Nuevo,2023-09-02
+227,Tomás Muñoz,M,46-60,Metropolitana,Maipú,Frecuente,2023-07-15
+228,Tomás González,M,60+,Los Lagos,Puerto Montt,Nuevo,2022-10-27
+229,Lucas Díaz,F,46-60,Metropolitana,Las Condes,Premium,2023-06-10
+230,Matías Sepúlveda,F,26-35,Valparaíso,Quilpué,Premium,2022-10-09
+231,Benjamín Muñoz,M,26-35,Metropolitana,Maipú,Nuevo,2023-04-22
+232,Vicente Contreras,M,36-45,Biobío,Concepción,Frecuente,2022-01-11
+233,Benjamín López,F,36-45,Metropolitana,Providencia,Frecuente,2023-08-08
+234,Vicente Contreras,F,60+,Biobío,Concepción,Premium,2022-03-18
+235,Vicente Rodríguez,M,46-60,Metropolitana,Santiago,Nuevo,2024-10-11
+236,Tomás Silva,M,46-60,Valparaíso,Valparaíso,Premium,2023-11-18
+237,Matías Soto,F,46-60,Metropolitana,Ñuñoa,Nuevo,2023-01-30
+238,Tomás Sepúlveda,F,26-35,Metropolitana,Ñuñoa,Premium,2023-11-22
+239,Antonella Muñoz,M,36-45,Antofagasta,Antofagasta,Premium,2024-11-21
+240,Camila Pérez,M,26-35,Metropolitana,Las Condes,Premium,2023-05-24
+241,Camila Pérez,M,36-45,Metropolitana,Santiago,Frecuente,2025-03-19
+242,Catalina Morales,M,36-45,Metropolitana,Ñuñoa,Premium,2022-11-24
+243,Agustín Rojas,M,26-35,Metropolitana,Ñuñoa,Premium,2023-03-29
+244,Lucas López,F,46-60,Metropolitana,Ñuñoa,Frecuente,2025-01-29
+245,Javiera Martínez,M,18-25,Antofagasta,Antofagasta,Nuevo,2022-06-17
+246,Isidora Sepúlveda,F,26-35,Metropolitana,Puente Alto,Nuevo,2024-11-01
+247,Lucas Muñoz,M,46-60,Valparaíso,Viña del Mar,Nuevo,2025-04-09
+248,Benjamín Martínez,M,36-45,Metropolitana,Las Condes,Frecuente,2025-02-28
+249,Isidora Sepúlveda,F,18-25,Metropolitana,Las Condes,Frecuente,2022-01-07
+250,Valentina Silva,F,26-35,Metropolitana,Providencia,Frecuente,2022-05-04
+251,Joaquín Contreras,M,46-60,Biobío,Talcahuano,Nuevo,2024-05-10
+252,Sofía Morales,M,18-25,Valparaíso,Quilpué,Nuevo,2025-01-09
+253,Camila López,F,60+,Metropolitana,Maipú,Frecuente,2023-04-02
+254,Catalina Fuentes,F,26-35,Metropolitana,Las Condes,Nuevo,2024-12-25
+255,Benjamín López,M,36-45,Metropolitana,Santiago,Nuevo,2022-08-20
+256,Javiera Sepúlveda,F,26-35,Metropolitana,Santiago,Nuevo,2022-03-10
+257,Benjamín Rojas,M,26-35,Metropolitana,Ñuñoa,Frecuente,2023-03-21
+258,Agustín Pérez,F,60+,Valparaíso,Quilpué,Nuevo,2023-10-19
+259,Vicente Morales,M,36-45,Metropolitana,Santiago,Premium,2022-05-05
+260,Antonella Rodríguez,M,26-35,Los Lagos,Osorno,Nuevo,2024-02-20
+261,Agustín Fuentes,F,26-35,Biobío,Concepción,Frecuente,2024-08-27
+262,Martín Contreras,F,26-35,La Araucanía,Temuco,Nuevo,2025-02-25
+263,Joaquín Muñoz,F,18-25,Valparaíso,Viña del Mar,Frecuente,2024-07-10
+264,Isidora López,F,36-45,Valparaíso,Viña del Mar,Nuevo,2022-05-30
+265,Isidora Rodríguez,F,46-60,La Araucanía,Temuco,Premium,2023-03-10
+266,Catalina Díaz,M,46-60,Valparaíso,Viña del Mar,Nuevo,2023-02-23
+267,Florencia Soto,M,36-45,Valparaíso,Quilpué,Nuevo,2023-09-24
+268,Joaquín Soto,M,18-25,Antofagasta,Antofagasta,Frecuente,2023-02-21
+269,Martín Pérez,F,26-35,Metropolitana,Providencia,Nuevo,2025-02-07
+270,Antonella Pérez,M,60+,Antofagasta,Calama,Nuevo,2024-10-19
+271,Vicente Rojas,M,26-35,Biobío,Concepción,Frecuente,2023-12-23
+272,Benjamín López,F,26-35,Antofagasta,Antofagasta,Nuevo,2022-06-02
+273,Javiera Soto,F,36-45,Metropolitana,Ñuñoa,Premium,2023-03-24
+274,Camila González,M,18-25,La Araucanía,Temuco,Frecuente,2024-09-26
+275,Martín López,F,18-25,Metropolitana,Santiago,Frecuente,2024-10-25
+276,Florencia Fuentes,M,26-35,Metropolitana,Maipú,Nuevo,2024-12-14
+277,Agustín Rodríguez,F,26-35,Los Lagos,Puerto Montt,Frecuente,2024-07-29
+278,Valentina Contreras,M,26-35,Antofagasta,Calama,Nuevo,2022-03-06
+279,Valentina Silva,M,36-45,Metropolitana,Las Condes,Frecuente,2022-12-17
+280,Benjamín Díaz,F,60+,Antofagasta,Calama,Nuevo,2022-07-15
+281,Benjamín Rojas,M,18-25,La Araucanía,Temuco,Frecuente,2023-07-29
+282,Valentina Pérez,F,36-45,Biobío,Talcahuano,Frecuente,2024-03-26
+283,Sofía López,F,36-45,Metropolitana,Las Condes,Nuevo,2024-02-26
+284,Antonella Sepúlveda,M,60+,Metropolitana,Las Condes,Nuevo,2022-06-05
+285,Lucas Díaz,M,36-45,Metropolitana,Maipú,Nuevo,2024-07-11
+286,Valentina López,M,46-60,Valparaíso,Quilpué,Nuevo,2024-02-18
+287,Sofía Rodríguez,M,26-35,Metropolitana,Santiago,Nuevo,2024-02-18
+288,Joaquín López,M,18-25,Los Lagos,Puerto Montt,Nuevo,2024-06-29
+289,Martín Muñoz,F,18-25,Metropolitana,Puente Alto,Nuevo,2025-02-10
+290,Catalina González,M,26-35,Valparaíso,Valparaíso,Frecuente,2023-10-27
+291,Vicente Morales,M,26-35,Valparaíso,Viña del Mar,Nuevo,2023-05-13
+292,Vicente Contreras,M,26-35,Metropolitana,Maipú,Frecuente,2022-05-10
+293,Lucas Sepúlveda,F,36-45,Metropolitana,Providencia,Nuevo,2023-05-21
+294,Catalina López,M,26-35,Los Lagos,Osorno,Frecuente,2023-11-12
+295,Tomás Soto,F,36-45,Antofagasta,Antofagasta,Premium,2022-10-06
+296,Lucas Sepúlveda,F,26-35,Los Lagos,Osorno,Frecuente,2023-08-20
+297,Isidora Sepúlveda,F,36-45,Metropolitana,Puente Alto,Nuevo,2022-08-22
+298,Javiera López,M,46-60,Biobío,Concepción,Frecuente,2023-03-06
+299,Lucas Rojas,M,26-35,Biobío,Concepción,Frecuente,2024-04-17
+300,Javiera Sepúlveda,M,36-45,Biobío,Talcahuano,Frecuente,2022-06-01
+301,Valentina Muñoz,F,36-45,Biobío,Talcahuano,Nuevo,2024-01-07
+302,Catalina López,M,60+,Valparaíso,Viña del Mar,Nuevo,2025-02-27
+303,Agustín Silva,M,26-35,Metropolitana,Ñuñoa,Frecuente,2023-03-31
+304,Camila Silva,F,26-35,Metropolitana,Santiago,Nuevo,2023-12-08
+305,Joaquín Pérez,M,36-45,Los Lagos,Puerto Montt,Frecuente,2022-10-18
+306,Javiera Rodríguez,M,26-35,Metropolitana,Las Condes,Nuevo,2022-07-19
+307,Antonella Morales,F,36-45,Biobío,Concepción,Premium,2022-02-16
+308,Vicente Martínez,F,26-35,Biobío,Talcahuano,Premium,2024-11-22
+309,Vicente Rojas,M,26-35,Metropolitana,Ñuñoa,Frecuente,2024-04-09
+310,Catalina González,F,26-35,Metropolitana,Ñuñoa,Frecuente,2024-05-29
+311,Vicente Soto,M,26-35,Metropolitana,Santiago,Nuevo,2022-07-28
+312,Antonella Sepúlveda,M,36-45,Antofagasta,Antofagasta,Nuevo,2024-12-16
+313,Tomás Sepúlveda,F,36-45,Antofagasta,Calama,Nuevo,2022-12-20
+314,Joaquín Rodríguez,F,36-45,Metropolitana,Maipú,Frecuente,2023-01-10
+315,Vicente Silva,F,36-45,Valparaíso,Viña del Mar,Nuevo,2024-05-16
+316,Benjamín Fuentes,M,60+,Metropolitana,Maipú,Nuevo,2024-07-12
+317,Lucas Contreras,M,26-35,Antofagasta,Calama,Nuevo,2025-02-24
+318,Agustín Pérez,F,26-35,Metropolitana,Puente Alto,Nuevo,2022-03-05
+319,Lucas Martínez,F,36-45,Biobío,Talcahuano,Frecuente,2025-03-04
+320,Benjamín López,M,36-45,Antofagasta,Calama,Nuevo,2024-01-22
+321,Tomás Fuentes,F,26-35,Antofagasta,Calama,Premium,2023-05-22
+322,Agustín Díaz,M,46-60,Metropolitana,Puente Alto,Frecuente,2022-08-29
+323,Isidora Fuentes,F,46-60,Metropolitana,Puente Alto,Nuevo,2022-10-13
+324,Vicente Soto,M,26-35,Metropolitana,Las Condes,Premium,2025-01-08
+325,Sofía López,M,60+,Metropolitana,Las Condes,Premium,2022-07-15
+326,Agustín Rojas,M,46-60,Metropolitana,Ñuñoa,Nuevo,2022-09-29
+327,Martín Contreras,M,18-25,Metropolitana,Santiago,Nuevo,2023-07-05
+328,Javiera Silva,M,36-45,Biobío,Concepción,Frecuente,2024-01-26
+329,Valentina López,M,26-35,Metropolitana,Maipú,Frecuente,2024-01-04
+330,Tomás Soto,F,36-45,Metropolitana,Maipú,Frecuente,2023-10-24
+331,Benjamín Muñoz,M,18-25,La Araucanía,Temuco,Nuevo,2022-04-10
+332,Isidora Rodríguez,F,46-60,Metropolitana,Las Condes,Nuevo,2024-05-26
+333,Valentina Morales,M,26-35,La Araucanía,Temuco,Frecuente,2023-07-16
+334,Catalina Morales,M,46-60,Valparaíso,Valparaíso,Nuevo,2022-04-17
+335,Camila Díaz,M,18-25,Metropolitana,Puente Alto,Nuevo,2022-07-14
+336,Camila Rodríguez,M,46-60,Valparaíso,Viña del Mar,Frecuente,2022-01-20
+337,Catalina Muñoz,F,18-25,Metropolitana,Las Condes,Premium,2023-04-14
+338,Sofía Muñoz,F,36-45,Metropolitana,Providencia,Nuevo,2022-09-30
+339,Martín Sepúlveda,M,46-60,Biobío,Concepción,Premium,2022-11-07
+340,Catalina Soto,M,26-35,Metropolitana,Providencia,Nuevo,2022-09-10
+341,Tomás López,F,46-60,Valparaíso,Quilpué,Premium,2023-05-24
+342,Isidora Rodríguez,M,26-35,Metropolitana,Santiago,Frecuente,2024-11-09
+343,Lucas Contreras,F,26-35,Biobío,Concepción,Frecuente,2023-05-06
+344,Antonella Rojas,M,46-60,Los Lagos,Osorno,Nuevo,2024-01-10
+345,Valentina González,F,18-25,Valparaíso,Valparaíso,Nuevo,2024-08-22
+346,Tomás Morales,M,26-35,Metropolitana,Maipú,Nuevo,2024-03-26
+347,Florencia Muñoz,M,18-25,Metropolitana,Providencia,Premium,2022-11-09
+348,Catalina Sepúlveda,F,26-35,Metropolitana,Maipú,Frecuente,2023-11-01
+349,Agustín Muñoz,M,18-25,Antofagasta,Antofagasta,Nuevo,2022-04-29
+350,Matías González,F,46-60,Biobío,Concepción,Nuevo,2022-12-26
+351,Florencia Rojas,M,18-25,Metropolitana,Las Condes,Frecuente,2024-11-25
+352,Antonella López,M,26-35,Metropolitana,Santiago,Nuevo,2022-03-02
+353,Lucas Silva,M,18-25,Los Lagos,Puerto Montt,Nuevo,2022-06-07
+354,Matías Díaz,F,18-25,Metropolitana,Santiago,Nuevo,2022-07-30
+355,Sofía Rojas,F,36-45,Metropolitana,Ñuñoa,Frecuente,2024-02-24
+356,Agustín Contreras,M,26-35,Metropolitana,Santiago,Frecuente,2023-10-22
+357,Vicente Díaz,F,60+,Metropolitana,Santiago,Premium,2022-04-18
+358,Antonella Muñoz,M,18-25,Antofagasta,Antofagasta,Nuevo,2023-09-29
+359,Javiera Soto,M,60+,Biobío,Concepción,Frecuente,2023-05-12
+360,Sofía González,M,18-25,Metropolitana,Puente Alto,Nuevo,2023-05-18
+361,Antonella González,M,46-60,Antofagasta,Calama,Nuevo,2022-01-20
+362,Martín Silva,F,60+,Metropolitana,Providencia,Frecuente,2023-05-03
+363,Martín Rodríguez,M,36-45,Metropolitana,Ñuñoa,Nuevo,2023-04-20
+364,Catalina Muñoz,F,26-35,Metropolitana,Providencia,Nuevo,2022-10-01
+365,Catalina Rodríguez,M,26-35,Metropolitana,Las Condes,Nuevo,2023-10-08
+366,Matías Rojas,F,26-35,Los Lagos,Osorno,Nuevo,2022-10-06
+367,Isidora Silva,M,36-45,Metropolitana,Santiago,Nuevo,2024-01-04
+368,Benjamín Díaz,M,18-25,Antofagasta,Antofagasta,Premium,2023-09-16
+369,Tomás Pérez,F,18-25,Metropolitana,Maipú,Premium,2022-04-11
+370,Agustín Muñoz,M,18-25,Valparaíso,Valparaíso,Nuevo,2025-01-31
+371,Sofía Díaz,M,26-35,Metropolitana,Ñuñoa,Premium,2023-04-01
+372,Florencia Fuentes,F,18-25,Metropolitana,Santiago,Nuevo,2025-04-15
+373,Valentina Fuentes,M,18-25,Valparaíso,Viña del Mar,Nuevo,2022-09-21
+374,Catalina Silva,F,26-35,La Araucanía,Temuco,Nuevo,2024-06-06
+375,Florencia Pérez,M,46-60,Metropolitana,Santiago,Frecuente,2023-01-19
+376,Lucas Contreras,M,18-25,Valparaíso,Viña del Mar,Nuevo,2023-08-28
+377,Agustín Morales,F,60+,Metropolitana,Ñuñoa,Nuevo,2024-12-12
+378,Joaquín Sepúlveda,M,26-35,Metropolitana,Providencia,Nuevo,2024-09-19
+379,Florencia González,M,36-45,Valparaíso,Quilpué,Premium,2022-03-02
+380,Agustín Morales,F,26-35,Los Lagos,Puerto Montt,Frecuente,2022-07-25
+381,Catalina Soto,F,26-35,Los Lagos,Osorno,Frecuente,2025-03-25
+382,Joaquín Sepúlveda,F,36-45,Valparaíso,Valparaíso,Frecuente,2022-02-27
+383,Tomás Rojas,M,18-25,Antofagasta,Antofagasta,Nuevo,2024-10-05
+384,Lucas González,M,60+,Metropolitana,Providencia,Frecuente,2024-12-14
+385,Antonella González,F,18-25,Metropolitana,Ñuñoa,Premium,2022-12-30
+386,Joaquín Muñoz,M,46-60,Biobío,Talcahuano,Frecuente,2024-12-13
+387,Sofía Rojas,M,46-60,Metropolitana,Maipú,Frecuente,2023-10-23
+388,Joaquín Díaz,F,26-35,Metropolitana,Ñuñoa,Frecuente,2025-02-24
+389,Catalina Fuentes,F,26-35,Metropolitana,Las Condes,Premium,2022-01-04
+390,Matías Silva,F,26-35,Los Lagos,Puerto Montt,Nuevo,2023-03-29
+391,Valentina Fuentes,M,26-35,Los Lagos,Osorno,Nuevo,2022-12-10
+392,Florencia López,F,46-60,Valparaíso,Valparaíso,Nuevo,2023-12-19
+393,Martín Silva,M,26-35,Biobío,Talcahuano,Nuevo,2022-12-07
+394,Agustín Rojas,M,18-25,Metropolitana,Santiago,Nuevo,2025-03-29
+395,Valentina Soto,F,46-60,Metropolitana,Providencia,Frecuente,2022-08-03
+396,Antonella Sepúlveda,M,46-60,Metropolitana,Maipú,Premium,2022-07-10
+397,Vicente González,F,26-35,Metropolitana,Providencia,Nuevo,2024-06-08
+398,Florencia Morales,M,26-35,Valparaíso,Valparaíso,Nuevo,2025-01-11
+399,Sofía González,M,18-25,Valparaíso,Valparaíso,Nuevo,2024-10-02
+400,Isidora Muñoz,F,26-35,Valparaíso,Quilpué,Nuevo,2024-09-10
+401,Tomás López,M,36-45,Metropolitana,Ñuñoa,Nuevo,2022-08-25
+402,Vicente Soto,M,26-35,Valparaíso,Viña del Mar,Nuevo,2024-03-04
+403,Agustín Fuentes,M,36-45,Metropolitana,Providencia,Frecuente,2023-06-24
+404,Joaquín López,M,60+,Valparaíso,Quilpué,Nuevo,2022-06-25
+405,Martín Martínez,M,36-45,Metropolitana,Providencia,Nuevo,2024-03-03
+406,Sofía Muñoz,M,26-35,Metropolitana,Providencia,Premium,2022-03-13
+407,Benjamín Contreras,F,60+,Antofagasta,Calama,Nuevo,2022-09-16
+408,Florencia Soto,F,18-25,Antofagasta,Calama,Frecuente,2022-10-30
+409,Javiera Fuentes,F,46-60,Antofagasta,Calama,Nuevo,2024-11-30
+410,Matías Muñoz,F,46-60,Metropolitana,Puente Alto,Premium,2025-03-06
+411,Catalina Morales,M,36-45,Antofagasta,Calama,Nuevo,2023-06-25
+412,Catalina González,M,46-60,Metropolitana,Las Condes,Frecuente,2022-10-22
+413,Florencia Soto,F,26-35,Metropolitana,Las Condes,Nuevo,2024-08-31
+414,Agustín Rojas,M,60+,Antofagasta,Calama,Frecuente,2022-07-21
+415,Valentina Díaz,M,26-35,Metropolitana,Maipú,Frecuente,2024-05-03
+416,Benjamín Martínez,F,18-25,Biobío,Talcahuano,Nuevo,2024-02-05
+417,Camila Rojas,F,46-60,Antofagasta,Antofagasta,Frecuente,2025-03-10
+418,Benjamín Soto,F,26-35,Metropolitana,Maipú,Frecuente,2024-07-23
+419,Camila Díaz,M,36-45,Valparaíso,Viña del Mar,Nuevo,2022-09-11
+420,Joaquín Soto,F,46-60,Antofagasta,Calama,Frecuente,2025-02-03
+421,Camila Contreras,F,26-35,Valparaíso,Quilpué,Frecuente,2023-08-07
+422,Agustín Morales,F,26-35,Metropolitana,Maipú,Frecuente,2023-03-30
+423,Lucas Rojas,F,36-45,Antofagasta,Antofagasta,Nuevo,2022-01-19
+424,Florencia Contreras,M,46-60,Valparaíso,Viña del Mar,Nuevo,2023-09-18
+425,Catalina Sepúlveda,F,18-25,Metropolitana,Ñuñoa,Premium,2024-12-02
+426,Tomás Pérez,F,36-45,Antofagasta,Calama,Premium,2025-02-23
+427,Florencia Morales,M,26-35,Valparaíso,Quilpué,Frecuente,2023-07-22
+428,Antonella Morales,F,46-60,La Araucanía,Temuco,Premium,2024-04-07
+429,Catalina Contreras,F,36-45,Metropolitana,Puente Alto,Frecuente,2024-05-07
+430,Lucas Morales,M,36-45,Metropolitana,Providencia,Frecuente,2023-04-01
+431,Tomás Muñoz,M,18-25,Antofagasta,Calama,Frecuente,2023-01-06
+432,Antonella Morales,F,26-35,Valparaíso,Valparaíso,Frecuente,2023-01-10
+433,Joaquín Pérez,M,36-45,Metropolitana,Santiago,Nuevo,2023-11-10
+434,Valentina Silva,F,36-45,Antofagasta,Calama,Frecuente,2025-04-10
+435,Sofía Díaz,M,26-35,Metropolitana,Puente Alto,Premium,2022-11-05
+436,Antonella Fuentes,F,46-60,Los Lagos,Osorno,Nuevo,2022-10-21
+437,Benjamín González,M,26-35,Los Lagos,Puerto Montt,Frecuente,2023-10-04
+438,Sofía Sepúlveda,M,36-45,Metropolitana,Maipú,Nuevo,2022-06-30
+439,Benjamín Martínez,F,46-60,Metropolitana,Santiago,Premium,2022-01-10
+440,Isidora González,F,36-45,Biobío,Concepción,Nuevo,2024-12-23
+441,Sofía Muñoz,M,36-45,Antofagasta,Calama,Nuevo,2023-10-02
+442,Tomás Silva,M,26-35,Antofagasta,Antofagasta,Nuevo,2023-09-03
+443,Isidora Rojas,M,18-25,La Araucanía,Temuco,Frecuente,2024-01-06
+444,Vicente Muñoz,M,46-60,Metropolitana,Santiago,Nuevo,2022-02-14
+445,Benjamín Sepúlveda,F,36-45,Valparaíso,Quilpué,Frecuente,2024-12-31
+446,Martín Silva,M,18-25,Metropolitana,Las Condes,Nuevo,2022-08-26
+447,Tomás Contreras,F,36-45,Metropolitana,Las Condes,Frecuente,2022-01-20
+448,Matías Martínez,F,26-35,Biobío,Concepción,Nuevo,2024-05-07
+449,Isidora Soto,M,26-35,Valparaíso,Valparaíso,Frecuente,2023-06-23
+450,Antonella Díaz,F,18-25,La Araucanía,Temuco,Premium,2024-09-11
+451,Sofía Muñoz,F,46-60,Antofagasta,Antofagasta,Premium,2024-10-08
+452,Tomás Pérez,M,18-25,Valparaíso,Valparaíso,Premium,2024-07-24
+453,Antonella Contreras,F,18-25,Antofagasta,Antofagasta,Nuevo,2024-01-08
+454,Antonella Soto,M,60+,Metropolitana,Las Condes,Premium,2022-12-16
+455,Vicente Muñoz,M,26-35,Metropolitana,Maipú,Nuevo,2023-12-03
+456,Martín Morales,F,18-25,Metropolitana,Ñuñoa,Frecuente,2024-09-06
+457,Matías Contreras,M,46-60,Los Lagos,Osorno,Nuevo,2022-11-23
+458,Camila Fuentes,F,36-45,Metropolitana,Maipú,Nuevo,2024-01-05
+459,Valentina Pérez,M,18-25,Metropolitana,Ñuñoa,Frecuente,2022-04-05
+460,Agustín Morales,M,36-45,Biobío,Concepción,Nuevo,2025-03-03
+461,Joaquín Morales,M,18-25,Biobío,Concepción,Nuevo,2024-09-13
+462,Lucas Fuentes,M,46-60,La Araucanía,Temuco,Frecuente,2024-11-01
+463,Florencia González,F,36-45,Metropolitana,Maipú,Nuevo,2023-11-09
+464,Javiera López,M,18-25,Metropolitana,Maipú,Nuevo,2024-07-29
+465,Camila Muñoz,M,26-35,Metropolitana,Puente Alto,Frecuente,2024-10-15
+466,Isidora Morales,M,60+,Antofagasta,Calama,Frecuente,2023-09-16
+467,Antonella Martínez,M,46-60,Antofagasta,Calama,Frecuente,2024-07-19
+468,Camila Soto,M,46-60,Metropolitana,Las Condes,Frecuente,2023-03-31
+469,Benjamín Rojas,M,18-25,Metropolitana,Ñuñoa,Frecuente,2022-08-06
+470,Isidora Díaz,F,60+,Metropolitana,Maipú,Nuevo,2023-06-05
+471,Antonella Muñoz,M,18-25,Antofagasta,Antofagasta,Frecuente,2023-01-26
+472,Sofía Silva,F,36-45,Metropolitana,Santiago,Frecuente,2024-10-29
+473,Lucas Martínez,F,36-45,Metropolitana,Providencia,Frecuente,2025-04-13
+474,Antonella Martínez,M,26-35,Metropolitana,Puente Alto,Premium,2024-03-04
+475,Catalina Soto,M,36-45,Biobío,Concepción,Nuevo,2023-07-15
+476,Tomás Fuentes,M,46-60,Valparaíso,Quilpué,Frecuente,2024-11-15
+477,Joaquín Morales,F,60+,Metropolitana,Ñuñoa,Premium,2023-08-19
+478,Antonella Rodríguez,F,46-60,Metropolitana,Puente Alto,Nuevo,2025-01-16
+479,Tomás Fuentes,M,46-60,Valparaíso,Quilpué,Nuevo,2024-05-04
+480,Benjamín Díaz,M,46-60,Metropolitana,Providencia,Premium,2022-04-19
+481,Benjamín Rodríguez,M,26-35,Valparaíso,Quilpué,Nuevo,2022-10-27
+482,Agustín Rodríguez,M,26-35,Antofagasta,Calama,Frecuente,2022-07-29
+483,Catalina Contreras,M,60+,Metropolitana,Santiago,Nuevo,2024-02-21
+484,Agustín Morales,M,46-60,Metropolitana,Puente Alto,Frecuente,2024-06-26
+485,Tomás Silva,F,60+,Metropolitana,Santiago,Nuevo,2023-02-01
+486,Matías Contreras,F,26-35,Metropolitana,Puente Alto,Nuevo,2024-11-18
+487,Camila Soto,M,46-60,Metropolitana,Providencia,Nuevo,2023-06-07
+488,Tomás Silva,M,18-25,La Araucanía,Temuco,Frecuente,2022-04-15
+489,Valentina López,F,26-35,Los Lagos,Osorno,Nuevo,2024-12-02
+490,Antonella Soto,M,26-35,Metropolitana,Puente Alto,Frecuente,2023-03-13
+491,Matías Morales,M,26-35,Los Lagos,Puerto Montt,Premium,2022-01-19
+492,Catalina López,F,26-35,Valparaíso,Quilpué,Frecuente,2023-10-20
+493,Joaquín Martínez,M,36-45,Metropolitana,Las Condes,Premium,2024-11-24
+494,Valentina Muñoz,F,60+,Metropolitana,Puente Alto,Frecuente,2024-11-18
+495,Isidora Fuentes,M,46-60,Valparaíso,Valparaíso,Frecuente,2023-03-08
+496,Valentina Rodríguez,F,18-25,Biobío,Talcahuano,Nuevo,2024-06-10
+497,Florencia Martínez,F,36-45,Metropolitana,Providencia,Premium,2022-12-31
+498,Catalina Contreras,M,18-25,Metropolitana,Ñuñoa,Nuevo,2024-07-12
+499,Benjamín Rodríguez,F,26-35,Metropolitana,Puente Alto,Nuevo,2022-05-10
+500,Valentina Pérez,M,26-35,Biobío,Concepción,Nuevo,2023-09-10
+501,Catalina López,M,60+,Metropolitana,Providencia,Nuevo,2022-10-07
+502,Camila Martínez,F,18-25,La Araucanía,Temuco,Frecuente,2024-02-04
+503,Valentina Pérez,F,46-60,Metropolitana,Ñuñoa,Nuevo,2025-01-26
+504,Sofía Rojas,F,26-35,Metropolitana,Las Condes,Nuevo,2024-11-15
+505,Benjamín Fuentes,M,36-45,Metropolitana,Santiago,Nuevo,2025-03-07
+506,Isidora Rodríguez,M,60+,Metropolitana,Las Condes,Nuevo,2022-07-21
+507,Tomás Sepúlveda,F,60+,Valparaíso,Viña del Mar,Nuevo,2022-07-24
+508,Sofía Sepúlveda,M,46-60,Metropolitana,Maipú,Nuevo,2023-09-19
+509,Martín Pérez,M,18-25,Metropolitana,Ñuñoa,Nuevo,2023-03-30
+510,Joaquín López,M,36-45,Metropolitana,Santiago,Nuevo,2024-07-01
+511,Sofía Martínez,F,26-35,Valparaíso,Quilpué,Nuevo,2023-07-29
+512,Camila Fuentes,M,46-60,Metropolitana,Providencia,Premium,2022-02-08
+513,Lucas Morales,F,26-35,Valparaíso,Valparaíso,Premium,2025-01-18
+514,Sofía Silva,F,26-35,Valparaíso,Quilpué,Nuevo,2023-08-19
+515,Sofía Silva,F,26-35,Metropolitana,Puente Alto,Frecuente,2022-12-06
+516,Joaquín González,F,46-60,Los Lagos,Puerto Montt,Nuevo,2024-09-17
+517,Isidora Martínez,M,26-35,Metropolitana,Maipú,Premium,2022-03-29
+518,Matías Rodríguez,M,46-60,Metropolitana,Las Condes,Frecuente,2023-10-26
+519,Catalina Soto,F,36-45,Valparaíso,Viña del Mar,Premium,2024-02-11
+520,Joaquín Fuentes,M,36-45,Metropolitana,Maipú,Premium,2024-04-11
+521,Javiera Rojas,F,18-25,Metropolitana,Ñuñoa,Nuevo,2022-10-12
+522,Joaquín Sepúlveda,F,36-45,Metropolitana,Maipú,Frecuente,2022-11-19
+523,Lucas Silva,F,36-45,Biobío,Talcahuano,Nuevo,2024-09-13
+524,Vicente Rojas,F,46-60,Metropolitana,Providencia,Nuevo,2025-03-20
+525,Catalina Sepúlveda,F,46-60,Metropolitana,Ñuñoa,Frecuente,2023-01-04
+526,Isidora Silva,M,46-60,Metropolitana,Providencia,Nuevo,2022-06-25
+527,Vicente Sepúlveda,M,26-35,Metropolitana,Ñuñoa,Nuevo,2022-10-20
+528,Agustín Contreras,M,18-25,Metropolitana,Santiago,Nuevo,2022-05-21
+529,Martín Fuentes,F,36-45,Antofagasta,Antofagasta,Nuevo,2024-10-29
+530,Matías Muñoz,M,36-45,Valparaíso,Quilpué,Frecuente,2022-03-21
+531,Martín Soto,F,36-45,Metropolitana,Maipú,Nuevo,2024-06-02
+532,Joaquín Sepúlveda,F,26-35,Antofagasta,Calama,Nuevo,2024-02-20
+533,Tomás Sepúlveda,M,26-35,Metropolitana,Santiago,Frecuente,2022-06-21
+534,Matías Martínez,F,26-35,Biobío,Concepción,Frecuente,2025-03-29
+535,Matías Rojas,M,36-45,Metropolitana,Las Condes,Nuevo,2024-01-12
+536,Joaquín Sepúlveda,M,60+,Metropolitana,Maipú,Frecuente,2025-03-02
+537,Lucas Rojas,M,36-45,Metropolitana,Maipú,Nuevo,2025-02-15
+538,Catalina Rodríguez,F,46-60,Metropolitana,Ñuñoa,Nuevo,2023-12-07
+539,Matías Díaz,M,46-60,Metropolitana,Puente Alto,Frecuente,2022-11-28
+540,Vicente Contreras,F,46-60,Valparaíso,Valparaíso,Nuevo,2022-04-17
+541,Valentina Pérez,F,26-35,Valparaíso,Quilpué,Nuevo,2022-06-30
+542,Tomás Rodríguez,F,60+,Metropolitana,Providencia,Frecuente,2024-03-31
+543,Tomás Díaz,F,46-60,Metropolitana,Puente Alto,Frecuente,2023-02-18
+544,Benjamín Soto,F,36-45,Metropolitana,Providencia,Nuevo,2022-12-14
+545,Joaquín Morales,M,26-35,Metropolitana,Providencia,Frecuente,2024-03-29
+546,Valentina Martínez,M,46-60,Biobío,Talcahuano,Nuevo,2022-05-21
+547,Isidora Silva,M,36-45,Antofagasta,Calama,Nuevo,2023-04-09
+548,Valentina Martínez,M,26-35,Metropolitana,Santiago,Frecuente,2025-02-18
+549,Florencia Rodríguez,M,60+,Los Lagos,Osorno,Frecuente,2025-01-06
+550,Javiera Sepúlveda,F,36-45,Biobío,Talcahuano,Nuevo,2024-07-28
+551,Agustín López,M,26-35,Valparaíso,Viña del Mar,Frecuente,2023-03-28
+552,Agustín Pérez,F,26-35,Metropolitana,Ñuñoa,Frecuente,2023-06-24
+553,Lucas Soto,M,26-35,Metropolitana,Puente Alto,Nuevo,2023-01-01
+554,Lucas Rodríguez,F,26-35,Los Lagos,Puerto Montt,Premium,2023-01-25
+555,Agustín Fuentes,M,26-35,Metropolitana,Santiago,Nuevo,2023-02-20
+556,Camila López,F,46-60,Metropolitana,Las Condes,Frecuente,2024-10-05
+557,Florencia Silva,F,60+,Metropolitana,Puente Alto,Nuevo,2025-03-22
+558,Sofía González,M,36-45,Metropolitana,Puente Alto,Nuevo,2025-03-27
+559,Javiera Muñoz,M,26-35,Metropolitana,Santiago,Nuevo,2022-12-24
+560,Matías Soto,M,36-45,Metropolitana,Las Condes,Nuevo,2025-04-04
+561,Lucas Sepúlveda,M,26-35,Metropolitana,Maipú,Nuevo,2023-07-06
+562,Joaquín Fuentes,M,26-35,Metropolitana,Providencia,Frecuente,2024-02-02
+563,Matías Rodríguez,M,46-60,Los Lagos,Osorno,Premium,2023-04-14
+564,Lucas López,F,26-35,Metropolitana,Maipú,Nuevo,2022-11-03
+565,Antonella López,M,26-35,La Araucanía,Temuco,Nuevo,2024-11-24
+566,Isidora Fuentes,M,36-45,Valparaíso,Quilpué,Nuevo,2022-05-03
+567,Joaquín Soto,M,26-35,Biobío,Talcahuano,Nuevo,2023-06-17
+568,Vicente López,M,26-35,Antofagasta,Calama,Frecuente,2023-02-12
+569,Catalina Sepúlveda,M,36-45,Metropolitana,Providencia,Premium,2022-06-10
+570,Martín Morales,M,46-60,Valparaíso,Valparaíso,Nuevo,2023-11-22
+571,Antonella Morales,M,46-60,Metropolitana,Puente Alto,Frecuente,2023-10-05
+572,Joaquín Rodríguez,M,26-35,Metropolitana,Providencia,Premium,2024-06-30
+573,Florencia Rodríguez,F,26-35,Metropolitana,Maipú,Nuevo,2023-04-26
+574,Benjamín González,M,36-45,Metropolitana,Santiago,Nuevo,2024-08-27
+575,Catalina Pérez,F,26-35,Valparaíso,Viña del Mar,Nuevo,2022-06-22
+576,Vicente González,F,36-45,Metropolitana,Las Condes,Premium,2024-12-14
+577,Florencia Martínez,M,18-25,Metropolitana,Ñuñoa,Frecuente,2025-01-12
+578,Martín Martínez,M,60+,Valparaíso,Viña del Mar,Frecuente,2024-07-24
+579,Tomás Soto,M,26-35,Antofagasta,Calama,Nuevo,2024-06-23
+580,Joaquín Pérez,M,36-45,Metropolitana,Ñuñoa,Premium,2022-10-07
+581,Tomás González,M,46-60,Los Lagos,Puerto Montt,Frecuente,2024-09-04
+582,Martín Martínez,M,26-35,Metropolitana,Providencia,Frecuente,2023-01-22
+583,Agustín Pérez,F,26-35,Valparaíso,Valparaíso,Frecuente,2024-02-14
+584,Tomás Morales,M,26-35,Biobío,Concepción,Nuevo,2023-07-11
+585,Javiera Pérez,M,26-35,Metropolitana,Santiago,Nuevo,2024-07-21
+586,Vicente Muñoz,M,26-35,Los Lagos,Osorno,Frecuente,2022-02-15
+587,Camila Silva,F,26-35,Metropolitana,Las Condes,Frecuente,2022-11-05
+588,Javiera Rodríguez,F,26-35,Metropolitana,Providencia,Nuevo,2024-01-31
+589,Lucas Rojas,F,46-60,Biobío,Talcahuano,Frecuente,2022-05-27
+590,Agustín Contreras,M,26-35,Antofagasta,Antofagasta,Nuevo,2022-09-07
+591,Isidora Silva,M,36-45,Biobío,Talcahuano,Premium,2022-07-12
+592,Matías Pérez,M,36-45,Metropolitana,Providencia,Nuevo,2022-03-28
+593,Matías Díaz,M,26-35,Metropolitana,Providencia,Frecuente,2023-03-23
+594,Agustín González,F,36-45,Valparaíso,Quilpué,Nuevo,2024-03-21
+595,Valentina Díaz,F,36-45,Valparaíso,Quilpué,Frecuente,2024-01-31
+596,Benjamín Soto,F,46-60,La Araucanía,Temuco,Nuevo,2022-05-03
+597,Joaquín López,M,46-60,Metropolitana,Santiago,Frecuente,2025-02-17
+598,Florencia González,M,46-60,Metropolitana,Puente Alto,Nuevo,2022-10-03
+599,Vicente Martínez,M,26-35,Valparaíso,Viña del Mar,Nuevo,2023-01-24
+600,Vicente Muñoz,F,26-35,Antofagasta,Calama,Frecuente,2025-02-09
+601,Catalina Rodríguez,F,46-60,Metropolitana,Puente Alto,Premium,2024-11-02
+602,Antonella Rodríguez,F,36-45,Biobío,Talcahuano,Nuevo,2023-05-05
+603,Sofía Sepúlveda,M,26-35,Valparaíso,Quilpué,Nuevo,2025-02-03
+604,Benjamín Fuentes,F,26-35,Metropolitana,Santiago,Nuevo,2022-05-17
+605,Benjamín Sepúlveda,M,36-45,Metropolitana,Puente Alto,Frecuente,2022-07-22
+606,Joaquín Díaz,F,18-25,Valparaíso,Valparaíso,Frecuente,2022-04-11
+607,Javiera López,F,26-35,La Araucanía,Temuco,Frecuente,2022-06-13
+608,Florencia Martínez,F,46-60,Biobío,Talcahuano,Nuevo,2022-04-30
+609,Matías Muñoz,F,36-45,Metropolitana,Providencia,Nuevo,2024-11-29
+610,Vicente Martínez,M,46-60,Valparaíso,Quilpué,Frecuente,2025-03-13
+611,Matías Rojas,F,36-45,Valparaíso,Quilpué,Nuevo,2024-05-24
+612,Joaquín Soto,M,46-60,Metropolitana,Maipú,Frecuente,2024-06-26
+613,Agustín Sepúlveda,F,26-35,Metropolitana,Puente Alto,Premium,2023-10-25
+614,Javiera Contreras,F,46-60,Metropolitana,Las Condes,Frecuente,2024-07-15
+615,Camila Pérez,F,26-35,Metropolitana,Las Condes,Nuevo,2023-09-11
+616,Sofía Muñoz,F,36-45,Antofagasta,Antofagasta,Nuevo,2023-07-20
+617,Agustín Díaz,M,46-60,Metropolitana,Santiago,Frecuente,2025-04-07
+618,Valentina Rodríguez,M,46-60,Valparaíso,Valparaíso,Nuevo,2023-03-22
+619,Matías Sepúlveda,M,18-25,La Araucanía,Temuco,Nuevo,2025-03-26
+620,Joaquín Fuentes,M,26-35,Metropolitana,Santiago,Premium,2023-11-16
+621,Catalina González,M,36-45,Metropolitana,Las Condes,Frecuente,2022-01-24
+622,Agustín Rojas,F,36-45,Metropolitana,Maipú,Premium,2024-10-25
+623,Valentina Díaz,M,26-35,Biobío,Talcahuano,Nuevo,2025-03-24
+624,Benjamín Martínez,M,26-35,Metropolitana,Maipú,Frecuente,2024-09-01
+625,Sofía Silva,F,36-45,Biobío,Concepción,Frecuente,2022-09-25
+626,Agustín Díaz,F,26-35,Los Lagos,Osorno,Nuevo,2024-12-09
+627,Matías Morales,M,26-35,La Araucanía,Temuco,Nuevo,2022-07-03
+628,Tomás Rojas,M,36-45,Metropolitana,Maipú,Frecuente,2022-02-19
+629,Isidora Morales,M,26-35,Metropolitana,Ñuñoa,Premium,2023-04-24
+630,Agustín Sepúlveda,F,46-60,Metropolitana,Las Condes,Nuevo,2022-04-22
+631,Tomás Silva,M,18-25,Valparaíso,Valparaíso,Frecuente,2022-08-16
+632,Florencia Martínez,M,36-45,Metropolitana,Providencia,Frecuente,2025-01-24
+633,Benjamín Pérez,F,18-25,Valparaíso,Valparaíso,Frecuente,2024-02-11
+634,Javiera Morales,F,18-25,Valparaíso,Quilpué,Nuevo,2022-04-19
+635,Matías González,M,46-60,Antofagasta,Calama,Nuevo,2024-01-08
+636,Antonella Silva,F,26-35,Metropolitana,Puente Alto,Premium,2022-07-23
+637,Benjamín Díaz,M,26-35,Valparaíso,Viña del Mar,Frecuente,2022-02-14
+638,Joaquín Morales,M,26-35,Metropolitana,Puente Alto,Nuevo,2023-12-22
+639,Catalina Fuentes,F,60+,Metropolitana,Las Condes,Nuevo,2023-06-12
+640,Sofía Muñoz,M,36-45,Metropolitana,Ñuñoa,Frecuente,2024-03-15
+641,Martín Díaz,F,26-35,Valparaíso,Viña del Mar,Premium,2023-04-11
+642,Sofía Díaz,F,36-45,Metropolitana,Ñuñoa,Frecuente,2025-01-15
+643,Sofía Contreras,F,36-45,Antofagasta,Antofagasta,Nuevo,2023-09-25
+644,Vicente Soto,F,46-60,Valparaíso,Viña del Mar,Premium,2022-08-31
+645,Tomás Silva,M,26-35,Metropolitana,Providencia,Nuevo,2024-04-22
+646,Agustín Sepúlveda,F,26-35,Metropolitana,Santiago,Nuevo,2023-07-01
+647,Sofía Martínez,M,46-60,Valparaíso,Viña del Mar,Nuevo,2024-09-03
+648,Sofía Rojas,F,26-35,Metropolitana,Maipú,Frecuente,2024-08-28
+649,Martín Díaz,F,46-60,Metropolitana,Santiago,Nuevo,2023-07-07
+650,Lucas Rodríguez,M,46-60,Los Lagos,Puerto Montt,Nuevo,2024-06-18
+651,Antonella Contreras,F,36-45,Biobío,Talcahuano,Nuevo,2024-02-19
+652,Catalina Rodríguez,F,36-45,Antofagasta,Antofagasta,Nuevo,2023-05-19
+653,Tomás Silva,F,26-35,Metropolitana,Puente Alto,Premium,2023-09-16
+654,Javiera Fuentes,M,18-25,Valparaíso,Quilpué,Nuevo,2022-10-19
+655,Sofía Contreras,M,26-35,Biobío,Concepción,Nuevo,2025-01-24
+656,Javiera Muñoz,M,26-35,Valparaíso,Quilpué,Premium,2023-02-18
+657,Valentina Muñoz,M,36-45,Biobío,Concepción,Frecuente,2022-09-11
+658,Vicente Contreras,M,18-25,Metropolitana,Providencia,Premium,2024-11-13
+659,Vicente Fuentes,F,26-35,Valparaíso,Quilpué,Nuevo,2022-11-04
+660,Tomás Morales,F,18-25,Metropolitana,Providencia,Premium,2024-07-02
+661,Camila Silva,M,46-60,Metropolitana,Puente Alto,Frecuente,2023-06-03
+662,Agustín Díaz,M,36-45,Valparaíso,Viña del Mar,Nuevo,2024-10-07
+663,Florencia Sepúlveda,F,18-25,Valparaíso,Valparaíso,Nuevo,2023-05-17
+664,Benjamín Morales,M,26-35,Metropolitana,Santiago,Nuevo,2022-10-25
+665,Vicente Morales,M,36-45,Metropolitana,Ñuñoa,Frecuente,2023-01-01
+666,Vicente Silva,M,60+,Valparaíso,Valparaíso,Frecuente,2025-02-25
+667,Valentina López,M,46-60,Metropolitana,Santiago,Nuevo,2024-02-16
+668,Antonella Martínez,M,36-45,Metropolitana,Ñuñoa,Nuevo,2023-07-17
+669,Valentina Silva,M,26-35,Metropolitana,Las Condes,Nuevo,2025-03-16
+670,Sofía Sepúlveda,M,36-45,Valparaíso,Quilpué,Nuevo,2023-12-26
+671,Tomás Díaz,F,18-25,Antofagasta,Calama,Frecuente,2023-04-22
+672,Martín Contreras,F,26-35,Metropolitana,Puente Alto,Frecuente,2023-03-01
+673,Tomás Pérez,F,26-35,Metropolitana,Puente Alto,Frecuente,2023-02-17
+674,Antonella Soto,M,46-60,Biobío,Concepción,Frecuente,2022-08-22
+675,Lucas Silva,F,36-45,Metropolitana,Maipú,Nuevo,2023-11-24
+676,Antonella Silva,M,60+,Metropolitana,Santiago,Frecuente,2025-01-04
+677,Camila Díaz,M,46-60,Metropolitana,Las Condes,Nuevo,2023-10-09
+678,Antonella Contreras,F,36-45,Metropolitana,Maipú,Nuevo,2022-03-05
+679,Antonella Rodríguez,F,26-35,Metropolitana,Santiago,Nuevo,2023-09-24
+680,Tomás Díaz,M,26-35,Metropolitana,Las Condes,Frecuente,2024-07-14
+681,Javiera Martínez,F,46-60,Biobío,Concepción,Nuevo,2022-07-09
+682,Tomás López,M,18-25,La Araucanía,Temuco,Frecuente,2024-12-08
+683,Isidora Rodríguez,F,36-45,La Araucanía,Temuco,Nuevo,2022-09-29
+684,Antonella Silva,F,18-25,La Araucanía,Temuco,Nuevo,2022-06-28
+685,Antonella Díaz,F,26-35,Biobío,Talcahuano,Frecuente,2023-03-06
+686,Sofía Rojas,M,18-25,Valparaíso,Quilpué,Frecuente,2023-07-13
+687,Joaquín Martínez,M,26-35,Metropolitana,Ñuñoa,Frecuente,2025-01-16
+688,Valentina Pérez,M,36-45,Valparaíso,Valparaíso,Nuevo,2022-12-17
+689,Matías Contreras,F,18-25,Metropolitana,Maipú,Nuevo,2022-04-14
+690,Joaquín Pérez,M,46-60,Valparaíso,Quilpué,Frecuente,2024-07-02
+691,Javiera Sepúlveda,F,18-25,Antofagasta,Calama,Nuevo,2022-06-10
+692,Lucas Díaz,F,18-25,Metropolitana,Puente Alto,Nuevo,2024-08-11
+693,Antonella López,M,36-45,Metropolitana,Santiago,Nuevo,2023-01-11
+694,Javiera Fuentes,F,26-35,Metropolitana,Las Condes,Frecuente,2024-09-07
+695,Catalina Fuentes,F,26-35,Metropolitana,Ñuñoa,Nuevo,2022-07-30
+696,Catalina Sepúlveda,M,26-35,Metropolitana,Providencia,Frecuente,2024-08-02
+697,Valentina Soto,F,46-60,Los Lagos,Osorno,Frecuente,2024-02-26
+698,Agustín Rojas,F,46-60,Metropolitana,Ñuñoa,Frecuente,2023-12-02
+699,Antonella Martínez,F,46-60,Metropolitana,Providencia,Nuevo,2024-08-06
+700,Catalina Soto,M,36-45,Metropolitana,Santiago,Nuevo,2022-08-11
+701,Camila López,F,36-45,Antofagasta,Calama,Frecuente,2025-04-04
+702,Javiera Díaz,F,36-45,Metropolitana,Las Condes,Nuevo,2025-03-29
+703,Martín Rodríguez,M,60+,Biobío,Concepción,Frecuente,2023-09-16
+704,Tomás González,M,60+,Metropolitana,Santiago,Nuevo,2022-09-19
+705,Matías Fuentes,M,46-60,Valparaíso,Valparaíso,Nuevo,2024-01-06
+706,Catalina Contreras,M,26-35,Valparaíso,Valparaíso,Frecuente,2023-10-14
+707,Catalina Fuentes,M,46-60,Metropolitana,Providencia,Nuevo,2023-01-21
+708,Sofía González,F,36-45,Antofagasta,Antofagasta,Frecuente,2022-09-15
+709,Sofía Muñoz,F,36-45,Metropolitana,Maipú,Premium,2024-06-13
+710,Vicente Silva,M,36-45,La Araucanía,Temuco,Nuevo,2024-05-21
+711,Camila Sepúlveda,M,46-60,Metropolitana,Providencia,Frecuente,2024-05-19
+712,Joaquín González,F,36-45,Metropolitana,Ñuñoa,Nuevo,2025-01-23
+713,Sofía Rodríguez,M,36-45,Valparaíso,Valparaíso,Frecuente,2022-06-13
+714,Lucas Morales,F,36-45,Valparaíso,Quilpué,Frecuente,2023-05-18
+715,Antonella Martínez,F,36-45,Metropolitana,Puente Alto,Premium,2022-04-19
+716,Martín Soto,M,26-35,Valparaíso,Valparaíso,Frecuente,2023-11-10
+717,Florencia González,M,36-45,Valparaíso,Quilpué,Nuevo,2023-09-15
+718,Tomás Silva,F,18-25,Los Lagos,Puerto Montt,Premium,2022-02-25
+719,Florencia Pérez,M,18-25,Metropolitana,Santiago,Frecuente,2022-09-29
+720,Javiera Soto,F,26-35,La Araucanía,Temuco,Nuevo,2022-11-06
+721,Antonella Muñoz,F,36-45,Biobío,Concepción,Frecuente,2022-03-09
+722,Catalina Díaz,M,46-60,Biobío,Concepción,Nuevo,2024-04-25
+723,Benjamín Morales,M,46-60,Biobío,Concepción,Nuevo,2023-12-08
+724,Tomás Silva,F,26-35,Metropolitana,Ñuñoa,Nuevo,2024-09-02
+725,Martín González,M,60+,Metropolitana,Maipú,Nuevo,2024-12-22
+726,Benjamín Muñoz,M,60+,Metropolitana,Maipú,Frecuente,2024-12-21
+727,Antonella Pérez,M,46-60,Valparaíso,Viña del Mar,Frecuente,2023-07-13
+728,Isidora Martínez,M,36-45,Metropolitana,Providencia,Nuevo,2023-05-11
+729,Valentina González,M,18-25,Metropolitana,Santiago,Frecuente,2022-01-18
+730,Florencia Díaz,F,18-25,Metropolitana,Santiago,Nuevo,2023-08-04
+731,Matías Rodríguez,F,18-25,Valparaíso,Quilpué,Nuevo,2023-03-21
+732,Vicente Muñoz,F,26-35,Valparaíso,Viña del Mar,Frecuente,2025-03-05
+733,Florencia López,M,36-45,Metropolitana,Ñuñoa,Frecuente,2024-07-17
+734,Valentina Pérez,F,26-35,Metropolitana,Las Condes,Premium,2022-11-28
+735,Vicente Silva,F,36-45,Metropolitana,Providencia,Frecuente,2023-06-27
+736,Matías Rojas,M,26-35,Metropolitana,Ñuñoa,Nuevo,2024-10-04
+737,Matías González,F,18-25,Metropolitana,Ñuñoa,Nuevo,2023-06-15
+738,Sofía Morales,F,60+,Metropolitana,Ñuñoa,Nuevo,2024-10-16
+739,Catalina Sepúlveda,F,36-45,Metropolitana,Maipú,Nuevo,2023-11-07
+740,Agustín González,M,60+,Metropolitana,Maipú,Nuevo,2022-05-24
+741,Antonella Morales,M,26-35,Metropolitana,Ñuñoa,Premium,2024-01-06
+742,Antonella Muñoz,M,46-60,Valparaíso,Viña del Mar,Frecuente,2024-01-19
+743,Catalina Morales,F,26-35,Metropolitana,Maipú,Premium,2022-03-22
+744,Lucas Muñoz,M,46-60,Valparaíso,Valparaíso,Nuevo,2024-01-06
+745,Lucas Contreras,F,46-60,Metropolitana,Ñuñoa,Nuevo,2023-05-04
+746,Camila González,M,18-25,Metropolitana,Ñuñoa,Nuevo,2024-07-09
+747,Javiera Morales,F,46-60,Metropolitana,Providencia,Premium,2024-12-07
+748,Lucas Morales,F,36-45,Metropolitana,Puente Alto,Nuevo,2022-10-17
+749,Camila Rojas,F,60+,Biobío,Concepción,Nuevo,2022-09-25
+750,Matías Muñoz,M,36-45,Metropolitana,Puente Alto,Nuevo,2022-05-11
+751,Antonella López,M,26-35,Antofagasta,Antofagasta,Nuevo,2024-05-22
+752,Benjamín Sepúlveda,F,26-35,Los Lagos,Puerto Montt,Nuevo,2023-03-13
+753,Joaquín Martínez,F,26-35,Biobío,Concepción,Nuevo,2022-12-11
+754,Vicente González,M,18-25,Biobío,Concepción,Nuevo,2024-02-10
+755,Martín Rodríguez,M,36-45,Metropolitana,Providencia,Nuevo,2023-08-05
+756,Martín Díaz,F,36-45,Metropolitana,Santiago,Frecuente,2024-07-11
+757,Tomás Soto,M,18-25,Biobío,Concepción,Nuevo,2022-06-30
+758,Joaquín Fuentes,F,36-45,Los Lagos,Puerto Montt,Nuevo,2022-07-15
+759,Lucas Silva,F,26-35,Metropolitana,Santiago,Nuevo,2022-11-02
+760,Martín Pérez,M,36-45,Metropolitana,Maipú,Nuevo,2023-03-06
+761,Vicente Rojas,F,36-45,Biobío,Concepción,Nuevo,2025-01-05
+762,Antonella Contreras,F,46-60,Metropolitana,Las Condes,Nuevo,2024-06-29
+763,Matías Díaz,M,46-60,Metropolitana,Maipú,Premium,2023-04-12
+764,Lucas González,M,18-25,Metropolitana,Puente Alto,Nuevo,2025-04-13
+765,Javiera Rodríguez,F,36-45,Metropolitana,Las Condes,Nuevo,2022-10-07
+766,Benjamín Pérez,F,18-25,Metropolitana,Maipú,Nuevo,2025-03-10
+767,Agustín Pérez,F,46-60,Metropolitana,Ñuñoa,Premium,2023-12-05
+768,Agustín Muñoz,M,46-60,La Araucanía,Temuco,Premium,2025-03-29
+769,Javiera Pérez,F,46-60,Metropolitana,Ñuñoa,Premium,2024-08-27
+770,Agustín Sepúlveda,F,60+,Metropolitana,Santiago,Nuevo,2024-06-08
+771,Benjamín Contreras,M,36-45,Metropolitana,Ñuñoa,Frecuente,2024-08-21
+772,Valentina Martínez,F,36-45,Metropolitana,Maipú,Premium,2023-05-08
+773,Agustín Morales,F,18-25,Metropolitana,Ñuñoa,Nuevo,2023-08-29
+774,Camila Silva,M,46-60,Biobío,Talcahuano,Nuevo,2025-03-14
+775,Camila Fuentes,F,26-35,Antofagasta,Calama,Frecuente,2024-08-08
+776,Isidora López,F,36-45,Metropolitana,Las Condes,Frecuente,2023-07-07
+777,Benjamín Muñoz,M,26-35,Metropolitana,Puente Alto,Nuevo,2024-01-16
+778,Valentina Martínez,F,18-25,Metropolitana,Las Condes,Nuevo,2025-02-18
+779,Isidora López,F,26-35,Metropolitana,Las Condes,Frecuente,2024-09-06
+780,Valentina Soto,M,36-45,Metropolitana,Puente Alto,Frecuente,2022-04-22
+781,Tomás Silva,M,46-60,Metropolitana,Ñuñoa,Frecuente,2024-12-25
+782,Isidora Silva,F,18-25,Los Lagos,Puerto Montt,Nuevo,2022-05-15
+783,Vicente Pérez,F,36-45,Los Lagos,Osorno,Nuevo,2022-08-12
+784,Tomás Contreras,F,36-45,Metropolitana,Maipú,Nuevo,2022-02-16
+785,Isidora Muñoz,F,46-60,Valparaíso,Valparaíso,Frecuente,2023-08-21
+786,Martín Sepúlveda,M,36-45,Metropolitana,Las Condes,Nuevo,2023-11-19
+787,Javiera Silva,M,36-45,Valparaíso,Viña del Mar,Nuevo,2024-12-21
+788,Joaquín Pérez,F,18-25,Metropolitana,Las Condes,Nuevo,2024-09-18
+789,Tomás Rojas,F,46-60,Metropolitana,Ñuñoa,Premium,2022-11-26
+790,Agustín Muñoz,F,60+,Biobío,Concepción,Nuevo,2022-11-27
+791,Benjamín Morales,M,60+,Metropolitana,Providencia,Nuevo,2023-02-25
+792,Tomás Muñoz,F,26-35,Metropolitana,Maipú,Frecuente,2022-11-29
+793,Sofía González,M,36-45,Los Lagos,Osorno,Nuevo,2023-10-18
+794,Sofía López,M,26-35,Metropolitana,Santiago,Frecuente,2025-03-20
+795,Matías Pérez,F,26-35,La Araucanía,Temuco,Nuevo,2022-10-13
+796,Isidora Sepúlveda,F,46-60,Metropolitana,Las Condes,Nuevo,2022-04-23
+797,Valentina Martínez,M,26-35,Metropolitana,Las Condes,Frecuente,2024-07-01
+798,Joaquín Contreras,F,46-60,Metropolitana,Maipú,Nuevo,2022-04-25
+799,Joaquín Soto,M,60+,Metropolitana,Puente Alto,Nuevo,2023-08-06
+800,Martín López,M,26-35,Biobío,Talcahuano,Frecuente,2024-06-28
+801,Sofía Díaz,M,36-45,Metropolitana,Puente Alto,Premium,2022-06-26
+802,Valentina González,M,36-45,Metropolitana,Las Condes,Nuevo,2024-02-09
+803,Sofía Díaz,F,46-60,Valparaíso,Viña del Mar,Frecuente,2025-03-09
+804,Tomás Silva,M,26-35,Metropolitana,Santiago,Nuevo,2023-09-11
+805,Matías Morales,M,26-35,Metropolitana,Maipú,Premium,2024-08-25
+806,Matías López,M,36-45,Valparaíso,Valparaíso,Frecuente,2022-02-28
+807,Martín Fuentes,M,36-45,Metropolitana,Maipú,Premium,2024-09-11
+808,Camila Fuentes,M,26-35,Antofagasta,Antofagasta,Nuevo,2024-02-04
+809,Joaquín Rojas,F,26-35,Metropolitana,Maipú,Frecuente,2022-10-05
+810,Tomás Pérez,F,36-45,Los Lagos,Puerto Montt,Frecuente,2022-04-10
+811,Antonella Fuentes,M,46-60,Valparaíso,Quilpué,Frecuente,2022-12-09
+812,Matías Martínez,M,46-60,Metropolitana,Santiago,Nuevo,2024-01-13
+813,Martín Soto,F,18-25,Metropolitana,Providencia,Frecuente,2024-09-20
+814,Matías Contreras,M,60+,Antofagasta,Antofagasta,Frecuente,2025-02-18
+815,Joaquín Pérez,M,18-25,La Araucanía,Temuco,Premium,2024-09-09
+816,Vicente Rodríguez,M,18-25,Valparaíso,Valparaíso,Nuevo,2023-12-02
+817,Agustín Pérez,F,26-35,Antofagasta,Antofagasta,Nuevo,2022-10-19
+818,Valentina González,M,46-60,Biobío,Concepción,Nuevo,2022-08-17
+819,Benjamín Silva,F,60+,Metropolitana,Santiago,Nuevo,2024-11-17
+820,Matías Sepúlveda,F,36-45,Valparaíso,Valparaíso,Nuevo,2022-07-17
+821,Sofía Fuentes,M,60+,Metropolitana,Las Condes,Nuevo,2022-07-05
+822,Valentina Muñoz,F,36-45,Antofagasta,Antofagasta,Premium,2023-05-11
+823,Camila Rodríguez,F,60+,Metropolitana,Puente Alto,Premium,2025-01-05
+824,Javiera Morales,F,26-35,Metropolitana,Las Condes,Premium,2023-01-15
+825,Agustín Contreras,F,46-60,Metropolitana,Las Condes,Nuevo,2024-11-19
+826,Lucas López,M,46-60,Metropolitana,Puente Alto,Frecuente,2022-10-06
+827,Matías Contreras,M,36-45,Metropolitana,Ñuñoa,Nuevo,2024-10-08
+828,Agustín Martínez,M,26-35,Los Lagos,Osorno,Nuevo,2024-06-28
+829,Joaquín Rojas,F,60+,Metropolitana,Maipú,Frecuente,2024-09-01
+830,Valentina Muñoz,F,26-35,Metropolitana,Ñuñoa,Frecuente,2024-12-06
+831,Valentina Soto,F,26-35,Metropolitana,Puente Alto,Frecuente,2022-12-12
+832,Martín Rodríguez,M,26-35,Metropolitana,Ñuñoa,Frecuente,2023-04-22
+833,Joaquín Silva,M,60+,Valparaíso,Quilpué,Nuevo,2024-03-30
+834,Matías Pérez,M,36-45,Biobío,Concepción,Nuevo,2022-08-10
+835,Lucas Morales,F,60+,Biobío,Talcahuano,Frecuente,2022-05-20
+836,Matías López,F,36-45,Metropolitana,Puente Alto,Frecuente,2023-09-13
+837,Tomás Morales,M,36-45,Biobío,Talcahuano,Frecuente,2023-02-18
+838,Camila López,F,60+,Antofagasta,Antofagasta,Nuevo,2025-01-12
+839,Javiera Silva,F,18-25,Metropolitana,Puente Alto,Frecuente,2024-02-10
+840,Lucas Contreras,F,26-35,Biobío,Talcahuano,Nuevo,2022-12-03
+841,Lucas Silva,F,36-45,Metropolitana,Maipú,Nuevo,2024-10-01
+842,Joaquín López,M,26-35,Valparaíso,Valparaíso,Frecuente,2024-02-13
+843,Joaquín López,F,46-60,Metropolitana,Ñuñoa,Nuevo,2024-01-21
+844,Joaquín Contreras,M,18-25,Metropolitana,Providencia,Nuevo,2023-12-08
+845,Valentina Fuentes,M,18-25,Valparaíso,Valparaíso,Nuevo,2022-06-23
+846,Martín Sepúlveda,M,26-35,Metropolitana,Ñuñoa,Nuevo,2024-08-01
+847,Catalina Sepúlveda,M,26-35,Metropolitana,Santiago,Frecuente,2023-10-11
+848,Antonella Silva,M,26-35,Metropolitana,Las Condes,Nuevo,2023-02-26
+849,Valentina Fuentes,F,26-35,Metropolitana,Santiago,Nuevo,2024-10-14
+850,Valentina Rodríguez,F,36-45,Valparaíso,Viña del Mar,Nuevo,2023-04-08
+851,Martín Díaz,M,46-60,Antofagasta,Calama,Frecuente,2024-08-31
+852,Antonella Díaz,M,26-35,Metropolitana,Puente Alto,Frecuente,2025-01-10
+853,Vicente González,F,36-45,Valparaíso,Valparaíso,Frecuente,2025-01-26
+854,Florencia Morales,M,60+,Antofagasta,Antofagasta,Frecuente,2024-08-15
+855,Agustín Rojas,M,46-60,Metropolitana,Maipú,Nuevo,2022-10-30
+856,Isidora Fuentes,M,26-35,Antofagasta,Calama,Frecuente,2022-05-12
+857,Catalina Díaz,F,18-25,Metropolitana,Santiago,Nuevo,2023-04-29
+858,Lucas Martínez,M,26-35,Antofagasta,Antofagasta,Nuevo,2024-08-08
+859,Florencia López,M,36-45,Metropolitana,Providencia,Frecuente,2022-03-01
+860,Camila González,F,26-35,Metropolitana,Las Condes,Premium,2024-09-22
+861,Joaquín Morales,F,26-35,La Araucanía,Temuco,Nuevo,2024-04-13
+862,Matías Martínez,M,36-45,Valparaíso,Valparaíso,Nuevo,2024-10-21
+863,Antonella Fuentes,M,46-60,Metropolitana,Ñuñoa,Nuevo,2023-10-04
+864,Matías Rojas,F,60+,Metropolitana,Maipú,Nuevo,2022-10-23
+865,Lucas Martínez,M,36-45,Antofagasta,Antofagasta,Nuevo,2022-04-25
+866,Florencia López,F,26-35,Metropolitana,Ñuñoa,Nuevo,2023-05-20
+867,Benjamín Rodríguez,F,26-35,Metropolitana,Maipú,Nuevo,2022-03-13
+868,Matías Martínez,F,46-60,Los Lagos,Osorno,Nuevo,2024-01-14
+869,Tomás Muñoz,F,26-35,Los Lagos,Puerto Montt,Premium,2023-06-08
+870,Benjamín Pérez,F,46-60,Valparaíso,Viña del Mar,Nuevo,2024-04-12
+871,Martín Fuentes,F,46-60,Metropolitana,Ñuñoa,Nuevo,2023-11-13
+872,Antonella Silva,F,46-60,Metropolitana,Ñuñoa,Frecuente,2024-05-11
+873,Camila Contreras,F,36-45,Valparaíso,Viña del Mar,Frecuente,2022-10-06
+874,Sofía Fuentes,M,46-60,Metropolitana,Las Condes,Nuevo,2023-05-27
+875,Florencia Rojas,M,46-60,Antofagasta,Antofagasta,Nuevo,2022-10-01
+876,Catalina Fuentes,F,18-25,Metropolitana,Santiago,Premium,2024-03-16
+877,Valentina Silva,F,26-35,Valparaíso,Valparaíso,Nuevo,2023-04-14
+878,Sofía Muñoz,M,26-35,Valparaíso,Quilpué,Nuevo,2023-06-17
+879,Javiera Fuentes,M,18-25,Biobío,Concepción,Nuevo,2024-06-10
+880,Tomás Rodríguez,M,26-35,Antofagasta,Calama,Premium,2023-06-30
+881,Isidora Contreras,F,26-35,Valparaíso,Valparaíso,Nuevo,2023-08-03
+882,Javiera Díaz,M,36-45,Los Lagos,Osorno,Nuevo,2023-04-28
+883,Catalina Morales,F,46-60,Metropolitana,Ñuñoa,Nuevo,2023-10-25
+884,Matías Martínez,F,18-25,Valparaíso,Valparaíso,Nuevo,2022-05-30
+885,Camila Pérez,M,26-35,Metropolitana,Maipú,Frecuente,2022-04-04
+886,Benjamín Sepúlveda,F,26-35,Metropolitana,Puente Alto,Nuevo,2025-02-19
+887,Sofía Muñoz,M,46-60,Metropolitana,Maipú,Nuevo,2024-08-16
+888,Sofía Silva,M,46-60,Metropolitana,Maipú,Nuevo,2022-04-01
+889,Antonella Contreras,F,26-35,Antofagasta,Calama,Frecuente,2023-06-25
+890,Benjamín Díaz,F,18-25,Metropolitana,Providencia,Nuevo,2024-06-20
+891,Martín Muñoz,M,18-25,Metropolitana,Las Condes,Premium,2024-08-14
+892,Lucas Muñoz,F,18-25,Valparaíso,Valparaíso,Nuevo,2024-07-26
+893,Florencia Sepúlveda,F,36-45,Metropolitana,Santiago,Frecuente,2022-12-11
+894,Valentina Díaz,M,36-45,Valparaíso,Viña del Mar,Nuevo,2024-05-02
+895,Catalina Soto,F,46-60,Valparaíso,Valparaíso,Nuevo,2022-09-07
+896,Javiera Morales,M,36-45,Metropolitana,Santiago,Nuevo,2024-09-09
+897,Antonella Rodríguez,F,26-35,Metropolitana,Santiago,Frecuente,2024-07-16
+898,Valentina Martínez,M,18-25,Metropolitana,Las Condes,Nuevo,2022-04-24
+899,Valentina González,F,26-35,Los Lagos,Osorno,Nuevo,2024-03-27
+900,Matías Pérez,M,46-60,Biobío,Talcahuano,Premium,2022-11-12
+901,Matías Fuentes,M,36-45,Valparaíso,Viña del Mar,Nuevo,2024-01-06
+902,Martín Muñoz,M,46-60,Metropolitana,Puente Alto,Nuevo,2023-07-04
+903,Benjamín Martínez,M,60+,Valparaíso,Quilpué,Nuevo,2022-07-10
+904,Lucas Martínez,F,26-35,Valparaíso,Viña del Mar,Nuevo,2022-11-14
+905,Sofía Rojas,M,46-60,Antofagasta,Calama,Nuevo,2023-09-08
+906,Benjamín Martínez,F,36-45,Metropolitana,Maipú,Nuevo,2022-06-06
+907,Florencia Soto,M,36-45,Valparaíso,Quilpué,Nuevo,2025-03-10
+908,Vicente López,F,46-60,Biobío,Concepción,Nuevo,2024-08-05
+909,Antonella Sepúlveda,M,46-60,Antofagasta,Calama,Frecuente,2023-09-02
+910,Isidora Rojas,F,46-60,Metropolitana,Puente Alto,Nuevo,2023-01-19
+911,Camila González,M,18-25,Valparaíso,Valparaíso,Frecuente,2024-06-07
+912,Lucas Pérez,M,36-45,Metropolitana,Ñuñoa,Frecuente,2024-04-09
+913,Sofía Rojas,F,26-35,Antofagasta,Antofagasta,Frecuente,2022-06-29
+914,Isidora Silva,F,36-45,Metropolitana,Maipú,Frecuente,2022-02-24
+915,Isidora Muñoz,M,46-60,Antofagasta,Antofagasta,Nuevo,2025-01-08
+916,Sofía Rodríguez,M,60+,Metropolitana,Maipú,Nuevo,2022-12-07
+917,Isidora Pérez,M,18-25,Metropolitana,Santiago,Nuevo,2023-05-12
+918,Martín Fuentes,M,46-60,Antofagasta,Calama,Nuevo,2024-06-03
+919,Lucas Díaz,F,36-45,Metropolitana,Maipú,Frecuente,2024-11-17
+920,Martín Silva,F,36-45,Valparaíso,Quilpué,Nuevo,2023-07-03
+921,Vicente Pérez,F,36-45,Valparaíso,Viña del Mar,Nuevo,2022-02-12
+922,Javiera Rojas,M,46-60,Metropolitana,Maipú,Premium,2023-11-26
+923,Lucas López,F,36-45,Antofagasta,Calama,Frecuente,2024-01-08
+924,Sofía Rojas,F,26-35,Metropolitana,Maipú,Nuevo,2024-09-15
+925,Tomás Díaz,F,36-45,Metropolitana,Santiago,Nuevo,2024-10-08
+926,Vicente Fuentes,F,46-60,Metropolitana,Las Condes,Nuevo,2022-11-21
+927,Agustín Silva,M,60+,Valparaíso,Viña del Mar,Frecuente,2022-09-05
+928,Florencia Rojas,F,46-60,Biobío,Talcahuano,Frecuente,2025-02-14
+929,Matías López,F,46-60,Los Lagos,Puerto Montt,Frecuente,2022-08-16
+930,Isidora Soto,F,46-60,Metropolitana,Ñuñoa,Nuevo,2022-08-30
+931,Sofía Morales,M,26-35,Metropolitana,Providencia,Nuevo,2022-07-23
+932,Camila Díaz,M,26-35,Metropolitana,Puente Alto,Nuevo,2024-05-01
+933,Joaquín Morales,F,26-35,Metropolitana,Puente Alto,Nuevo,2024-04-29
+934,Martín Contreras,M,60+,Metropolitana,Puente Alto,Frecuente,2024-05-28
+935,Javiera Rojas,F,46-60,Metropolitana,Puente Alto,Premium,2022-03-02
+936,Catalina López,F,26-35,Metropolitana,Maipú,Frecuente,2023-10-07
+937,Benjamín Morales,M,26-35,Valparaíso,Quilpué,Frecuente,2022-11-06
+938,Joaquín González,M,60+,Antofagasta,Antofagasta,Frecuente,2023-10-05
+939,Javiera Rodríguez,M,46-60,Metropolitana,Ñuñoa,Nuevo,2023-02-25
+940,Valentina González,M,26-35,Metropolitana,Ñuñoa,Frecuente,2023-09-10
+941,Tomás Díaz,F,36-45,Metropolitana,Las Condes,Frecuente,2025-01-12
+942,Camila González,M,26-35,Biobío,Talcahuano,Frecuente,2022-11-24
+943,Benjamín Fuentes,M,26-35,Los Lagos,Osorno,Nuevo,2022-08-15
+944,Javiera Pérez,F,36-45,Biobío,Concepción,Frecuente,2022-09-13
+945,Agustín Soto,M,26-35,Los Lagos,Puerto Montt,Frecuente,2025-03-04
+946,Matías Soto,F,46-60,Metropolitana,Las Condes,Nuevo,2023-05-23
+947,Martín Muñoz,F,18-25,Metropolitana,Providencia,Nuevo,2024-05-21
+948,Catalina Sepúlveda,M,46-60,Metropolitana,Puente Alto,Nuevo,2024-01-27
+949,Lucas Rodríguez,M,46-60,Metropolitana,Providencia,Frecuente,2024-06-20
+950,Sofía Rodríguez,F,36-45,Metropolitana,Maipú,Nuevo,2024-07-26
+951,Joaquín Muñoz,M,18-25,Biobío,Talcahuano,Frecuente,2025-02-18
+952,Matías Soto,M,60+,Metropolitana,Las Condes,Nuevo,2022-11-10
+953,Sofía López,M,18-25,Metropolitana,Las Condes,Premium,2022-10-20
+954,Camila Muñoz,M,18-25,Metropolitana,Santiago,Nuevo,2024-09-28
+955,Javiera Soto,M,36-45,Valparaíso,Quilpué,Frecuente,2025-03-04
+956,Javiera López,M,36-45,Metropolitana,Providencia,Premium,2022-10-11
+957,Catalina Díaz,M,26-35,Metropolitana,Santiago,Premium,2024-04-18
+958,Valentina Fuentes,F,46-60,La Araucanía,Temuco,Frecuente,2023-07-23
+959,Valentina Díaz,F,60+,Metropolitana,Puente Alto,Nuevo,2025-02-19
+960,Matías Morales,F,60+,Metropolitana,Las Condes,Frecuente,2022-02-08
+961,Javiera Muñoz,M,26-35,Metropolitana,Santiago,Nuevo,2025-04-01
+962,Martín Rojas,M,18-25,La Araucanía,Temuco,Nuevo,2023-11-28
+963,Vicente Pérez,F,26-35,Metropolitana,Santiago,Nuevo,2022-07-23
+964,Benjamín Sepúlveda,M,26-35,Los Lagos,Puerto Montt,Nuevo,2022-12-13
+965,Martín Soto,M,26-35,Metropolitana,Santiago,Nuevo,2022-10-19
+966,Agustín Silva,M,60+,Metropolitana,Las Condes,Nuevo,2025-04-15
+967,Valentina Silva,F,26-35,Metropolitana,Providencia,Premium,2024-04-13
+968,Matías Díaz,F,26-35,Metropolitana,Maipú,Nuevo,2025-02-08
+969,Isidora López,F,26-35,Antofagasta,Antofagasta,Frecuente,2024-10-21
+970,Javiera González,F,46-60,Metropolitana,Puente Alto,Nuevo,2024-05-17
+971,Benjamín Silva,M,36-45,Los Lagos,Osorno,Premium,2022-01-02
+972,Tomás González,F,46-60,Antofagasta,Antofagasta,Nuevo,2023-03-12
+973,Sofía Rodríguez,M,46-60,Metropolitana,Providencia,Frecuente,2022-09-09
+974,Antonella Morales,M,60+,Los Lagos,Osorno,Nuevo,2023-10-14
+975,Antonella Díaz,M,60+,Valparaíso,Viña del Mar,Nuevo,2023-10-21
+976,Lucas González,F,36-45,Valparaíso,Viña del Mar,Frecuente,2022-01-05
+977,Catalina Martínez,F,46-60,Valparaíso,Quilpué,Frecuente,2024-09-28
+978,Matías Soto,M,46-60,Metropolitana,Las Condes,Nuevo,2024-06-30
+979,Matías Silva,M,60+,Antofagasta,Calama,Nuevo,2022-01-18
+980,Joaquín Díaz,F,46-60,Biobío,Talcahuano,Frecuente,2023-07-30
+981,Joaquín González,M,36-45,Metropolitana,Ñuñoa,Frecuente,2024-10-08
+982,Catalina Muñoz,M,36-45,Metropolitana,Maipú,Nuevo,2023-02-06
+983,Vicente Muñoz,F,46-60,Metropolitana,Providencia,Nuevo,2025-03-04
+984,Florencia Díaz,F,60+,Valparaíso,Quilpué,Frecuente,2023-04-12
+985,Javiera González,M,36-45,Valparaíso,Quilpué,Nuevo,2025-02-21
+986,Martín Pérez,F,36-45,La Araucanía,Temuco,Nuevo,2024-06-04
+987,Agustín González,M,60+,Metropolitana,Puente Alto,Nuevo,2022-03-31
+988,Antonella Muñoz,F,60+,Metropolitana,Providencia,Premium,2023-02-03
+989,Agustín Díaz,F,26-35,Metropolitana,Santiago,Frecuente,2022-06-02
+990,Martín López,F,36-45,Metropolitana,Ñuñoa,Premium,2024-09-09
+991,Matías Silva,F,60+,Antofagasta,Antofagasta,Frecuente,2023-05-22
+992,Valentina López,M,46-60,Metropolitana,Ñuñoa,Nuevo,2023-04-30
+993,Benjamín Contreras,M,46-60,Metropolitana,Ñuñoa,Nuevo,2022-05-05
+994,Benjamín Pérez,M,18-25,Metropolitana,Ñuñoa,Nuevo,2024-06-24
+995,Catalina Muñoz,M,26-35,Metropolitana,Puente Alto,Frecuente,2024-02-21
+996,Catalina Silva,M,46-60,Valparaíso,Quilpué,Nuevo,2024-07-17
+997,Javiera Martínez,M,36-45,Valparaíso,Valparaíso,Nuevo,2022-02-23
+998,Isidora Sepúlveda,F,36-45,Valparaíso,Viña del Mar,Nuevo,2022-05-19
+999,Vicente Díaz,F,46-60,Metropolitana,Santiago,Nuevo,2024-06-29
+1000,Joaquín Pérez,F,18-25,Valparaíso,Viña del Mar,Frecuente,2024-11-16
+1001,Sofía González,F,36-45,Metropolitana,Puente Alto,Premium,2022-01-17
+1002,Isidora Morales,F,46-60,Metropolitana,Las Condes,Nuevo,2023-02-05
+1003,Antonella Fuentes,M,36-45,Metropolitana,Maipú,Nuevo,2024-08-15
+1004,Lucas Díaz,F,36-45,Metropolitana,Ñuñoa,Nuevo,2022-03-28
+1005,Lucas Rodríguez,M,46-60,Valparaíso,Viña del Mar,Nuevo,2023-05-05
+1006,Joaquín González,F,26-35,Metropolitana,Puente Alto,Nuevo,2022-01-14
+1007,Joaquín González,F,26-35,Metropolitana,Las Condes,Nuevo,2023-02-03
+1008,Antonella Fuentes,F,26-35,La Araucanía,Temuco,Nuevo,2022-12-23
+1009,Camila Fuentes,F,26-35,Metropolitana,Santiago,Nuevo,2022-07-27
+1010,Agustín Soto,M,36-45,Metropolitana,Puente Alto,Premium,2024-07-23
+1011,Valentina Muñoz,F,46-60,Los Lagos,Puerto Montt,Frecuente,2024-06-07
+1012,Joaquín Soto,M,60+,Metropolitana,Providencia,Premium,2024-02-14
+1013,Tomás López,F,26-35,Biobío,Concepción,Frecuente,2023-01-23
+1014,Lucas Díaz,F,46-60,Metropolitana,Ñuñoa,Frecuente,2022-09-16
+1015,Joaquín Silva,M,26-35,Metropolitana,Ñuñoa,Nuevo,2024-03-05
+1016,Lucas Pérez,M,36-45,Valparaíso,Quilpué,Frecuente,2024-10-10
+1017,Javiera Fuentes,F,26-35,Metropolitana,Las Condes,Nuevo,2023-02-20
+1018,Joaquín Pérez,F,18-25,Metropolitana,Santiago,Nuevo,2022-11-18
+1019,Benjamín Silva,M,26-35,Metropolitana,Maipú,Nuevo,2023-04-17
+1020,Antonella Pérez,M,18-25,Metropolitana,Maipú,Nuevo,2024-10-15
+1021,Valentina Pérez,F,46-60,Valparaíso,Valparaíso,Nuevo,2024-01-06
+1022,Isidora Soto,F,36-45,Metropolitana,Las Condes,Nuevo,2022-03-20
+1023,Isidora Rodríguez,F,60+,Antofagasta,Calama,Nuevo,2023-07-17
+1024,Catalina Contreras,F,36-45,Metropolitana,Puente Alto,Premium,2023-12-11
+1025,Agustín Díaz,F,36-45,Los Lagos,Osorno,Frecuente,2024-03-25
+1026,Antonella Fuentes,F,26-35,Metropolitana,Ñuñoa,Nuevo,2022-06-25
+1027,Camila Soto,F,36-45,Metropolitana,Providencia,Nuevo,2025-02-17
+1028,Joaquín Soto,F,26-35,Biobío,Talcahuano,Frecuente,2024-10-20
+1029,Antonella Sepúlveda,F,36-45,Valparaíso,Valparaíso,Premium,2023-09-06
+1030,Catalina Contreras,F,60+,Metropolitana,Santiago,Frecuente,2023-11-08
+1031,Antonella Sepúlveda,M,36-45,Metropolitana,Las Condes,Nuevo,2022-08-11
+1032,Vicente González,M,18-25,Metropolitana,Providencia,Nuevo,2025-02-06
+1033,Isidora Díaz,M,36-45,Los Lagos,Puerto Montt,Nuevo,2023-08-05
+1034,Vicente Soto,M,26-35,Metropolitana,Santiago,Nuevo,2022-01-23
+1035,Catalina Fuentes,F,18-25,Metropolitana,Providencia,Nuevo,2022-05-21
+1036,Vicente Sepúlveda,M,36-45,Antofagasta,Calama,Nuevo,2024-08-30
+1037,Javiera Muñoz,M,36-45,Metropolitana,Providencia,Frecuente,2022-10-20
+1038,Javiera Silva,F,46-60,La Araucanía,Temuco,Frecuente,2024-10-02
+1039,Tomás Contreras,F,26-35,La Araucanía,Temuco,Premium,2023-12-12
+1040,Catalina Morales,F,36-45,Biobío,Concepción,Nuevo,2024-07-26
+1041,Vicente Pérez,M,36-45,Los Lagos,Puerto Montt,Frecuente,2023-05-06
+1042,Lucas Contreras,F,60+,Biobío,Concepción,Frecuente,2023-03-21
+1043,Martín Silva,F,26-35,Metropolitana,Puente Alto,Nuevo,2023-10-30
+1044,Catalina Soto,M,46-60,Metropolitana,Maipú,Nuevo,2024-08-03
+1045,Antonella Morales,M,36-45,Metropolitana,Santiago,Nuevo,2022-10-07
+1046,Sofía Silva,M,46-60,Valparaíso,Valparaíso,Frecuente,2024-06-15
+1047,Tomás Muñoz,M,26-35,Valparaíso,Quilpué,Frecuente,2022-12-29
+1048,Javiera Soto,F,26-35,Valparaíso,Valparaíso,Premium,2022-11-11
+1049,Benjamín Fuentes,F,26-35,Metropolitana,Las Condes,Nuevo,2024-06-24
+1050,Catalina López,F,60+,Valparaíso,Viña del Mar,Premium,2022-04-10
+1051,Martín González,F,26-35,Metropolitana,Providencia,Frecuente,2022-02-02
+1052,Vicente Rodríguez,F,18-25,Metropolitana,Puente Alto,Nuevo,2022-07-17
+1053,Isidora Sepúlveda,F,60+,Metropolitana,Maipú,Premium,2025-02-25
+1054,Matías Soto,M,26-35,Metropolitana,Maipú,Frecuente,2023-03-14
+1055,Javiera Díaz,F,36-45,Metropolitana,Las Condes,Frecuente,2023-03-12
+1056,Isidora Contreras,M,46-60,Metropolitana,Maipú,Premium,2022-05-18
+1057,Vicente Pérez,F,36-45,Metropolitana,Ñuñoa,Frecuente,2025-01-03
+1058,Antonella Rojas,M,60+,Valparaíso,Quilpué,Nuevo,2022-09-30
+1059,Javiera Contreras,F,36-45,Metropolitana,Ñuñoa,Premium,2025-04-13
+1060,Tomás Díaz,M,46-60,Metropolitana,Puente Alto,Nuevo,2022-09-12
+1061,Tomás Díaz,F,26-35,Metropolitana,Ñuñoa,Nuevo,2024-10-18
+1062,Antonella Rojas,M,26-35,La Araucanía,Temuco,Frecuente,2024-06-27
+1063,Camila Díaz,M,26-35,Los Lagos,Puerto Montt,Frecuente,2023-08-14
+1064,Agustín Sepúlveda,M,36-45,La Araucanía,Temuco,Nuevo,2023-05-24
+1065,Valentina Díaz,F,36-45,Metropolitana,Providencia,Premium,2024-10-03
+1066,Isidora Díaz,F,26-35,Metropolitana,Maipú,Nuevo,2022-12-22
+1067,Martín Rojas,F,26-35,Biobío,Talcahuano,Premium,2023-05-17
+1068,Valentina Soto,M,26-35,Metropolitana,Maipú,Nuevo,2024-09-12
+1069,Sofía Fuentes,M,18-25,Metropolitana,Maipú,Nuevo,2024-06-06
+1070,Sofía Martínez,F,26-35,Metropolitana,Maipú,Nuevo,2023-09-07
+1071,Lucas Muñoz,M,18-25,Metropolitana,Maipú,Nuevo,2025-02-25
+1072,Camila Fuentes,M,36-45,La Araucanía,Temuco,Premium,2022-01-09
+1073,Catalina Silva,M,36-45,Los Lagos,Puerto Montt,Nuevo,2024-02-04
+1074,Catalina Sepúlveda,F,26-35,Metropolitana,Maipú,Premium,2022-09-12
+1075,Lucas Morales,M,36-45,Biobío,Talcahuano,Premium,2023-12-15
+1076,Lucas González,M,36-45,Biobío,Concepción,Frecuente,2023-05-12
+1077,Javiera Morales,F,26-35,Valparaíso,Quilpué,Frecuente,2023-06-20
+1078,Camila Muñoz,F,36-45,Valparaíso,Viña del Mar,Nuevo,2022-11-27
+1079,Isidora Contreras,F,46-60,Valparaíso,Viña del Mar,Frecuente,2022-06-14
+1080,Catalina Sepúlveda,M,46-60,Metropolitana,Ñuñoa,Premium,2024-12-27
+1081,Joaquín Fuentes,F,26-35,Metropolitana,Providencia,Premium,2025-03-18
+1082,Camila Rojas,M,18-25,Metropolitana,Santiago,Frecuente,2023-09-23
+1083,Tomás Rodríguez,M,26-35,Metropolitana,Las Condes,Nuevo,2024-05-03
+1084,Vicente Martínez,F,36-45,Metropolitana,Providencia,Nuevo,2024-09-23
+1085,Isidora Pérez,M,26-35,Metropolitana,Puente Alto,Nuevo,2023-01-10
+1086,Tomás Muñoz,M,18-25,Valparaíso,Valparaíso,Nuevo,2022-06-13
+1087,Lucas Morales,F,18-25,Valparaíso,Viña del Mar,Frecuente,2024-09-05
+1088,Benjamín Muñoz,F,36-45,Metropolitana,Santiago,Nuevo,2025-04-07
+1089,Lucas Silva,M,36-45,Metropolitana,Las Condes,Nuevo,2023-06-29
+1090,Agustín Soto,M,26-35,La Araucanía,Temuco,Premium,2023-10-08
+1091,Camila Silva,M,46-60,Antofagasta,Antofagasta,Nuevo,2022-07-25
+1092,Florencia Rodríguez,F,26-35,Metropolitana,Puente Alto,Frecuente,2024-12-22
+1093,Martín Morales,F,18-25,Antofagasta,Calama,Nuevo,2024-11-20
+1094,Antonella Morales,M,26-35,Metropolitana,Maipú,Nuevo,2022-04-04
+1095,Joaquín Contreras,M,60+,Valparaíso,Quilpué,Premium,2022-06-16
+1096,Isidora Rodríguez,F,46-60,Biobío,Concepción,Nuevo,2023-08-25
+1097,Javiera Rojas,M,60+,Biobío,Talcahuano,Frecuente,2023-09-10
+1098,Vicente López,F,18-25,Metropolitana,Ñuñoa,Nuevo,2023-03-10
+1099,Catalina López,M,26-35,La Araucanía,Temuco,Frecuente,2023-10-31
+1100,Sofía Martínez,M,18-25,Los Lagos,Osorno,Premium,2022-09-10
+1101,Antonella Contreras,M,36-45,La Araucanía,Temuco,Frecuente,2022-05-13
+1102,Tomás Muñoz,F,18-25,Metropolitana,Ñuñoa,Frecuente,2022-08-25
+1103,Joaquín Rojas,M,60+,Metropolitana,Puente Alto,Frecuente,2022-08-26
+1104,Isidora Fuentes,M,60+,Metropolitana,Las Condes,Frecuente,2025-01-01
+1105,Agustín Muñoz,M,18-25,Biobío,Talcahuano,Nuevo,2022-09-16
+1106,Agustín Silva,M,18-25,Antofagasta,Calama,Nuevo,2023-08-31
+1107,Antonella Pérez,F,26-35,Valparaíso,Quilpué,Frecuente,2022-03-12
+1108,Lucas Pérez,M,18-25,Valparaíso,Viña del Mar,Nuevo,2023-03-18
+1109,Benjamín Fuentes,F,46-60,Biobío,Talcahuano,Nuevo,2023-04-06
+1110,Camila Martínez,M,26-35,Antofagasta,Calama,Premium,2022-11-23
+1111,Valentina Martínez,M,26-35,Biobío,Concepción,Frecuente,2024-03-11
+1112,Sofía Soto,F,46-60,Metropolitana,Ñuñoa,Nuevo,2022-07-19
+1113,Sofía Silva,M,26-35,Valparaíso,Valparaíso,Nuevo,2025-03-28
+1114,Camila Soto,F,36-45,Antofagasta,Antofagasta,Nuevo,2023-02-05
+1115,Benjamín Muñoz,M,60+,Los Lagos,Puerto Montt,Premium,2022-12-11
+1116,Antonella Sepúlveda,M,60+,Metropolitana,Ñuñoa,Frecuente,2024-11-21
+1117,Agustín Contreras,M,26-35,Metropolitana,Puente Alto,Premium,2022-09-01
+1118,Valentina López,M,46-60,Valparaíso,Quilpué,Nuevo,2024-02-08
+1119,Joaquín González,F,18-25,Valparaíso,Valparaíso,Nuevo,2024-06-30
+1120,Agustín González,M,26-35,Valparaíso,Quilpué,Nuevo,2024-11-09
+1121,Lucas Morales,M,26-35,Valparaíso,Valparaíso,Nuevo,2024-02-26
+1122,Vicente Contreras,F,26-35,Metropolitana,Puente Alto,Frecuente,2025-01-05
+1123,Matías López,F,60+,Metropolitana,Santiago,Nuevo,2022-05-11
+1124,Camila Martínez,M,46-60,Valparaíso,Valparaíso,Nuevo,2023-01-04
+1125,Valentina Martínez,M,46-60,Valparaíso,Valparaíso,Nuevo,2022-11-27
+1126,Joaquín Martínez,F,26-35,Metropolitana,Ñuñoa,Nuevo,2023-09-04
+1127,Tomás Morales,M,18-25,Metropolitana,Maipú,Frecuente,2024-11-29
+1128,Isidora Rodríguez,F,36-45,Metropolitana,Santiago,Nuevo,2023-12-23
+1129,Isidora Rojas,F,36-45,Metropolitana,Las Condes,Nuevo,2023-09-06
+1130,Florencia Pérez,M,36-45,Valparaíso,Valparaíso,Nuevo,2022-06-02
+1131,Martín Rodríguez,F,36-45,Metropolitana,Santiago,Frecuente,2023-06-05
+1132,Joaquín Sepúlveda,F,26-35,Metropolitana,Providencia,Nuevo,2023-01-30
+1133,Camila Sepúlveda,F,18-25,Biobío,Concepción,Frecuente,2024-02-16
+1134,Valentina Soto,F,26-35,Valparaíso,Viña del Mar,Frecuente,2024-04-13
+1135,Florencia González,F,26-35,Metropolitana,Providencia,Nuevo,2023-04-08
+1136,Vicente Martínez,M,36-45,Metropolitana,Maipú,Nuevo,2022-09-10
+1137,Tomás Martínez,M,36-45,Metropolitana,Santiago,Nuevo,2025-03-17
+1138,Vicente Soto,M,36-45,Los Lagos,Puerto Montt,Nuevo,2024-03-08
+1139,Sofía Rojas,M,36-45,Valparaíso,Viña del Mar,Nuevo,2022-11-15
+1140,Agustín Morales,M,46-60,Biobío,Concepción,Nuevo,2024-01-29
+1141,Tomás Pérez,M,36-45,Metropolitana,Ñuñoa,Premium,2024-08-17
+1142,Valentina Pérez,M,46-60,Antofagasta,Antofagasta,Frecuente,2023-09-18
+1143,Valentina Rojas,F,18-25,Metropolitana,Las Condes,Frecuente,2023-05-07
+1144,Martín Morales,F,36-45,Metropolitana,Puente Alto,Frecuente,2022-01-22
+1145,Matías Contreras,F,36-45,Valparaíso,Quilpué,Nuevo,2024-12-26
+1146,Joaquín Díaz,F,36-45,Metropolitana,Providencia,Frecuente,2024-12-30
+1147,Agustín Rojas,F,26-35,La Araucanía,Temuco,Frecuente,2024-12-08
+1148,Lucas Contreras,F,26-35,Los Lagos,Puerto Montt,Nuevo,2024-05-15
+1149,Matías Pérez,M,36-45,Valparaíso,Viña del Mar,Nuevo,2025-01-09
+1150,Catalina Díaz,M,60+,Biobío,Concepción,Premium,2025-03-10
+1151,Benjamín Soto,F,36-45,La Araucanía,Temuco,Nuevo,2024-09-26
+1152,Vicente Contreras,M,18-25,Metropolitana,Maipú,Nuevo,2023-12-18
+1153,Sofía Contreras,F,60+,Metropolitana,Santiago,Nuevo,2024-11-19
+1154,Lucas Contreras,M,26-35,Valparaíso,Viña del Mar,Premium,2023-04-09
+1155,Matías Silva,M,26-35,Metropolitana,Las Condes,Frecuente,2023-07-06
+1156,Matías Díaz,M,18-25,Metropolitana,Maipú,Nuevo,2023-02-11
+1157,Vicente Morales,F,60+,Metropolitana,Ñuñoa,Premium,2022-03-06
+1158,Lucas López,F,26-35,Metropolitana,Maipú,Frecuente,2024-09-28
+1159,Sofía Muñoz,F,46-60,La Araucanía,Temuco,Nuevo,2024-03-07
+1160,Benjamín Morales,M,26-35,Metropolitana,Puente Alto,Frecuente,2023-04-30
+1161,Tomás Silva,F,46-60,Metropolitana,Providencia,Frecuente,2023-08-16
+1162,Agustín Pérez,F,46-60,Biobío,Concepción,Frecuente,2023-01-18
+1163,Matías Rodríguez,F,26-35,Metropolitana,Puente Alto,Frecuente,2024-08-28
+1164,Sofía Contreras,F,26-35,Metropolitana,Providencia,Premium,2022-09-04
+1165,Valentina Fuentes,F,26-35,Metropolitana,Puente Alto,Nuevo,2023-02-13
+1166,Agustín Soto,M,36-45,Valparaíso,Quilpué,Nuevo,2023-04-19
+1167,Florencia Soto,M,60+,Metropolitana,Ñuñoa,Nuevo,2022-08-14
+1168,Vicente González,F,18-25,Metropolitana,Ñuñoa,Nuevo,2022-04-08
+1169,Matías Contreras,F,26-35,Metropolitana,Maipú,Nuevo,2023-07-28
+1170,Camila Morales,F,26-35,Metropolitana,Ñuñoa,Frecuente,2022-07-18
+1171,Joaquín Díaz,M,26-35,Biobío,Talcahuano,Nuevo,2024-12-19
+1172,Benjamín Sepúlveda,F,26-35,Metropolitana,Maipú,Premium,2022-09-04
+1173,Antonella Pérez,M,60+,Metropolitana,Providencia,Frecuente,2025-01-24
+1174,Isidora Contreras,M,46-60,Metropolitana,Puente Alto,Premium,2022-09-19
+1175,Matías Contreras,F,36-45,La Araucanía,Temuco,Nuevo,2024-07-07
+1176,Tomás González,F,46-60,Metropolitana,Ñuñoa,Nuevo,2022-09-22
+1177,Valentina Rojas,M,46-60,Antofagasta,Calama,Frecuente,2024-10-10
+1178,Isidora Rojas,F,26-35,Metropolitana,Providencia,Frecuente,2023-07-11
+1179,Javiera Martínez,M,26-35,Metropolitana,Providencia,Nuevo,2024-11-16
+1180,Vicente Díaz,F,36-45,Metropolitana,Las Condes,Nuevo,2022-09-01
+1181,Sofía Pérez,F,36-45,Metropolitana,Providencia,Premium,2023-07-23
+1182,Camila Morales,M,36-45,Metropolitana,Las Condes,Nuevo,2022-08-26
+1183,Florencia Rodríguez,F,26-35,Los Lagos,Osorno,Nuevo,2025-01-29
+1184,Joaquín Díaz,M,26-35,Metropolitana,Santiago,Frecuente,2022-01-22
+1185,Matías Rodríguez,M,60+,Los Lagos,Osorno,Premium,2025-04-09
+1186,Isidora Fuentes,M,26-35,Valparaíso,Viña del Mar,Nuevo,2025-02-02
+1187,Sofía Silva,F,46-60,Valparaíso,Viña del Mar,Nuevo,2024-03-20
+1188,Lucas Rojas,M,26-35,La Araucanía,Temuco,Nuevo,2022-07-11
+1189,Tomás González,M,26-35,Metropolitana,Providencia,Frecuente,2023-01-05
+1190,Valentina Rojas,F,26-35,Valparaíso,Viña del Mar,Premium,2023-01-20
+1191,Sofía Rodríguez,F,36-45,Los Lagos,Osorno,Nuevo,2022-07-25
+1192,Benjamín Rojas,F,46-60,Metropolitana,Las Condes,Nuevo,2022-01-28
+1193,Camila López,F,36-45,Valparaíso,Viña del Mar,Premium,2022-01-28
+1194,Lucas López,M,46-60,Metropolitana,Las Condes,Nuevo,2022-10-13
+1195,Florencia Morales,F,18-25,Metropolitana,Santiago,Nuevo,2022-04-25
+1196,Martín Rojas,F,60+,Metropolitana,Santiago,Nuevo,2024-11-13
+1197,Tomás Díaz,M,36-45,Metropolitana,Ñuñoa,Frecuente,2023-12-25
+1198,Matías Díaz,F,60+,Metropolitana,Las Condes,Nuevo,2022-12-14
+1199,Joaquín Muñoz,F,36-45,Valparaíso,Valparaíso,Nuevo,2022-08-31
+1200,Martín Rojas,M,36-45,Metropolitana,Las Condes,Nuevo,2023-01-07
+1201,Joaquín Pérez,F,46-60,Metropolitana,Providencia,Frecuente,2024-10-19
+1202,Catalina Silva,M,46-60,Metropolitana,Santiago,Frecuente,2022-10-30
+1203,Sofía Muñoz,M,60+,Los Lagos,Puerto Montt,Frecuente,2023-07-25
+1204,Martín Silva,M,36-45,Metropolitana,Ñuñoa,Nuevo,2024-10-09
+1205,Catalina Contreras,M,36-45,Antofagasta,Calama,Frecuente,2023-05-19
+1206,Valentina Sepúlveda,M,36-45,Antofagasta,Antofagasta,Frecuente,2024-02-27
+1207,Isidora Fuentes,F,26-35,Metropolitana,Maipú,Premium,2022-01-06
+1208,Joaquín Soto,F,26-35,La Araucanía,Temuco,Frecuente,2022-05-03
+1209,Agustín Díaz,F,18-25,Valparaíso,Valparaíso,Nuevo,2024-05-12
+1210,Catalina Rodríguez,F,36-45,Valparaíso,Viña del Mar,Nuevo,2022-10-21
+1211,Valentina Silva,F,18-25,Biobío,Talcahuano,Nuevo,2025-04-06
+1212,Martín Rojas,F,36-45,Metropolitana,Providencia,Frecuente,2022-01-26
+1213,Lucas Contreras,M,26-35,Valparaíso,Quilpué,Frecuente,2023-09-06
+1214,Benjamín Morales,F,36-45,Metropolitana,Providencia,Frecuente,2022-11-16
+1215,Javiera Martínez,M,60+,Metropolitana,Puente Alto,Nuevo,2024-05-17
+1216,Florencia Muñoz,M,60+,Metropolitana,Providencia,Frecuente,2022-11-18
+1217,Agustín Contreras,F,46-60,Metropolitana,Puente Alto,Frecuente,2022-04-25
+1218,Lucas Soto,M,46-60,Metropolitana,Providencia,Nuevo,2024-08-17
+1219,Isidora Pérez,F,18-25,Metropolitana,Las Condes,Frecuente,2024-05-18
+1220,Agustín Pérez,F,36-45,Antofagasta,Antofagasta,Nuevo,2022-02-27
+1221,Isidora Martínez,F,36-45,Metropolitana,Santiago,Nuevo,2023-09-26
+1222,Benjamín Sepúlveda,M,18-25,Metropolitana,Las Condes,Nuevo,2025-03-13
+1223,Tomás Contreras,F,26-35,Metropolitana,Maipú,Frecuente,2024-01-01
+1224,Antonella Contreras,F,36-45,Los Lagos,Puerto Montt,Nuevo,2022-07-19
+1225,Benjamín Pérez,F,26-35,Biobío,Talcahuano,Nuevo,2024-09-03
+1226,Isidora López,F,46-60,Valparaíso,Valparaíso,Premium,2023-04-20
+1227,Antonella Silva,F,26-35,Metropolitana,Las Condes,Frecuente,2024-12-07
+1228,Catalina Díaz,F,60+,Los Lagos,Puerto Montt,Premium,2022-03-23
+1229,Matías López,F,18-25,Valparaíso,Viña del Mar,Frecuente,2024-10-15
+1230,Lucas Muñoz,M,26-35,Los Lagos,Osorno,Nuevo,2022-06-28
+1231,Joaquín Muñoz,F,26-35,Metropolitana,Maipú,Nuevo,2024-01-15
+1232,Javiera Morales,F,60+,Metropolitana,Puente Alto,Nuevo,2023-06-09
+1233,Catalina Contreras,F,26-35,Metropolitana,Puente Alto,Frecuente,2023-08-11
+1234,Valentina Morales,M,36-45,Los Lagos,Osorno,Premium,2024-02-05
+1235,Benjamín Rodríguez,F,36-45,Los Lagos,Puerto Montt,Nuevo,2022-03-29
+1236,Vicente Sepúlveda,M,46-60,Metropolitana,Providencia,Nuevo,2024-02-09
+1237,Joaquín Silva,M,36-45,Metropolitana,Maipú,Nuevo,2022-07-11
+1238,Catalina López,M,26-35,Metropolitana,Las Condes,Nuevo,2022-08-10
+1239,Isidora Rodríguez,M,18-25,Metropolitana,Maipú,Nuevo,2024-09-22
+1240,Sofía Morales,F,26-35,Metropolitana,Santiago,Premium,2024-08-20
+1241,Joaquín López,M,60+,Biobío,Concepción,Nuevo,2022-05-08
+1242,Florencia Pérez,F,18-25,Antofagasta,Antofagasta,Nuevo,2024-05-16
+1243,Martín Martínez,F,36-45,Metropolitana,Las Condes,Nuevo,2024-07-13
+1244,Antonella López,M,26-35,Metropolitana,Las Condes,Premium,2024-05-27
+1245,Vicente Rodríguez,M,26-35,Metropolitana,Ñuñoa,Frecuente,2025-01-01
+1246,Isidora Muñoz,F,26-35,Antofagasta,Calama,Nuevo,2025-02-22
+1247,Lucas Fuentes,M,18-25,La Araucanía,Temuco,Nuevo,2022-10-30
+1248,Sofía Morales,M,36-45,Biobío,Concepción,Nuevo,2024-07-11
+1249,Martín Rodríguez,F,36-45,Biobío,Concepción,Nuevo,2023-01-20
+1250,Camila Soto,M,18-25,Los Lagos,Osorno,Frecuente,2025-03-27
+1251,Javiera Contreras,M,26-35,Antofagasta,Calama,Frecuente,2024-10-19
+1252,Vicente Silva,M,26-35,Biobío,Concepción,Frecuente,2022-08-21
+1253,Tomás Rodríguez,F,60+,Metropolitana,Santiago,Nuevo,2024-06-14
+1254,Matías Silva,F,36-45,Metropolitana,Puente Alto,Frecuente,2024-04-22
+1255,Martín Díaz,F,46-60,Metropolitana,Puente Alto,Nuevo,2023-08-17
+1256,Matías Soto,M,26-35,Metropolitana,Ñuñoa,Frecuente,2024-08-19
+1257,Joaquín López,F,36-45,Biobío,Talcahuano,Premium,2022-01-16
+1258,Agustín González,M,18-25,Metropolitana,Santiago,Nuevo,2024-04-29
+1259,Antonella Soto,F,60+,Metropolitana,Maipú,Nuevo,2024-11-28
+1260,Catalina Fuentes,F,46-60,Los Lagos,Osorno,Nuevo,2023-01-30
+1261,Catalina Soto,F,26-35,Valparaíso,Valparaíso,Frecuente,2022-12-22
+1262,Catalina Fuentes,M,46-60,Metropolitana,Providencia,Premium,2022-08-31
+1263,Camila Contreras,F,36-45,Metropolitana,Puente Alto,Nuevo,2022-07-11
+1264,Valentina Sepúlveda,M,18-25,Valparaíso,Quilpué,Nuevo,2025-01-18
+1265,Vicente Díaz,F,26-35,Metropolitana,Puente Alto,Frecuente,2024-01-04
+1266,Florencia Morales,F,26-35,Biobío,Concepción,Frecuente,2024-02-14
+1267,Matías Muñoz,M,60+,Valparaíso,Valparaíso,Nuevo,2025-04-01
+1268,Valentina Muñoz,M,46-60,Metropolitana,Providencia,Nuevo,2023-01-05
+1269,Martín Muñoz,M,60+,Metropolitana,Santiago,Nuevo,2022-02-14
+1270,Javiera López,F,26-35,Metropolitana,Santiago,Premium,2023-10-05
+1271,Matías Soto,M,36-45,Valparaíso,Quilpué,Frecuente,2022-03-06
+1272,Florencia Muñoz,F,36-45,Metropolitana,Puente Alto,Nuevo,2024-12-04
+1273,Isidora Fuentes,M,18-25,Metropolitana,Providencia,Nuevo,2022-11-09
+1274,Sofía Pérez,M,36-45,Metropolitana,Santiago,Nuevo,2022-06-20
+1275,Javiera Rodríguez,M,26-35,Valparaíso,Viña del Mar,Premium,2023-08-26
+1276,Florencia Contreras,F,36-45,Metropolitana,Puente Alto,Nuevo,2023-02-10
+1277,Martín Silva,M,36-45,Biobío,Talcahuano,Frecuente,2024-09-26
+1278,Martín Díaz,M,26-35,Valparaíso,Quilpué,Frecuente,2024-02-24
+1279,Florencia Sepúlveda,M,26-35,Metropolitana,Ñuñoa,Premium,2022-03-11
+1280,Camila Muñoz,F,46-60,Metropolitana,Maipú,Frecuente,2024-03-26
+1281,Isidora Morales,M,26-35,Metropolitana,Las Condes,Nuevo,2022-05-29
+1282,Antonella Díaz,M,36-45,Metropolitana,Las Condes,Premium,2022-01-23
+1283,Tomás Sepúlveda,F,36-45,Valparaíso,Valparaíso,Frecuente,2024-02-29
+1284,Martín Morales,M,26-35,Biobío,Talcahuano,Nuevo,2022-06-03
+1285,Lucas González,M,26-35,Metropolitana,Santiago,Nuevo,2024-10-08
+1286,Agustín Sepúlveda,F,26-35,Valparaíso,Quilpué,Frecuente,2024-02-24
+1287,Javiera Pérez,F,46-60,Valparaíso,Viña del Mar,Nuevo,2022-01-10
+1288,Benjamín Soto,F,18-25,Metropolitana,Santiago,Frecuente,2024-12-16
+1289,Florencia Soto,M,26-35,Metropolitana,Puente Alto,Frecuente,2023-09-09
+1290,Catalina Pérez,M,36-45,Metropolitana,Ñuñoa,Premium,2022-04-07
+1291,Matías González,F,18-25,Metropolitana,Santiago,Nuevo,2024-02-05
+1292,Agustín Rojas,F,26-35,Los Lagos,Osorno,Frecuente,2024-06-11
+1293,Benjamín Pérez,F,18-25,Metropolitana,Las Condes,Nuevo,2022-01-11
+1294,Florencia Rodríguez,F,60+,Metropolitana,Puente Alto,Nuevo,2024-02-17
+1295,Martín Morales,M,36-45,Metropolitana,Puente Alto,Frecuente,2022-10-31
+1296,Florencia Soto,M,26-35,Valparaíso,Viña del Mar,Frecuente,2024-09-30
+1297,Agustín Morales,F,36-45,Biobío,Concepción,Premium,2023-12-24
+1298,Isidora Silva,M,26-35,Metropolitana,Santiago,Nuevo,2022-01-27
+1299,Antonella López,M,46-60,Antofagasta,Antofagasta,Frecuente,2024-12-16
+1300,Agustín Soto,M,60+,Metropolitana,Puente Alto,Frecuente,2022-09-24
+1301,Valentina Pérez,M,26-35,Biobío,Talcahuano,Premium,2023-01-20
+1302,Sofía Silva,F,46-60,Valparaíso,Valparaíso,Nuevo,2022-07-29
+1303,Camila Silva,M,26-35,Metropolitana,Santiago,Premium,2023-07-01
+1304,Isidora Rojas,M,36-45,Metropolitana,Puente Alto,Nuevo,2024-06-02
+1305,Matías González,M,46-60,Metropolitana,Maipú,Nuevo,2024-01-28
+1306,Florencia Martínez,M,36-45,Metropolitana,Santiago,Frecuente,2022-12-28
+1307,Agustín Muñoz,F,46-60,Valparaíso,Quilpué,Nuevo,2022-08-16
+1308,Florencia Díaz,M,26-35,Metropolitana,Santiago,Nuevo,2022-07-26
+1309,Lucas Díaz,F,46-60,Antofagasta,Calama,Frecuente,2023-07-04
+1310,Camila Muñoz,F,36-45,Biobío,Talcahuano,Frecuente,2023-08-13
+1311,Vicente Soto,F,26-35,Antofagasta,Calama,Premium,2023-05-04
+1312,Lucas Contreras,M,18-25,Metropolitana,Las Condes,Premium,2022-01-27
+1313,Joaquín Silva,F,36-45,Metropolitana,Providencia,Nuevo,2022-01-20
+1314,Tomás Fuentes,F,36-45,Metropolitana,Providencia,Frecuente,2022-02-05
+1315,Tomás López,M,36-45,Biobío,Talcahuano,Premium,2022-07-24
+1316,Florencia Soto,M,18-25,Metropolitana,Las Condes,Nuevo,2024-09-23
+1317,Lucas Muñoz,M,36-45,Metropolitana,Ñuñoa,Frecuente,2024-11-26
+1318,Agustín Morales,F,26-35,Metropolitana,Santiago,Nuevo,2024-04-20
+1319,Joaquín Díaz,F,26-35,Biobío,Talcahuano,Frecuente,2024-06-01
+1320,Javiera Martínez,F,26-35,Los Lagos,Osorno,Premium,2025-01-20
+1321,Florencia Pérez,F,18-25,Metropolitana,Puente Alto,Frecuente,2024-05-04
+1322,Martín López,M,36-45,Antofagasta,Calama,Nuevo,2022-09-09
+1323,Sofía Silva,F,36-45,Los Lagos,Osorno,Frecuente,2024-10-18
+1324,Lucas Pérez,F,46-60,Valparaíso,Valparaíso,Nuevo,2023-09-14
+1325,Benjamín Silva,M,18-25,Metropolitana,Las Condes,Frecuente,2022-09-10
+1326,Sofía Soto,M,46-60,Metropolitana,Puente Alto,Frecuente,2023-05-30
+1327,Valentina Rodríguez,M,18-25,Biobío,Concepción,Nuevo,2022-11-14
+1328,Agustín González,M,60+,La Araucanía,Temuco,Frecuente,2023-08-19
+1329,Catalina Muñoz,M,60+,Valparaíso,Quilpué,Nuevo,2024-05-15
+1330,Sofía Morales,F,26-35,Valparaíso,Viña del Mar,Frecuente,2023-10-23
+1331,Tomás Sepúlveda,M,36-45,Metropolitana,Maipú,Frecuente,2022-06-25
+1332,Sofía Martínez,M,36-45,Antofagasta,Calama,Nuevo,2022-07-16
+1333,Martín Silva,F,60+,Metropolitana,Santiago,Premium,2024-05-11
+1334,Tomás López,F,36-45,Metropolitana,Las Condes,Nuevo,2022-10-15
+1335,Tomás González,M,18-25,Metropolitana,Ñuñoa,Nuevo,2025-03-04
+1336,Javiera Fuentes,F,18-25,Antofagasta,Calama,Frecuente,2024-11-26
+1337,Matías Fuentes,M,36-45,Valparaíso,Quilpué,Nuevo,2023-11-14
+1338,Benjamín Rodríguez,F,36-45,Metropolitana,Puente Alto,Frecuente,2025-04-12
+1339,Sofía Pérez,M,46-60,Metropolitana,Santiago,Frecuente,2023-04-03
+1340,Matías Muñoz,F,26-35,Valparaíso,Valparaíso,Frecuente,2023-02-16
+1341,Lucas González,M,26-35,Metropolitana,Santiago,Nuevo,2022-08-01
+1342,Agustín Fuentes,M,46-60,Metropolitana,Ñuñoa,Nuevo,2023-01-12
+1343,Martín Rojas,F,26-35,Valparaíso,Quilpué,Frecuente,2022-09-10
+1344,Isidora Silva,M,26-35,Metropolitana,Ñuñoa,Nuevo,2025-01-24
+1345,Florencia Contreras,M,36-45,Valparaíso,Valparaíso,Nuevo,2024-01-23
+1346,Camila Pérez,M,18-25,Antofagasta,Calama,Nuevo,2022-10-31
+1347,Benjamín Soto,F,36-45,Metropolitana,Ñuñoa,Nuevo,2024-06-29
+1348,Joaquín Martínez,F,26-35,Metropolitana,Ñuñoa,Frecuente,2022-11-21
+1349,Sofía Soto,M,36-45,Metropolitana,Providencia,Nuevo,2022-12-24
+1350,Catalina Muñoz,M,26-35,Biobío,Talcahuano,Frecuente,2023-09-13
+1351,Florencia Rojas,M,36-45,Metropolitana,Puente Alto,Nuevo,2024-11-04
+1352,Valentina González,F,46-60,Valparaíso,Valparaíso,Nuevo,2024-04-06
+1353,Lucas Soto,F,60+,Valparaíso,Quilpué,Frecuente,2024-10-19
+1354,Catalina López,M,60+,Metropolitana,Santiago,Frecuente,2022-12-23
+1355,Javiera López,M,36-45,Metropolitana,Santiago,Premium,2022-05-30
+1356,Catalina Rojas,F,26-35,Metropolitana,Maipú,Nuevo,2024-07-09
+1357,Vicente Contreras,F,18-25,Metropolitana,Santiago,Frecuente,2023-02-17
+1358,Benjamín López,F,46-60,Valparaíso,Viña del Mar,Frecuente,2023-02-21
+1359,Antonella Rojas,M,26-35,Valparaíso,Valparaíso,Frecuente,2022-05-28
+1360,Joaquín Sepúlveda,F,46-60,Metropolitana,Maipú,Nuevo,2023-12-23
+1361,Valentina Rojas,M,18-25,Metropolitana,Maipú,Nuevo,2022-05-26
+1362,Camila Díaz,M,60+,Valparaíso,Viña del Mar,Nuevo,2023-11-09
+1363,Tomás Muñoz,F,46-60,Metropolitana,Puente Alto,Frecuente,2022-11-20
+1364,Matías Sepúlveda,M,60+,Metropolitana,Las Condes,Frecuente,2022-04-27
+1365,Florencia Díaz,M,46-60,Metropolitana,Santiago,Nuevo,2024-05-13
+1366,Benjamín Díaz,M,18-25,Metropolitana,Puente Alto,Premium,2023-11-07
+1367,Joaquín Muñoz,M,36-45,Biobío,Concepción,Premium,2022-03-14
+1368,Florencia Rodríguez,F,18-25,Metropolitana,Maipú,Frecuente,2022-09-23
+1369,Lucas Pérez,F,18-25,Valparaíso,Valparaíso,Nuevo,2024-06-02
+1370,Catalina Morales,F,36-45,Biobío,Concepción,Nuevo,2023-02-06
+1371,Martín Rodríguez,M,36-45,Metropolitana,Santiago,Nuevo,2022-09-14
+1372,Joaquín Díaz,M,26-35,La Araucanía,Temuco,Nuevo,2024-01-24
+1373,Agustín Contreras,F,60+,Metropolitana,Santiago,Premium,2022-01-21
+1374,Valentina González,F,26-35,Metropolitana,Las Condes,Nuevo,2022-04-27
+1375,Tomás Rojas,M,36-45,Metropolitana,Santiago,Frecuente,2023-05-16
+1376,Isidora Silva,M,46-60,Metropolitana,Providencia,Nuevo,2025-01-18
+1377,Tomás Fuentes,F,36-45,Metropolitana,Las Condes,Nuevo,2024-01-22
+1378,Benjamín Soto,M,46-60,Metropolitana,Puente Alto,Nuevo,2022-08-02
+1379,Agustín Pérez,F,18-25,Metropolitana,Ñuñoa,Frecuente,2022-10-08
+1380,Javiera Morales,M,60+,Metropolitana,Santiago,Nuevo,2023-04-27
+1381,Catalina Pérez,F,18-25,Metropolitana,Puente Alto,Nuevo,2023-07-24
+1382,Catalina Silva,F,26-35,Metropolitana,Maipú,Nuevo,2024-02-23
+1383,Tomás González,M,60+,Metropolitana,Puente Alto,Frecuente,2022-04-18
+1384,Isidora López,F,26-35,Metropolitana,Puente Alto,Nuevo,2023-06-22
+1385,Matías Martínez,M,60+,Metropolitana,Ñuñoa,Nuevo,2022-04-27
+1386,Javiera Contreras,M,26-35,Los Lagos,Osorno,Nuevo,2024-12-31
+1387,Sofía González,M,46-60,Los Lagos,Osorno,Nuevo,2023-05-03
+1388,Tomás Soto,M,18-25,Metropolitana,Las Condes,Nuevo,2025-01-16
+1389,Matías Pérez,M,46-60,Valparaíso,Valparaíso,Nuevo,2022-01-26
+1390,Javiera González,M,36-45,Metropolitana,Puente Alto,Nuevo,2022-01-19
+1391,Florencia Sepúlveda,M,60+,Metropolitana,Maipú,Nuevo,2022-06-12
+1392,Florencia Fuentes,M,18-25,Biobío,Concepción,Nuevo,2023-07-20
+1393,Agustín Muñoz,F,26-35,Valparaíso,Quilpué,Premium,2022-04-12
+1394,Agustín González,M,60+,Valparaíso,Valparaíso,Frecuente,2022-03-27
+1395,Benjamín Sepúlveda,F,26-35,Antofagasta,Antofagasta,Frecuente,2023-12-25
+1396,Agustín Díaz,M,36-45,Metropolitana,Ñuñoa,Nuevo,2022-06-08
+1397,Sofía González,M,36-45,Valparaíso,Viña del Mar,Nuevo,2023-08-03
+1398,Lucas Pérez,F,26-35,Metropolitana,Santiago,Nuevo,2024-02-07
+1399,Matías Sepúlveda,F,46-60,Metropolitana,Puente Alto,Frecuente,2022-02-22
+1400,Joaquín Díaz,M,46-60,Biobío,Concepción,Frecuente,2025-04-05
+1401,Valentina Díaz,M,36-45,Metropolitana,Santiago,Frecuente,2022-06-10
+1402,Lucas Morales,M,26-35,Metropolitana,Providencia,Frecuente,2022-04-16
+1403,Antonella Díaz,M,26-35,Metropolitana,Las Condes,Frecuente,2023-05-15
+1404,Javiera Rodríguez,M,26-35,Metropolitana,Las Condes,Frecuente,2023-05-09
+1405,Lucas Sepúlveda,F,26-35,Metropolitana,Maipú,Nuevo,2024-01-12
+1406,Agustín López,M,36-45,Antofagasta,Antofagasta,Frecuente,2022-09-14
+1407,Antonella Muñoz,F,26-35,Biobío,Concepción,Frecuente,2023-12-01
+1408,Vicente Silva,F,26-35,Valparaíso,Viña del Mar,Nuevo,2023-02-10
+1409,Matías Rojas,F,46-60,Valparaíso,Valparaíso,Frecuente,2024-08-20
+1410,Catalina Contreras,M,18-25,Los Lagos,Puerto Montt,Frecuente,2022-09-29
+1411,Matías Rodríguez,F,18-25,Metropolitana,Las Condes,Premium,2023-11-21
+1412,Martín Pérez,M,46-60,La Araucanía,Temuco,Frecuente,2024-07-10
+1413,Valentina Rojas,F,36-45,Valparaíso,Viña del Mar,Frecuente,2024-11-09
+1414,Javiera Rojas,M,60+,Metropolitana,Santiago,Nuevo,2023-10-19
+1415,Martín Pérez,M,26-35,Metropolitana,Providencia,Premium,2022-04-09
+1416,Martín Martínez,M,36-45,Metropolitana,Puente Alto,Nuevo,2023-03-08
+1417,Matías Pérez,M,36-45,Metropolitana,Providencia,Premium,2022-12-06
+1418,Matías Díaz,M,18-25,Metropolitana,Providencia,Frecuente,2023-06-16
+1419,Camila Sepúlveda,F,60+,Metropolitana,Puente Alto,Frecuente,2022-12-12
+1420,Camila Soto,F,26-35,Metropolitana,Puente Alto,Nuevo,2024-09-27
+1421,Javiera Pérez,F,46-60,Metropolitana,Santiago,Nuevo,2022-09-16
+1422,Valentina Fuentes,F,60+,Metropolitana,Ñuñoa,Frecuente,2023-06-23
+1423,Agustín Rodríguez,F,26-35,Los Lagos,Osorno,Nuevo,2022-06-11
+1424,Valentina Rodríguez,M,46-60,Valparaíso,Valparaíso,Nuevo,2024-11-16
+1425,Antonella Díaz,F,60+,La Araucanía,Temuco,Nuevo,2024-12-03
+1426,Isidora Pérez,M,26-35,Valparaíso,Valparaíso,Frecuente,2023-03-27
+1427,Valentina Martínez,F,18-25,Metropolitana,Santiago,Nuevo,2023-02-11
+1428,Benjamín Contreras,M,36-45,Valparaíso,Quilpué,Frecuente,2022-12-31
+1429,Vicente Pérez,F,46-60,Valparaíso,Quilpué,Nuevo,2024-09-18
+1430,Joaquín Martínez,M,26-35,Biobío,Concepción,Nuevo,2024-03-14
+1431,Martín Silva,M,26-35,La Araucanía,Temuco,Nuevo,2023-08-12
+1432,Matías Soto,M,46-60,Metropolitana,Maipú,Frecuente,2023-10-16
+1433,Agustín González,M,26-35,Antofagasta,Antofagasta,Premium,2024-04-23
+1434,Antonella Pérez,M,26-35,Biobío,Talcahuano,Nuevo,2022-05-05
+1435,Florencia Silva,F,26-35,Metropolitana,Santiago,Nuevo,2022-04-22
+1436,Vicente Martínez,F,46-60,Metropolitana,Santiago,Premium,2025-03-18
+1437,Sofía Sepúlveda,F,60+,Valparaíso,Valparaíso,Frecuente,2023-11-07
+1438,Joaquín López,F,36-45,Metropolitana,Puente Alto,Nuevo,2023-11-14
+1439,Catalina Fuentes,F,26-35,Metropolitana,Providencia,Premium,2022-11-18
+1440,Agustín González,F,46-60,Metropolitana,Puente Alto,Nuevo,2023-03-18
+1441,Benjamín Rojas,M,26-35,Metropolitana,Providencia,Frecuente,2024-09-20
+1442,Florencia Rodríguez,F,46-60,Valparaíso,Viña del Mar,Frecuente,2022-03-11
+1443,Valentina Muñoz,F,36-45,Metropolitana,Ñuñoa,Frecuente,2023-07-07
+1444,Sofía Muñoz,M,26-35,Metropolitana,Puente Alto,Premium,2022-01-31
+1445,Camila Pérez,M,36-45,Biobío,Concepción,Nuevo,2024-05-20
+1446,Catalina Pérez,M,18-25,Valparaíso,Viña del Mar,Frecuente,2024-08-23
+1447,Agustín Contreras,F,60+,Metropolitana,Ñuñoa,Nuevo,2024-12-28
+1448,Matías Silva,F,36-45,Metropolitana,Santiago,Nuevo,2025-01-24
+1449,Lucas Sepúlveda,F,36-45,Metropolitana,Las Condes,Nuevo,2024-01-28
+1450,Matías Martínez,F,26-35,Valparaíso,Viña del Mar,Frecuente,2022-06-21
+1451,Lucas Martínez,F,18-25,Metropolitana,Maipú,Nuevo,2024-04-05
+1452,Sofía González,M,36-45,Metropolitana,Puente Alto,Nuevo,2023-11-23
+1453,Lucas Martínez,M,26-35,Metropolitana,Ñuñoa,Nuevo,2023-03-05
+1454,Valentina Muñoz,M,36-45,Metropolitana,Maipú,Nuevo,2024-09-16
+1455,Matías Rojas,F,26-35,Metropolitana,Santiago,Nuevo,2024-11-30
+1456,Lucas Rojas,M,26-35,Metropolitana,Las Condes,Nuevo,2022-12-16
+1457,Antonella Sepúlveda,M,36-45,Los Lagos,Puerto Montt,Nuevo,2023-07-10
+1458,Joaquín Martínez,M,36-45,Metropolitana,Providencia,Premium,2023-02-23
+1459,Vicente Martínez,M,18-25,La Araucanía,Temuco,Nuevo,2022-10-05
+1460,Tomás Rodríguez,F,26-35,Metropolitana,Santiago,Frecuente,2022-01-12
+1461,Javiera Sepúlveda,F,18-25,Metropolitana,Ñuñoa,Frecuente,2022-05-06
+1462,Isidora Pérez,M,46-60,Metropolitana,Maipú,Frecuente,2022-01-29
+1463,Florencia Martínez,F,18-25,Metropolitana,Providencia,Nuevo,2024-04-05
+1464,Florencia Sepúlveda,F,18-25,Metropolitana,Puente Alto,Frecuente,2023-01-01
+1465,Florencia López,M,26-35,Biobío,Concepción,Frecuente,2023-11-08
+1466,Sofía Rojas,F,36-45,Los Lagos,Puerto Montt,Nuevo,2022-07-07
+1467,Sofía Martínez,M,26-35,La Araucanía,Temuco,Nuevo,2022-04-17
+1468,Agustín Martínez,M,26-35,Metropolitana,Maipú,Frecuente,2022-08-29
+1469,Antonella Martínez,F,46-60,Metropolitana,Providencia,Premium,2024-12-05
+1470,Sofía Fuentes,M,36-45,Los Lagos,Osorno,Frecuente,2023-07-23
+1471,Martín Morales,M,26-35,Metropolitana,Las Condes,Premium,2022-09-04
+1472,Martín Díaz,F,26-35,Biobío,Concepción,Premium,2023-12-10
+1473,Javiera Soto,F,18-25,Los Lagos,Osorno,Nuevo,2023-02-06
+1474,Camila Sepúlveda,M,18-25,La Araucanía,Temuco,Frecuente,2023-06-04
+1475,Florencia Morales,F,60+,Metropolitana,Santiago,Premium,2023-06-03
+1476,Lucas Rojas,M,46-60,La Araucanía,Temuco,Nuevo,2024-07-19
+1477,Vicente Fuentes,F,18-25,Metropolitana,Santiago,Nuevo,2022-11-10
+1478,Antonella Muñoz,M,60+,Valparaíso,Valparaíso,Frecuente,2022-05-08
+1479,Antonella Rodríguez,F,60+,Biobío,Talcahuano,Frecuente,2023-11-13
+1480,Martín Fuentes,F,18-25,Los Lagos,Puerto Montt,Frecuente,2024-04-05
+1481,Benjamín Pérez,F,36-45,Metropolitana,Maipú,Nuevo,2024-06-27
+1482,Tomás Pérez,M,18-25,Biobío,Talcahuano,Frecuente,2022-01-07
+1483,Javiera Muñoz,F,60+,Valparaíso,Valparaíso,Frecuente,2025-03-05
+1484,Vicente López,F,26-35,Metropolitana,Las Condes,Nuevo,2022-02-11
+1485,Tomás Fuentes,F,46-60,Antofagasta,Antofagasta,Nuevo,2023-05-21
+1486,Vicente Pérez,F,36-45,Metropolitana,Maipú,Nuevo,2023-08-11
+1487,Vicente Pérez,M,36-45,Metropolitana,Las Condes,Nuevo,2023-02-13
+1488,Joaquín López,M,46-60,Metropolitana,Ñuñoa,Frecuente,2024-01-15
+1489,Catalina Rojas,F,60+,Metropolitana,Maipú,Nuevo,2025-04-13
+1490,Isidora Soto,M,18-25,Antofagasta,Antofagasta,Nuevo,2023-08-15
+1491,Matías Martínez,F,36-45,Metropolitana,Maipú,Frecuente,2022-03-06
+1492,Benjamín Soto,F,36-45,Metropolitana,Santiago,Nuevo,2024-02-13
+1493,Matías Rojas,M,26-35,Metropolitana,Maipú,Frecuente,2023-11-21
+1494,Javiera Sepúlveda,M,46-60,Biobío,Talcahuano,Frecuente,2024-06-18
+1495,Antonella Silva,M,26-35,Metropolitana,Providencia,Frecuente,2024-02-04
+1496,Matías Contreras,M,46-60,La Araucanía,Temuco,Frecuente,2024-11-04
+1497,Tomás Sepúlveda,F,60+,Metropolitana,Puente Alto,Frecuente,2022-12-07
+1498,Benjamín Muñoz,M,46-60,Metropolitana,Providencia,Frecuente,2023-11-14
+1499,Javiera González,F,26-35,Metropolitana,Providencia,Nuevo,2022-12-05
+1500,Isidora Contreras,F,46-60,Metropolitana,Providencia,Frecuente,2023-04-29
