@@ -1,0 +1,9 @@
+flowchart TB
+    classDef hecho fill:#1f4e79,stroke:#0b2540,color:#ffffff,font-weight:bold
+    classDef dim fill:#dbe8f5,stroke:#5b8bc0,color:#0b2540
+    cli["dim_cliente<br/>2.500"]:::dim --> tar["dim_tarjeta<br/>2.500"]:::dim
+    tar --> tx(["transaccion<br/>375.262"]):::hecho
+    tar --> ec(["estado_cuenta<br/>26.367"]):::hecho
+    com["dim_comercio<br/>27"]:::dim --> tx
+    fec["dim_fecha<br/>410"]:::dim --> tx
+    fec -- "id_fecha_cierre" --> ec

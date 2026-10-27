@@ -1,6 +1,6 @@
 # Esquema de datos: bases relacionales
 
-Tres bases de datos **sintéticas** con modelo dimensional (esquema estrella), pensadas para practicar **SQL**, **Power BI** y análisis con **pandas**. Todas siguen las mismas convenciones, así que lo que se aprende en una sirve para las otras.
+Tres bases de datos **sintéticas** con modelo dimensional (esquema estrella), pensadas para practicar **SQL**, **Power BI** y análisis con **pandas**. Las tres son independientes entre sí, pero siguen las mismas convenciones de diseño, así que lo que se aprende en una sirve para las otras.
 
 | Base | Dominio | Período | Tablas | Filas | Hechos | Preguntas típicas |
 |---|---|---|---:|---:|---|---|
@@ -10,9 +10,25 @@ Tres bases de datos **sintéticas** con modelo dimensional (esquema estrella), p
 
 ## Cómo se organizan los datos
 
-![Esquema unificado](diagramas/esquema_unificado.png)
+Son **tres bases independientes**: no comparten tablas ni se relacionan entre sí. Cada una es una estrella propia, donde las **tablas de hechos** (en azul oscuro) guardan eventos medibles y las **dimensiones** (en celeste) los describen. Cada base trae su propia `dim_fecha`, que cubre solo su período.
 
-Cada base es una estrella: las **tablas de hechos** (en azul oscuro) guardan eventos medibles, y las **dimensiones** (en celeste) los describen. Las tres bases comparten **`dim_fecha`**, con la misma estructura y llave, así que se pueden comparar en una misma línea de tiempo.
+### 🛒 compras
+
+![Esquema compras](diagramas/compras.png)
+
+Una **orden** la hace un cliente, por un canal, en una fecha. Cada orden tiene una o más líneas en **detalle_orden**, una por producto.
+
+### 💳 tarjetas_credito
+
+![Esquema tarjetas de crédito](diagramas/tarjetas_credito.png)
+
+Cada cliente tiene una **tarjeta**. La tarjeta genera **transacciones** (compras en comercios, avances, pagos e intereses) y un **estado de cuenta** al cierre de cada mes.
+
+### 🚕 taxis
+
+![Esquema taxis](diagramas/taxis.png)
+
+Cada **viaje** une a un pasajero con un conductor y su vehículo, entre una zona de origen y una de destino, en una fecha.
 
 ### Convenciones comunes
 
@@ -21,7 +37,7 @@ Cada base es una estrella: las **tablas de hechos** (en azul oscuro) guardan eve
 | Prefijos | `dim_` para dimensiones. Los hechos van sin prefijo |
 | Llaves primarias | `id_<entidad>`, entero correlativo desde 1 |
 | Llaves foráneas | mismo nombre que la PK a la que apuntan, con dos excepciones: `id_zona_origen`/`id_zona_destino` e `id_fecha_cierre` |
-| Llave de fecha | `id_fecha` entero con formato `AAAAMMDD`, por ejemplo `20251225` |
+| Llave de fecha | `id_fecha` entero con formato `AAAAMMDD`, por ejemplo `20251225`. La estructura es igual en las tres bases, pero cada una tiene su propia tabla |
 | Montos | pesos chilenos (CLP) enteros, sin decimales |
 | Banderas | enteros 0/1 (`es_fin_semana`, `es_fraude`, `con_lluvia`, …) |
 | Textos | en español. Los nombres de personas son ficticios |
@@ -33,8 +49,9 @@ Cada base es una estrella: las **tablas de hechos** (en azul oscuro) guardan eve
 esquema-datos/
 ├── README.md                    ← este archivo
 ├── diagramas/
-│   ├── esquema_unificado.png
-│   └── esquema_unificado.mmd    ← fuente Mermaid del diagrama
+│   ├── compras.png / .mmd       ← diagrama de cada base (fuente Mermaid)
+│   ├── tarjetas_credito.png / .mmd
+│   └── taxis.png / .mmd
 ├── compras/
 │   ├── README.md                ← diccionario, diagrama ER y consultas
 │   ├── compras.db.zip           ← base SQLite (descomprimir)

@@ -1,0 +1,8 @@
+flowchart TB
+    classDef hecho fill:#1f4e79,stroke:#0b2540,color:#ffffff,font-weight:bold
+    classDef dim fill:#dbe8f5,stroke:#5b8bc0,color:#0b2540
+    pas["dim_pasajero<br/>8.000"]:::dim --> via(["viaje<br/>186.984"]):::hecho
+    con["dim_conductor<br/>600"]:::dim --> via
+    veh["dim_vehiculo<br/>600"]:::dim --> via
+    zon["dim_zona<br/>20"]:::dim -- "origen / destino" --> via
+    fec["dim_fecha<br/>365"]:::dim --> via

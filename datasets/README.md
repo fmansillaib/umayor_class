@@ -48,15 +48,13 @@ Colección de bases de datos para proyectos de Machine Learning e IA. Los datase
 
 ## Esquema de Datos (bases relacionales para SQL y Power BI)
 
-Bases sintéticas con modelo estrella (tablas de hechos y dimensiones), con SQLite, CSV, DDL y script generador. Detalle y diagramas en [`esquema-datos/`](esquema-datos/).
+Tres bases sintéticas **independientes**, cada una con su propio modelo estrella (tablas de hechos y dimensiones), con SQLite, CSV, DDL y script generador. Detalle y diagramas en [`esquema-datos/`](esquema-datos/).
 
 | Base | Tablas | Registros | Período | Descripción |
 |------|-------:|----------:|---------|-------------|
 | **[compras](esquema-datos/compras/)** | 6 | 40,497 | 2024–2025 | Retail omnicanal: órdenes, detalle, clientes, productos, canales |
 | **[tarjetas_credito](esquema-datos/tarjetas_credito/)** | 6 | 407,066 | 2025 | Transacciones, estados de cuenta, pagos, intereses, mora y fraude |
 | **[taxis](esquema-datos/taxis/)** | 6 | 196,569 | 2025 | Viajes en Santiago: tarifas dinámicas, cancelaciones, conductores, zonas |
-
-![Esquema unificado](esquema-datos/diagramas/esquema_unificado.png)
 
 ## Estructura
 

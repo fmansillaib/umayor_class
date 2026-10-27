@@ -1,0 +1,8 @@
+flowchart TB
+    classDef hecho fill:#1f4e79,stroke:#0b2540,color:#ffffff,font-weight:bold
+    classDef dim fill:#dbe8f5,stroke:#5b8bc0,color:#0b2540
+    cli["dim_cliente<br/>1.500"]:::dim --> ord(["orden<br/>12.000"]):::hecho
+    can["dim_canal<br/>6"]:::dim --> ord
+    fec["dim_fecha<br/>731"]:::dim --> ord
+    ord --> det(["detalle_orden<br/>26.182"]):::hecho
+    pro["dim_producto<br/>78"]:::dim --> det
